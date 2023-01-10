@@ -4,7 +4,7 @@
     <title> Sicurservice - Home </title>
     <!-- META TAGS -->
     <meta charset="utf-8" />
-    <meta name="keywords" content="sicurezza, anti, consigli, casa, famiglia, protezione" />
+    <meta name="keywords" content="sicurezza, antifurto, consigli, casa, famiglia, protezione" />
     <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
     <meta name="author" content="Sicurservice" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,46 +30,34 @@
                 <li><a href="#prodotti">I nostri prodotti</a></li>
                 <li><a href="#info">Info</a></li>
                 <li><input type="button" id="themeButton" /></li>
-                <!-- <li><button id="theme_button"></button></li>  -->                          
             </ul>
         </nav>
     </header>
     <main>
-        <div>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="img/slideshow/assistenza.jpg" alt="Printer I developed basing on BLV mgn 12 project">
-                    <div class="text"><span>My custom built 3D printer. Derived from BLV MGN12</span></div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="img/slideshow/azienda.jpg"
-                        alt="3D printer project done in stage previous wire management">
-                    <div class="text"><span>3D printer project <em>before</em> management</span></div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/slideshow/contatti.jpg"
-                        alt="3D printer project done in stage after wire management">
-                    <div class="text"><span>3D printer project <em>after</em> management</span></div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="img/slideshow/prodotti1.jpg" alt="3D printer project Marlin ramps conversion">
-                    <div class="text"><span>3D printer <em>after</em> Marlin ramps conversion</span></div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)" role="button">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)" role="button">&#10095;</a>
+        <div class="slideshowContainer">
+            <div class="mySlides fade">
+                <img src="img/slideshow/assistenza.jpg" alt="">
             </div>
-
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
+            <div class="mySlides fade">
+                <img src="img/slideshow/azienda.jpg" alt="">                   
+            </div>
+            <div class="mySlides fade">
+                <img src="img/slideshow/contatti.jpg" alt="">                  
+            </div>
+            <div class="mySlides fade">
+                <img src="img/slideshow/prodotti1.jpg" alt="">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)" role="button">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)" role="button">&#10095;</a>               
+            <div id="dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
             </div>
-            <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-            </script>
         </div>
+        
+        <!-- SERVIZI -->
         <section id="servizi">
             <h2>I nostri servizi</h2>
             <ul>
@@ -96,6 +84,7 @@
             
         </section>
     </main>
+    
     <footer>
         <table border="1">
             <caption>Orari</caption>
