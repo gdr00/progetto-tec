@@ -1,6 +1,3 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
 // Next/previous controls
 function iterateSlides(value_to_add) {
   showSlides(slideIndex += value_to_add);
