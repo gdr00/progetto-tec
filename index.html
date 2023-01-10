@@ -35,33 +35,35 @@
         </nav>
     </header>
     <main>
-        <div id="slideShow">
-            <div id="slideshowImagesContainer">
-                <div class="slideshowImage">
-                    <img src="img/slideshow/assistenza.jpg" alt="assistenza" />
+        <div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="img/slideshow/assistenza.jpg" alt="Printer I developed basing on BLV mgn 12 project">
+                    <div class="text"><span>My custom built 3D printer. Derived from BLV MGN12</span></div>
                 </div>
-                <div class="slideshowImage">
-                    <img src="img/slideshow/azienda.jpg" alt="azienda" />
+                <div class="mySlides fade">
+                    <img src="img/slideshow/azienda.jpg"
+                        alt="3D printer project done in stage previous wire management">
+                    <div class="text"><span>3D printer project <em>before</em> management</span></div>
                 </div>
-                <div class="slideshowImage">
-                    <img src="img/slideshow/consigli.jpg" alt="consigli" />
+                <div class="mySlides fade">
+                    <img src="images/slideshow/contatti.jpg"
+                        alt="3D printer project done in stage after wire management">
+                    <div class="text"><span>3D printer project <em>after</em> management</span></div>
                 </div>
-                <div class="slideshowImage">
-                    <img src="img/slideshow/prodotti1.jpg" alt="prodotti1" />
-                </div> 
-                <div class="slideshowImage">
-                    <img src="img/slideshow/prodotti2.jpg" alt="prodotti2" />
+                <div class="mySlides fade">
+                    <img src="img/slideshow/prodotti1.jpg" alt="3D printer project Marlin ramps conversion">
+                    <div class="text"><span>3D printer <em>after</em> Marlin ramps conversion</span></div>
                 </div>
-            
-                <a id="prev" onclick="iterateSlides(-1)">&#10039;</a>
-                <a id="next" onclick="iterateSlides(1)">&#10140;</a>
+                <a class="prev" onclick="plusSlides(-1)" role="button">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" role="button">&#10095;</a>
             </div>
-            <div>
-                <span class="slideshowDot" onclick="currentSlide(1)"></span>
-                <span class="slideshowDot" onclick="currentSlide(2)"></span>
-                <span class="slideshowDot" onclick="currentSlide(3)"></span>
-                <span class="slideshowDot" onclick="currentSlide(4)"></span>
-                <span class="slideshowDot" onclick="currentSlide(5)"></span>
+
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
             <script>
                 let slideIndex = 1;
@@ -129,7 +131,6 @@
                 </tr>
             </tbody>
         </table>
-        <p>Copyright © Il tuo sito per la sicurezza</p>
     </footer>
 </body>
 
