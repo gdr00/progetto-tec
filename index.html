@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="utf-8" />
     <title> Sicurservice - Home </title>
+    <!-- META TAGS -->
+    <meta charset="utf-8" />
     <meta name="keywords" content="sicurezza, anti, consigli, casa, famiglia, protezione" />
     <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
     <meta name="author" content="Sicurservice" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- LINK TAGS -->
     <link rel="stylesheet" href="css/style.css" media="handheld, screen" />
     <link rel="stylesheet" href="css/mini.css" media="handled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
     <link rel="stylesheet" href="css/print.css" media="print" />
-
     <link rel="shortcut icon" type="image/png" href="./img/icon.png" />
+
+    
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Il tuo sito per la sicurezza</h1>
@@ -29,35 +35,38 @@
         </nav>
     </header>
     <main>
-        <div id="slideshowContainer">
-            <div class="slideshowImage">
-                <img src="img/slideshow/assistenza.jpg" alt="Immagine 1" />
+        <script>let slideIndex = 1;
+            showSlides(slideIndex);
+        </script>
+        <div id="slideShow">
+            <div id="slideshowImagesContainer">
+                <div class="slideshowImage">
+                    <img src="img/slideshow/assistenza.jpg" alt="assistenza" />
+                </div>
+                <div class="slideshowImage">
+                    <img src="img/slideshow/azienda.jpg" alt="azienda" />
+                </div>
+                <div class="slideshowImage">
+                    <img src="img/slideshow/consigli.jpg" alt="consigli" />
+                </div>
+                <div class="slideshowImage">
+                    <img src="img/slideshow/prodotti1.jpg" alt="prodotti1" />
+                </div> 
+                <div class="slideshowImage">
+                    <img src="img/slideshow/prodotti2.jpg" alt="prodotti2" />
+                </div>
+            
+                <a id="prev" onclick="iterateSlides(-1)">&#10039;</a>
+                <a id="next" onclick="iterateSlides(1)">&#10140;</a>
             </div>
-            <div class="slideshowImage">
-                <img src="img/slideshow/azienda.jpg" alt="Immagine 1" />
+            <div>
+                <span class="slideshowDot" onclick="currentSlide(1)"></span>
+                <span class="slideshowDot" onclick="currentSlide(2)"></span>
+                <span class="slideshowDot" onclick="currentSlide(3)"></span>
+                <span class="slideshowDot" onclick="currentSlide(4)"></span>
+                <span class="slideshowDot" onclick="currentSlide(5)"></span>
             </div>
-            <div class="slideshowImage">
-                <img src="img/slideshow/consigli.jpg" alt="Immagine 1" />
-            </div>
-            <div class="slideshowImage">
-                <img src="img/slideshow/prodotti1.jpg" alt="Immagine 1" />
-            </div> 
-            <div class="slideshowImage">
-                <img src="img/slideshow/prodotti2.jpg" alt="Immagine 1" />
-            </div>
-
-            <a id="prev" onclick="iterateSlides(-1)">&#10094;</a>
-            <a id="next" onclick="iterateSlides(1)">&#10095;</a>
         </div>
-        <div>
-            <span class="curruntSlidePos" onclick="currentSlide(1)"></span>
-            <span class="curruntSlidePos" onclick="currentSlide(2)"></span>
-            <span class="curruntSlidePos" onclick="currentSlide(3)"></span>
-            <span class="curruntSlidePos" onclick="currentSlide(4)"></span>
-            <span class="curruntSlidePos" onclick="currentSlide(5)"></span>
-            <span class="curruntSlidePos" onclick="currentSlide(6)"></span>
-            <span class="curruntSlidePos" onclick="currentSlide(7)"></span>
-          </div>
         <section id="servizi">
             <h2>I nostri servizi</h2>
             <ul>
@@ -80,8 +89,45 @@
                 <li>Email: info@sicurezza.com</li>
             </ul>
         </section>
+        <section id="orari">
+            
+        </section>
     </main>
     <footer>
+        <table border="1">
+            <caption>Orari</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Lunedì</th>
+                    <th scope="col">Martedì</th>
+                    <th scope="col">Mercoledì</th>
+                    <th scope="col">Giovedì</th>
+                    <th scope="col">Venerdì</th>
+                    <th scope="col">Sabato</th>
+                    <th scope="col">Domenica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>8:00-12:00</th>
+                    <th>8:00-12:00</th>
+                    <th>8:00-12:00</th>
+                    <th>8:00-12:00</th>
+                    <th>8:00-12:00</th>
+                    <th>8:00-12:00</th>
+                    <th>-</th>
+                </tr>
+                <tr>
+                    <th>15:00-18:00</th>
+                    <th>15:00-18:00</th>
+                    <th>15:00-18:00</th>
+                    <th>15:00-18:00</th>
+                    <th>15:00-18:00</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+            </tbody>
+        </table>
         <p>Copyright © Il tuo sito per la sicurezza</p>
     </footer>
 </body>
