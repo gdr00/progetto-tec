@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="it">
   <head>
-    <meta charset="utf-8">
     <title>Login </title>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="sicurezza, sicurservice, antifurto, casa, protezione, famiglia," />
+    <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
+    <meta name="author" content="Sicurservice" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- LINK TAGS -->
     <link rel="stylesheet" href="../css/style.css" media="handheld, screen" />
     <link rel="stylesheet" href="../css/mini.css" media="handled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
     <link rel="stylesheet" href="../css/print.css" media="print" />
     <link rel="shortcut icon" type="image/png" href="./img/icon.png" />
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
   </head>
   
   <body>
-    <div class="loginBox">
+    <header>
+      <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
+      <nav id="menu">
+          <ul>
+              <li ><a href="#home">Home</a></li>
+              <li><a href="html/chiSiamo.html">Chi siamo</a></li>
+              <li><a href="html/prodotti.html">I nostri prodotti</a></li>
+              <li><a href="html/info.html">Info</a></li>
+              <li><input type="button" id="themeButton" /></li>
+          </ul>
+      </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav id ="breadcrumb">
+    <img src="../img/icons/location-dot.svg" alt="Ti trovi in:"/>
+    <p> <span lang ="en"> <a href ="../index.html">Home</span></a> &#187; <span lang ="en">Login</span> </p>
+  </nav>
+
+    <div id="loginBox">
       <h1>Pagina di login</h1>
 
       <form id = "loginForm">
@@ -21,13 +50,11 @@
         <!-- PASSWORD INPUT -->
         <label for="password">Password</label>
         <input type="password" id = "password" placeholder="Inserisci la password"/><br> 
-        
+
         <input type="submit" value="Log In"/>
 
-        <!-- <a href="#">Lost your Password?</a><br> -->
         <!-- DA CONTROLLARE IL BR QUI -->
         <br> <a href="#">Non hai un account?</a>
-
       </form>
     </div>
   </body>
