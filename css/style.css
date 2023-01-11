@@ -11,7 +11,8 @@
   --socialshovercolor: #fff;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
-  --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);
+  --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
+  /*--globaltxtsize: 1em;/* */
 }
 
 html,
@@ -41,14 +42,16 @@ header {
   color: var(--txtcolor);
   background: url(../img/logo-sfondo-nero.webp) no-repeat center left;
   background-size: contain;
-  height: 10em;
+  height: calc(10*var(--globaltxtsize));
   background-color: var(--navbarbg);
 }
 
 header h1 {
+  display: block;
   margin-top: 0em; /*per evitare il margine inserito dal browser*/
   text-indent: -9999em;
   line-height: 1px;
+  height: 1px;
   font-size: 6em;
 }
 
@@ -63,6 +66,7 @@ header h2 {
 ********************/
 
 #menu{
+  float: right;
   text-align: right;
   width: 100%;
   height: calc(3*var(--globaltxtsize));
@@ -215,6 +219,46 @@ color: var(--linkcolor);
 /*******************
        FOOTER
 ********************/
+
+/*******************
+    BACK TO TOP
+********************/
+#toTopBTN {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#toTopBTN::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#toTopBTN:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#toTopBTN:active {
+  background-color: #555;
+}
+#toTopBTN.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 /*******************
        LOGIN PAGE
