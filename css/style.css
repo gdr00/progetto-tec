@@ -86,16 +86,19 @@ h2{
 }
 
 #menu ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
   height: 100%;
   list-style-type: none;
   margin: 0;
   position: relative;
-  top: -15px;
 }
 
 #menu li {
-  display: inline;
-  padding-left: 1.5em; /*left padding to properly align to the right the menu*/
+  padding: 0em 0em 0em 1.5em; /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
 }
 
 #menu a {
@@ -124,15 +127,17 @@ h2{
 color: var(--linkcolor);
 }
 
-#themeButton{
-  display: inline-block;
+#menu #themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
+  display: block;
   width: 80px;
   height: 30px;
   background: url(../img/prova.png) no-repeat center;
-  background-size: cover; /*fit the image cutting it no stretch*/
+  background-size: contain; /*fit the image cutting it no stretch*/
+  background-color: none;
   background-position: center;
-  position: relative;
-  top:15px;
+  transition: none;
+  border-radius: 0em;
+  padding: 1em; /*no padding or else if present image will stretch to padding dimension plus box dimension*/
 }
 
 #breadcrumb{
