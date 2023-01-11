@@ -33,30 +33,34 @@
       </nav>
   </header>
 
-  <!-- BREADCRUMB -->
-  <nav id ="breadcrumb">
-    <img src="../img/icons/location-dot.svg" alt="Ti trovi in:"/>
-    <p> <span lang ="en"> <a href ="../index.html">Home</span></a> &#187; <span lang ="en">Login</span> </p>
-  </nav>
+    <!-- BREADCRUMB -->
+    <nav id ="breadcrumb">
+      <img src="../img/icons/location-dot.svg" alt="Ti trovi in:"/>
+      <p> <span lang ="en"> <a href ="../index.html">Home</span></a> &#187; <span lang ="en">Login</span> </p>
+    </nav>
 
-    <div id="loginBox">
-      <h1>Pagina di login</h1>
+    <main>
+      <div class ="center">
+      <!-- LOGINBOX -->
+      <div id="loginBox" class ="center">
+        <h1>Pagina di login</h1>
 
-      <form id = "loginForm">
+        <!-- FORM -->
+        <form id = "loginForm">
+          <!-- USERNAME INPUT -->
+          <label for="username">Username</label>
+          <input type="text" id ="username" placeholder="Inserisci l'usernamee"/> <br> 
 
-        <!-- USERNAME INPUT -->
-        <label for="username">Username</label>
-        <input type="text" id ="username" placeholder="Inserisci l'usernamee"/> <br> 
+          <!-- PASSWORD INPUT -->
+          <label for="password">Password</label>
+          <input type="password" id = "password" placeholder="Inserisci la password"/><br> 
+          <input type="submit" id ="loginButton" value="Log In"/>
 
-        <!-- PASSWORD INPUT -->
-        <label for="password">Password</label>
-        <input type="password" id = "password" placeholder="Inserisci la password"/><br> 
-
-        <input type="submit" id ="loginButton" value="Log In"/>
-
-        <!-- DA CONTROLLARE IL BR QUI -->
-        <br> <a href="#">Non hai un account?</a>
-      </form>
-    </div>
+          <!-- DA CONTROLLARE IL BR QUI -->
+          <br> <a href="#">Non hai un account?</a>
+        </form>
+      </div>
+      </div>
+    </main>
   </body>
 </html>
