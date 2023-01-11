@@ -26,7 +26,7 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-var btn = $('#toTopBTN');
+var btn = $('#toTop');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {

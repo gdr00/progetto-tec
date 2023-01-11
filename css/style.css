@@ -39,20 +39,29 @@ body {
 ********************/
 
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
   color: var(--txtcolor);
-  background: url(../img/logo-sfondo-nero.webp) no-repeat center left;
-  background-size: contain;
   height: calc(10*var(--globaltxtsize));
   background-color: var(--navbarbg);
 }
 
+header > * { /*all the children of header grow to fit container and center themself in it*/
+  align-self: center;
+  flex-grow: 0;
+}
+
 header h1 {
   display: block;
-  margin-top: 0em; /*per evitare il margine inserito dal browser*/
+  width: 30%;
+  height: 100%;
+  background: url(../img/logo-sfondo-nero.webp) no-repeat center left;
+  background-size: contain; /*fit the image without cutting it*/
+  background-position: left;
   text-indent: -9999em;
-  line-height: 1px;
-  height: 1px;
-  font-size: 6em;
+  font-size: 1px;
 }
 
 header h2 {
@@ -66,48 +75,57 @@ header h2 {
 ********************/
 
 #menu{
-  float: right;
   text-align: right;
-  width: 100%;
+  width: 70%;
   height: calc(3*var(--globaltxtsize));
   color: var(--txtcolor);
   font-size: var(--globaltxtsize);
 }
 
 #menu ul {
+  height: 100%;
   list-style-type: none;
+  margin: 0;
 }
 
 #menu li {
   display: inline;
-  padding: 1.5em;
+  padding-left: 1.5em; /*left padding to properly align to the right the menu*/
 }
 
-#menu li a {
+#menu a {
   color: var(--txtcolor);
   text-decoration: none;
   font-weight: bold;
   font-size: var(--globaltxtsize);
 }
 
-#menu li a:visited{
+#menu a:visited{
   color: var(--txtcolor);
 }
 
-#menu .active, #menu li a:hover {
+#menu a {
+  padding: .5em .5em;
+} /*top bottom left right padding in order to eliminate the text movement*/
+
+#menu a.active, #menu a:hover {
   background-color: #717171;
   transition: linear 0.14s;
   border-radius: 1em;
-  padding: .5em .5em;
+  padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
 }
 
-#menu li a:hover { /*post li a:visited altrimenti non sovrascrive*/
+#menu a:hover { /*post li a:visited altrimenti non sovrascrive*/
 color: var(--linkcolor);
 }
 
 #themeButton{
-  height: calc(2*var(--globaltxtsize));
-  width: calc(6*var(--globaltxtsize));
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background: url(../img/prova.png) no-repeat center;
+  background-size: cover; /*fit the image cutting it no stretch*/
+  background-position: center;
 }
 
 #breadcrumb{
