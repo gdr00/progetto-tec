@@ -69,7 +69,6 @@ h2{
 ********************/
 
 #menu{
-  float: right;
   text-align: right;
   width: 100%;
   height: calc(3*var(--globaltxtsize));
