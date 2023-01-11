@@ -62,8 +62,6 @@ header h2 {
       NAVIGATION
 ********************/
 
-
-
 #menu{
   text-align: right;
   width: 100%;
@@ -129,6 +127,7 @@ color: var(--linkcolor);
 /*******************
        CONTENT
 ********************/
+
 /*******************
  SLIDESHOW CONTAINER
 ********************/
