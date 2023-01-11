@@ -221,7 +221,8 @@ color: var(--linkcolor);
        LOGIN PAGE
 ********************/
 #loginBox{
-  position: flex;
+  position: relative;
+  justify-content: center;
   width: 380px;
   height: 420px;
   background: #1c1c1c;
@@ -265,6 +266,7 @@ color: var(--linkcolor);
 
 #loginForm{
   position: absolute;
+  justify-content: center;
   inset: 2px;
   border-radius: 8px;
   background-color: #28292d;
@@ -272,4 +274,10 @@ color: var(--linkcolor);
   padding: 80px 40px;
   display: flex;
   flex-direction: column;
+}
+
+.login-box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
