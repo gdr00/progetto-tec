@@ -326,64 +326,56 @@ color: var(--linkcolor);
 /*******************
        LOGIN PAGE
 ********************/
-#loginBox{
-  position: relative;
-  justify-content: center;
-  width: 380px;
-  height: 420px;
-  background: #1c1c1c;
-  border-radius: 8px;
-  overflow: hidden;
+#loginContainer{
+  width: 50%;
+  border-radius: 10px;
+  padding : 2em 2em;
+  margin-top : 1em;
+  margin-left : auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  box-shadow: rgba(252, 252, 252, 0.15) 0px 2px 8px;
+  text-align: center;
 }
 
-#loginBox::before{
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(0deg, transparent,var(--animatedformcolor), var(--animatedformcolor));
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-}
-
-#loginBox::after{
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(0deg, transparent,var(--animatedformcolor), var(--animatedformcolor));
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -3;
-}
-
-@keyframes animate{
-  0%{
-      transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(360deg);
-  }
-}
-
-#loginForm{
-  position: absolute;
-  justify-content: center;
-  inset: 2px;
-  border-radius: 8px;
-  background-color: #28292d;
-  z-index: 10;
-  padding: 80px 40px;
+form{
   display: flex;
   flex-direction: column;
-}
-
-.login-box-container{
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
+
+input{
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+input[type="submit"]{
+  background-color: var(--linkcolor);
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  width: 100px;
+  margin-top: 1em;
+}
+
+input[type="submit"]:hover{
+  background-color: #333;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
