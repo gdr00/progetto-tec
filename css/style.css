@@ -11,6 +11,8 @@
   --socialslinkcolor: #007cb0;
   --socialshovercolor: #fff;
   --animatedformcolor:#1BDC88;
+  --tableoddrowcolor: #585858;
+  --tableevenrowcolor: #007cb0;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
   --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
@@ -295,6 +297,46 @@ color: var(--linkcolor);
 /*******************
        FOOTER
 ********************/
+
+/*******************
+       TABLE
+********************/
+
+table{
+  border-collapse: collapse;
+}
+
+table caption{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+table thead tr:nth-child(odd){
+  background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(even){
+  background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(odd){
+  background-color: var(--tableevenrowcolor);
+}
+
+#tabOrari{
+  font-size: 0.6em;
+}
+
+#tabOrari th[scope="row"]{
+  text-align: left;
+  padding: 0.2em;
+}
+
+#tabOrari td{
+  text-align: center;
+  padding: 0.2em;
+}
+
 
 /*******************
     BACK TO TOP
