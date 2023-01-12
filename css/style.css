@@ -369,7 +369,9 @@ color: var(--linkcolor);
 
 #contactsContainer {
   margin-top: 2em;
-  width: 100%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -380,23 +382,42 @@ color: var(--linkcolor);
   list-style: none;
 }
 
-#contactList ul {
-  margin-left: 0.2em;
-  padding: 0%;
-}
-/* ! METTERE I NUMERI DI TELEFONO COME LINK */
-#contactList a {
+#contactsList ul {
+  height: 100%;
+  padding: 0em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#contactList a:hover {
+#contactsList ul a:hover{
+  background-color: #717171;
+  transition: linear 0.14s;
+  border-radius: 1em;
+  padding: .5em .5em;
+  color: var(--linkcolor);
+}
+
+#contactsList li {
+  margin: 0.8em;
+  background-color: lightslategray;
+  border-radius: 3em;
+  flex: 0 1 30px;
+  padding: 1em;
+  text-align: center;
+}
+
+/* ! METTERE I NUMERI DI TELEFONO COME LINK */
+#contactsList a {
+}
+
+#contactsList a:hover {
 }
 /*! */
-#contactList {
+#contactsList {
   flex: 1.5 1;
-}
-
-#contactList * {
-  margin-left: 1em;
 }
 
 #formRequestsContainer {
