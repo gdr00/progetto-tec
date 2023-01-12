@@ -10,6 +10,7 @@
   --linkvisited: #1BDC88;
   --socialslinkcolor: #007cb0;
   --socialshovercolor: #fff;
+  --animatedformcolor:#1BDC88;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
   --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
@@ -342,7 +343,7 @@ color: var(--linkcolor);
   left: -50%;
   width: 380px;
   height: 420px;
-  background: linear-gradient(0deg, transparent,#45f3ff, #45f3ff);
+  background: linear-gradient(0deg, transparent,var(--animatedformcolor), var(--animatedformcolor));
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
 }
@@ -354,7 +355,7 @@ color: var(--linkcolor);
   left: -50%;
   width: 380px;
   height: 420px;
-  background: linear-gradient(0deg, transparent,#45f3ff, #45f3ff);
+  background: linear-gradient(0deg, transparent,var(--animatedformcolor), var(--animatedformcolor));
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
   animation-delay: -3;
