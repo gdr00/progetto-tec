@@ -17,6 +17,11 @@
   /*--globaltxtsize: 1em;/* */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
     font-size: 100%;
@@ -32,7 +37,7 @@ html {
 body {
     max-width: 1024px;
     margin: auto;
-    background-color: var(--bgcolor);
+    background-color: var(--bodybgcolor);
     color: var(--txtcolor);
 }
 
@@ -77,6 +82,13 @@ h2{
 /*******************
       NAVIGATION
 ********************/
+nav, div {
+  display: block;
+}
+
+#hamburgerButton{
+  display: none; /*hidden by default in main style, unhidden in mini*/
+}
 
 #menu{
   text-align: right;
@@ -128,17 +140,18 @@ h2{
 color: var(--linkcolor);
 }
 
-#menu #themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
+#themeButContainer #themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
   display: block;
   width: 80px;
   height: 30px;
   background: url(../img/prova.png) no-repeat center;
   background-size: contain; /*fit the image cutting it no stretch*/
-  background-color: none;
-  background-position: center;
-  transition: none;
-  border-radius: 0em;
-  padding: 1em; /*no padding or else if present image will stretch to padding dimension plus box dimension*/
+  background-color: #fff;
+  background-position: left; /*when clicked change property throug js to right and bgcolor to #000*/
+  transition: linear 0.1s;
+  border-radius: 15px;
+  border: 2px solid var(--linkcolor);
+  margin-left: 1.5em;
 }
 
 #breadcrumb{
