@@ -40,49 +40,56 @@
 	</nav>
 
 	<main>
-		<dl>
-			<dt>Telefono fisso</dt>
-			<dd><a href="tel:+390434590096">+39-0434-590096</a></dd>
-			<dt>Email</dt>
-			<dd><a href="mailto:info@securservice.com">info@securservice.com</a></dd>
-			<dt>Cellulari</dt>
-			<dd>
-				<ul>
-					<li>Moret Roberta: <a href="tel:+393474913322">+39-347-491-3322</a></li>
-					<li>Alessandro Da Re: <a href="tel:+393474913322">+39-347-491-3322</a></li>
-				</ul>
-			</dd>
-			<dt>Posizione</dt>
-			<dd></dd>
-		</dl>
-		<div>
-			<h2>MODULO RICHIESTE</h2>
-			<p>Inviaci la tua richiesta</p>
-			<form class="contacts-form">
-				<label id="lbl-fname" for="fname">Nome</label>
-				<input id="fname" type="text" placeholder="Nome" aria-labelledby="lbl-fname" />
-				<span class="error none" id="name-error"></span>
+		<ul id="contactsContainer">
+			<li id="contactList">
+				<dl>
+					<dt>Telefono fisso</dt>
+					<dd><a href="tel:+390434590096">+39-0434-590096</a></dd>
+					<dt>Email</dt>
+					<dd><a href="mailto:info@securservice.com">info@securservice.com</a></dd>
+					<dt>Cellulari</dt>
+					<dd>
+						<ul>
+							<li>Moret Roberta: <a href="tel:+393474913322">+39-347-491-3322</a></li>
+							<li>Alessandro Da Re: <a href="tel:+393474913322"></a></li>
+						</ul>
+					</dd>
+					<dt>Posizione</dt>
+					<dd></dd>
+				</dl>
+			</li>
+			<li id="formRequestsContainer">
+				<h2>MODULO RICHIESTE</h2>
+				<p>Inviaci la tua richiesta</p>
+				<form id="requestsForm">
+					<label id="lbl-fname" for="fname">Nome</label>
+					<br />
+					<input id="fname" type="text" placeholder="Nome" aria-labelledby="lbl-fname" />
+					<span class="error none" id="name-error"></span>
+					<br />
 
-				<label id="lbl-fsurname" for="fsurname">Cognome</label>
-				<input id="fsurname" type="text" placeholder="Cognome" aria-labelledby="lbl-fsurname" />
-				<span class="error none" id="surname-error"></span>
+					<label id="lbl-fsurname" for="fsurname">Cognome</label>
+					<br />
+					<input id="fsurname" type="text" placeholder="Cognome" aria-labelledby="lbl-fsurname" />
+					<span class="error none" id="surname-error"></span>
+					<br />
 
-				<label id="lbl-fphone" for="fphone">Numero di telefono</label>
-				<input id="fphone" type="tel" placeholder="+39 123 456 7890" aria-labelledby="lbl-fphone" />
-				<span class="error none" id="phone-error"></span>
+					<label id="lbl-fphone" for="fphone">Numero di telefono</label>
+					<br />
+					<input id="fphone" type="tel" placeholder="+39 123 456 7890" aria-labelledby="lbl-fphone" />
+					<span class="error none" id="phone-error"></span>
+					<br />
 
-				<label id="lbl-fmex" for="fmex">Messaggio</label>
-				<textarea id="fmex" placeholder="..." aria-labelledby="lbl-fmex" maxlength="1000" ></textarea>
-				<span class="error none" id="mex-error"></span>
+					<label id="lbl-fmex" for="fmex">Messaggio</label>
+					<br />
+					<textarea id="fmex" placeholder="..." aria-labelledby="lbl-fmex" maxlength="1000" ></textarea>
+					<span class="error none" id="mex-error"></span>
+					<br />
 
-				<div id="agreementBlock">
-					<input id="agreement" type="checkbox" aria-labelledby="lbl-checkbox" />
-					<label id="lbl-checkbox" for="agreement">Accetto i termini della <a href="" title="Privacy Policy ">Privacy Policy</a></label>
-				</div>
-
-				<input type="button" value="Invia richiesta" onclick="send_email()"/>
-			</form>
-		</div> 
+					<input type="button" value="Invia richiesta" onclick="send_email()"/>
+				</form>
+			</li>
+		</div>
 	</main>
 </body>
 </html>

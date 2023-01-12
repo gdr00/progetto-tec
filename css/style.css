@@ -138,34 +138,6 @@ color: var(--linkcolor);
        CONTENT
 ********************/
 
-#products{
-  color: var(--txtcolor);
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0em;
-  justify-content: center;
-  margin-top: 2em;
-  
-}
-
-#products li{
-  padding: 10px;
-  border-radius: 10px;
-  flex: 0 0 270px;
-  text-align: center;
-  border: solid white 1px;
-  margin: 1em;
-}
-
-#products li p {
-  font-size: var(--globaltxtsize);
-}
-
-.productTitle {
-  font-size: 1.2em;
-}
-
 /*******************
  SLIDESHOW CONTAINER
 ********************/
@@ -357,4 +329,103 @@ color: var(--linkcolor);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*******************
+       PRODUCTS
+********************/
+
+#products{
+  color: var(--txtcolor);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0em;
+  justify-content: center;
+  margin-top: 2em;
+  
+}
+
+#products li{
+  padding: 10px;
+  border-radius: 10px;
+  flex: 0 0 270px;
+  text-align: center;
+  border: solid white 1px;
+  margin: 1em;
+}
+
+#products li p {
+  font-size: var(--globaltxtsize);
+}
+
+.productTitle {
+  font-size: 1.2em;
+}
+
+/*******************
+       CONTATTI PAGE
+********************/
+
+#contactsContainer {
+  margin-top: 2em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0em;
+}
+
+#contactsContainer li{
+  list-style: none;
+}
+
+#contactList ul {
+  margin-left: 0.2em;
+  padding: 0%;
+}
+/* ! METTERE I NUMERI DI TELEFONO COME LINK */
+#contactList a {
+}
+
+#contactList a:hover {
+}
+/*! */
+#contactList {
+  flex: 1.5 1;
+}
+
+#contactList * {
+  margin-left: 1em;
+}
+
+#formRequestsContainer {
+  flex: 3 1;
+  text-align: center;
+}
+
+#formRequestsContainer input, textarea {
+  width: 60%;
+  border-radius: 0.5em;
+}
+
+#formRequestsContainer input {
+  margin-bottom: 2em;
+}
+
+#requestsForm label {
+  text-align: center;
+}
+
+#requestsForm input[type="button"]{
+  width: 30%;
+  margin-top: 2em;
+}
+
+#requestsForm textarea {
+  height: 10em;
+}
+
+#agreementBlock label, input {
+  margin: 0em;
 }
