@@ -1,5 +1,5 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+
 // Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -26,7 +26,7 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-var btn = $('#toTop');
+var btn = $('#toTopBTN');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
