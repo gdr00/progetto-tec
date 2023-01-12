@@ -304,7 +304,7 @@ color: var(--linkcolor);
 }
 #toTopBTN::after {
   content: "\f077";
-  font-family: FontAwesome;
+  font-family: "Verdana", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
