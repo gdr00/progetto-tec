@@ -121,12 +121,11 @@ nav, div {
   flex-wrap: nowrap;
   height: 100%;
   list-style-type: none;
-  margin: 0;
   position: relative;
 }
 
 #menu li {
-  padding: 0em 0em 0em 1.5em; /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
+  padding: 0em 0em 0em calc(1.5*var(--globaltxtsize)); /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
 }
 
 #menu a {
@@ -255,8 +254,10 @@ main ul{
 
 .mySlides img {
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 35vh;
   border-radius: 2rem;
+  position: relative;
+  left: auto;
 }
 
 .prev,
@@ -265,14 +266,17 @@ main ul{
   position: absolute;
   top: 50%;
   width: auto;
+  min-width: 44px;
+  min-height: 30px;
   margin-top: -2em;
   padding: 1em;
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 2em;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .next {
