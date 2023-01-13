@@ -14,7 +14,7 @@
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
   --animatedformcolor: #1BDC88;
-  --tableoddrowcolor: #585858;
+  --tableoddrowcolor: #4D4D4D;
   --tableevenrowcolor: #1BDC88;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
@@ -139,7 +139,7 @@ header h1 {
 
 #menu a.active,
 #menu a:hover {
-  background-color: #717171;
+  background-color: #333333;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
   transition: linear 0.14s;
