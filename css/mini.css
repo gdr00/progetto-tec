@@ -1,34 +1,3 @@
-:root {
-    --navbarbg: #050505;
-    --breadcrumbbg: grey;
-    --footerbg: rgba(0, 0, 0, 0.35);
-    --bodybgcolor: #050505;
-    --bodylineheight: 1.9em;
-    --txtcolor: #f1f1f1;
-    --linkcolor: #003cff;
-    --linkvisited: #f1f1f1;
-    --linkhovercolor: #1BDC88;
-    --navlinkcolor: #f1f1f1;
-    --navlinkvisited: #f1f1f1;
-    --navlinkhovercolor: #1BDC88;
-    --themebg: #f1f1f1;
-    --themeborder: #1BDC88;
-    --animatedformcolor: #1BDC88;
-    --tableoddrowcolor: #585858;
-    --tableevenrowcolor: #1BDC88;
-    /*take the min from the min of vw, vh or 
-    if it is too big take the minumum of default text size*/
-    /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
-    /*--globaltxtsize: 1em;/* */
-    --iconpos: left;
-    --logo: url(../img/logo-sfondo-nero.webp);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html,
 body {
     font-size: 1em;
@@ -40,13 +9,6 @@ body {
 html {
     background: var(--bodybgcolor);
     /*scroll-behavior: smooth; /*smooth scroll su tutta la pagina o link che snappano?*/
-}
-
-body {
-    max-width: 1024px;
-    margin: auto;
-    background-color: var(--bodybgcolor);
-    color: var(--txtcolor);
 }
 
 a {
