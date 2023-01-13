@@ -240,9 +240,8 @@ main ul{
 ********************/
 
 .slideshowContainer {
-  max-width: 1024px;
-  position: relative;
   width: fit-content;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
