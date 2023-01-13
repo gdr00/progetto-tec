@@ -1,4 +1,12 @@
 var slideIndex = 1;
+var theme = "dark";
+
+document.readyState(setup());
+
+function setup() {
+  localStorage.setItem('panelTheme', theme);
+}
+
 
 // Next/previous controls
 function plusSlides(n) {
@@ -26,9 +34,6 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-var theme = "dark";
-document.localStorage.setItem('panelTheme', theme);
-
 function changeTheme() {
   localstTheme = localStorage.getItem('panelTheme');
   if (localstTheme == 'dark') {
@@ -41,12 +46,25 @@ function changeTheme() {
 function setTheme(theme) {
   if (theme == 'dark') {
     localStorage.setItem('panelTheme', theme);
-    $(':root').css('--bodybgcolor', '#050505');
+    document.documentElement.style.setProperty('--bodybgcolor', '#050505');
+    document.documentElement.style.setProperty('--navbarbg', '#050505');
+    document.documentElement.style.setProperty('--txtcolor', '#f1f1f1');
+    document.documentElement.style.setProperty('--linkcolor', '#f1f1f1');
+    document.documentElement.style.setProperty('--linkvisited', '#f1f1f1');
+    document.documentElement.style.setProperty('--linknavhovercolor', '#1BDC88');
+    document.documentElement.style.setProperty('--iconpos', 'left');
+    document.documentElement.style.setProperty('--logo', 'url(../img/logo-sfondo-nero.webp)');
   }
   if (theme == 'light') {
-    localStorage.setItem('panelTheme', 'light');
-    $(':root').css('--bodybgcolor', '#ffffff');
-    alert("light");
+    localStorage.setItem('panelTheme', theme);
+    document.documentElement.style.setProperty('--bodybgcolor', '#ffffff');
+    document.documentElement.style.setProperty('--navbarbg', '#ffffff');
+    document.documentElement.style.setProperty('--txtcolor', '#000000');
+    document.documentElement.style.setProperty('--linkcolor', '#000000');
+    document.documentElement.style.setProperty('--linkvisited', '#000000');
+    document.documentElement.style.setProperty('--linknavhovercolor', '#1BDC88');
+    document.documentElement.style.setProperty('--iconpos', 'right');
+    document.documentElement.style.setProperty('--logo', 'url(../img/logo-sfondo-bianco.webp)');
   }
 }
 
