@@ -4,7 +4,7 @@ var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor
 var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
 var btn = $('#toTopBTN');
 
-window.readyState(setup());
+document.readyState(setup());
 
 function setup() {
   localStorage.setItem('panelTheme', theme);
