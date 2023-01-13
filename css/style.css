@@ -11,6 +11,8 @@
   --navlinkcolor: #f1f1f1;
   --navlinkvisited: #f1f1f1;
   --navlinkhovercolor: #1BDC88;
+  --themebg: #f1f1f1;
+  --themeborder: #1BDC88;
   --animatedformcolor:#1BDC88;
   --tableoddrowcolor: #585858;
   --tableevenrowcolor: #1BDC88;
@@ -164,11 +166,11 @@ color: var(--navlinknavhovercolor);
   height: 30px;
   background: url(../img/prova.png) no-repeat center;
   background-size: contain; /*fit the image cutting it no stretch*/
-  background-color: var(--txtcolor);
+  background-color: var(--themebg);
   background-position: var(--iconpos); /*when clicked change property throug js to right and bgcolor to #000*/
   transition: linear 0.1s;
   border-radius: 15px;
-  border: 2px solid var(--linknavhovercolor);
+  border: 2px solid var(--themeborder);
   margin-left: 1.5em;
 }
 
