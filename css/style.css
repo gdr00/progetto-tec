@@ -31,7 +31,7 @@
 
 html,
 body {
-    font-size: 100%;
+    font-size: var(--globaltxtsize);
     font-family: "Verdana", sans-serif;
     line-height: 1.5em;
     margin: auto;
@@ -74,7 +74,7 @@ header {
   background-color: var(--navbarbg);
 }
 
-header > * { /*all the children of header grow to fit container and center themself in it*/
+header > * { /*all the children of header center themself in it*/
   align-self: center;
   flex-grow: 0;
 }
@@ -93,10 +93,6 @@ header h1 {
 header h2 {
   padding: 0.5em;
   margin-top: 0.7em;
-}
-
-h2{
-  font-size: 1.8em;
 }
 
 /*******************
@@ -199,6 +195,18 @@ color: var(--navlinknavhovercolor);
 /*******************
        CONTENT
 ********************/
+
+main h1 {
+  margin: .5em 0 .2em .5em;
+}
+
+main h2 {
+  margin: .5em 0 .2em .5em;
+}
+
+main ul{
+  margin-left: calc(var(--globaltxtsize)*3);
+}
 
 #products{
   color: var(--txtcolor);
