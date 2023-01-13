@@ -66,36 +66,12 @@ a:hover {
         HEADER
 ********************/
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    color: var(--txtcolor);
-    height: 10em;
-    background-color: var(--navbarbg);
-}
-
-header>* {
-    /*all the children of header center themself in it*/
-    align-self: center;
-    flex-grow: 0;
+    height: 6.5em;
 }
 
 header h1 {
-    display: block;
     width: 55%;
     height: 100%;
-    background: var(--logo) no-repeat center left;
-    background-size: contain;
-    /*fit the image without cutting it*/
-    background-position: left;
-    text-indent: -9999em;
-    font-size: 1px;
-}
-
-header h2 {
-    padding: 0.5em;
-    margin-top: 0.7em;
 }
 
 /*******************
@@ -119,12 +95,7 @@ header h2 {
 }
 
 #breadcrumb {
-    background-color: var(--breadcrumbbg);
-    border-radius: 5px;
-    border-top: 3px solid #3b3c41;
-    border-bottom: 2px solid #3b3c41;
-    color: var(--txtcolor);
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 #breadcrumb img {
