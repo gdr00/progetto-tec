@@ -49,14 +49,31 @@ var values = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88',
 function setTheme(theme) {
   if (theme == 'dark') {
     localStorage.setItem('panelTheme', theme);
-    for (var i = 0; i < properties.length; i++) {
+    /*for (var i = 0; i < properties.length; i++) {
       document.documentElement.style.setProperty(properties[i], values[0][i]);
-    }
+    }*/
+    document.documentElement.style.setProperty('--bodybgcolor', '#050505');
+    document.documentElement.style.setProperty('--navbarbg', '#050505');
+    document.documentElement.style.setProperty('--txtcolor', '#f1f1f1');
+    document.documentElement.style.setProperty('--linkcolor', '#f1f1f1');
+    document.documentElement.style.setProperty('--linkvisited', '#f1f1f1');
+    document.documentElement.style.setProperty('--linknavhovercolor', '#1BDC88');
+    document.documentElement.style.setProperty('--iconpos', 'left');
+    document.documentElement.style.setProperty('--logo', 'url(../img/logo-sfondo-nero.webp)');
   }
   if (theme == 'light') {
-    for (var i = 0; i < properties.length; i++) {
+    localStorage.setItem('panelTheme', theme);
+    /*for (var i = 0; i < properties.length; i++) {
       document.documentElement.style.setProperty(properties[i], values[1][i]);
-    }
+    }*/
+    document.documentElement.style.setProperty('--bodybgcolor', '#ffffff');
+    document.documentElement.style.setProperty('--navbarbg', '#ffffff');
+    document.documentElement.style.setProperty('--txtcolor', '#000000');
+    document.documentElement.style.setProperty('--linkcolor', '#000000');
+    document.documentElement.style.setProperty('--linkvisited', '#000000');
+    document.documentElement.style.setProperty('--linknavhovercolor', '#1BDC88');
+    document.documentElement.style.setProperty('--iconpos', 'right');
+    document.documentElement.style.setProperty('--logo', 'url(../img/logo-sfondo-bianco.webp)');
   }
 }
 
