@@ -112,18 +112,13 @@ nav, div {
 
 #menu > * {
   align-self: center;
-  flex-grow: 0;
 }
 
 #menu ul {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
   height: 100%;
   list-style-type: none;
-  position: relative;
 }
 
 #menu li {
@@ -154,7 +149,7 @@ nav, div {
 }
 
 #menu a:hover { /*post li a:visited altrimenti non sovrascrive*/
-color: var(--navlinknavhovercolor);
+color: var(--navlinkhovercolor);
 }
 
 #hamburger{
