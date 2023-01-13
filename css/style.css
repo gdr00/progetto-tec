@@ -18,7 +18,7 @@
   --tableevenrowcolor: #1BDC88;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
-  --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
+  /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
   /*--globaltxtsize: 1em;/* */
   --iconpos: left;
   --logo: url(../img/logo-sfondo-nero.webp);
@@ -31,7 +31,7 @@
 
 html,
 body {
-    font-size: var(--globaltxtsize);
+    font-size: 1em;
     font-family: "Verdana", sans-serif;
     line-height: 1.5em;
     margin: auto;
@@ -70,7 +70,7 @@ header {
   justify-content: center;
   flex-wrap: nowrap;
   color: var(--txtcolor);
-  height: calc(10*var(--globaltxtsize));
+  height: 10em;
   background-color: var(--navbarbg);
 }
 
@@ -275,6 +275,7 @@ main ul{
   font-size: 2em;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  border-width: 0;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.35);
 }
@@ -295,8 +296,8 @@ main ul{
 
 .dot {
   cursor: pointer;
-  height: 1em;
-  width: 1em;
+  height: 1.2em;
+  width: 1.2em;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
