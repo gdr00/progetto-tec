@@ -5,7 +5,7 @@
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em;
   --txtcolor: #f1f1f1;
-  --linkcolor: #003cff;
+  --linkcolor: #f1f1f1;
   --linkvisited: #f1f1f1;
   --linkhovercolor: #1BDC88;
   --navlinkcolor: #f1f1f1;
@@ -51,7 +51,6 @@ body {
 
 a {
   color: var(--linkcolor);
-  text-decoration: none;
 }
 
 a:visited {
@@ -368,6 +367,13 @@ main ul {
 /*******************
        FOOTER
 ********************/
+
+footer { /*footer fatto con flex per semplicità di riscalatura*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 /*******************
        TABLE
