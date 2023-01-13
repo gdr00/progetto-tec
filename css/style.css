@@ -117,7 +117,6 @@ nav, div {
 #menu ul {
   display: flex;
   flex-direction: row;
-  height: 100%;
   list-style-type: none;
 }
 
@@ -166,7 +165,7 @@ color: var(--navlinkhovercolor);
   transition: linear 0.1s;
   border-radius: 15px;
   border: 2px solid var(--themeborder);
-  margin-left: 1.5em;
+  margin-left: 1em;
 }
 
 #breadcrumb{
