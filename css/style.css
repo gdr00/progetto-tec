@@ -5,7 +5,7 @@
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em;
   --txtcolor: #f1f1f1;
-  --linkcolor: #f1f1f1;
+  --linkcolor: #003cff;
   --linkvisited: #f1f1f1;
   --linkhovercolor: #1BDC88;
   --navlinkcolor: #f1f1f1;
@@ -111,7 +111,6 @@ nav, div {
 #menu{
   text-align: right;
   width: 70%;
-  height: calc(3*var(--globaltxtsize));
   color: var(--txtcolor);
   font-size: var(--globaltxtsize);
 }
@@ -133,14 +132,14 @@ nav, div {
 }
 
 #menu a {
-  color: var(--linkcolor);
+  color: var(--navlinkcolor);
   text-decoration: none;
   font-weight: bold;
   font-size: var(--globaltxtsize);
 }
 
 #menu a:visited{
-  color: var(--linkvisited);
+  color: var(--navlinkvisited);
 }
 
 #menu a {
@@ -156,7 +155,7 @@ nav, div {
 }
 
 #menu a:hover { /*post li a:visited altrimenti non sovrascrive*/
-color: var(--linknavhovercolor);
+color: var(--navlinknavhovercolor);
 }
 
 #themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
