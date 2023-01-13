@@ -4,15 +4,15 @@
   --footerbg: rgba(0, 0, 0, 0.35);
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em;
-  --txtnavhovercolor: #007cb0;
+  --linknavhovercolor: #1BDC88;
   --txtcolor: #f1f1f1;
-  --linkcolor: #1BDC88;
-  --linkvisited: #1BDC88;
+  --linkcolor: #f1f1f1;
+  --linkvisited: #f1f1f1;
   --socialslinkcolor: #007cb0;
   --socialshovercolor: #fff;
   --animatedformcolor:#1BDC88;
   --tableoddrowcolor: #585858;
-  --tableevenrowcolor: #007cb0;
+  --tableevenrowcolor: #1BDC88;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
   --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
@@ -117,14 +117,14 @@ nav, div {
 }
 
 #menu a {
-  color: var(--txtcolor);
+  color: var(--linkcolor);
   text-decoration: none;
   font-weight: bold;
   font-size: var(--globaltxtsize);
 }
 
 #menu a:visited{
-  color: var(--txtcolor);
+  color: var(--linkvisited);
 }
 
 #menu a {
@@ -140,10 +140,10 @@ nav, div {
 }
 
 #menu a:hover { /*post li a:visited altrimenti non sovrascrive*/
-color: var(--linkcolor);
+color: var(--linknavhovercolor);
 }
 
-#themeButContainer #themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
+#themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
   display: block;
   width: 80px;
   height: 30px;

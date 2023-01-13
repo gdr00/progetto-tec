@@ -26,6 +26,30 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
+var theme = "dark";
+document.localStorage.setItem('panelTheme', theme);
+
+function changeTheme() {
+  localstTheme = localStorage.getItem('panelTheme');
+  if (localstTheme == 'dark') {
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+}
+
+function setTheme(theme) {
+  if (theme == 'dark') {
+    localStorage.setItem('panelTheme', theme);
+    $(':root').css('--bodybgcolor', '#050505');
+  }
+  if (theme == 'light') {
+    localStorage.setItem('panelTheme', 'light');
+    $(':root').css('--bodybgcolor', '#ffffff');
+    alert("light");
+  }
+}
+
 var btn = $('#toTopBTN');
 
 $(window).scroll(function() {
