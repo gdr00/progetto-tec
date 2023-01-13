@@ -1,5 +1,7 @@
 var slideIndex = 1;
 var theme = "dark";
+var properties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--iconpos', '--logo']
+var values = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
 
 document.readyState(setup());
 
@@ -43,37 +45,18 @@ function changeTheme() {
   }
 }
 
-var properties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--iconpos', '--logo']
-var values = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
-
 function setTheme(theme) {
   if (theme == 'dark') {
     localStorage.setItem('panelTheme', theme);
-    /*for (var i = 0; i < properties.length; i++) {
+    for (var i = 0; i < properties.length; i++) {
       document.documentElement.style.setProperty(properties[i], values[0][i]);
-    }*/
-    document.documentElement.style.setProperty('--bodybgcolor', '#050505');
-    document.documentElement.style.setProperty('--navbarbg', '#050505');
-    document.documentElement.style.setProperty('--txtcolor', '#f1f1f1');
-    document.documentElement.style.setProperty('--linkcolor', '#f1f1f1');
-    document.documentElement.style.setProperty('--linkvisited', '#f1f1f1');
-    document.documentElement.style.setProperty('--linknavhovercolor', '#1BDC88');
-    document.documentElement.style.setProperty('--iconpos', 'left');
-    document.documentElement.style.setProperty('--logo', 'url(../img/logo-sfondo-nero.webp)');
+    } /* attenzione alla posizione delle variabili globali, prima erano tra set theme e changeTheme, siccome change chiama set e le variabili erano dichiarate sotto change per change non esistevano ancora e crashava con metodo .lenght*/
   }
   if (theme == 'light') {
     localStorage.setItem('panelTheme', theme);
-    /*for (var i = 0; i < properties.length; i++) {
+    for (var i = 0; i < properties.length; i++) {
       document.documentElement.style.setProperty(properties[i], values[1][i]);
-    }*/
-    document.documentElement.style.setProperty('--bodybgcolor', '#ffffff');
-    document.documentElement.style.setProperty('--navbarbg', '#ffffff');
-    document.documentElement.style.setProperty('--txtcolor', '#000000');
-    document.documentElement.style.setProperty('--linkcolor', '#000000');
-    document.documentElement.style.setProperty('--linkvisited', '#000000');
-    document.documentElement.style.setProperty('--linknavhovercolor', '#1BDC88');
-    document.documentElement.style.setProperty('--iconpos', 'right');
-    document.documentElement.style.setProperty('--logo', 'url(../img/logo-sfondo-bianco.webp)');
+    }/**/
   }
 }
 
