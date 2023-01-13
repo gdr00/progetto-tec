@@ -4,7 +4,7 @@ var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor
 var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
 var btn = $('#toTopBTN');
 
-document.readyState(setup());
+window.readyState(setup());
 
 function setup() {
   localStorage.setItem('panelTheme', theme);
@@ -62,7 +62,7 @@ function setTheme(theme) {
 }
 
 window.scroll(function() {
-  if ($(window).scrollTop() > 300) {
+  if (window.scrollTop() > 300) {
     btn.addClass('show');
   } else {
     btn.removeClass('show');
@@ -71,5 +71,6 @@ window.scroll(function() {
 
 btn.on('click', function(e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  window.animate({scrollTop:0}, '300');
+  
 });
