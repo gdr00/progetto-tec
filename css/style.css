@@ -126,6 +126,7 @@ div {
 
 #menu li {
   padding: 0em 0em 0em .5em;
+  align-self: center;
   /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
 }
 
