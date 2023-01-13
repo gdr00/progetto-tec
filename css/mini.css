@@ -1,0 +1,310 @@
+:root {
+    --navbarbg: #050505;
+    --breadcrumbbg: grey;
+    --footerbg: rgba(0, 0, 0, 0.35);
+    --bodybgcolor: #050505;
+    --bodylineheight: 1.9em;
+    --txtcolor: #f1f1f1;
+    --linkcolor: #003cff;
+    --linkvisited: #f1f1f1;
+    --linkhovercolor: #1BDC88;
+    --navlinkcolor: #f1f1f1;
+    --navlinkvisited: #f1f1f1;
+    --navlinkhovercolor: #1BDC88;
+    --themebg: #f1f1f1;
+    --themeborder: #1BDC88;
+    --animatedformcolor: #1BDC88;
+    --tableoddrowcolor: #585858;
+    --tableevenrowcolor: #1BDC88;
+    /*take the min from the min of vw, vh or 
+    if it is too big take the minumum of default text size*/
+    /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
+    /*--globaltxtsize: 1em;/* */
+    --iconpos: left;
+    --logo: url(../img/logo-sfondo-nero.webp);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 1em;
+    font-family: "Verdana", sans-serif;
+    line-height: 1.5em;
+    margin: auto;
+}
+
+html {
+    background: var(--bodybgcolor);
+    /*scroll-behavior: smooth; /*smooth scroll su tutta la pagina o link che snappano?*/
+}
+
+body {
+    max-width: 1024px;
+    margin: auto;
+    background-color: var(--bodybgcolor);
+    color: var(--txtcolor);
+}
+
+a {
+    color: var(--linkcolor);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--linkvisited);
+}
+
+a:hover {
+    color: var(--linknavhovercolor);
+}
+
+/*******************
+        HEADER
+********************/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    color: var(--txtcolor);
+    height: 10em;
+    background-color: var(--navbarbg);
+}
+
+header>* {
+    /*all the children of header center themself in it*/
+    align-self: center;
+    flex-grow: 0;
+}
+
+header h1 {
+    display: block;
+    width: 30%;
+    height: 100%;
+    background: var(--logo) no-repeat center left;
+    background-size: contain;
+    /*fit the image without cutting it*/
+    background-position: left;
+    text-indent: -9999em;
+    font-size: 1px;
+}
+
+header h2 {
+    padding: 0.5em;
+    margin-top: 0.7em;
+}
+
+/*******************
+      NAVIGATION
+********************/
+nav,
+div {
+    display: block;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: var(--txtcolor);
+    font-size: 1em;
+}
+
+#menu>* {
+    align-self: center;
+}
+
+#menu ul {
+    display: none;
+}
+
+#menu li {
+    padding: 0em 0em 0em .5em;
+    /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
+}
+
+#menu a {
+    color: var(--navlinkcolor);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#menu a:visited {
+    color: var(--navlinkvisited);
+}
+
+#menu a {
+    padding: .5em .5em;
+    border-radius: 1em;
+}
+
+/*top bottom left right padding in order to eliminate the text movement*/
+
+#menu a.active,
+#menu a:hover {
+    background-color: #717171;
+    /*border-radius: 1em;
+  padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
+    transition: linear 0.14s;
+}
+
+#menu a:hover {
+    /*post li a:visited altrimenti non sovrascrive*/
+    color: var(--navlinkhovercolor);
+}
+
+#hamburger {
+    display: block;
+    /*hidden by default in main style, unhidden in mini*/
+    height: 45px;
+    width: 45px;
+
+}
+
+#breadcrumb {
+    background-color: var(--breadcrumbbg);
+    border-radius: 5px;
+    border-top: 3px solid #3b3c41;
+    border-bottom: 2px solid #3b3c41;
+    color: var(--txtcolor);
+    font-size: 1em;
+}
+
+#breadcrumb img {
+    width: .8em;
+    height: .8em;
+    margin: 0em 0.1em 0em .8em;
+}
+
+#breadcrumb p {
+    padding: 0.5em;
+    padding-left: 0;
+    font-size: .8em;
+}
+
+
+/*******************
+       CONTENT
+********************/
+
+main h1 {
+    margin: .5em 0 .2em .5em;
+}
+
+main h2 {
+    margin: .5em 0 .2em .5em;
+}
+
+main ul {
+    margin-left: 3em;
+}
+
+#products {
+    color: var(--txtcolor);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0em;
+    justify-content: center;
+    margin-top: 2em;
+
+}
+
+#products li {
+    padding: 10px;
+    border-radius: 10px;
+    flex: 0 0 270px;
+    text-align: center;
+    border: solid white 1px;
+    margin: 1em;
+}
+
+#products li p {
+    font-size: 1em;
+}
+
+.productTitle {
+    font-size: 1.2em;
+}
+
+/*******************
+ SLIDESHOW CONTAINER
+********************/
+
+.mySlides img {
+    max-width: 100%;
+    max-height: 32vh;
+    border-radius: 1rem;
+}
+
+.prev,
+.next {
+    display: none;
+}
+
+/*******************
+    BACK TO TOP
+********************/
+#toTop {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    bottom: 42px;
+    right: 42px;
+}
+
+/*******************
+       FOOTER
+********************/
+
+/*******************
+       TABLE
+********************/
+
+table {
+    border-collapse: collapse;
+}
+
+table caption {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+table thead tr:nth-child(odd) {
+    background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--tableevenrowcolor);
+}
+
+#tabOrari {
+    font-size: 0.6em;
+}
+
+#tabOrari th[scope="row"] {
+    text-align: left;
+    padding: 0.2em;
+}
+
+#tabOrari td {
+    text-align: center;
+    padding: 0.2em;
+}
+
+/*******************
+     LOGIN PAGE
+********************/
+
+/*******************
+      chiSiamo
+********************/

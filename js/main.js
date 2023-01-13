@@ -1,8 +1,7 @@
 var slideIndex = 1;
 var theme = "dark";
-var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--themebg', '--themeborder', '--iconpos', '--logo']
-var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
-var btn = $('#toTopBTN');
+var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--themebg', '--themeborder', '--iconpos', '--logo'];
+var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']];
 
 document.readyState(setup());
 
@@ -61,16 +60,16 @@ function setTheme(theme) {
   }
 }
 
-window.scroll(function() {
-  if (window.scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
+document.scroll(function(){
+  var y = this.scrollTop();
+  window.alert(y);
+  if(y > 200){
+    document.getElementById("toTop").style.display = "block";
+  }else{
+    document.getElementById("toTop").style.display = "none";
   }
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  window.animate({scrollTop:0}, '300');
-  
-});
+function toTop(){
+  window.scroll({top : 0, behavior : 'smooth'});
+} 

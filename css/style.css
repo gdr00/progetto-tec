@@ -1,4 +1,4 @@
-:root{
+:root {
   --navbarbg: #050505;
   --breadcrumbbg: grey;
   --footerbg: rgba(0, 0, 0, 0.35);
@@ -13,7 +13,7 @@
   --navlinkhovercolor: #1BDC88;
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
-  --animatedformcolor:#1BDC88;
+  --animatedformcolor: #1BDC88;
   --tableoddrowcolor: #585858;
   --tableevenrowcolor: #1BDC88;
   /*take the min from the min of vw, vh or 
@@ -31,34 +31,35 @@
 
 html,
 body {
-    font-size: 1em;
-    font-family: "Verdana", sans-serif;
-    line-height: 1.5em;
-    margin: auto;
+  font-size: 1em;
+  font-family: "Verdana", sans-serif;
+  line-height: 1.5em;
+  margin: auto;
 }
 
 html {
-    background: var(--bodybgcolor);
+  background: var(--bodybgcolor);
+  /*scroll-behavior: smooth; /*smooth scroll su tutta la pagina o link che snappano?*/
 }
 
 body {
-    max-width: 1024px;
-    margin: auto;
-    background-color: var(--bodybgcolor);
-    color: var(--txtcolor);
+  max-width: 1024px;
+  margin: auto;
+  background-color: var(--bodybgcolor);
+  color: var(--txtcolor);
 }
 
 a {
-    color: var(--linkcolor);
-    text-decoration: none;
+  color: var(--linkcolor);
+  text-decoration: none;
 }
 
-a:visited{
+a:visited {
   color: var(--linkvisited);
 }
 
 a:hover {
-    color: var(--linknavhovercolor);
+  color: var(--linknavhovercolor);
 }
 
 /*******************
@@ -74,7 +75,8 @@ header {
   background-color: var(--navbarbg);
 }
 
-header > * { /*all the children of header center themself in it*/
+header>* {
+  /*all the children of header center themself in it*/
   align-self: center;
   flex-grow: 0;
 }
@@ -84,7 +86,8 @@ header h1 {
   width: 30%;
   height: 100%;
   background: var(--logo) no-repeat center left;
-  background-size: contain; /*fit the image without cutting it*/
+  background-size: contain;
+  /*fit the image without cutting it*/
   background-position: left;
   text-indent: -9999em;
   font-size: 1px;
@@ -98,11 +101,12 @@ header h2 {
 /*******************
       NAVIGATION
 ********************/
-nav, div {
+nav,
+div {
   display: block;
 }
 
-#menu{
+#menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -110,7 +114,7 @@ nav, div {
   font-size: 1em;
 }
 
-#menu > * {
+#menu>* {
   align-self: center;
 }
 
@@ -121,7 +125,8 @@ nav, div {
 }
 
 #menu li {
-  padding: 0em 0em 0em .5em; /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
+  padding: 0em 0em 0em .5em;
+  /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
 }
 
 #menu a {
@@ -131,44 +136,52 @@ nav, div {
   font-size: 1em;
 }
 
-#menu a:visited{
+#menu a:visited {
   color: var(--navlinkvisited);
 }
 
 #menu a {
   padding: .5em .5em;
   border-radius: 1em;
-} /*top bottom left right padding in order to eliminate the text movement*/
+}
 
-#menu a.active, #menu a:hover {
+/*top bottom left right padding in order to eliminate the text movement*/
+
+#menu a.active,
+#menu a:hover {
   background-color: #717171;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
   transition: linear 0.14s;
 }
 
-#menu a:hover { /*post li a:visited altrimenti non sovrascrive*/
-color: var(--navlinkhovercolor);
+#menu a:hover {
+  /*post li a:visited altrimenti non sovrascrive*/
+  color: var(--navlinkhovercolor);
 }
 
-#hamburger{
-  display: none; /*hidden by default in main style, unhidden in mini*/
+#hamburger {
+  display: none;
+  /*hidden by default in main style, unhidden in mini*/
 }
 
-#themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
+#themeButton {
+  /*button to change theme with increased specificity to overwrite previous settings on hover*/
   width: 80px;
   height: 30px;
   background: url(../img/prova.png) no-repeat center;
-  background-size: contain; /*fit the image cutting it no stretch*/
+  background-size: contain;
+  /*fit the image cutting it no stretch*/
   background-color: var(--themebg);
-  background-position: var(--iconpos); /*when clicked change property throug js to right and bgcolor to #000*/
+  background-position: var(--iconpos);
+  /*when clicked change property throug js to right and bgcolor to #000*/
   transition: linear 0.1s;
   border-radius: 15px;
   border: 2px solid var(--themeborder);
   margin: 0em 1em;
 }
 
-#breadcrumb{
+#breadcrumb {
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
   border-top: 3px solid #3b3c41;
@@ -177,14 +190,14 @@ color: var(--navlinkhovercolor);
   font-size: 1em;
 }
 
-#breadcrumb img{
+#breadcrumb img {
   display: inline;
   width: 1em;
   height: 1em;
   margin: 0em 0.5em 0em 0.5em;
 }
 
-#breadcrumb p{
+#breadcrumb p {
   display: inline;
   padding: 0.5em;
   padding-left: 0;
@@ -203,11 +216,11 @@ main h2 {
   margin: .5em 0 .2em .5em;
 }
 
-main ul{
+main ul {
   margin-left: 3em;
 }
 
-#products{
+#products {
   color: var(--txtcolor);
   display: flex;
   flex-wrap: wrap;
@@ -215,10 +228,10 @@ main ul{
   padding: 0em;
   justify-content: center;
   margin-top: 2em;
-  
+
 }
 
-#products li{
+#products li {
   padding: 10px;
   border-radius: 10px;
   flex: 0 0 270px;
@@ -243,6 +256,7 @@ main ul{
   width: fit-content;
   max-width: 1024px;
   position: relative;
+  /*to position the prev and next buttons*/
   margin: 0 auto;
 }
 
@@ -319,12 +333,45 @@ main ul{
 
 @keyframes fade {
   from {
-      opacity: .4
+    opacity: .4
   }
 
   to {
-      opacity: 1
+    opacity: 1
   }
+}
+
+/*******************
+    BACK TO TOP
+********************/
+#toTop {
+  display: none;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--navlinkcolor);
+  border-color: var(--navlinkcolor);
+  background-color: var(--navlinkhovercolor);
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  z-index: 1000;
+}
+
+#toTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#toTop:active {
+  background-color: #555;
 }
 
 /*******************
@@ -335,102 +382,63 @@ main ul{
        TABLE
 ********************/
 
-table{
+table {
   border-collapse: collapse;
 }
 
-table caption{
+table caption {
   font-weight: bold;
   font-size: 1.2em;
 }
 
-table thead tr:nth-child(odd){
+table thead tr:nth-child(odd) {
   background-color: var(--tableoddrowcolor);
 }
 
-table tbody tr:nth-child(even){
+table tbody tr:nth-child(even) {
   background-color: var(--tableoddrowcolor);
 }
 
-table tbody tr:nth-child(odd){
+table tbody tr:nth-child(odd) {
   background-color: var(--tableevenrowcolor);
 }
 
-#tabOrari{
+#tabOrari {
   font-size: 0.6em;
 }
 
-#tabOrari th[scope="row"]{
+#tabOrari th[scope="row"] {
   text-align: left;
   padding: 0.2em;
 }
 
-#tabOrari td{
+#tabOrari td {
   text-align: center;
   padding: 0.2em;
-}
-
-
-/*******************
-    BACK TO TOP
-********************/
-#toTopBTN {
-  display: block;
-  font-size: 1.6em;
-  background-color: var(--navlinkhovercolor);
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 15px;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  z-index: 1000;
-}
-#toTopBTN::after {
-  font-family: "Verdana", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
-}
-#toTopBTN:hover {
-  cursor: pointer;
-  background-color: #333;
-}
-#toTopBTN:active {
-  background-color: #555;
-}
-#toTopBTN.show {
-  opacity: 1;
-  visibility: visible;
 }
 
 /*******************
        LOGIN PAGE
 ********************/
-#loginContainer{
+#loginContainer {
   width: 50%;
   border-radius: 10px;
-  padding : 2em 2em;
-  margin-top : 1em;
-  margin-left : auto;
+  padding: 2em 2em;
+  margin-top: 1em;
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
   box-shadow: rgba(252, 252, 252, 0.15) 0px 2px 8px;
   text-align: center;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-input{
+input {
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 5px;
@@ -438,7 +446,7 @@ input{
   font-size: 1em;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   background-color: var(--linkcolor);
   color: white;
   border: none;
@@ -448,7 +456,7 @@ input[type="submit"]{
   margin-top: 1em;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
   background-color: #333;
   cursor: pointer;
 }
@@ -457,11 +465,12 @@ input[type="submit"]:hover{
  chiSiamo
 ********************/
 
-#chiSiamo{
+#chiSiamo {
   padding: 11px;
 }
-.cards{
-  margin : -10px;
+
+.cards {
+  margin: -10px;
   padding: 10px;
   list-style: none;
   display: flex;
@@ -469,30 +478,17 @@ input[type="submit"]:hover{
   justify-content: center;
 }
 
-.cards li{
+.cards li {
   background-color: #020507;
-  border : 1px solid #ccc;
+  border: 1px solid #ccc;
   margin: 0 10px 20px 10px;
   padding: 10px;
   border-radius: 5px;
-  flex:  0 0 400px; 
+  flex: 0 0 400px;
   text-align: center;
 }
 
-.numeroCellulare{
+.numeroCellulare {
   font-size: 1 em;
   color: var(--linkcolor);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-  
