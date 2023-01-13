@@ -129,13 +129,14 @@ nav, div {
 
 #menu a {
   padding: .5em .5em;
+  border-radius: 1em;
 } /*top bottom left right padding in order to eliminate the text movement*/
 
 #menu a.active, #menu a:hover {
   background-color: #717171;
-  transition: linear 0.14s;
-  border-radius: 1em;
+  /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
+  transition: linear 0.14s;
 }
 
 #menu a:hover { /*post li a:visited altrimenti non sovrascrive*/
@@ -421,6 +422,7 @@ input[type="submit"]:hover{
   background-color: #333;
   cursor: pointer;
 }
+
 
 
 

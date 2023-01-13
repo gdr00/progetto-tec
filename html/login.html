@@ -21,16 +21,21 @@
   
   <body>
     <header>
-      <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
+      <h1 tabindex="1">Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
       <nav id="menu">
           <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="html/chiSiamo.html">Chi siamo</a></li>
-              <li><a href="html/prodotti.html">I nostri prodotti</a></li>
-              <li><a href="html/info.html">Info</a></li>
-              <li><input type="button" id="themeButton" /></li>
+              <li><a tabindex="2" href="#home">Home</a></li>
+              <li><a tabindex="3" href="html/chiSiamo.html">Chi siamo</a></li>
+              <li><a tabindex="4" href="html/prodotti.html">I nostri prodotti</a></li>
+              <li><a tabindex="5" href="html/info.html">Info</a></li>
           </ul>
       </nav>
+      <nav id="hamburger">
+          <button id="hamburgerButton" onclick="toggleMenu()">&#9776;</button>
+      </nav>
+      <div id="themeButContainer">
+          <button tabindex="6" id="themeButton"></a>
+      </div>
   </header>
 
     <!-- BREADCRUMB -->
