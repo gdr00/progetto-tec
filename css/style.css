@@ -7,7 +7,10 @@
   --txtcolor: #f1f1f1;
   --linkcolor: #f1f1f1;
   --linkvisited: #f1f1f1;
-  --linknavhovercolor: #1BDC88;
+  --linkhovercolor: #1BDC88;
+  --navlinkcolor: #f1f1f1;
+  --navlinkvisited: #f1f1f1;
+  --navlinkhovercolor: #1BDC88;
   --animatedformcolor:#1BDC88;
   --tableoddrowcolor: #585858;
   --tableevenrowcolor: #1BDC88;
@@ -41,6 +44,19 @@ body {
     margin: auto;
     background-color: var(--bodybgcolor);
     color: var(--txtcolor);
+}
+
+a {
+    color: var(--linkcolor);
+    text-decoration: none;
+}
+
+a:visited{
+  color: var(--linkvisited);
+}
+
+a:hover {
+    color: var(--linknavhovercolor);
 }
 
 /*******************

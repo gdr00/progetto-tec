@@ -1,7 +1,8 @@
 var slideIndex = 1;
 var theme = "dark";
-var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--iconpos', '--logo']
-var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
+var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--iconpos', '--logo']
+var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
+var btn = $('#toTopBTN');
 
 document.readyState(setup());
 
@@ -60,9 +61,7 @@ function setTheme(theme) {
   }
 }
 
-var btn = $('#toTopBTN');
-
-$(window).scroll(function() {
+window.scroll(function() {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show');
   } else {
