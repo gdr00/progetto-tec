@@ -1,4 +1,15 @@
 var slideIndex = 1;
+var theme = "dark";
+var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linknavhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--themebg', '--themeborder', '--iconpos', '--logo']
+var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']]
+var btn = $('#toTopBTN');
+
+document.readyState(setup());
+
+function setup() {
+  localStorage.setItem('panelTheme', theme);
+}
+
 
 // Next/previous controls
 function plusSlides(n) {
@@ -26,9 +37,31 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-var btn = $('#toTopBTN');
+function changeTheme() {
+  localstTheme = localStorage.getItem('panelTheme');
+  if (localstTheme == 'dark') {
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+}
 
-$(window).scroll(function() {
+function setTheme(theme) {
+  if (theme == 'dark') {
+    localStorage.setItem('panelTheme', theme);
+    for (var i = 0; i < themeProperties.length; i++) {
+      document.documentElement.style.setProperty(themeProperties[i], themeValues[0][i]);
+    } /* attenzione alla posizione delle variabili globali, prima erano tra set theme e changeTheme, siccome change chiama set e le variabili erano dichiarate sotto change per change non esistevano ancora e crashava con metodo .lenght*/
+  }
+  if (theme == 'light') {
+    localStorage.setItem('panelTheme', theme);
+    for (var i = 0; i < themeProperties.length; i++) {
+      document.documentElement.style.setProperty(themeProperties[i], themeValues[1][i]);
+    }/**/
+  }
+}
+
+window.scroll(function() {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show');
   } else {
