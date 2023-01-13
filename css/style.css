@@ -26,6 +26,7 @@ body {
 
 html {
     background: var(--bodybgcolor);
+    background-image: linear-gradient(to bottom,black 90%, #393939);
 }
 
 body {
@@ -133,6 +134,21 @@ color: var(--linkcolor);
   padding: 0.5em;
 }
 
+#breadcrumb a:hover {
+  background-color: #717171;
+  transition: linear 0.14s;
+  border-radius: 1em;
+  padding: .5em .5em;
+  color: var(--linkcolor);
+}
+
+#breadcrumb a {
+  text-decoration: none;
+  color:white;
+}
+
+#breadcrumb a:visited {
+}
 
 /*******************
        CONTENT
@@ -225,6 +241,46 @@ color: var(--linkcolor);
 /*******************
        FOOTER
 ********************/
+/*******************
+       TABLE
+********************/
+
+table{
+  float:right;
+  border-collapse: collapse;
+}
+
+table caption{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+table thead tr:nth-child(odd){
+  background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(even){
+  background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(odd){
+  background-color: var(--tableevenrowcolor);
+}
+
+#tabOrari{
+  font-size: 0.6em;
+}
+
+#tabOrari th[scope="row"]{
+  text-align: left;
+  padding: 0.2em;
+}
+
+#tabOrari td{
+  text-align: center;
+  padding: 0.2em;
+}
+
 
 /*******************
     BACK TO TOP
@@ -394,29 +450,27 @@ color: var(--linkcolor);
 }
 
 #contactsList ul a:hover{
-  background-color: #717171;
   transition: linear 0.14s;
-  border-radius: 1em;
-  padding: .5em .5em;
   color: var(--linkcolor);
+}
+
+#contactList ul a:visited {
+  color: white;
 }
 
 #contactsList li {
   margin: 0.8em;
-  background-color: lightslategray;
+  background-color: #717171;
   border-radius: 3em;
   flex: 0 1 30px;
   padding: 1em;
   text-align: center;
 }
 
-/* ! METTERE I NUMERI DI TELEFONO COME LINK */
-#contactsList a {
+#contactsList li a {
+  text-decoration: none;
 }
 
-#contactsList a:hover {
-}
-/*! */
 #contactsList {
   flex: 1.5 1;
 }
@@ -429,6 +483,12 @@ color: var(--linkcolor);
 #formRequestsContainer input, textarea {
   width: 60%;
   border-radius: 0.5em;
+  padding:.8em;
+}
+
+#formRequestsContainer input:hover, textarea:hover {
+  border: 2px solid var(--linkcolor);
+  transition: linear 0.14s;
 }
 
 #formRequestsContainer input {
@@ -445,7 +505,7 @@ color: var(--linkcolor);
 }
 
 #requestsForm textarea {
-  height: 10em;
+  height: 4em;
 }
 
 #agreementBlock label, input {
