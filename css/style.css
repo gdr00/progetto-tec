@@ -67,7 +67,7 @@ a:hover {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   color: var(--txtcolor);
   height: 10em;
@@ -102,19 +102,21 @@ nav, div {
   display: block;
 }
 
-#hamburgerButton{
-  display: none; /*hidden by default in main style, unhidden in mini*/
+#menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: var(--txtcolor);
+  font-size: 1em;
 }
 
-#menu{
-  text-align: right;
-  width: 70%;
-  color: var(--txtcolor);
-  font-size: var(--globaltxtsize);
+#menu > * {
+  align-self: center;
+  flex-grow: 0;
 }
 
 #menu ul {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
@@ -125,14 +127,14 @@ nav, div {
 }
 
 #menu li {
-  padding: 0em 0em 0em calc(1.5*var(--globaltxtsize)); /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
+  padding: 0em 0em 0em .5em; /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
 }
 
 #menu a {
   color: var(--navlinkcolor);
   text-decoration: none;
   font-weight: bold;
-  font-size: var(--globaltxtsize);
+  font-size: 1em;
 }
 
 #menu a:visited{
@@ -155,8 +157,11 @@ nav, div {
 color: var(--navlinknavhovercolor);
 }
 
+#hamburger{
+  display: none; /*hidden by default in main style, unhidden in mini*/
+}
+
 #themeButton{ /*button to change theme with increased specificity to overwrite previous settings on hover*/
-  display: block;
   width: 80px;
   height: 30px;
   background: url(../img/prova.png) no-repeat center;
@@ -175,7 +180,7 @@ color: var(--navlinknavhovercolor);
   border-top: 3px solid #3b3c41;
   border-bottom: 2px solid #3b3c41;
   color: var(--txtcolor);
-  font-size: var(--globaltxtsize);
+  font-size: 1em;
 }
 
 #breadcrumb img{
@@ -205,7 +210,7 @@ main h2 {
 }
 
 main ul{
-  margin-left: calc(var(--globaltxtsize)*3);
+  margin-left: 3em;
 }
 
 #products{
@@ -229,7 +234,7 @@ main ul{
 }
 
 #products li p {
-  font-size: var(--globaltxtsize);
+  font-size: 1em;
 }
 
 .productTitle {
