@@ -83,7 +83,7 @@ header>* {
 
 header h1 {
     display: block;
-    width: 30%;
+    width: 55%;
     height: 100%;
     background: var(--logo) no-repeat center left;
     background-size: contain;
@@ -101,69 +101,21 @@ header h2 {
 /*******************
       NAVIGATION
 ********************/
-nav,
-div {
-    display: block;
-}
-
-#menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    color: var(--txtcolor);
-    font-size: 1em;
-}
-
-#menu>* {
-    align-self: center;
-}
 
 #menu ul {
     display: none;
 }
 
-#menu li {
-    padding: 0em 0em 0em .5em;
-    /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
-}
-
-#menu a {
-    color: var(--navlinkcolor);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-#menu a:visited {
-    color: var(--navlinkvisited);
-}
-
-#menu a {
-    padding: .5em .5em;
-    border-radius: 1em;
-}
-
-/*top bottom left right padding in order to eliminate the text movement*/
-
-#menu a.active,
-#menu a:hover {
-    background-color: #717171;
-    /*border-radius: 1em;
-  padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
-    transition: linear 0.14s;
-}
-
-#menu a:hover {
-    /*post li a:visited altrimenti non sovrascrive*/
-    color: var(--navlinkhovercolor);
-}
-
 #hamburger {
     display: block;
+    text-align: center;
     /*hidden by default in main style, unhidden in mini*/
-    height: 45px;
-    width: 45px;
-
+    height: 1.5em;
+    width: 1.5em;
+    background: none;
+    border: none;
+    color: var(--txtcolor);
+    font-size: 3em;
 }
 
 #breadcrumb {
