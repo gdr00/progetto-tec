@@ -242,6 +242,8 @@ main ul{
 .slideshowContainer {
   max-width: 1024px;
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .mySlides {
