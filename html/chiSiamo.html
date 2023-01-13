@@ -29,13 +29,13 @@
                 <li><a href="prodotti.html">I nostri prodotti</a></li>
                 <li><a href="info.html"><abbr>Info</abbr></a></li>
             </ul>
+            <nav id="hamburger">
+                <button id="hamburgerButton" onclick="toggleMenu()">&#9776;</button>
+            </nav>
+            <div id="themeButContainer" aria-hidden="true"> <!-- aria-hidden="true" per non far leggere il contenuto al screen reader (per disabilità visiva non serve un cambio di contrasto)-->
+                <button id="themeButton" onclick="changeTheme();" aria-hidden="true"></a>
+            </div>
         </nav>
-        <nav id="hamburger">
-            <button id="hamburgerButton" onclick="toggleMenu()">&#9776;</button>
-        </nav>
-        <div id="themeButContainer" aria-hidden="true">
-            <button id="themeButton" onclick="changeTheme();" aria-hidden="true"></a>
-        </div>
     </header>
 
     <nav id ="breadcrumb">
