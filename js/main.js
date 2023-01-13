@@ -7,7 +7,7 @@ var btn = $('#toTopBTN');
 document.readyState(setup());
 
 function setup() {
-  localStorage.setItem('panelTheme', theme);
+  sessionStorage.setItem('panelTheme', theme);
 }
 
 
@@ -38,7 +38,7 @@ function showSlides(n) {
 }
 
 function changeTheme() {
-  localstTheme = localStorage.getItem('panelTheme');
+  localstTheme = sessionStorage.getItem('panelTheme');
   if (localstTheme == 'dark') {
     setTheme('light');
   } else {
@@ -48,13 +48,13 @@ function changeTheme() {
 
 function setTheme(theme) {
   if (theme == 'dark') {
-    localStorage.setItem('panelTheme', theme);
+    sessionStorage.setItem('panelTheme', theme);
     for (var i = 0; i < themeProperties.length; i++) {
       document.documentElement.style.setProperty(themeProperties[i], themeValues[0][i]);
     } /* attenzione alla posizione delle variabili globali, prima erano tra set theme e changeTheme, siccome change chiama set e le variabili erano dichiarate sotto change per change non esistevano ancora e crashava con metodo .lenght*/
   }
   if (theme == 'light') {
-    localStorage.setItem('panelTheme', theme);
+    sessionStorage.setItem('panelTheme', theme);
     for (var i = 0; i < themeProperties.length; i++) {
       document.documentElement.style.setProperty(themeProperties[i], themeValues[1][i]);
     }/**/
