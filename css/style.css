@@ -180,14 +180,15 @@ color: var(--navlinknavhovercolor);
 
 #breadcrumb img{
   display: inline;
-  width: var(--globaltxtsize);
-  height: var(--globaltxtsize);
+  width: 1em;
+  height: 1em;
   margin: 0em 0.5em 0em 0.5em;
 }
 
 #breadcrumb p{
   display: inline;
   padding: 0.5em;
+  padding-left: 0;
 }
 
 
