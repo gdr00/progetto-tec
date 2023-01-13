@@ -165,7 +165,7 @@ color: var(--navlinkhovercolor);
   transition: linear 0.1s;
   border-radius: 15px;
   border: 2px solid var(--themeborder);
-  margin-left: 1em;
+  margin: 0em 1em;
 }
 
 #breadcrumb{
