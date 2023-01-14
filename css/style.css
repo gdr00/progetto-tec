@@ -222,7 +222,6 @@ main ul {
   padding: 0em;
   justify-content: center;
   margin-top: 2em;
-
 }
 
 #products li {
@@ -230,12 +229,14 @@ main ul {
   border-radius: 10px;
   flex: 0 0 270px;
   text-align: center;
-  border: solid white 1px;
+  border: solid var(--txtcolor) 1px;
+  background-color: var(--cardbg);
   margin: 1em;
 }
 
 #products li p {
   font-size: 1em;
+  padding: 1em .1em;
 }
 
 .productTitle {
