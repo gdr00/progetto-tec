@@ -60,7 +60,7 @@ function setTheme(theme) {
   }
 }
 
-document.scroll(function(){
+/*document.scroll(function(){
   var y = this.scrollTop();
   window.alert(y);
   if(y > 200){
@@ -68,7 +68,7 @@ document.scroll(function(){
   }else{
     document.getElementById("toTop").style.display = "none";
   }
-});
+}); /*non va boh*/
 
 function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});

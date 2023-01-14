@@ -433,7 +433,7 @@ main ul {
     BACK TO TOP
 ********************/
 #toTop {
-  display: none;
+  display: block;
   font-size: 1.6em;
   font-weight: bold;
   color: var(--navlinkcolor);
@@ -455,7 +455,7 @@ main ul {
 
 #toTop:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color: var(--cardbg);
 }
 
 #toTop:active {
