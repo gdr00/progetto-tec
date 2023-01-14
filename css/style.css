@@ -264,7 +264,7 @@ main ul {
 
 .mySlides img {
   max-width: 100%;
-  max-height: 35vh;
+  max-height: 45vh;
   border-radius: 2rem;
   position: relative;
   left: auto;
@@ -279,10 +279,10 @@ main ul {
   min-width: 44px; /*per accessibilità*/
   min-height: 30px;
   margin-top: -2em;
+  font-size: 2em;
   padding: 1em;
   color: #fff;
   font-weight: bold;
-  font-size: 2em;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   border-width: 0;
@@ -339,12 +339,42 @@ main ul {
     Partner List
 ********************/
 
+#partnerCards{
+  position: relative; /*per posizionare il bottone*/
+}
+
+#partnerCards .prev,
+#partnerCards .next {
+  top: 50%;
+  width: 44px; /*per accessibilità*/
+  height: 44px;
+  margin-top: -1em;
+  margin-left: 1em; /*non va più bene quando la 80vw < 1024px, contenitore riscala e frecce no perchè passa da riferimento body 1024px a 1em dal bordo*/
+  margin-right: 1em;
+  font-size: 1em;
+  padding: 0em;
+  color: var(--txtcolor);
+  border-radius: 22px;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 #partnerList {
   display: flex;
   justify-content: center;
   padding: 0;
   margin: auto;
-  max-width: 80vw; /*80% della larghezza del viewport per "bellezza" sono interessato solo alla card centrale, quindi non mi interessa il limite 1024px*/
+  max-width: 1024px; /*80% della larghezza del viewport per "bellezza" sono interessato solo alla card centrale, quindi non mi interessa il limite 1024px*/
   overflow: hidden;
 }
 
@@ -352,12 +382,17 @@ main ul {
   #partnerList {
     max-width: 90vw;
   }
+
+  #partnerCards .prev,
+  #partnerCards .next {
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
 }
 
 #partnerList li {
   list-style: none;
   display: block;
-  width: 250px;
   height: 250px;
   margin-left: 4em;
   color: var(--cardtxtcolor);
@@ -368,6 +403,7 @@ main ul {
 #partnerList h2 {
   display: block;
   margin: auto; /*overwrite margini di default*/
+  width: 250px;
 }
 
 #partnerList p {}
