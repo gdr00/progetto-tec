@@ -344,7 +344,7 @@ main ul {
 }
 
 #partnerCards .prev,
-#partnerCards .next {
+#partnerCards .next { /*eredito e sovrascrivo bottoni next e prev*/
   top: 50%;
   width: 44px; /*per accessibilità*/
   height: 44px;
@@ -371,8 +371,7 @@ main ul {
 
 #partnerList {
   display: flex;
-  justify-content: center;
-  padding: 0;
+  justify-content: flex-start;
   margin: auto;
   max-width: 1024px; /*80% della larghezza del viewport per "bellezza" sono interessato solo alla card centrale, quindi non mi interessa il limite 1024px*/
   overflow: hidden;
@@ -393,20 +392,32 @@ main ul {
 #partnerList li {
   list-style: none;
   display: block;
-  height: 250px;
+  height: 330px;
   margin-left: 4em;
   color: var(--cardtxtcolor);
   background-color: var(--cardbg);
   border-radius: 1em;
+  justify-content: center;
+}
+
+#partnerList li:first-child {
+  margin-left: 0;
 }
 
 #partnerList h2 {
   display: block;
   margin: auto; /*overwrite margini di default*/
-  width: 250px;
+  width: 330px;
+  height: 60px;
+  overflow: hidden;
+  text-indent: -9999px;
+  font-size: 1px;
 }
 
-#partnerList p {}
+#partnerList p {
+  text-align: justify;
+  margin: 1em;
+}
 
 /*******************
     BACK TO TOP
