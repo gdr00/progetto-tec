@@ -691,11 +691,6 @@ input[type="submit"]:hover {
   padding:.8em;
 }
 
-#formRequestsContainer input:hover, textarea:hover {
-  border: 2px solid var(--linkcolor);
-  transition: linear 0.14s;
-}
-
 #requestsForm label {
   margin-bottom: .5em;
   margin-top: 1.5em;
