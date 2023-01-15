@@ -201,7 +201,6 @@ header h1 {
 }
 
 #breadcrumb a {
-  text-decoration: none;
   color:white;
 }
 
@@ -592,6 +591,7 @@ input[type="submit"]:hover {
 ********************/
 
 #contactsContainer {
+  align-items: center;
   font-size: var(--globaltxtsize);
   margin-top: 2em;
   margin-bottom: 1em;
@@ -637,10 +637,6 @@ input[type="submit"]:hover {
   flex: 0 1 30px;
   padding: 1em;
   text-align: center;
-}
-
-#contactsList li a {
-  text-decoration: none;
 }
 
 #contactsList {
