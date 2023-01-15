@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="../css/style.css" media="handheld, screen" />
 	<link rel="stylesheet" href="../css/mini.css" media="handled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
 	<link rel="stylesheet" href="../css/print.css" media="print" />
-	<link rel="shortcut icon" type="image/png" href="./img/icon.png" />
+	<link rel="shortcut icon" type="image/png" href="../img/icon.png" />
 
 	<!-- SCRIPTS -->
-	<script src="js/main.js"></script>
+	<script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 			<ul>
 				<li><a href="../index.html">Home</a></li>
 				<li><a href="chiSiamo.html">Chi siamo</a></li>
-				<li><a href="prodotti.html">I nostri prodotti</a></li>
+				<li><a href="prodotti.html">Prodotti</a></li>
 				<li ><a class="active" href="#info">Contatti</a></li>
 				<li><input type="button" id="themeButton" /></li>
 			</ul>
@@ -42,17 +42,30 @@
 	<main>
 		<ul id="contactsContainer">
 			<li id="contactsList">
-				<ul >
-					<li><p>Telefono fisso :<a href="tel:+390434590096">+39-0434-590096</a></p></li>
-					<li><p><span lang="en">Email</span> :<a href="mailto:info@securservice.com">info@securservice.com</a></p></li>
-					<li></p>Cellulari :<a href="tel:+393474913322">+39-347-491-3322</a></p></li>
-					<li><p>Posizione : <a href="https://www.google.it/maps/place/Via+Maestri+del+Lavoro,+65,+33080+Porcia+PN/@45.9549606,12.5790201,17z/data=!3m1!4b1!4m5!3m4!1s0x477965677015ea89:0xe12674f024739a60!8m2!3d45.9549569!4d12.5812088">Via Maestri del Lavoro 65, Porcia (PN), 33080</a></p></li>
+				<h2>CONTATTACI</h2>
+				<ul>
+					<li>
+						<h3>Telefono fisso</h3>
+						<a href="tel:+390434590096">+39 0434590096</a>
+					</li>
+					<li>
+						<h3><span lang="en">Email</span></h3>
+						<a href="mailto:info@securservice.com">info@securservice.com</a>
+					</li>
+					<li>
+						<h3>Cellulari</h3>
+						<a href="tel:+393474913322">+39 3474913322</a>
+					</li>
+					<li>
+						<h3>Posizione</h3>
+						<a href="https://www.google.it/maps/place/Via+Maestri+del+Lavoro,+65,+33080+Porcia+PN/@45.9549606,12.5790201,17z/data=!3m1!4b1!4m5!3m4!1s0x477965677015ea89:0xe12674f024739a60!8m2!3d45.9549569!4d12.5812088">Via Maestri del Lavoro 65, Porcia (PN), 33080</a>
+					</li>
 				</ul>
 			</li>
 			<li id="formRequestsContainer">
 				<h2>MODULO RICHIESTE</h2>
 				<p>Inviaci la tua richiesta</p>
-				<form id="requestsForm">
+				<form id="requestsForm" action="richiestaInviata.html" method="post">
 					<label id="lbl-fname" for="fname">Nome</label>
 					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" />
 					<span class="error none" id="name-error"></span>
@@ -65,11 +78,12 @@
 					<label id="lbl-fmex" for="fmex">Messaggio</label>
 					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" ></textarea>
 					<span class="error none" id="mex-error"></span>
-					<input type="button" value="Invia richiesta" onclick="send_email()"/>
+					<input type="submit" value="Invia richiesta"/>
 				</form>
 			</li>
 		</div>
 	</main>
+    <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
 	<footer>
 		<table id="tabOrari" title="Orari di apertura">
             <caption>Orari di apertura</caption>
