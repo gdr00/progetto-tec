@@ -16,14 +16,11 @@
   --themeborder: #1BDC88;
   --cardbg: #181818;
   --cardshadow: #141414;
+  --cardtitlesize: 1.2em;
   --cardtxtcolor: #f1f1f1;
   --animatedformcolor: #1BDC88;
   --tableoddrowcolor: #4D4D4D;
   --tableevenrowcolor: #1BDC88;
-  /*take the min from the min of vw, vh or 
-  if it is too big take the minumum of default text size*/
-  /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
-  /*--globaltxtsize: 1em;/* */
   --iconpos: left;
   --logo: url(../img/logo-sfondo-nero.webp);
 }
@@ -253,8 +250,8 @@ main ul {
   border: 1px solid var(--linkhovercolor);
 }
 
-.productTitle {
-  font-size: 1.2em;
+#products li h3{
+  font-size: var(--cardtitlesize);
   margin-bottom: .7em;
 }
 
