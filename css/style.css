@@ -244,10 +244,7 @@ main ul {
   background-color: var(--cardbg);
   margin: 1em;
   border: 1px solid black;
-}
-
-#products li:hover {
-  border: 1px solid var(--linkhovercolor);
+  box-shadow: 0 0 8px 2px grey;
 }
 
 #products li h3{
@@ -618,6 +615,10 @@ input[type="submit"]:hover {
   justify-content: center;
 }
 
+#contactsList ul li{
+  box-shadow: 0 0 8px 2px grey;
+}
+
 #contactsList ul a:hover{
   transition: linear 0.14s;
   color: var(--linkhovercolor);
@@ -632,7 +633,7 @@ input[type="submit"]:hover {
 
 #contactsList li {
   margin: 0.8em;
-  background-color: #717171;
+  background-color: var(--cardbg);
   border-radius: 3em;
   flex: 0 1 30px;
   padding: 1em;
