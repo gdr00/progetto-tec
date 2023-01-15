@@ -530,45 +530,6 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
 }
 
 /*******************
-       TABLE
-********************/
-
-table {
-  border-collapse: collapse;
-}
-
-table caption {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-table thead tr:nth-child(odd) {
-  background-color: var(--tableoddrowcolor);
-}
-
-table tbody tr:nth-child(even) {
-  background-color: var(--tableoddrowcolor);
-}
-
-table tbody tr:nth-child(odd) {
-  background-color: var(--tableevenrowcolor);
-}
-
-#tabOrari {
-  font-size: 0.6em;
-}
-
-#tabOrari th[scope="row"] {
-  text-align: left;
-  padding: 0.2em;
-}
-
-#tabOrari td {
-  text-align: center;
-  padding: 0.2em;
-}
-
-/*******************
        LOGIN PAGE
 ********************/
 #loginContainer {
@@ -685,6 +646,7 @@ input[type="submit"]:hover {
 #contactsList ul {
   height: 100%;
   padding: 0em;
+  margin-left: 0em;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -734,11 +696,9 @@ input[type="submit"]:hover {
   transition: linear 0.14s;
 }
 
-#formRequestsContainer input {
-  margin-bottom: 2em;
-}
-
 #requestsForm label {
+  margin-bottom: .5em;
+  margin-top: 1.5em;
   text-align: center;
 }
 
