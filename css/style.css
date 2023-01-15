@@ -228,6 +228,7 @@ main ul {
   padding: 10px;
   border-radius: 10px;
   flex: 0 0 270px;
+  height: 270px;
   text-align: center;
   border: solid var(--txtcolor) 1px;
   background-color: var(--cardbg);
