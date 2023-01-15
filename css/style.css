@@ -1,27 +1,44 @@
-:root{
+:root {
   --navbarbg: #050505;
   --breadcrumbbg: grey;
   --footerbg: rgba(0, 0, 0, 0.35);
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em;
-  --txtnavhovercolor: #007cb0;
   --txtcolor: #f1f1f1;
-  --linkcolor: #1BDC88;
-  --linkvisited: #1BDC88;
-  --socialslinkcolor: #007cb0;
-  --socialshovercolor: #fff;
+  --linkcolor: #f1f1f1;
+  --linkvisited: #f1f1f1;
+  --linkhovercolor: #1BDC88;
+  --navlinkcolor: #f1f1f1;
+  --navlinkvisited: #f1f1f1;
+  --navlinkhovercolor: #1BDC88;
+  --navlinkbg: #5050504d;
+  --themebg: #f1f1f1;
+  --themeborder: #1BDC88;
+  --cardbg: #181818;
+  --cardshadow: #141414;
+  --cardtxtcolor: #f1f1f1;
+  --animatedformcolor: #1BDC88;
+  --tableoddrowcolor: #4D4D4D;
+  --tableevenrowcolor: #1BDC88;
   /*take the min from the min of vw, vh or 
   if it is too big take the minumum of default text size*/
-  --globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
+  /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
   /*--globaltxtsize: 1em;/* */
+  --iconpos: left;
+  --logo: url(../img/logo-sfondo-nero.webp);
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    font-size: 100%;
-    font-family: "Verdana", sans-serif;
-    line-height: 1.5em;
-    margin: auto;
+  font-size: 1em;
+  font-family: "Verdana", sans-serif;
+  line-height: 1.5em;
+  margin: auto;
 }
 
 html {
@@ -30,108 +47,154 @@ html {
 }
 
 body {
-    max-width: 1024px;
-    margin: auto;
-    background-color: var(--bgcolor);
-    color: var(--txtcolor);
+  max-width: 1024px;
+  margin: auto;
+  background-color: var(--bodybgcolor);
+  color: var(--txtcolor);
+}
+
+a {
+  color: var(--linkcolor);
+}
+
+a:visited {
+  color: var(--linkvisited);
+}
+
+a:hover {
+  color: var(--linknavhovercolor);
 }
 
 /*******************
         HEADER
 ********************/
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   color: var(--txtcolor);
-  background: url(../img/logo-sfondo-nero.webp) no-repeat center left;
-  background-size: contain;
-  height: calc(10*var(--globaltxtsize));
+  height: 10em;
   background-color: var(--navbarbg);
 }
 
+header>* {
+  /*all the children of header center themself in it*/
+  align-self: center;
+  flex-grow: 0;
+}
+
 header h1 {
-  display: block;
-  margin-top: 0em; /*per evitare il margine inserito dal browser*/
+  width: 30%;
+  height: 100%;
+  background: var(--logo) no-repeat center left;
+  background-size: contain;
+  /*fit the image without cutting it*/
+  background-position: left;
   text-indent: -9999em;
-  line-height: 1px;
-  height: 1px;
-  font-size: 6em;
-}
-
-header h2 {
-  padding: 0.5em;
-  margin-top: 0.7em;
-}
-
-h2{
-  font-size: 1.8em;
+  font-size: 1px;
 }
 
 /*******************
       NAVIGATION
 ********************/
 
-#menu{
-  text-align: right;
-  width: 100%;
-  height: calc(3*var(--globaltxtsize));
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   color: var(--txtcolor);
-  font-size: var(--globaltxtsize);
+  font-size: 1em;
+}
+
+#menu>* {
+  align-self: center;
 }
 
 #menu ul {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
 }
 
 #menu li {
-  display: inline;
-  padding: 1.5em;
+  padding: 0em 0em 0em .5em;
+  align-self: center;
+  /*left padding to properly align to the right the menu no right padding and no flex grow to minimize space*/
 }
 
-#menu li a {
-  color: var(--txtcolor);
+#menu a {
+  color: var(--navlinkcolor);
   text-decoration: none;
   font-weight: bold;
-  font-size: var(--globaltxtsize);
+  font-size: 1em;
 }
 
-#menu li a:visited{
-  color: var(--txtcolor);
+#menu a:visited {
+  color: var(--navlinkvisited);
 }
 
-#menu .active, #menu li a:hover {
-  background-color: #717171;
-  transition: linear 0.14s;
-  border-radius: 1em;
+#menu a {
   padding: .5em .5em;
+  border-radius: 1em;
 }
 
-#menu li a:hover { /*post li a:visited altrimenti non sovrascrive*/
-color: var(--linkcolor);
+/*top bottom left right padding in order to eliminate the text movement*/
+
+#menu a.active,
+#menu a:hover {
+  background-color: var(--navlinkbg);
+  /*border-radius: 1em;
+  padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
+  transition: linear 0.14s;
 }
 
-#themeButton{
-  height: calc(2*var(--globaltxtsize));
-  width: calc(6*var(--globaltxtsize));
+#menu a:hover {
+  /*post li a:visited altrimenti non sovrascrive*/
+  color: var(--navlinkhovercolor);
 }
 
-#breadcrumb{
+#hamburger {
+  display: none;
+  /*hidden by default in main style, unhidden in mini*/
+}
+
+#themeButton {
+  /*button to change theme with increased specificity to overwrite previous settings on hover*/
+  width: 80px;
+  height: 30px;
+  background: url(../img/prova.png) no-repeat center;
+  background-size: contain;
+  /*fit the image cutting it no stretch*/
+  background-color: var(--themebg);
+  background-position: var(--iconpos);
+  /*when clicked change property throug js to right and bgcolor to #000*/
+  transition: linear 0.1s;
+  border-radius: 15px;
+  border: 2px solid var(--themeborder);
+  margin: 0em 1em;
+}
+
+#breadcrumb {
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
   border-top: 3px solid #3b3c41;
   border-bottom: 2px solid #3b3c41;
   color: var(--txtcolor);
-  font-size: var(--globaltxtsize);
+  font-size: 1em;
 }
 
-#breadcrumb img{
+#breadcrumb img {
   display: inline;
-  width: var(--globaltxtsize);
-  height: var(--globaltxtsize);
+  width: 1em;
+  height: 1em;
   margin: 0em 0.5em 0em 0.5em;
 }
 
-#breadcrumb p{
+#breadcrumb p {
   display: inline;
   padding: 0.5em;
+  padding-left: 0;
 }
 
 #breadcrumb a:hover {
@@ -154,13 +217,58 @@ color: var(--linkcolor);
        CONTENT
 ********************/
 
+main h1 {
+  margin: .5em 0 .2em .5em;
+}
+
+main h2 {
+  margin: .5em 0 .2em .5em;
+}
+
+main ul {
+  margin-left: 3em;
+}
+
+#products {
+  color: var(--txtcolor);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0em;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+#products li {
+  padding: 10px;
+  border-radius: 10px;
+  flex: 0 0 270px;
+  height: 270px;
+  text-align: center;
+  border: solid var(--txtcolor) 1px;
+  background-color: var(--cardbg);
+  margin: 1em;
+}
+
+#products li p {
+  font-size: 1em;
+  padding: 1em .1em;
+}
+
+.productTitle {
+  font-size: 1.2em;
+}
+
 /*******************
  SLIDESHOW CONTAINER
 ********************/
 
 .slideshowContainer {
+  width: fit-content;
   max-width: 1024px;
   position: relative;
+  /*to position the prev and next buttons*/
+  margin: 0 auto;
 }
 
 .mySlides {
@@ -173,8 +281,10 @@ color: var(--linkcolor);
 
 .mySlides img {
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 45vh;
   border-radius: 2rem;
+  position: relative;
+  left: auto;
 }
 
 .prev,
@@ -183,14 +293,18 @@ color: var(--linkcolor);
   position: absolute;
   top: 50%;
   width: auto;
+  min-width: 44px; /*per accessibilità*/
+  min-height: 30px;
   margin-top: -2em;
-  padding: 1em;
-  color: white;
-  font-weight: bold;
   font-size: 2em;
+  padding: 1em;
+  color: #fff;
+  font-weight: bold;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  border-width: 0;
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .next {
@@ -209,8 +323,8 @@ color: var(--linkcolor);
 
 .dot {
   cursor: pointer;
-  height: 1em;
-  width: 1em;
+  height: 1.2em;
+  width: 1.2em;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -230,12 +344,138 @@ color: var(--linkcolor);
 
 @keyframes fade {
   from {
-      opacity: .4
+    opacity: .4
   }
 
   to {
-      opacity: 1
+    opacity: 1
   }
+}
+
+/*******************
+    Partner List
+********************/
+
+#partnerCards{
+  position: relative; /*per posizionare il bottone*/
+}
+
+#partnerCards .prev,
+#partnerCards .next { /*eredito e sovrascrivo bottoni next e prev*/
+  top: 50%;
+  width: 44px; /*per accessibilità*/
+  height: 44px;
+  margin-top: -1em;
+  margin-left: 1em; /*non va più bene quando la 80vw < 1024px, contenitore riscala e frecce no perchè passa da riferimento body 1024px a 1em dal bordo*/
+  margin-right: 1em;
+  font-size: 1em;
+  padding: 0em;
+  color: var(--txtcolor);
+  border-radius: 22px;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#partnerList {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  max-width: 1024px; /*80% della larghezza del viewport per "bellezza" sono interessato solo alla card centrale, quindi non mi interessa il limite 1024px*/
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) { /*se la larghezza è minore di 1024px riscalo la larghezza delle card per evitare facciano schifo*/
+  #partnerList {
+    max-width: 90vw;
+  }
+
+  #partnerCards .prev,
+  #partnerCards .next {
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
+}
+
+#partnerList li {
+  list-style: none;
+  display: block;
+  height: 330px;
+  margin-left: 4em;
+  color: var(--cardtxtcolor);
+  background-color: var(--cardbg);
+  border-radius: 1em;
+  justify-content: center;
+}
+
+#partnerList li:first-child {
+  margin-left: 0;
+}
+
+#partnerList h2 {
+  display: block;
+  margin: auto; /*overwrite margini di default*/
+  width: 330px;
+  height: 60px;
+  overflow: hidden;
+  text-indent: -9999px;
+  font-size: 1px;
+}
+
+#partnerList p {
+  text-align: justify;
+  margin: 1em;
+  font-size: .85em;
+}
+
+#partnerList p::before{
+  content: "\201C";
+}
+
+#partnerList p::after{
+  content: "\201D";
+}
+
+/*******************
+    BACK TO TOP
+********************/
+#toTop {
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--navlinkcolor);
+  border-color: var(--navlinkcolor);
+  background-color: var(--navlinkhovercolor);
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  z-index: 1000;
+}
+
+#toTop:hover {
+  cursor: pointer;
+  background-color: var(--cardbg);
+}
+
+#toTop:active {
+  background-color: #555;
 }
 
 /*******************
@@ -282,107 +522,110 @@ table tbody tr:nth-child(odd){
 }
 
 
+footer { /*footer fatto con flex per semplicità di riscalatura*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 /*******************
-    BACK TO TOP
+       TABLE
 ********************/
-#toTopBTN {
-  display: inline-block;
-  background-color: #FF9800;
-  width: 50px;
-  height: 50px;
+
+table {
+  border-collapse: collapse;
+}
+
+table caption {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+table thead tr:nth-child(odd) {
+  background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--tableoddrowcolor);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--tableevenrowcolor);
+}
+
+#tabOrari {
+  font-size: 0.6em;
+}
+
+#tabOrari th[scope="row"] {
+  text-align: left;
+  padding: 0.2em;
+}
+
+#tabOrari td {
   text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-#toTopBTN::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
-}
-#toTopBTN:hover {
-  cursor: pointer;
-  background-color: #333;
-}
-#toTopBTN:active {
-  background-color: #555;
-}
-#toTopBTN.show {
-  opacity: 1;
-  visibility: visible;
+  padding: 0.2em;
 }
 
 /*******************
        LOGIN PAGE
 ********************/
-#loginBox{
-  position: relative;
-  justify-content: center;
-  width: 380px;
-  height: 420px;
-  background: #1c1c1c;
-  border-radius: 8px;
-  overflow: hidden;
+#loginContainer {
+  width: 50%;
+  border-radius: 10px;
+  padding: 2em 2em;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  box-shadow: rgba(252, 252, 252, 0.15) 0px 2px 8px;
+  text-align: center;
 }
 
-#loginBox::before{
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(0deg, transparent,#45f3ff, #45f3ff);
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-}
-
-#loginBox::after{
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  background: linear-gradient(0deg, transparent,#45f3ff, #45f3ff);
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -3;
-}
-
-@keyframes animate{
-  0%{
-      transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(360deg);
-  }
-}
-
-#loginForm{
-  position: absolute;
-  justify-content: center;
-  inset: 2px;
-  border-radius: 8px;
-  background-color: #28292d;
-  z-index: 10;
-  padding: 80px 40px;
+form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.login-box-container{
+input {
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  background-color: var(--linkcolor);
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  width: 100px;
+  margin-top: 1em;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+/*******************
+ chiSiamo
+********************/
+
+#chiSiamo {
+  padding: 11px;
+}
+
+.cards {
+  margin: -10px;
+  padding: 10px;
+  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -510,4 +753,19 @@ table tbody tr:nth-child(odd){
 
 #agreementBlock label, input {
   margin: 0em;
+}
+
+.cards li {
+  background-color: #020507;
+  border: 1px solid #ccc;
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 0 0 400px;
+  text-align: center;
+}
+
+.numeroCellulare {
+  font-size: 1 em;
+  color: var(--linkcolor);
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Sicurservice - Login</title>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="sicurezza, sicurservice, antifurto, casa, protezione, famiglia," />
+    <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
+    <meta name="author" content="Sicurservice" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- LINK TAGS -->
+    <link rel="stylesheet" href="../../css/style.css" media="handheld, screen" />
+    <link rel="stylesheet" href="../../css/mini.css" media="handhled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
+    <link rel="stylesheet" href="../../css/print.css" media="print" />
+    <link rel="shortcut icon" type="image/png" href="../../img/icon.png" />
+
+    <!-- SCRIPTS -->
+    <script src="../../js/main.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <h1 tabindex="1">Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
+      <nav id="menu">
+          <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../chiSiamo.html">Chi siamo</a></li>
+              <li><a href="../prodotti.html">Prodotti</a></li>
+              <li><a href="../info.html">Info</a></li>
+          </ul>
+          <button id="themeButton" onclick="changeTheme();" aria-hidden="true"></button>
+          <button id="hamburger" onclick="toggleMenu()">&#9776;</button>
+      </nav>
+  </header>
+
+    <!-- BREADCRUMB -->
+    <nav id ="breadcrumb">
+      <img src="../../img/icons/location-dot.svg" alt="Ti trovi in:"/>
+      <span lang ="en"> <a href ="../../index.html">Home</span></a> &#187; <span lang ="en">Login</span> 
+    </nav>
+
+    <main>
+      <!-- div con una form al suo interno -->
+      <div id="loginContainer">
+        
+        <form action="login.php" method="post">
+          <label for="username" lang="en">Username</label>
+          <input type="text" name="username" id="username" placeholder="Inserisci il tuo username" required> 
+          <label for="password" lang="en">Password</label>
+          <input type="password" name="password" id="password" placeholder="Inserisci la tua password" required>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+    </main>
+    <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
+
+    <footer>
+    </footer>
+
+  </body>
+</html>
