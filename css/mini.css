@@ -82,7 +82,7 @@ header h1 {
     height: fit-content;
     background-color: var(--navmenubg);
     box-shadow: #f1f1f1;
-    padding: 1em;
+    padding: 2em;
     border-radius: 1em;
     order: 3; /*set display order to 3 post hamburger*/
 }
