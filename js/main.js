@@ -1,4 +1,5 @@
 var slideIndex = 1;
+var cardIndex = 1;
 var theme = "dark";
 var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo'];
 var themeValues =    [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], 
@@ -8,6 +9,7 @@ document.readyState(setup());
 
 function setup() {
   sessionStorage.setItem('panelTheme', theme);
+  setupCards();
 }
 
 
@@ -88,5 +90,21 @@ function removeMenus(){
   var menu = document.getElementById("menus");
   if (menu.style.display == "flex") {
     menu.style.display = "none";
+  }
+}
+
+function plusCards(n){
+  showCards(cardIndex += n);
+}
+
+/*function setupCards(){
+  var partnerList = document.getElementByID("partnerList");
+  partnerList.style.setProperty("left", "0px");
+}*/
+
+function showCards(n){
+  var cards = document.getElementsByClassName("partnerCard");
+  for(var i = 0; i < cards.length; i++){
+    cards[i].style.setProperty = "translateX(" + (i*390) + "px)";
   }
 }
