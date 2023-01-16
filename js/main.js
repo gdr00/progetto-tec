@@ -86,5 +86,7 @@ function toggleMenu(){
 
 function removeMenus(){
   var menu = document.getElementById("menus");
-  menu.style.display = "none";
+  if (menu.style.display == "flex") {
+    menu.style.display = "none";
+  }
 }
