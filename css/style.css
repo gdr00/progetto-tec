@@ -674,6 +674,7 @@ input[type="submit"]:hover {
 #formRequestsContainer input, textarea {
   width: 60%;
   padding:.8em;
+  min-width: 12em;
 }
 
 #formRequestsContainer input[type="text"], input[type="tel"], textarea {
