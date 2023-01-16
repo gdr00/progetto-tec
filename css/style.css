@@ -344,7 +344,7 @@ main ul {
 ********************/
 
 #partnerCards{
-  position: relative; /*per posizionare il bottone*/
+  position: relative; /*perchè i bottoni prendano come riferimento per absolute la posizione del box padre*/
 }
 
 #partnerCards .prev,
