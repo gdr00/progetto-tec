@@ -15,5 +15,5 @@
 - [ ] Dimensione minima mobile tasti clickabili 30w x 44hpx 44w x 30h px
 - [ ]  Alt delle immagini dello slideshow
 - [ ] Controllare hover per i cellulari
-- [ ] Fixare span Home 
+- [ ] Fixare span Home
 - [ ] Fixare cambio tema permanente quando clicco in altre pagine
