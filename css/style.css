@@ -74,11 +74,11 @@ header {
   justify-content: space-between;
   flex-wrap: nowrap;
   color: var(--txtcolor);
-  height: 10em;
+  height: 5em;
   background-color: var(--navbarbg);
 }
 
-header>* {
+header > * {
   /*all the children of header center themself in it*/
   align-self: center;
   flex-grow: 0;
