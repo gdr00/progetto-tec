@@ -181,6 +181,14 @@ main ul {
 }
 
 /*******************
+       CARDS
+********************/
+
+#partnerCards .prev, #partnerCards .next { /*prev e next disabilitate per slideshow ma abilitate per cards*/
+    display: block;
+}
+
+/*******************
     BACK TO TOP
 ********************/
 #toTop {

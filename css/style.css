@@ -396,8 +396,10 @@ main ul {
 #partnerList li {
   list-style: none;
   display: block;
+  position: relative; /*mi permette di spostare gli li all'interno del flexbox*/
+  left: calc(50% - 165px); /*per centrare la card nello schermo*/
   height: 330px;
-  margin-left: 4em;
+  margin-left: 60px; /*margini in px per sapere le distanze di cui traslare in js*/
   color: var(--cardtxtcolor);
   background-color: var(--cardbg);
   border-radius: 1em;
