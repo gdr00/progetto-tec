@@ -4,7 +4,7 @@ var translateAmount = 0;
 var theme = "dark";
 var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo', '--cardbg', '--cardshadow', '--cardtxtcolor'];
 var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)', '#181818', '#141414', '#f1f1f1'], 
-  ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#000000', '#101010', '#000000']];
+  ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ffffff', '#e1e1e1', '#000000']];
 
 document.readyState(setup());
 
