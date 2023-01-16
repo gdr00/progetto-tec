@@ -1,5 +1,6 @@
 :root {
     --navbarbg: #050505;
+    --navmenubg: rgba(0, 0, 0, 0.90);
     --breadcrumbbg: grey;
     --footerbg: rgba(0, 0, 0, 0.35);
     --bodybgcolor: #050505;
@@ -79,7 +80,7 @@ header h1 {
     z-index: 1; /*display on top of everything so images don't fuck things up*/
     width: fit-content;
     height: fit-content;
-    background-color: #000;
+    background-color: var(--navmenubg);
     box-shadow: #f1f1f1;
     padding: 1em;
     border-radius: 1em;

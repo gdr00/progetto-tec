@@ -83,3 +83,8 @@ function toggleMenu(){
     menu.style.display = "flex";
   }
 }
+
+function removeMenus(){
+  var menu = document.getElementById("menus");
+  menu.style.display = "none";
+}
