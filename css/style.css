@@ -414,6 +414,7 @@ main ul {
 #partnerList h2 {
   display: block;
   margin: auto; /*overwrite margini di default*/
+  margin-top: 12em;
   width: 330px;
   height: 60px;
   overflow: hidden;
@@ -433,6 +434,49 @@ main ul {
 
 #partnerList p::after{
   content: "\201D";
+}
+
+#partnerList .partnerCard h2 { /*dovuto incrementare specificità per overwrite*/
+  background-size: contain;
+  background-position: center;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#partner1 h2 {
+  background: url(../img/partners/ksenia_logo.png) no-repeat center;
+}
+
+#partner2 h2 {
+  background: url(../img/partners/hesa_logo.png) no-repeat center;
+}
+
+#partner3 h2 {
+  background: url(../img/partners/hikvision_logo.svg) no-repeat center;
+}
+
+#partner4 h2 {
+  background: url(../img/partners/microtik_logo.svg) no-repeat center;
+}
+
+#partner5 h2 {
+  background: url(../img/partners/solarEdge_logo.svg) no-repeat center;
+}
+
+#partner6 h2 {
+  background: url(../img/partners/ditec_logo.svg) no-repeat center;
+}
+
+#partner7 h2 {
+  background: url(../img/partners/fronius_logo.png) no-repeat center;
+}
+
+#partner8 h2 {
+  background: url(../img/partners/carrier_logo.svg) no-repeat center;
+}
+
+#partner9 h2 {
+  background: url(../img/partners/cambium_networks.svg) no-repeat center;
 }
 
 /*******************
