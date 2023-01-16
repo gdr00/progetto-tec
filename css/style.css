@@ -478,8 +478,14 @@ main ul {
 ********************/
 
 table{
-  float:right;
   border-collapse: collapse;
+  box-shadow: 0 0 8px 2px grey;
+  border-radius: 1em;
+  margin-top: 0.5em;
+}
+
+caption {
+  margin-bottom: 0.7em;
 }
 
 table caption{
@@ -499,20 +505,36 @@ table tbody tr:nth-child(odd){
   background-color: var(--tableevenrowcolor);
 }
 
-#tabOrari{
+#tabOrari {
   font-size: 0.6em;
+  margin-bottom: 2em;
+}
+
+#topLeftBorder {
+  border-top-left-radius: 1em;
+}
+
+#topRightBorder {
+  border-top-right-radius: 1em;
+}
+
+#bottomLeftBorder {
+  border-bottom-left-radius: 1em;
+}
+
+#bottomRightBorder {
+  border-bottom-right-radius: 1em;
 }
 
 #tabOrari th[scope="row"]{
   text-align: left;
-  padding: 0.2em;
+  padding: 0.2em 0.2em 0.2em 0.5em;
 }
 
-#tabOrari td{
+#tabOrari td, th {
   text-align: center;
-  padding: 0.2em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
 }
-
 
 footer { /*footer fatto con flex per semplicità di riscalatura*/
   display: flex;
@@ -591,7 +613,6 @@ input[type="submit"]:hover {
   align-items: center;
   font-size: var(--globaltxtsize);
   margin-top: 2em;
-  margin-bottom: 1em;
   width: 90%;
   margin-right: auto;
   margin-left: auto;
