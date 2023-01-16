@@ -137,6 +137,8 @@ header h1 {
 #menu a {
   padding: .5em .5em;
   border-radius: 1em;
+  min-height: 30px;
+  min-width: 44px;
 }
 
 /*top bottom left right padding in order to eliminate the text movement*/
