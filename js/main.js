@@ -72,4 +72,13 @@ function setTheme(theme) {
 
 function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
-} 
+}
+
+function toggleMenu(){
+  var menu = document.getElementById("menus");
+  if(menu.style.display == "flex"){
+    menu.style.display = "none";
+  }else{
+    menu.style.display = "flex";
+  }
+}

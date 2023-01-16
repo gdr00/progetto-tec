@@ -102,7 +102,7 @@ header h1 {
 #menu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   color: var(--txtcolor);
   font-size: 1em;
 }
