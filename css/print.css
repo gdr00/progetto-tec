@@ -1,0 +1,66 @@
+body {
+	font-size: 13pt;
+	line-height: 16pt;
+}
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table td, table th {
+	padding: 5pt 3pt 5pt 3pt;
+	border: 1px solid black;
+}
+
+#menu {
+	display: none;
+}
+
+button {
+	display: none;
+}
+
+img {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	line-height: 20pt;
+}
+
+/** INDEX */
+
+/** CHISIAMO */
+
+#staff {
+	line-height: 5pt;
+}
+
+#staff h2 {
+}
+
+/** CONTATTI */
+
+#formRequestsContainer { /* nascondo il form modulo richieste*/
+	display: none;
+}
+
+#contactsContainer {
+	list-style-type: none;
+}
+
+#contactsList {
+	line-height: 5pt;
+}
+
+/** PRODOTTI */
+
+/** LOGIN */
+
+/** REGISTER */
