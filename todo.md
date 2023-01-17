@@ -20,3 +20,4 @@
 - [ ] Fare il test delle immagini con i plugin di chrome
 - [ ] Aggiungere "Salta alla navigazione"
 - [ ] Fixare tutti i tabIndex
+- [ ] (MB) Chiedere alla prof emoji 
