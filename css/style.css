@@ -23,6 +23,7 @@
   --tableoddrowcolor: #4D4D4D;
   --tableevenrowcolor: #1BDC88;
   --iconpos: left;
+  --formbuttoncolor: #1BDC88;
   --logo: url(../img/logo-sfondo-nero.webp);
 }
 
@@ -630,6 +631,14 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #333;
   cursor: pointer;
+}
+
+#loginContainer p{
+  float: left;
+}
+
+input[type="submit"]{
+  background-color: var(--formbuttoncolor);
 }
 
 /*******************

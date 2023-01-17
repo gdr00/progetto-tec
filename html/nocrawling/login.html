@@ -43,14 +43,14 @@
     <main>
       <!-- div con una form al suo interno -->
       <div id="loginContainer">
-        
         <form action="login.php" method="post">
           <label for="username" lang="en">Username</label>
           <input type="text" name="username" id="username" placeholder="Inserisci il tuo username" required> 
           <label for="password" lang="en">Password</label>
           <input type="password" name="password" id="password" placeholder="Inserisci la tua password" required>
-          <input type="submit" value="Login">
+          <input type="submit" value="Login"> 
         </form>
+        <p>Non hai un account? <a href="registrazione.php">Registrati</a></p>
       </div>
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
