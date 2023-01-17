@@ -184,8 +184,7 @@ header h1 {
   align-items: center;
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
-  border-top: 3px solid #3b3c41;
-  border-bottom: 2px solid #3b3c41;
+  box-shadow: 0 0 8px 2px grey;
   color: var(--txtcolor);
   font-size: 1em;
 }
