@@ -21,3 +21,4 @@
 - [ ] Aggiungere "Salta alla navigazione"
 - [ ] Fixare tutti i tabIndex
 - [ ] (MB) Chiedere alla prof emoji 
+- [ ] Correggere tabIndex menu hambuger prima visita
