@@ -4,6 +4,7 @@
   --footerbg: rgba(0, 0, 0, 0.35);
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em;
+  --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
   --linkcolor: #f1f1f1;
   --linkvisited: #f1f1f1;
@@ -176,6 +177,11 @@ header h1 {
 }
 
 #breadcrumb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
   border-top: 3px solid #3b3c41;
@@ -185,16 +191,10 @@ header h1 {
 }
 
 #breadcrumb img {
-  display: inline;
-  width: 1em;
-  height: 1em;
-  margin: 0em 0.5em 0em 0.5em;
-}
-
-#breadcrumb p {
-  display: inline;
-  padding: 0.5em;
-  padding-left: 0;
+  height: var(--globaltxtsize);
+  width: var(--globaltxtsize);
+  margin-left: .3em;
+  margin-right: .3em;
 }
 
 #breadcrumb a:hover {
