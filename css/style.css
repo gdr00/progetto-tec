@@ -40,15 +40,13 @@ body {
 }
 
 html {
-    background: var(--bodybgcolor);
-    background-image: linear-gradient(to bottom,black 90%, #393939);
+  background: var(--bodybgcolor);
+  background-image: linear-gradient(to bottom,black 90%, #393939);
 }
 
 body {
   max-width: 1024px;
   margin: auto;
-  background-color: var(--bodybgcolor);
-  background-image: linear-gradient(to bottom,black 90%, #393939);
   color: var(--txtcolor);
 }
 
