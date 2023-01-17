@@ -37,20 +37,20 @@
     <!-- BREADCRUMB -->
     <nav id ="breadcrumb">
       <img src="../../img/icons/location-dot.svg" alt="Ti trovi in:"/>
-      <span lang ="en"> <a href ="../../index.html">Home</span></a> &#187; <span lang ="en">Login</span> 
+      <span lang ="en"> <a href ="../../index.html">Home</span></a> &#187; <span lang ="en">Registrati</span> 
     </nav>
 
     <main>
       <!-- div con una form al suo interno -->
       <div id="loginContainer">
-        <form action="login.php" method="post">
+        <form action="register.php" method="post">
           <label for="email" lang="en">Email</label>
-          <input type="email" name="email" id="email" placeholder="Inserisci la tua email" autocomplete= "email" required>
+          <input type="email" name="email" id="email" placeholder="Inserisci la tua email" autocomplete = "email" required>
           <label for="password" lang="en">Password</label>
-          <input type="password" name="password" id="password" placeholder="Inserisci la tua password" autocomplete ="current-password" required>
-          <input type="submit" value="Login"> 
+          <input type="password" name="password" id="new-password" placeholder="Inserisci la tua password" autocomplete = "new-password" required>
+          <input type="submit" value="Registrati"> 
         </form>
-        <p>Non hai un account? <a href="registrazione.php">Registrati</a></p>
+        <p>Hai già un account? <a href="login.php"><span lang ="en">Login</span></a></p>
       </div>
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
