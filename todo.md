@@ -13,12 +13,13 @@
 - [ ] Tag abbr per abbreviazioni
 - [ ] Evitare stacked menu
 - [ ] Dimensione minima mobile tasti clickabili 30w x 44hpx 44w x 30h px
-- [ ]  Alt delle immagini dello slideshow
+- [ ] Alt delle immagini dello slideshow
 - [ ] Controllare hover per i cellulari
 - [ ] Fixare span Home
 - [ ] Fixare cambio tema permanente quando clicco in altre pagine
 - [ ] Fare il test delle immagini con i plugin di chrome
 - [ ] Aggiungere "Salta alla navigazione"
 - [ ] Fixare tutti i tabIndex
-- [ ] (MB) Chiedere alla prof emoji 
+- [ ] (MB) Chiedere alla prof emoji
 - [ ] Correggere tabIndex menu hambuger prima visita
+- [ ] footer per mobile

@@ -634,7 +634,7 @@ input[type="submit"]:hover {
 }
 
 /*******************
- chiSiamo
+      chiSiamo
 ********************/
 
 #chiSiamo {
@@ -652,7 +652,7 @@ input[type="submit"]:hover {
 }
 
 /*******************
-       CONTATTI PAGE
+    CONTATTI PAGE
 ********************/
 
 #contactsContainer {
@@ -736,8 +736,6 @@ textarea {
   font-family: "Verdana", sans-serif;
   font-size: var(--globaltxtsize);
 }
-
-
 
 #requestsForm label {
   margin-bottom: .5em;
