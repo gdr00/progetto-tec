@@ -41,15 +41,13 @@ body {
 }
 
 html {
-    background: var(--bodybgcolor);
-    background-image: linear-gradient(to bottom,black 90%, #393939);
+  background: var(--bodybgcolor);
+  background-image: linear-gradient(to bottom,black 90%, #393939);
 }
 
 body {
   max-width: 1024px;
   margin: auto;
-  background-color: var(--bodybgcolor);
-  background-image: linear-gradient(to bottom,black 90%, #393939);
   color: var(--txtcolor);
 }
 
@@ -642,7 +640,7 @@ input[type="submit"]{
 }
 
 /*******************
- chiSiamo
+      chiSiamo
 ********************/
 
 #chiSiamo {
@@ -660,7 +658,7 @@ input[type="submit"]{
 }
 
 /*******************
-       CONTATTI PAGE
+    CONTATTI PAGE
 ********************/
 
 #contactsContainer {
@@ -744,8 +742,6 @@ textarea {
   font-family: "Verdana", sans-serif;
   font-size: var(--globaltxtsize);
 }
-
-
 
 #requestsForm label {
   margin-bottom: .5em;
