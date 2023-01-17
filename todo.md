@@ -17,3 +17,5 @@
 - [ ] Controllare hover per i cellulari
 - [ ] Fixare span Home
 - [ ] Fixare cambio tema permanente quando clicco in altre pagine
+- [ ] Fare il test delle immagini con i plugin di chrome
+- [ ] Aggiungere "Salta alla navigazione"
