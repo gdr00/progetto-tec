@@ -415,7 +415,7 @@ main ul {
   border-radius: 1em 1em 0 0;
 }
 
-#partnerList h2 {
+#partnerList a {
   display: block;
   margin: auto; /*overwrite margini di default*/
   width: 330px;
@@ -439,46 +439,46 @@ main ul {
   content: "\201D";
 }
 
-#partnerList .partnerCard h2 { /*dovuto incrementare specificità per overwrite*/
+#partnerList .partnerCard a { /*dovuto incrementare specificità per overwrite*/
   background-size: contain;
   background-position: center;
   max-width: 90%;
   max-height: 90%;
 }
 
-#partner1 h2 {
+#partner1 a {
   background: url(../img/partners/ksenia_logo.png) no-repeat center;
 }
 
-#partner2 h2 {
+#partner2 a {
   background: url(../img/partners/hesa_logo.png) no-repeat center;
 }
 
-#partner3 h2 {
+#partner3 a {
   background: url(../img/partners/hikvision_logo.svg) no-repeat center;
 }
 
-#partner4 h2 {
+#partner4 a {
   background: url(../img/partners/microtik_logo.svg) no-repeat center;
 }
 
-#partner5 h2 {
+#partner5 a {
   background: url(../img/partners/solarEdge_logo.svg) no-repeat center;
 }
 
-#partner6 h2 {
+#partner6 a {
   background: url(../img/partners/ditec_logo.svg) no-repeat center;
 }
 
-#partner7 h2 {
+#partner7 a {
   background: url(../img/partners/fronius_logo.png) no-repeat center;
 }
 
-#partner8 h2 {
+#partner8 a {
   background: url(../img/partners/carrier_logo.svg) no-repeat center;
 }
 
-#partner9 h2 {
+#partner9 a {
   background: url(../img/partners/cambium_networks.svg) no-repeat center;
 }
 
