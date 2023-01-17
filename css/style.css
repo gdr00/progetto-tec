@@ -72,11 +72,11 @@ header {
   justify-content: space-between;
   flex-wrap: nowrap;
   color: var(--txtcolor);
-  height: 10em;
+  height: 5em;
   background-color: var(--navbarbg);
 }
 
-header>* {
+header > * {
   /*all the children of header center themself in it*/
   align-self: center;
   flex-grow: 0;
@@ -100,7 +100,7 @@ header h1 {
 #menu {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   color: var(--txtcolor);
   font-size: 1em;
 }
@@ -135,6 +135,8 @@ header h1 {
 #menu a {
   padding: .5em .5em;
   border-radius: 1em;
+  min-height: 30px;
+  min-width: 44px;
 }
 
 /*top bottom left right padding in order to eliminate the text movement*/
@@ -349,7 +351,7 @@ main ul {
 ********************/
 
 #partnerCards{
-  position: relative; /*per posizionare il bottone*/
+  position: relative; /*perchè i bottoni prendano come riferimento per absolute la posizione del box padre*/
 }
 
 #partnerCards .prev,
@@ -401,8 +403,11 @@ main ul {
 #partnerList li {
   list-style: none;
   display: block;
+  position: relative; /*mi permette di spostare gli li all'interno del flexbox*/
+  left: calc(50% - 165px); /*per centrare la card nello schermo*/
+  /*transform: translate(-390px);/**/
   height: 330px;
-  margin-left: 4em;
+  margin-left: 60px; /*margini in px per sapere le distanze di cui traslare in js*/
   color: var(--cardtxtcolor);
   background-color: var(--cardbg);
   border-radius: 1em;
@@ -416,6 +421,7 @@ main ul {
 #partnerList h2 {
   display: block;
   margin: auto; /*overwrite margini di default*/
+  margin-top: 12em;
   width: 330px;
   height: 60px;
   overflow: hidden;
@@ -435,6 +441,49 @@ main ul {
 
 #partnerList p::after{
   content: "\201D";
+}
+
+#partnerList .partnerCard h2 { /*dovuto incrementare specificità per overwrite*/
+  background-size: contain;
+  background-position: center;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#partner1 h2 {
+  background: url(../img/partners/ksenia_logo.png) no-repeat center;
+}
+
+#partner2 h2 {
+  background: url(../img/partners/hesa_logo.png) no-repeat center;
+}
+
+#partner3 h2 {
+  background: url(../img/partners/hikvision_logo.svg) no-repeat center;
+}
+
+#partner4 h2 {
+  background: url(../img/partners/microtik_logo.svg) no-repeat center;
+}
+
+#partner5 h2 {
+  background: url(../img/partners/solarEdge_logo.svg) no-repeat center;
+}
+
+#partner6 h2 {
+  background: url(../img/partners/ditec_logo.svg) no-repeat center;
+}
+
+#partner7 h2 {
+  background: url(../img/partners/fronius_logo.png) no-repeat center;
+}
+
+#partner8 h2 {
+  background: url(../img/partners/carrier_logo.svg) no-repeat center;
+}
+
+#partner9 h2 {
+  background: url(../img/partners/cambium_networks.svg) no-repeat center;
 }
 
 /*******************
@@ -721,7 +770,8 @@ textarea {
 }
 
 .cards li {
-  background-color: #020507;
+  color: var(--cardtxtcolor);
+  background-color: var(--cardbg);
   border: 1px solid #ccc;
   margin: 0 10px 20px 10px;
   padding: 10px;

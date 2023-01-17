@@ -1,7 +1,10 @@
 var slideIndex = 1;
+var cardIndex = 1;
+var translateAmount = 0;
 var theme = "dark";
-var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo'];
-var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)'], ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)']];
+var themeProperties = ['--bodybgcolor', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo', '--cardbg', '--cardshadow', '--cardtxtcolor'];
+var themeValues = [['#050505', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)', '#181818', '#141414', '#f1f1f1'], 
+  ['#ffffff', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ffffff', '#e1e1e1', '#000000']];
 
 document.readyState(setup());
 
@@ -72,4 +75,48 @@ function setTheme(theme) {
 
 function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
-} 
+}
+
+function toggleMenu(){
+  var menu = document.getElementById("menus");
+  if(menu.style.display == "flex"){
+    menu.style.display = "none";
+  }else{
+    menu.style.display = "flex";
+  }
+}
+
+function removeMenus(){
+  var menu = document.getElementById("menus");
+  if (menu.style.display == "flex") {
+    menu.style.display = "none";
+  }
+}
+
+/*function setupCards(){
+  var partnerList = document.getElementByID("partnerList");
+  partnerList.style.setProperty("left", "0px");
+}*/
+
+function showCards(n){
+  var cards = document.getElementsByClassName("partnerCard");
+  cardIndex += n;
+  if(cardIndex > cards.length){
+    cardIndex = 1;
+    translateAmount = 0;
+    for (var i = 0; i < cards.length; i++){
+      cards[i].style.transform = "translate(0px)";
+    }
+  } else if(cardIndex < 1){
+    cardIndex = cards.length;
+    translateAmount = (cards.length - 1) * 390;
+    for (var i = 0; i < cards.length; i++){
+      cards[i].style.transform = "translate(-" + translateAmount + "px)";
+    }
+  } else {
+    translateAmount += n*390;
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].style.transform = "translate(-"+translateAmount+"px)";
+    }
+  }
+}

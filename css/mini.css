@@ -1,3 +1,34 @@
+:root {
+    --navbarbg: #050505;
+    --navmenubg: rgba(0, 0, 0, 0.90);
+    --breadcrumbbg: grey;
+    --footerbg: rgba(0, 0, 0, 0.35);
+    --bodybgcolor: #050505;
+    --bodylineheight: 1.9em;
+    --txtcolor: #f1f1f1;
+    --linkcolor: #f1f1f1;
+    --linkvisited: #f1f1f1;
+    --linkhovercolor: #1BDC88;
+    --navlinkcolor: #f1f1f1;
+    --navlinkvisited: #f1f1f1;
+    --navlinkhovercolor: #1BDC88;
+    --navlinkbg: #5050504d;
+    --themebg: #f1f1f1;
+    --themeborder: #1BDC88;
+    --cardbg: #181818;
+    --cardshadow: #141414;
+    --cardtxtcolor: #f1f1f1;
+    --animatedformcolor: #1BDC88;
+    --tableoddrowcolor: #4D4D4D;
+    --tableevenrowcolor: #1BDC88;
+    /*take the min from the min of vw, vh or 
+  if it is too big take the minumum of default text size*/
+    /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
+    /*--globaltxtsize: 1em;/* */
+    --iconpos: left;
+    --logo: url(../img/logo-sfondo-nero.webp);
+}
+
 html,
 body {
     font-size: 1em;
@@ -28,7 +59,7 @@ a:hover {
         HEADER
 ********************/
 header {
-    height: 6.5em;
+    height: 4em;
 }
 
 header h1 {
@@ -42,6 +73,23 @@ header h1 {
 
 #menu ul {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 4em;
+    z-index: 1; /*display on top of everything so images don't fuck things up*/
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--navmenubg);
+    box-shadow: #f1f1f1;
+    padding: 2em;
+    border-radius: 1em;
+    order: 3; /*set display order to 3 post hamburger*/
+}
+
+#menu li {
+    margin: 0em 0em 1em 0em; /*resetta il margine sulla sisnistra e lo mette sotto*/
+    padding: 0;
 }
 
 #hamburger {
@@ -130,6 +178,14 @@ main ul {
 .prev,
 .next {
     display: none;
+}
+
+/*******************
+       CARDS
+********************/
+
+#partnerCards .prev, #partnerCards .next { /*prev e next disabilitate per slideshow ma abilitate per cards*/
+    display: block;
 }
 
 /*******************

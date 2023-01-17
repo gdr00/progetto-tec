@@ -23,7 +23,7 @@
     <header>
         <h1 tabindex="1">Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
         <nav id="menu">
-            <ul>
+            <ul id="menus">
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="html/chiSiamo.html">Chi siamo</a></li>
                 <li><a href="html/prodotti.html">Prodotti</a></li>
@@ -76,52 +76,52 @@
             <h2>I nostri partner</h2>
             <div id="partnerCards">
                 <ul id="partnerList">
-                    <li>
+                    <li class="partnerCard" id="partner1">
                         <h2>Ksenia</h2>
                         <p>Prodotto Made in italy di alta gamma per impianti antintrusione, domotica, ed integrazione con sistemi di terze parti</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner2">
                         <h2>Hesa</h2>
                         <p>marchio leader in ambito prodotti per la sicurezza delle cose e persone, 
                             sistemi antintrusione, controllo accessi, videosorveglianza ed altro ancora.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner3">
                         <h2>Hikvision</h2>
                         <p>Azienda leader nel mondo della videosorveglianza, soluzioni ad alta tecnologia 
                             per ogni contesto, dal piccolo impianto per abitazione privata, fino ad impianti 
                             per importanti strutture industriali o in ambito pubblico, monitoraggio traffico persone ecc. ecc.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner4">
                         <h2>Mikrotik</h2>
                         <p>Marchio di eccellenza nel mercato del networking, ottimo rapporto qualità prezzo.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner5">
                         <h2>Solaredge</h2>
                         <p>Grande marchio nell' ambito dei sistemi di impianti fotovoltaici per ogni esigenza, 
                             sistemi di accumulo di energia e mobilità elettrica.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner6">
                         <h2>Ditec</h2>
                         <p>Azienda produttrice di automazioni per cancelli, e porte automatiche, 
                             da molti anni sul mercato, prodotti di qualità ed affidabili.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner7">
                         <h2>Fronius</h2>
                         <p>Grande marchio nell' ambito dei sistemi di impianti fotovoltaici per ogni esigenza,
                         sistemi di accumulo di energia e mobilità elettrica.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner8">
                         <h2>Utc Fire & Security</h2>
                         <p>altro marchio da noi trattato in ambito antintrusione e rivelazione 
                             incendio per applicazioni sia in ambito residenziale che industriale.</p>
                     </li>
-                    <li>
+                    <li class="partnerCard" id="partner9">
                         <h2>Cambium Networks</h2>
                         <p>Marchio di eccellenza nel mercato del networking, ottimo rapporto qualità prezzo.</p>
                     </li>
                 </ul>
-                <button class="prev" onclick="plusCards(-1)" aria-label="Slide precedente">&#10094;</button>
-                <button class="next" onclick="plusCards(1)" aria-label="Slide successiva">&#10095;</button>
+                <button class="prev" onclick="showCards(-1)" aria-label="Slide precedente">&#10094;</button>
+                <button class="next" onclick="showCards(1)" aria-label="Slide successiva">&#10095;</button>
             </div>
         </section>
         <section id="contatti">
@@ -140,7 +140,8 @@
     <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
 
     <footer>
-        <table id="tabOrari" title="Orari di apertura" summary="Tabella che esponde gli orari dell'azienda. Ci sono due righe per mattina e pomeriggio colonne per ogni giorno della settimana">
+        <!-- TABELLA ORARI -->
+        <table id="tabOrari" title="Orari di apertura" aria-describedby="La tabella è organizzata per righe e colonne, nelle colonne ci sono i giorni della settimana, mentre nella prima riga ci sono gli della mattina e nella seconda riga ci sono gli orari del pomeriggio"">
             <caption>Orari di apertura</caption>
             <thead>
                 <tr>
