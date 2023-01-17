@@ -24,3 +24,4 @@
 - [ ] Correggere tabIndex menu hambuger prima visita
 - [ ] footer per mobile
 - [ ] Description per register e login
+- [ ] Recensioni e/o login come admin per proditti
