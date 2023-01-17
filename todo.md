@@ -8,7 +8,6 @@
 - [ ] Stampa
 - [ ] Link per non vedenti per saltare menù, news e il "torna su" (aiuti alla navigazione)
 - [ ] Utilizzo aria-label per screen reader
-- [ ] Tabindex corretto
 - [ ] Span per parole estere
 - [ ] Tag abbr per abbreviazioni
 - [ ] Evitare stacked menu
@@ -21,6 +20,6 @@
 - [ ] Aggiungere "Salta alla navigazione"
 - [ ] Fixare tutti i tabIndex
 - [ ] (MB) Chiedere alla prof emoji
-- [ ] Correggere tabIndex menu hambuger prima visita
 - [ ] footer per mobile
 - [ ] Description per register e login
+- [ ] Recensioni e/o login come admin per proditti
