@@ -23,3 +23,4 @@
 - [ ] (MB) Chiedere alla prof emoji
 - [ ] Correggere tabIndex menu hambuger prima visita
 - [ ] footer per mobile
+- [ ] Description per register e login
