@@ -186,6 +186,7 @@ header h1 {
   box-shadow: 0 0 8px 2px grey;
   color: var(--txtcolor);
   font-size: 1em;
+  margin-bottom: 2em;
 }
 
 #breadcrumb img {
@@ -411,7 +412,7 @@ main ul {
 
 #partnerList .cardLogo {
   background-color: #fff;
-  border-radius: 1em;
+  border-radius: 1em 1em 0 0;
 }
 
 #partnerList h2 {
