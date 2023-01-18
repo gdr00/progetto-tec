@@ -23,3 +23,4 @@
 - [ ] footer per mobile
 - [ ] Description per register e login
 - [ ] Recensioni e/o login come admin per proditti
+- [ ] Area described by al posto di summary(XHTML) nella tabella
