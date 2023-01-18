@@ -220,10 +220,6 @@ main h2 {
   margin: .5em 0 .2em .5em;
 }
 
-main ul {
-  margin-left: 3em;
-}
-
 #products {
   color: var(--txtcolor);
   display: flex;
@@ -710,7 +706,7 @@ input[type="submit"]{
 }
 
 #contactsList li {
-  margin: 0.8em;
+  margin: 0.8em 1.2em 0.8em 1.2em;
   background-color: var(--cardbg);
   border-radius: 3em;
   flex: 0 1 30px;
@@ -724,12 +720,12 @@ input[type="submit"]{
 }
 
 #formRequestsContainer {
-  flex: 3 1;
+  flex: 2 1;
   text-align: center;
 }
 
 #formRequestsContainer input, textarea {
-  width: 60%;
+  width: 80%;
   padding:.8em;
   min-width: 12em;
 }
