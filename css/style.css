@@ -689,10 +689,6 @@ input[type="submit"]{
   justify-content: center;
 }
 
-#contactsList ul li{
-  box-shadow: 0 0 8px 2px grey;
-}
-
 #contactsList ul a:hover{
   transition: linear 0.14s;
   color: var(--linkhovercolor);
@@ -706,12 +702,15 @@ input[type="submit"]{
 }
 
 #contactsList li {
-  margin: 0.8em 1.2em 0.8em 1.2em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
   background-color: var(--cardbg);
   border-radius: 3em;
   flex: 0 1 30px;
   padding: 1em;
   text-align: center;
+  width: 65%;
+  box-shadow: 0 0 8px 2px grey;
 }
 
 #contactsList {
