@@ -25,3 +25,4 @@
 - [ ] Description per register e login
 - [ ] Recensioni e/o login come admin per proditti
 - [ ] Area described by al posto di summary(XHTML) nella tabella
+- [ ] Class e Id per elementi uguali, ma in pagine diverse
