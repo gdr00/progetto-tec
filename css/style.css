@@ -639,6 +639,10 @@ input[type="submit"]{
       chiSiamo
 ********************/
 
+#chiSiamoMain {
+  height: 100%;
+}
+
 #chiSiamo {
   padding: 11px;
 }
