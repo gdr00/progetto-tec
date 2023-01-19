@@ -42,10 +42,6 @@ body {
   background: var(--bodybgcolor);
 }
 
-html {
-  background-image: linear-gradient(to bottom,black 90%, #393939);
-}
-
 body {
   max-width: 1024px;
   margin: auto;
