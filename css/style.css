@@ -101,12 +101,9 @@ header h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   color: var(--txtcolor);
   font-size: 1em;
-}
-
-#menu>* {
-  align-self: center;
 }
 
 #menu ul {
@@ -172,7 +169,10 @@ header h1 {
   transition: linear 0.1s;
   border-radius: 15px;
   border: 2px solid var(--themeborder);
-  margin: 0em 1em;
+  
+  font-size: 1px;
+  text-indent: -9999em;
+  margin: 0em 10px; /*siccome cambiare font size cambia anche il valore di un em setto il margine ad uun valore assoluto*/
 }
 
 #breadcrumb {

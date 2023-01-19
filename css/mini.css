@@ -94,12 +94,26 @@ header h1 {
     display: block;
     text-align: center;
     /*hidden by default in main style, unhidden in mini*/
-    height: 1.5em;
-    width: 1.5em;
+    min-height: 44px;
+    min-width: 44px;
     background: none;
     border: none;
     color: var(--txtcolor);
-    font-size: 3em;
+    font-size: 44px;
+    order: 2; /*set display order to 2 per menu*/
+    cursor: pointer;    
+}
+
+#hamburger:after {
+    position: relative;
+    top: -4px; /*adjust position of hamburger, pixel comparsi da non si sa dove*/
+    content: "\2630";
+}
+
+#hamburger span {
+    display: block;
+    text-indent: -9999em;
+    font-size: 1px;
 }
 
 #breadcrumb {
