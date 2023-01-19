@@ -28,3 +28,4 @@
 - [ ] aggiungere <ahref="#firstAvaiableContent"class="hidden">Salta al primo contenuto `</a>` e id firstAvaiableContent per ogni pagina
 - [ ] Sistemare tutti i contrasti
 - [ ] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
+- [ ] chech [https://wave.webaim.org/]()
