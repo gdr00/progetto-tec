@@ -537,13 +537,21 @@ main h2 {
   z-index: 1000;
 }
 
+#toTop span {
+  display: block;
+  font-size: 1px;
+  text-indent: -9999em;
+}
+
+#toTop::after {
+  content: "\21EA";
+  position: relative;
+  left: -1px;
+}
+
 #toTop:hover {
   cursor: pointer;
   background-color: var(--cardbg);
-}
-
-#toTop:active {
-  background-color: #555;
 }
 
 /*******************
