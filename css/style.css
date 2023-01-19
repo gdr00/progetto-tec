@@ -38,10 +38,10 @@ body {
   font-family: "Verdana", sans-serif;
   line-height: 1.5em;
   margin: auto;
+  background: var(--bodybgcolor);
 }
 
 html {
-  background: var(--bodybgcolor);
   background-image: linear-gradient(to bottom,black 90%, #393939);
 }
 
