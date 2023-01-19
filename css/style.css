@@ -214,11 +214,13 @@ header h1 {
 ********************/
 
 main h1 {
-  margin: .5em 0 .2em .5em;
+  margin: 1em 0.5em 1em;
+  text-align: center;
 }
 
 main h2 {
-  margin: .5em 0 .2em .5em;
+  margin: 1em 0.5em 1em;
+  text-align: center;
 }
 
 #products {
