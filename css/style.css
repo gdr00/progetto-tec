@@ -562,6 +562,28 @@ main h2 {
 /*******************
        FOOTER
 ********************/
+
+
+footer { /*footer fatto con flex per semplicità di riscalatura*/
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contattiFooter {
+  padding-right: 1em;
+}
+
+#contattiFooter li {
+  list-style-type: none;
+}
+
+#contattiFooter a:hover {
+  color: var(--navlinkhovercolor);
+  transition: .14s;
+}
+
 /*******************
        TABLE
 ********************/
@@ -570,7 +592,6 @@ table{
   border-collapse: collapse;
   box-shadow: 0 0 8px 2px grey;
   border-radius: 1em;
-  margin-top: 2.5em;
 }
 
 caption {
@@ -623,13 +644,6 @@ table tbody tr:nth-child(odd){
 #tabOrari td, th {
   text-align: center;
   padding: 0.5em 0.8em 0.5em 0.8em;
-}
-
-footer { /*footer fatto con flex per semplicità di riscalatura*/
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 /*******************
