@@ -101,7 +101,7 @@ header h1 {
     color: var(--txtcolor);
     font-size: 44px;
     order: 2; /*set display order to 2 per menu*/
-    cursor: pointer;    
+    cursor: pointer;  
 }
 
 #hamburger:after {
