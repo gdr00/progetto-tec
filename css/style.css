@@ -18,6 +18,7 @@
   --cardbg: #181818;
   --cardshadow: #141414;
   --cardtxtcolor: #f1f1f1;
+  --cardLogobg: #fff;
   --cardtitlesize: 1.2em;
   --animatedformcolor: #1BDC88;
   --tableoddrowcolor: #4D4D4D;
@@ -359,13 +360,13 @@ main h2 {
   padding: 0em;
   color: var(--txtcolor);
   border-radius: 22px;
-  background-color: var(--bodybgcolor);
+  background: none;
   transition: none;
 }
 
 #partnerCards .prev:hover,
 #partnerCards .next:hover {
-  background-color: var(--cardbg);
+  background-color: var(--bodybgcolor);
 }
 
 #partnerList {
@@ -407,7 +408,7 @@ main h2 {
 }
 
 #partnerList .cardLogo {
-  background-color: #fff;
+  background-color: var(--cardLogobg);
   border-radius: 1em 1em 0 0;
 }
 
