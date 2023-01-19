@@ -77,7 +77,7 @@ function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
 
-function toggleMenu(){
+function toggleMenu(){ /*for hamburger menu*/
   var menu = document.getElementById("menus");
   if(menu.style.display == "flex"){
     menu.style.display = "none";
@@ -86,7 +86,7 @@ function toggleMenu(){
   }
 }
 
-function removeMenus(){
+function removeMenus(){ /*for body*/
   var menu = document.getElementById("menus");
   if (menu.style.display == "flex") {
     menu.style.display = "none";
@@ -119,4 +119,8 @@ function showCards(n){
       cards[i].style.transform = "translate(-"+translateAmount+"px)";
     }
   }
+}
+
+function showDescription() {
+  
 }
