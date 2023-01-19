@@ -1,99 +1,98 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <title>Register - Sicurservice</title>
-    <!-- META TAGS -->
-    <meta charset="utf-8">
-    <meta name="keywords" content="sicurezza, sicurservice, antifurto, casa, protezione, famiglia," />
-    <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
-    <meta name="author" content="Sicurservice" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- LINK TAGS -->
-    <link rel="stylesheet" href="../../css/style.css" media="handheld, screen" />
-    <link rel="stylesheet" href="../../css/mini.css" media="handhled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
-    <link rel="stylesheet" href="../../css/print.css" media="print" />
-    <link rel="shortcut icon" type="image/png" href="../../img/icon.png" />
-
-    <!-- SCRIPTS -->
-    <script src="../../js/main.js"></script>
-  </head>
+<head>
+  <title>Register - Sicurservice</title>
+  <!-- META TAGS -->
+  <meta charset="utf-8">
+  <meta name="keywords" content="sicurezza, sicurservice, antifurto, casa, protezione, famiglia," />
+  <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
+  <meta name="author" content="Sicurservice" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <body>
-    <header>
-      <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
-      <nav id="menu">
-          <ul>
-              <li><a href="../../index.html">Home</a></li>
-              <li><a href="../chiSiamo.html">Chi siamo</a></li>
-              <li><a href="../prodotti.html">Prodotti</a></li>
-              <li><a href="../info.html">Info</a></li>
-          </ul>
-          <button id="themeButton" onclick="changeTheme();" aria-hidden="true"></button>
-          <button id="hamburger" onclick="toggleMenu()">&#9776;</button>
-      </nav>
+  <!-- LINK TAGS -->
+  <link rel="stylesheet" href="../../css/style.css" media="handheld, screen" />
+  <link rel="stylesheet" href="../../css/mini.css" media="handhled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
+  <link rel="stylesheet" href="../../css/print.css" media="print" />
+  <link rel="shortcut icon" type="image/png" href="../../img/icon.png" />
+  <!-- SCRIPTS -->
+  <script src="../../js/main.js"></script>
+</head>
+  
+<body>
+  <header>
+    <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
+    <nav id="menu">
+      <button id="themeButton" onclick="changeTheme();" aria-hidden="true"></button>
+      <button id="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <ul id="menus">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../chiSiamo.html">Chi siamo</a></li>
+        <li><a href="../prodotti.html">Prodotti</a></li>
+        <li><a href="../info.html">Info</a></li>
+      </ul>
+    </nav>
   </header>
 
-    <!-- BREADCRUMB -->
-    <nav id ="breadcrumb">
-      <img src="../../img/icons/location-dot.svg" alt="Ti trovi in:"/>
-      <span lang ="en"> <a href ="../../index.html">Home</span></a> &#187; <span lang ="en">Registrati</span> 
-    </nav>
+  <!-- BREADCRUMB -->
+  <nav id ="breadcrumb">
+    <img src="../../img/icons/location-dot.svg" alt="Ti trovi in:"/>
+    <span lang ="en"> <a href ="../../index.html">Home</span></a> &#187; <span lang ="en">Registrati</span> 
+  </nav>
 
-    <main>
-      <!-- div con una form al suo interno -->
-      <div id="loginContainer">
-        <form action="register.php" method="post">
-          <label for="email" lang="en">Email</label>
-          <input type="email" name="email" id="email" placeholder="Inserisci la tua email" autocomplete = "email" required>
-          <label for="password" lang="en">Password</label>
-          <input type="password" name="password" id="new-password" placeholder="Inserisci la tua password" autocomplete = "new-password" required>
-          <input type="submit" value="Registrati"> 
-        </form>
-        <p>Hai già un account? <a href="login.php"><span lang ="en">Login</span></a></p>
-      </div>
-    </main>
-    <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
+  <main>
+    <!-- div con una form al suo interno -->
+    <div id="loginContainer">
+      <form action="register.php" method="post">
+        <label for="email" lang="en">Email</label>
+        <input type="email" name="email" id="email" placeholder="Inserisci la tua email" autocomplete = "email" required>
+        <label for="password" lang="en">Password</label>
+        <input type="password" name="password" id="new-password" placeholder="Inserisci la tua password" autocomplete = "new-password" required>
+        <input type="submit" value="Registrati"> 
+      </form>
+      <p>Hai già un account? <a href="login.php"><span lang ="en">Login</span></a></p>
+    </div>
+  </main>
+  <button id="toTop" onclick="toTop()" aria-label="Vai all'inizio">&#8682;</button>
 
-    <footer>
-      <table id="tabOrari" title="Orari di apertura" aria-describedby="La tabella è organizzata per righe e colonne, nelle colonne ci sono i giorni della settimana, mentre nella prima riga ci sono gli della mattina e nella seconda riga ci sono gli orari del pomeriggio"">
-        <caption>Orari di apertura</caption>
-        <thead>
-            <tr>
-                <td id="topLeftBorder"></td>
-                <th scope="col">Lunedì</th>
-                <th scope="col">Martedì</th>
-                <th scope="col">Mercoledì</th>
-                <th scope="col">Giovedì</th>
-                <th scope="col">Venerdì</th>
-                <th scope="col">Sabato</th>
-                <th scope="col" id="topRightBorder">Domenica</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Mattino</th>
-                <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <th scope="row" id="bottomLeftBorder">Pomeriggio</th>
-                <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                <td abbr="15 - 18">-</td>
-                <td id="bottomRightBorder">-</td>
-            </tr>
-        </tbody>
-      </table>
-    </footer>
+  <footer>
+    <table id="tabOrari" title="Orari di apertura" aria-describedby="La tabella è organizzata per righe e colonne, nelle colonne ci sono i giorni della settimana, mentre nella prima riga ci sono gli della mattina e nella seconda riga ci sono gli orari del pomeriggio"">
+      <caption>Orari di apertura</caption>
+      <thead>
+          <tr>
+              <td id="topLeftBorder"></td>
+              <th scope="col">Lunedì</th>
+              <th scope="col">Martedì</th>
+              <th scope="col">Mercoledì</th>
+              <th scope="col">Giovedì</th>
+              <th scope="col">Venerdì</th>
+              <th scope="col">Sabato</th>
+              <th scope="col" id="topRightBorder">Domenica</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <th scope="row">Mattino</th>
+              <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
+              <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
+              <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
+              <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
+              <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
+              <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
+              <td>-</td>
+          </tr>
+          <tr>
+              <th scope="row" id="bottomLeftBorder">Pomeriggio</th>
+              <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
+              <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
+              <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
+              <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
+              <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
+              <td abbr="15 - 18">-</td>
+              <td id="bottomRightBorder">-</td>
+          </tr>
+      </tbody>
+    </table>
+  </footer>
 
-  </body>
+</body>
 </html>
