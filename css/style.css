@@ -314,8 +314,8 @@ main h2 {
 
 .dot {
   cursor: pointer;
-  height: 1.5em;
-  width: 1.5em;
+  height: 1.2em;
+  width: 1.2em;
   margin: 0 2px;
   background-color: var(--txtcolor);
   border-radius: 50%;
@@ -323,6 +323,7 @@ main h2 {
   transition: background-color 0.6s ease;
   overflow: hidden;
   text-indent: -999em;
+  border: 0;
 }
 
 .active,

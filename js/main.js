@@ -6,12 +6,16 @@ var themeProperties = ['--bodybgcolor', '--breadcrumbbg', '--navbarbg', '--txtco
 var themeValues = [['#050505', '#181818', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)', '#181818', '#ffffff', '#141414', '#f1f1f1', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%)'], 
   ['#ffffff', '#f1f1f1', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ededed', '#e1e1e1', '#e1e1e1', '#000000', 'invert(0%) sepia(97%) saturate(14%) hue-rotate(160deg) brightness(103%) contrast(102%)']];
 
-document.readyState(setup());
+window.readyState(setupWindow());
+document.readyState(setupPage());
 
-function setup() {
+function setupWindow() {
   sessionStorage.setItem('panelTheme', theme);
 }
 
+function setupPage() {
+  alert(sessionStorage.getItem('panelTheme'));
+}
 
 // Next/previous controls
 function plusSlides(n) {
@@ -42,8 +46,10 @@ function showSlides(n) {
 function changeTheme() {
   localstTheme = sessionStorage.getItem('panelTheme');
   if (localstTheme == 'dark') {
+    theme = 'light';
     setTheme('light');
   } else {
+    theme = 'dark';
     setTheme('dark');
   }
 }
