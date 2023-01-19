@@ -317,7 +317,7 @@ main h2 {
   height: 1.2em;
   width: 1.2em;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--txtcolor);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -325,7 +325,7 @@ main h2 {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: var(--linkhovercolor);
 }
 
 .fade {
