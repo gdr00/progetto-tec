@@ -17,8 +17,8 @@
 - [ ] Fixare span Home
 - [ ] Fixare cambio tema permanente quando clicco in altre pagine
 - [ ] Fare il test delle immagini con i plugin di chrome
-- [ ] Aggiungere "Salta alla navigazione"
-- [ ] Fixare tutti i tabIndex
+- [X] Aggiungere "Salta alla navigazione"
+- [X] Fixare tutti i tabIndex
 - [ ] footer per mobile
 - [ ] (MB) Chiedere alla prof emoji
 - [ ] Description per register e login
@@ -26,3 +26,5 @@
 - [ ] Area described by al posto di summary(XHTML) nella tabella
 - [ ] Class e Id per elementi uguali, ma in pagine diverse
 - [ ] aggiungere <ahref="#firstAvaiableContent"class="hidden">Salta al primo contenuto `</a>` e id firstAvaiableContent per ogni pagina
+- [ ] Sistemare tutti i contrasti
+- [ ] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
