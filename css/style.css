@@ -735,7 +735,7 @@ input[type="submit"]{
 }
 
 #contactList ul a:visited {
-  color: white;
+  color: var(--linkvisited);
 }
 #contactsList h2{
   margin-bottom: 1em;
@@ -751,6 +751,10 @@ input[type="submit"]{
   text-align: center;
   width: 65%;
   box-shadow: 0 0 8px 2px grey;
+}
+
+#contactsList a { /*per andare a capo con i link*/
+  display: block;
 }
 
 #contactsList {
@@ -792,7 +796,7 @@ textarea {
 #requestsForm input[type="submit"]{
   width: 30%;
   margin-top: 2em;
-  background-color: #717171;
+  background-color: var(--cardbg);
   border-radius: 3em;
 }
 

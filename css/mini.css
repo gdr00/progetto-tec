@@ -44,7 +44,6 @@ html {
 
 a {
     color: var(--linkcolor);
-    text-decoration: none;
 }
 
 a:visited {
