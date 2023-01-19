@@ -76,15 +76,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
+  align-items: center;
   color: var(--txtcolor);
   height: 5em;
   background-color: var(--navbarbg);
-}
-
-header > * {
-  /*all the children of header center themself in it*/
-  align-self: center;
-  flex-grow: 0;
 }
 
 header h1 {
@@ -227,15 +222,6 @@ main h2 {
   text-align: center;
 }
 
-main ul {
-  list-style: none;
-  text-align: center;
-}
-
-main li {
-  padding: .7em 0.5em .7em;
-}
-
 #products {
   color: var(--txtcolor);
   display: flex;
@@ -359,6 +345,36 @@ main li {
     SERVICE LIST
 ********************/
 
+#serviceList {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+#serviceList li {
+  text-align: center;
+  margin: 1em;
+  padding: .5em;
+  border-radius: 2em;
+  background-color: var(--cardbg);
+  min-width: fit-content;
+  width: 300px;
+}
+
+#serviceList li h2 { /*eredito h2 sono già centrato*/
+  font-size: var(--txtsize);
+  margin-bottom: .7em;
+}
+
+#serviceList li p {
+  font-size: var(--txtsize);
+  margin: .5em .5em;
+  text-align: left;
+  font-size: small;
+}
 
 /*******************
     Partner List
@@ -387,10 +403,6 @@ main li {
 #partnerCards .prev:hover,
 #partnerCards .next:hover {
   background-color: var(--bodybgcolor);
-}
-
-.partnerCard {
-  padding: 0;
 }
 
 #partnerList {
