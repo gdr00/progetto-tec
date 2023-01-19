@@ -3,7 +3,7 @@
   --breadcrumbbg: grey;
   --footerbg: rgba(0, 0, 0, 0.35);
   --bodybgcolor: #050505;
-  --bodylineheight: 1.9em;
+  --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
   --linkcolor: #f1f1f1;
@@ -58,6 +58,14 @@ a:visited {
 
 a:hover {
   color: var(--linknavhovercolor);
+}
+
+.hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
 }
 
 /*******************
@@ -219,6 +227,15 @@ main h2 {
   text-align: center;
 }
 
+main ul {
+  list-style: none;
+  text-align: center;
+}
+
+main li {
+  padding: .7em 0.5em .7em;
+}
+
 #products {
   color: var(--txtcolor);
   display: flex;
@@ -339,6 +356,11 @@ main h2 {
 }
 
 /*******************
+    SERVICE LIST
+********************/
+
+
+/*******************
     Partner List
 ********************/
 
@@ -365,6 +387,10 @@ main h2 {
 #partnerCards .prev:hover,
 #partnerCards .next:hover {
   background-color: var(--bodybgcolor);
+}
+
+.partnerCard {
+  padding: 0;
 }
 
 #partnerList {

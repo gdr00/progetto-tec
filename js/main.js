@@ -86,13 +86,6 @@ function toggleMenu(){ /*for hamburger menu*/
   }
 }
 
-function removeMenus(){ /*for body*/
-  var menu = document.getElementById("menus");
-  if (menu.style.display == "flex") {
-    menu.style.display = "none";
-  }
-}
-
 /*function setupCards(){
   var partnerList = document.getElementByID("partnerList");
   partnerList.style.setProperty("left", "0px");
