@@ -360,17 +360,16 @@ main h2 {
   padding: .5em;
   border-radius: 2em;
   background-color: var(--cardbg);
-  min-width: fit-content;
+  height: fit-content; /*TODO*/
   width: 300px;
 }
 
-#serviceList li h2 { /*eredito h2 sono già centrato*/
+#serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
   font-size: var(--txtsize);
   margin-bottom: .7em;
 }
 
 #serviceList li p {
-  font-size: var(--txtsize);
   margin: .5em .5em;
   text-align: left;
   font-size: small;
