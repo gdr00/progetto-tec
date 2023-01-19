@@ -356,12 +356,12 @@ main h2 {
 
 #serviceList li {
   text-align: center;
+  flex: 0 1 300px; /*no grow*/
   margin: 1em;
   padding: .5em;
   border-radius: 2em;
   background-color: var(--cardbg);
   height: fit-content; /*TODO*/
-  width: 300px;
 }
 
 #serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
