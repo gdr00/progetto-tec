@@ -4,7 +4,7 @@ var translateAmount = 0;
 var theme = "dark";
 var themeProperties = ['--bodybgcolor', '--breadcrumbbg', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo', '--cardbg', '--cardLogobg', '--cardshadow', '--cardtxtcolor', '--breadcrumbsvg'];
 var themeValues = [['#050505', '#181818', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)', '#181818', '#ffffff', '#141414', '#f1f1f1', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%)'], 
-  ['#ffffff', '#f1f1f1', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ededed', '#e1e1e1', '#e1e1e1', '#000000', 'invert(0%) sepia(97%) saturate(14%) hue-rotate(160deg) brightness(103%) contrast(102%)']];
+  ['#ffffff', '#ededed', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ededed', '#e1e1e1', '#e1e1e1', '#000000', 'invert(0%) sepia(97%) saturate(14%) hue-rotate(160deg) brightness(103%) contrast(102%)']];
 
 window.readyState(setupWindow());
 document.readyState(setupPage());
