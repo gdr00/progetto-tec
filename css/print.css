@@ -1,7 +1,7 @@
 body {
 	font-size: 13pt;
 	line-height: 16pt;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Times New Roman", Times, serif; /* Cambiare con font di default a font con grazie*/
 }
 
 table {
