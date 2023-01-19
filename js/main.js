@@ -86,11 +86,6 @@ function toggleMenu(){ /*for hamburger menu*/
   }
 }
 
-/*function setupCards(){
-  var partnerList = document.getElementByID("partnerList");
-  partnerList.style.setProperty("left", "0px");
-}*/
-
 function showCards(n){
   var cards = document.getElementsByClassName("partnerCard");
   cardIndex += n;
