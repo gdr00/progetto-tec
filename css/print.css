@@ -1,6 +1,7 @@
 body {
 	font-size: 13pt;
 	line-height: 16pt;
+	font-family: "Times New Roman", Times, serif;
 }
 
 table {
@@ -32,6 +33,10 @@ a {
 
 h1 {
 	line-height: 20pt;
+}
+
+footer {
+	display: none;
 }
 
 /** INDEX */
