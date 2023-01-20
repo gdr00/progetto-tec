@@ -148,6 +148,8 @@ header h1 {
 #menu a.active{
   background-color: var(--linkhovercolor);
   color: var(--currentnavpagetxtcolor);
+  pointer-events: none;
+  cursor: default;
 }
 
 #menu a:hover {
