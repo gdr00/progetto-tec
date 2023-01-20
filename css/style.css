@@ -2,6 +2,7 @@
   --navbarbg: #050505;
   --breadcrumbbg: #181818;
   --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
+  --breadcrumbshadowcolor: #6B6B6B;
   --footerbg: rgba(0, 0, 0, 0.35);
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
@@ -184,7 +185,7 @@ header h1 {
   align-items: center;
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
-  box-shadow: 0px 5px 10px -5px grey;
+  box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor);
   color: var(--txtcolor);
   font-size: 1em;
   margin-bottom: 2em;
