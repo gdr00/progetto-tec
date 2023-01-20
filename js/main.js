@@ -85,10 +85,13 @@ function toTop(){
 
 function toggleMenu(){ /*for hamburger menu*/
   var menu = document.getElementById("menus");
+  var hamburger = document.getElementById("hamburger");
   if(menu.style.display == "flex"){
     menu.style.display = "none";
+    hamburger.setAttribute("aria-expanded", "false");
   }else{
     menu.style.display = "flex";
+    hamburger.setAttribute("aria-expanded", "true");
   }
 }
 
