@@ -9,11 +9,10 @@
   --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
   --linkcolor: #f1f1f1;
-  --linkvisited: #f1f1f1;
+  --linkvisitedcolor: #f1f1f1;
   --linkhovercolor: #1BDC88;
-  --navlinkcolor: #f1f1f1;
-  --navlinkvisited: #f1f1f1;
-  --navlinkhovercolor: #1BDC88;
+  --currentnavpagetxtcolor: black;
+  --currentnavpagebg: white;
   --navlinkbg: #5050504d;
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
@@ -55,7 +54,7 @@ a {
 }
 
 a:visited {
-  color: var(--linkvisited);
+  color: var(--linkvisitedcolor);
 }
 
 a:hover {
@@ -121,14 +120,14 @@ header h1 {
 }
 
 #menu a {
-  color: var(--navlinkcolor);
+  color: var(--linkcolor);
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
 }
 
 #menu a:visited {
-  color: var(--navlinkvisited);
+  color: var(--linkvisitedcolor);
 }
 
 #menu a {
@@ -139,8 +138,6 @@ header h1 {
 }
 
 /*top bottom left right padding in order to eliminate the text movement*/
-
-#menu a.active,
 #menu a:hover {
   background-color: var(--navlinkbg);
   /*border-radius: 1em;
@@ -148,9 +145,14 @@ header h1 {
   transition: linear 0.14s;
 }
 
+#menu a.active{
+  background-color: var(--linkhovercolor);
+  color: var(--currentnavpagetxtcolor);
+}
+
 #menu a:hover {
   /*post li a:visited altrimenti non sovrascrive*/
-  color: var(--navlinkhovercolor);
+  color: var(--linkhovercolor);
 }
 
 #hamburger {
@@ -326,8 +328,6 @@ main h2 {
   text-indent: -999em;
   border: 0;
 }
-
-.active,
 .dot:hover {
   background-color: var(--linkhovercolor);
 }
@@ -527,9 +527,9 @@ main h2 {
   display: block;
   font-size: 1.6em;
   font-weight: bold;
-  color: var(--navlinkcolor);
-  border-color: var(--navlinkcolor);
-  background-color: var(--navlinkhovercolor);
+  color: var(--linkcolor);
+  border-color: var(--linkcolor);
+  background-color: var(--linkhovercolor);
   width: 50px;
   height: 50px;
   border-radius: 15px;
@@ -581,7 +581,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
 }
 
 #contattiFooter a:hover {
-  color: var(--navlinkhovercolor);
+  color: var(--linkhovercolor);
   transition: .14s;
 }
 
@@ -763,7 +763,7 @@ input[type="submit"]{
 }
 
 #contactList ul a:visited {
-  color: var(--linkvisited);
+  color: var(--linkvisitedcolor);
 }
 #contactsList h2{
   margin-bottom: 1em;
