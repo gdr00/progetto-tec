@@ -566,13 +566,15 @@ main h2 {
 
 
 footer { /*footer fatto con flex per semplicità di riscalatura*/
-  margin-top: 2.5em;
+  margin-top: 1em;
+  padding-top: 1.5em;
   padding-bottom: 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   font-size: var(--footertxtsize);
+  align-items: center;
 }
 
 #contactsOnFooter {
