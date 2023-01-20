@@ -140,6 +140,8 @@ header h1 {
 /*top bottom left right padding in order to eliminate the text movement*/
 #menu a:hover {
   background-color: var(--navlinkbg);
+  color: var(--linkhovercolor);
+  text-decoration: underline;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
   transition: linear 0.14s;
@@ -150,11 +152,6 @@ header h1 {
   color: var(--currentnavpagetxtcolor);
   pointer-events: none;
   cursor: default;
-}
-
-#menu a:hover {
-  /*post li a:visited altrimenti non sovrascrive*/
-  color: var(--linkhovercolor);
 }
 
 #hamburger {
