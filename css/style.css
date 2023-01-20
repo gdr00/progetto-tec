@@ -569,19 +569,16 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
 }
 
-#contattiFooter {
-  padding-right: 1em;
+#contactsOnFooter {
+  flex: 1 1;
+  padding: 1em;
 }
 
-#contattiFooter li {
-  list-style-type: none;
-}
-
-#contattiFooter a:hover {
-  color: var(--linkhovercolor);
-  transition: .14s;
+#contactsOnFooter li {
+  list-style: none;
 }
 
 /*******************
@@ -615,7 +612,8 @@ table tbody tr:nth-child(odd){
   background-color: var(--tableevenrowcolor);
 }
 
-#tabOrari {
+#hoursTable {
+  flex: 2 1 ;
   font-size: 0.6em;
   margin-bottom: 2em;
 }
@@ -636,12 +634,12 @@ table tbody tr:nth-child(odd){
   border-bottom-right-radius: 1em;
 }
 
-#tabOrari th[scope="row"]{
+#hoursTable th[scope="row"]{
   text-align: left;
   padding: 0.2em 0.2em 0.2em 0.5em;
 }
 
-#tabOrari td, th {
+#hoursTable td, th {
   text-align: center;
   padding: 0.5em 0.8em 0.5em 0.8em;
 }
