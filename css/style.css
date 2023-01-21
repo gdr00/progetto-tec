@@ -13,7 +13,8 @@
   --linkvisitedcolor: #BD89EB;
   --currentnavpagetxtcolor: black;
   --currentnavpagebg: #1BDC88;
-  --navlinkbg: #5050504d;
+  --navlinkhoverbg: white;
+  --navlinkhovercolor: black;
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
   --cardbg: #181818;
@@ -43,7 +44,8 @@
   --linkvisitedcolor: #681DA8;
   --currentnavpagetxtcolor: black;
   --currentnavpagebg: #1BDC88;
-  --navlinkbg: #5050504d;
+  --navlinkhoverbg: black;
+  --navlinkhovercolor: white;
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
   --cardbg: white;
@@ -169,7 +171,8 @@ header h1 {
 
 /*top bottom left right padding in order to eliminate the text movement*/
 #menu a:hover {
-  background-color: var(--navlinkbg);
+  background-color: var(--navlinkhoverbg);
+  color: var(--navlinkhovercolor);
   text-decoration: underline;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
@@ -234,7 +237,7 @@ header h1 {
 }
 
 #themeButton:checked + .slider {
-  background-color: #353a38;
+  background-color: #bdbdbd;
 }
 
 #themeButton:checked + .slider:before {
@@ -613,7 +616,6 @@ main h2 {
   font-size: 1.6em;
   font-weight: bold;
   color: var(--bodybgcolor);
-  border-color: var(--txtcolor);
   background-color: var(--linkcolor);
   width: 50px;
   height: 50px;
@@ -703,7 +705,7 @@ table tbody {
 }
 
 #hoursTable {
-  flex: 2 1 ;
+  flex: 2 1;
 }
 
 #hoursTable th {
