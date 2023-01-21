@@ -17,7 +17,7 @@
   --navlinkhovercolor: black;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/moon.png);
-  --themeborder: #1BDC88;
+  --themeborder: #fff;
   --cardbg: #181818;
   --cardshadow: #141414;
   --cardLogobg: #fff;
@@ -49,7 +49,7 @@
   --navlinkhovercolor: white;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/light.png);
-  --themeborder: #1BDC88;
+  --themeborder: #000;
   --cardbg: white;
   --cardshadow: #141414;
   --cardLogobg: #fff;
@@ -198,7 +198,7 @@ header h1 {
 
 #themeButton {
   /*button to change theme with increased specificity to overwrite previous settings on hover*/
-  width: 80px;
+  width: 70px;
   height: 30px;
   background: var(--themebgimg) no-repeat center;
   background-size: contain;
