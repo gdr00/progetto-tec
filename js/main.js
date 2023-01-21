@@ -132,7 +132,7 @@ function setTheme(themeName) {
 
 // function to toggle between light and dark theme
 function changeTheme() {
-  console.log('change theme request, current theme: '+localStorage.getItem('theme'));
+  console.log('change theme request, old theme: '+localStorage.getItem('theme'));
   if (localStorage.getItem('theme') == 'theme-dark') {
       setTheme('theme-light');
   } else {
@@ -140,13 +140,18 @@ function changeTheme() {
   }
 }
 
+function syncTheme() {
+  console.log('sync theme button, current theme: '+localStorage.getItem('theme')+', button status: '+document.getElementById('themeButton').checked);
+  if(localStorage.getItem('theme') == 'theme-light') {
+    document.getElementById('themeButton').checked = true;
+  }
+}
+
 // Immediately invoked function to set the theme on initial load
 (function () {
   if (localStorage.getItem('theme') == 'theme-light') {
       setTheme('theme-light');
-      document.getElementById('themeButton').checked = true;
   } else {
       setTheme('theme-dark');
-      document.getElementById('themeButton').checked = false;
   }
 })();
