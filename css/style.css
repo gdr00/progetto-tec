@@ -16,6 +16,7 @@
   --navlinkhoverbg: white;
   --navlinkhovercolor: black;
   --themebg: #f1f1f1;
+  --themebgimg: url(../img/theme/moon.png);
   --themeborder: #1BDC88;
   --cardbg: #181818;
   --cardshadow: #141414;
@@ -47,6 +48,7 @@
   --navlinkhoverbg: black;
   --navlinkhovercolor: white;
   --themebg: #f1f1f1;
+  --themebgimg: url(../img/theme/light.png);
   --themeborder: #1BDC88;
   --cardbg: white;
   --cardshadow: #141414;
@@ -55,7 +57,7 @@
   --animatedformcolor: #1BDC88;
   --tableoddrowcolor: #4D4D4D;
   --tableevenrowcolor: #363535;
-  --iconpos: left;
+  --iconpos: right;
   --formbuttoncolor: #1BDC88;
   --footertxtsize: .8em;
   --logo: url(../img/logo-sfondo-nero.webp);
@@ -193,75 +195,12 @@ header h1 {
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
-/* The switch - the box around the slider */
-.switch {
-  margin-left: 1em;
-  margin-right: 1em;
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: grey;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-image: url(../img/theme/light.png);
-  background-size: cover;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-#themeButton:checked + .slider {
-  background-color: #bdbdbd;
-}
-
-#themeButton:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-  background-image: url(../img/theme/moon.png);
-  background-size: cover;
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
 #themeButton {
   /*button to change theme with increased specificity to overwrite previous settings on hover*/
   width: 80px;
   height: 30px;
-  background: url(../img/prova.png) no-repeat center;
+  background: var(--themebgimg) no-repeat center;
   background-size: contain;
   /*fit the image cutting it no stretch*/
   background-color: var(--themebg);
