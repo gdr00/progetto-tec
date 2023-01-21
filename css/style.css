@@ -620,6 +620,15 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   list-style: none;
 }
 
+#contactsOnFooter a {
+  color: var(--linkcolor);
+}
+
+#contactsOnFooter a:hover {
+  color: var(--linkhovercolor);
+  transition: .14s;
+}
+
 /*******************
        TABLE
 ********************/
@@ -757,6 +766,15 @@ input[type="submit"]{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.cards a {
+  color: var(--linkcolor);
+}
+
+.cards a:hover {
+  color: var(--linkhovercolor);
+  transition: .14s;
 }
 
 #staff h2 {
