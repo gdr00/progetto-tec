@@ -228,16 +228,12 @@ table caption {
     font-size: 1.2em;
 }
 
-table thead tr:nth-child(odd) {
+table thead {
     background-color: var(--tableoddrowcolor);
 }
 
-table tbody tr:nth-child(even) {
+table tbody {
     background-color: var(--tableoddrowcolor);
-}
-
-table tbody tr:nth-child(odd) {
-    background-color: var(--tableevenrowcolor);
 }
 
 #tabOrari {
