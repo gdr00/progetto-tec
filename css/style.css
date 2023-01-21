@@ -22,8 +22,8 @@
   --cardLogobg: #fff;
   --cardtitlesize: 1.2em;
   --animatedformcolor: #1BDC88;
-  --tableoddrowcolor: #4D4D4D;
-  --tableevenrowcolor: #363535;
+  --theadcolor: #4D4D4D;
+  --tbodycolor: #363535;
   --iconpos: left;
   --formbuttoncolor: #1BDC88;
   --footertxtsize: .8em;
@@ -711,16 +711,12 @@ table caption{
   font-size: 1.2em;
 }
 
-table thead tr:nth-child(odd){
-  background-color: var(--tableoddrowcolor);
+table thead {
+  background-color: var(--theadcolor);
 }
 
-table tbody tr:nth-child(even){
-  background-color: var(--tableoddrowcolor);
-}
-
-table tbody tr:nth-child(odd){
-  background-color: var(--tableevenrowcolor);
+table tbody {
+  background-color: var(--tbodycolor);
 }
 
 #hoursTable {
