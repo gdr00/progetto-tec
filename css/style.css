@@ -600,6 +600,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   text-align: center;
   font-size: var(--footertxtsize);
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #contactsOnFooter {
