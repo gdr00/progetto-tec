@@ -92,6 +92,7 @@ a:visited {
 
 a:hover {
   color: var(--linknavhovercolor);
+  transition: 0.14s
 }
 
 .hidden {
@@ -157,7 +158,6 @@ header h1 {
 }
 
 #menu a {
-  color: var(--linkcolor);
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
@@ -177,7 +177,6 @@ header h1 {
 /*top bottom left right padding in order to eliminate the text movement*/
 #menu a:hover {
   background-color: var(--navlinkbg);
-  color: var(--linkhovercolor);
   text-decoration: underline;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
@@ -304,11 +303,6 @@ header h1 {
 
 #breadcrumb a:hover {
   transition: linear 0.14s;
-  color: var(--linkhovercolor);
-}
-
-#breadcrumb a {
-  color: var(--linkcolor);
 }
 
 /*******************
@@ -684,12 +678,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   list-style: none;
 }
 
-#contactsOnFooter a {
-  color: var(--linkcolor);
-}
-
 #contactsOnFooter a:hover {
-  color: var(--linkhovercolor);
   transition: .14s;
 }
 
@@ -828,12 +817,7 @@ input[type="submit"]{
   align-items: center;
 }
 
-.cards a {
-  color: var(--linkcolor);
-}
-
 .cards a:hover {
-  color: var(--linkhovercolor);
   transition: .14s;
 }
 
@@ -875,7 +859,6 @@ input[type="submit"]{
 
 #contactsList ul a:hover{
   transition: linear 0.14s;
-  color: var(--linkhovercolor);
 }
 
 #contactList ul a:visited {
@@ -950,7 +933,6 @@ textarea {
 
 #requestsForm input[type="submit"]:hover {
   background-color: var(--navlinkbg);
-  color: var(--linkhovercolor);
 }
 
 #agreementBlock label, input {
@@ -969,5 +951,4 @@ textarea {
 
 .numeroCellulare {
   font-size: 1 em;
-  color: var(--linkcolor);
 }
