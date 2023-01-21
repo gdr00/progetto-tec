@@ -307,10 +307,7 @@ input:checked + .slider:before {
 }
 
 #breadcrumb a {
-  color:white;
-}
-
-#breadcrumb a:visited {
+  color: var(--linkcolor);
 }
 
 /*******************
