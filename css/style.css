@@ -611,8 +611,8 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   list-style: none;
 }
 
-#contactsOnFooter a:hover {
-  transition: .14s;
+#contactsOnFooter span {
+  margin-top: 2em;
 }
 
 /*******************
@@ -753,6 +753,7 @@ input[type="submit"]{
 /*******************
     CONTATTI PAGE
 ********************/
+
 
 #contactsContainer {
   align-items: center;
