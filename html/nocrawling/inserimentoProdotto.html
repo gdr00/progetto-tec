@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Prodotti - Sicurservice</title> <!--prima contenso particolare poi generale-->
+    <title>Chi Siamo - Sicurservice</title>
     <!-- META TAGS -->
     <meta charset="utf-8" />
-    <meta name="keywords" content="sicurezza, antifurto, consigli, casa, famiglia, protezione" />
-    <meta name="description" content="Sicurservice - Sistemi d'allarme, antifurti, videosorveglianza, rivelazione incendi, automazione accessi, domotica, etc. - Porcia (PN)" />
+    <meta name="keywords" content="Alessandro Da Re, Roberta Moret, installatore, contabilità" />
+    <meta name="description" content="" />
     <meta name="author" content="Sicurservice" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- LINK TAGS -->
-    <link rel="stylesheet" href="../css/style.css" media="handheld, screen" />
-    <link rel="stylesheet" href="../css/mini.css" media="handled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
-    <link rel="stylesheet" href="../css/print.css" media="print" />
-    <link rel="shortcut icon" type="image/png" href="../img/icon.png" />
+    <link rel="stylesheet" href="../../css/style.css" media="handheld, screen" />
+    <link rel="stylesheet" href="../../css/mini.css" media="handhled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
+    <link rel="stylesheet" href="../../css/print.css" media="print" />
+    <link rel="shortcut icon" type="image/png" href="../../img/icon.png" />
 
     <!-- SCRIPTS -->
-    <script src="../js/main.js"></script>
+    <script src="../../js/main.js"></script>
 </head>
 
 <body onload="syncTheme()">
@@ -25,52 +25,43 @@
         <nav id="menu">
             <button id="hamburger" onclick="toggleMenu()" aria-expanded="false"><span>Menu</span></button>
             <ul id="menus">
-                <li><a href="../index.html" aria-label="vai alla pagina home">Home</a></li>
-                <li><a href="chiSiamo.html" aria-label="vai alla pagina chi siamo">Chi siamo</a></li>
-                <li><a class="active" aria-label="pagina corrente prodotti" href="#prodotti">Prodotti</a></li>
-                <li><a href="contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
+                <li><a href="../../index.html" aria-label="vai alla pagina home">Home</a></li>
+                <li><a href="../chiSiamo.html" aria-label="vai alla pagina home">Chi siamo</a></li>
+                <li><a href="../prodotti.html" aria-label="vai alla pagina prodotti">Prodotti</a></li>
+                <li><a href="../contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
+                <li><a class="active" aria-label="pagina corrente area amministratore">Amministratore</a></li>
             </ul>
             <button id="themeButton" onclick="changeTheme();" aria-hidden="true">Tema chiaro-scuro</button>
         </nav>
     </header>
 
-    <nav id ="breadcrumb" aria-label="Posizione corrente">
-        <img src="../img/icons/location-dot.svg" alt="Ti trovi in:"/>
-        <p><a href="../index.html"><span lang ="en">Home</span></a> > Prodotti</p>
-    </nav>
-
+	<!-- BREADCRUMB -->
+	<nav id ="breadcrumb" aria-label="Posizione corrente">
+		<img src="../img/icons/location-dot.svg" alt="Ti trovi in:"/>
+		<p><a href ="../index.html"><span lang="en">Home</span></a> > Chi siamo</p>
+	</nav>
+    
     <main>
-        <h2>Prodotti</h2>
-        <ul id="products">
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-            <li>
-                <h3>Cancelli automatici</h3>
-                <img src="../img/logo.png" alt="Immaginediocan"/>
-            </li>
-        </ul>
+
+
+    <h1>Inserimento Nuovo Prodotto</h1>
+    <form id="modifyProduct" method="post" enctype="multipart/form-data">
+        <label for="product-name">Nome Prodotto:</label>
+        <input type="text" id="product-name" name="product-name" required>
+        <br>
+        <label for="product-image">Immagini Prodotto:</label>
+        <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
+        <br>
+        <label for="product-description">Descrizione Prodotto:</label>
+        <textarea id="product-description" name="product-description" required></textarea>
+        <br>
+        <div class="button-group">
+            <button type="submit" formaction="add-product.php">Aggiungi</button>
+            <button type="submit" formaction="edit-product.php" disabled>Modifica</button>
+            <button type="submit" formaction="delete-product.php" disabled>Elimina</button>
+        </div>
+    </form>
+
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Torna all'inizio"><span>Torna all'inizio</span></button>
 
@@ -125,6 +116,6 @@
                 </tbody>
             </table>
     </footer>
-</body>
 
+</body>
 </html>

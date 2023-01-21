@@ -611,8 +611,9 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   list-style: none;
 }
 
-#contactsOnFooter span {
-  margin-top: 2em;
+#contactsOnFooter ul li span {
+  display: inline-block;
+  padding-top: 2em;
 }
 
 /*******************
