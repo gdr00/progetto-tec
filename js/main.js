@@ -131,7 +131,7 @@ function setTheme(themeName) {
 }
 
 // function to toggle between light and dark theme
-function toggleTheme() {
+function changeTheme() {
   console.log('change theme request, current theme: '+localStorage.getItem('theme'));
   if (localStorage.getItem('theme') == 'theme-dark') {
       setTheme('theme-light');
@@ -144,9 +144,9 @@ function toggleTheme() {
 (function () {
   if (localStorage.getItem('theme') == 'theme-light') {
       setTheme('theme-light');
-      document.getElementById('themeSlider').checked = false;
+      //document.getElementById('themeSlider').checked = false;
   } else {
       setTheme('theme-dark');
-    document.getElementById('themeSlider').checked = true;
+      //document.getElementById('themeSlider').checked = true;
   }
 })();
