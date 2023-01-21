@@ -19,7 +19,7 @@
     <script src="../js/main.js"></script>
 </head>
 
-<body>
+<body onload="syncTheme()">
     <header>
         <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
         <nav id="menu">
@@ -30,7 +30,10 @@
                 <li><a href="prodotti.html" aria-label="vai alla pagina prodotti">Prodotti</a></li>
                 <li><a href="contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
             </ul>
-            <button id="themeButton" onclick="changeTheme();" aria-hidden="true">Tema chiaro-scuro</button>
+            <label class="switch">
+                <input type="checkbox" id="themeButton" onclick="changeTheme()"/>
+                <span class="slider round"></span>
+            </label>
         </nav>
     </header>
 
