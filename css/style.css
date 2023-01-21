@@ -12,13 +12,12 @@
   --linkvisitedcolor: #f1f1f1;
   --linkhovercolor: #1BDC88;
   --currentnavpagetxtcolor: black;
-  --currentnavpagebg: white;
+  --currentnavpagebg: #1BDC88;
   --navlinkbg: #5050504d;
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
   --cardbg: #181818;
   --cardshadow: #141414;
-  --cardtxtcolor: #f1f1f1;
   --cardLogobg: #fff;
   --cardtitlesize: 1.2em;
   --animatedformcolor: #1BDC88;
@@ -31,26 +30,25 @@
 }
 
 .theme-light{
-  --navbarbg: #050505;
-  --breadcrumbbg: #181818;
+  --navbarbg: white;
+  --breadcrumbbg: white;
   --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
   --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: rgba(0, 0, 0, 0.35);
+  --footerbg: white;
   --bodybgcolor: white;
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
-  --txtcolor: #f1f1f1;
-  --linkcolor: #f1f1f1;
-  --linkvisitedcolor: #f1f1f1;
-  --linkhovercolor: #1BDC88;
+  --txtcolor: black;
+  --linkcolor: blue;
+  --linkvisitedcolor: blue;
+  --linkhovercolor: #851bdc;
   --currentnavpagetxtcolor: black;
-  --currentnavpagebg: white;
+  --currentnavpagebg: #1BDC88;
   --navlinkbg: #5050504d;
   --themebg: #f1f1f1;
   --themeborder: #1BDC88;
-  --cardbg: #181818;
+  --cardbg: white;
   --cardshadow: #141414;
-  --cardtxtcolor: #f1f1f1;
   --cardLogobg: #fff;
   --cardtitlesize: 1.2em;
   --animatedformcolor: #1BDC88;
@@ -182,7 +180,7 @@ header h1 {
 }
 
 #menu a.active{
-  background-color: var(--linkhovercolor);
+  background-color: var(--currentnavpagebg);
   color: var(--currentnavpagetxtcolor);
   pointer-events: none;
   cursor: default;
@@ -220,7 +218,7 @@ header h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: grey;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -232,23 +230,22 @@ header h1 {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-image: url(../img/theme/light.png);
+  background-size: cover;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 #themeButton:checked + .slider {
-  background-color: #2196F3;
-}
-
-#themeButton:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  background-color: #353a38;
 }
 
 #themeButton:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-image: url(../img/theme/moon.png);
+  background-size: cover;
 }
 
 /* Rounded sliders */
@@ -535,7 +532,7 @@ main h2 {
   /*transform: translate(-390px);/**/
   height: 330px;
   margin-left: 60px; /*margini in px per sapere le distanze di cui traslare in js*/
-  color: var(--cardtxtcolor);
+  color: var(--txtcolor);
   background-color: var(--cardbg);
   border-radius: 1em;
   justify-content: center;
@@ -958,7 +955,7 @@ textarea {
 }
 
 .cards li {
-  color: var(--cardtxtcolor);
+  color: var(--txtcolor);
   background-color: var(--cardbg);
   border: 1px solid #ccc;
   margin: 0 10px 20px 10px;
