@@ -28,6 +28,7 @@
   --iconpos: left;
   --formbuttoncolor: #1BDC88;
   --footertxtsize: .8em;
+  --tabletxtsize: .65em;
   --logo: url(../img/logo-sfondo-nero.webp);
 }
 
@@ -645,6 +646,8 @@ table tbody {
 
 #hoursTable {
   flex: 2 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #hoursTable th {
@@ -669,12 +672,13 @@ table tbody {
 
 #hoursTable th[scope="row"]{
   text-align: left;
-  padding: 0.2em 0.2em 0.2em 0.5em;
+  padding-left: 1em;
 }
 
 #hoursTable td, th {
+  font-size: var(--tabletxtsize);
   text-align: center;
-  padding: 0.5em 0.8em 0.5em 0.8em;
+  padding: .2em;
 }
 
 /*******************
