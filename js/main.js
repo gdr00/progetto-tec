@@ -149,6 +149,7 @@ function syncTheme() {
 (function () {
   if (localStorage.getItem('theme') == 'theme-light') {
       setTheme('theme-light');
+      syncTheme();
   } else {
       setTheme('theme-dark');
   }
