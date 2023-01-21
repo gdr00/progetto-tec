@@ -1,4 +1,4 @@
-:root {
+.theme-dark{
   --navbarbg: #050505;
   --breadcrumbbg: #181818;
   --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
@@ -30,9 +30,43 @@
   --logo: url(../img/logo-sfondo-nero.webp);
 }
 
+.theme-light{
+  --navbarbg: #050505;
+  --breadcrumbbg: #181818;
+  --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
+  --breadcrumbshadowcolor: #6B6B6B;
+  --footerbg: rgba(0, 0, 0, 0.35);
+  --bodybgcolor: white;
+  --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
+  --globaltxtsize: 1em;
+  --txtcolor: #f1f1f1;
+  --linkcolor: #f1f1f1;
+  --linkvisitedcolor: #f1f1f1;
+  --linkhovercolor: #1BDC88;
+  --currentnavpagetxtcolor: black;
+  --currentnavpagebg: white;
+  --navlinkbg: #5050504d;
+  --themebg: #f1f1f1;
+  --themeborder: #1BDC88;
+  --cardbg: #181818;
+  --cardshadow: #141414;
+  --cardtxtcolor: #f1f1f1;
+  --cardLogobg: #fff;
+  --cardtitlesize: 1.2em;
+  --animatedformcolor: #1BDC88;
+  --tableoddrowcolor: #4D4D4D;
+  --tableevenrowcolor: #363535;
+  --iconpos: left;
+  --formbuttoncolor: #1BDC88;
+  --footertxtsize: .8em;
+  --logo: url(../img/logo-sfondo-nero.webp);
+}
+
+
 * {
   margin: 0;
   padding: 0;
+  border: 1px solid red;
 }
 
 html,

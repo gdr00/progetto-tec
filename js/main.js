@@ -142,11 +142,11 @@ function toggleTheme() {
 
 // Immediately invoked function to set the theme on initial load
 (function () {
-  if (localStorage.getItem('theme') == 'theme-dark') {
-      setTheme('theme-dark');
+  if (localStorage.getItem('theme') == 'theme-light') {
+      setTheme('theme-light');
       document.getElementById('themeSlider').checked = false;
   } else {
-      setTheme('theme-light');
+      setTheme('theme-dark');
     document.getElementById('themeSlider').checked = true;
   }
 })();
