@@ -9,9 +9,8 @@
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
-  --linkcolor: #f1f1f1;
-  --linkvisitedcolor: #f1f1f1;
-  --linkhovercolor: #1BDC88;
+  --linkcolor: #1BDC88;
+  --linkvisitedcolor: #BD89EB;
   --currentnavpagetxtcolor: black;
   --currentnavpagebg: #1BDC88;
   --navlinkbg: #5050504d;
@@ -33,7 +32,7 @@
 .theme-light{
   --navbarbg: white;
   --breadcrumbbg: white;
-  --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
+  --breadcrumbsvg: none;
   --breadcrumbshadowcolor: #6B6B6B;
   --footerbg: white;
   --bodybgcolor: white;
@@ -41,8 +40,7 @@
   --globaltxtsize: 1em;
   --txtcolor: black;
   --linkcolor: blue;
-  --linkvisitedcolor: blue;
-  --linkhovercolor: #851bdc;
+  --linkvisitedcolor: #681DA8;
   --currentnavpagetxtcolor: black;
   --currentnavpagebg: #1BDC88;
   --navlinkbg: #5050504d;
@@ -88,11 +86,6 @@ a {
 
 a:visited {
   color: var(--linkvisitedcolor);
-}
-
-a:hover {
-  color: var(--linknavhovercolor);
-  transition: 0.14s
 }
 
 .hidden {
@@ -419,7 +412,7 @@ main h2 {
   border: 0;
 }
 .dot:hover {
-  background-color: var(--linkhovercolor);
+  background-color: var(--linkcolor);
 }
 
 .fade {
@@ -619,9 +612,9 @@ main h2 {
   display: block;
   font-size: 1.6em;
   font-weight: bold;
-  color: var(--linkcolor);
-  border-color: var(--linkcolor);
-  background-color: var(--linkhovercolor);
+  color: var(--bodybgcolor);
+  border-color: var(--txtcolor);
+  background-color: var(--linkcolor);
   width: 50px;
   height: 50px;
   border-radius: 15px;
@@ -649,7 +642,7 @@ main h2 {
 
 #toTop:hover {
   cursor: pointer;
-  background-color: var(--cardbg);
+  border: 3px solid var(--txtcolor);
 }
 
 /*******************
@@ -798,15 +791,6 @@ input[type="submit"]{
 /*******************
       chiSiamo
 ********************/
-
-#chiSiamoMain {
-  height: 100%;
-}
-
-#chiSiamo {
-  padding: 11px;
-}
-
 .cards {
   margin: -10px;
   padding: 10px;
@@ -927,7 +911,6 @@ textarea {
 }
 
 #requestsForm input[type="text"]:hover, input[type="tel"]:hover, textarea:hover {
-  border: 2px solid var(--linkhovercolor);
   transition: linear 0.14s;
 }
 
