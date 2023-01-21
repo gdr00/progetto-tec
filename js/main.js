@@ -144,9 +144,9 @@ function changeTheme() {
 (function () {
   if (localStorage.getItem('theme') == 'theme-light') {
       setTheme('theme-light');
-      //document.getElementById('themeSlider').checked = false;
+      document.getElementById('themeButton').checked = true;
   } else {
       setTheme('theme-dark');
-      //document.getElementById('themeSlider').checked = true;
+      document.getElementById('themeButton').checked = false;
   }
 })();
