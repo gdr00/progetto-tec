@@ -1,11 +1,13 @@
 var slideIndex = 1;
 var cardIndex = 1;
 var translateAmount = 0;
-var theme = "dark";
+/*var theme = "dark";
 var themeProperties = ['--bodybgcolor', '--breadcrumbbg', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo', '--cardbg', '--cardLogobg', '--cardshadow', '--cardtxtcolor', '--breadcrumbsvg'];
 var themeValues = [['#050505', '#181818', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)', '#181818', '#ffffff', '#141414', '#f1f1f1', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%)'], 
   ['#ffffff', '#ededed', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ededed', '#e1e1e1', '#e1e1e1', '#000000', 'invert(0%) sepia(97%) saturate(14%) hue-rotate(160deg) brightness(103%) contrast(102%)']];
+*/
 
+/*
 window.readyState(setupWindow());
 document.readyState(setupPage());
 
@@ -16,6 +18,7 @@ function setupWindow() {
 function setupPage() {
   alert(sessionStorage.getItem('panelTheme'));
 }
+*/
 
 // Next/previous controls
 function plusSlides(n) {
@@ -42,7 +45,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("active");
 }
-
+/*
 function changeTheme() {
   localstTheme = sessionStorage.getItem('panelTheme');
   if (localstTheme == 'dark') {
@@ -59,15 +62,17 @@ function setTheme(theme) {
     sessionStorage.setItem('panelTheme', theme);
     for (var i = 0; i < themeProperties.length; i++) {
       document.documentElement.style.setProperty(themeProperties[i], themeValues[0][i]);
-    } /* attenzione alla posizione delle variabili globali, prima erano tra set theme e changeTheme, siccome change chiama set e le variabili erano dichiarate sotto change per change non esistevano ancora e crashava con metodo .lenght*/
+    } /* attenzione alla posizione delle variabili globali, prima erano tra set theme e changeTheme, siccome change chiama set e le variabili erano dichiarate sotto change per change non esistevano ancora e crashava con metodo .lenght
   }
   if (theme == 'light') {
     sessionStorage.setItem('panelTheme', theme);
     for (var i = 0; i < themeProperties.length; i++) {
       document.documentElement.style.setProperty(themeProperties[i], themeValues[1][i]);
-    }/**/
+    }
   }
 }
+
+*/
 
 /*document.scroll(function(){
   var y = this.scrollTop();
@@ -118,6 +123,30 @@ function showCards(n){
   }
 }
 
-function showDescription() {
-  
+//--------------------------------------------------------------
+
+function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
 }
+
+// function to toggle between light and dark theme
+function toggleTheme() {
+  console.log('change theme request, current theme: '+localStorage.getItem('theme'));
+  if (localStorage.getItem('theme') == 'theme-dark') {
+      setTheme('theme-light');
+  } else {
+      setTheme('theme-dark');
+  }
+}
+
+// Immediately invoked function to set the theme on initial load
+(function () {
+  if (localStorage.getItem('theme') == 'theme-dark') {
+      setTheme('theme-dark');
+      document.getElementById('themeSlider').checked = false;
+  } else {
+      setTheme('theme-light');
+    document.getElementById('themeSlider').checked = true;
+  }
+})();
