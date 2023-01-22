@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "your_username";
+$username = "tecweb";
 $password = "eDD&%5+QrPr4?A-";
 $dbname = "tecweb";
 
@@ -9,5 +9,5 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Controlla la connessione
 if (!$conn)
-    die("Connection failed: " . mysqli_connect_error());
-echo "Connected successfully";
+    die("Connessione fallita: " . mysqli_connect_error());
+echo "Connessione riuscita";

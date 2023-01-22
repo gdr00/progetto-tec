@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'connection.php';
 
 // Prende i dati dalla form
@@ -18,12 +19,12 @@ $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
 move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file);
 
 // Insert the data into the database
-$sql = "INSERT INTO products (name, description, image) VALUES ('$product_name', '$product_description', '$target_file')";
+$sql = "INSERT INTO prodotto (nome, descrizione, immagine) VALUES ('$product_name', '$product_description', '$target_file')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "Prodotto inserito correttamente";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Errore: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
