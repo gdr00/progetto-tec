@@ -650,8 +650,7 @@ table tbody {
 
 #hoursTable {
   flex: 2 1;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 1em;
 }
 
 #hoursTable th {

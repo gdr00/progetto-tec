@@ -153,6 +153,10 @@ table {
     width: 80%;
 }
 
+#hoursTable {
+    margin-right: 0;
+}
+
 /*
 thead, tfoot{
     display: none;
