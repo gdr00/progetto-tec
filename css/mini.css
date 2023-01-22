@@ -35,7 +35,7 @@
 
 .theme-light{
   --navbarbg: white;
-  --navmenubg: rgba(255, 255, 255, 0.95);
+  --navmenubg: rgba(255, 255, 255, 0.90);
   --breadcrumbbg: white;
   --breadcrumbsvg: none;
   --breadcrumbshadowcolor: #6B6B6B;
