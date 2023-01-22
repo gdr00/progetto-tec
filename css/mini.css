@@ -1,5 +1,6 @@
 .theme-dark{
   --navbarbg: #050505;
+  --navmenubg: rgba(0, 0, 0, 0.95);
   --breadcrumbbg: #181818;
   --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
   --breadcrumbshadowcolor: #6B6B6B;
@@ -34,6 +35,7 @@
 
 .theme-light{
   --navbarbg: white;
+  --navmenubg: rgba(255, 255, 255, 0.95);
   --breadcrumbbg: white;
   --breadcrumbsvg: none;
   --breadcrumbshadowcolor: #6B6B6B;
