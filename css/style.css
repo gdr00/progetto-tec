@@ -141,6 +141,7 @@ header h1 {
   align-items: center;
   color: var(--txtcolor);
   font-size: 1em;
+  white-space: nowrap;
 }
 
 #menu ul {
