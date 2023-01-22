@@ -289,7 +289,6 @@ main h2 {
 
 .slideshowContainer {
   width: fit-content;
-  max-width: 1024px;
   position: relative;
   /*to position the prev and next buttons*/
   margin: 0 auto;
@@ -304,10 +303,9 @@ main h2 {
 }
 
 .mySlides img {
-  max-width: 100%;
-  max-height: 45vh;
-  position: relative;
-  left: auto;
+  max-height: 40vh; /*voglio occupi al massimo il 40% della viewport per lasciare spazio agli altri contenuti*/
+  width: auto;
+  border-radius: 1em;
 }
 
 .prev,

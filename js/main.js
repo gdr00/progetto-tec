@@ -1,24 +1,6 @@
 var slideIndex = 1;
 var cardIndex = 1;
 var translateAmount = 0;
-/*var theme = "dark";
-var themeProperties = ['--bodybgcolor', '--breadcrumbbg', '--navbarbg', '--txtcolor', '--linkcolor', '--linkvisited', '--linkhovercolor', '--navlinkcolor', '--navlinkvisited', '--navlinkhovercolor', '--navlinkbg', '--themebg', '--themeborder', '--iconpos', '--logo', '--cardbg', '--cardLogobg', '--cardshadow', '--cardtxtcolor', '--breadcrumbsvg'];
-var themeValues = [['#050505', '#181818', '#050505', '#f1f1f1', '#f1f1f1', '#f1f1f1', '#1BDC88', '#f1f1f1', '#f1f1f1', '#1BDC88', '#5050504d', '#f1f1f1', '#1BDC88', 'left', 'url(../img/logo-sfondo-nero.webp)', '#181818', '#ffffff', '#141414', '#f1f1f1', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%)'], 
-  ['#ffffff', '#ededed', '#ffffff', '#000000', '#000000', '#000000', '#1BDC88', '#000000', '#000000', '#1BDC88', '#ababab4d', '#000000', '#1BDC88', 'right', 'url(../img/logo-sfondo-bianco.webp)', '#ededed', '#e1e1e1', '#e1e1e1', '#000000', 'invert(0%) sepia(97%) saturate(14%) hue-rotate(160deg) brightness(103%) contrast(102%)']];
-*/
-
-/*
-window.readyState(setupWindow());
-document.readyState(setupPage());
-
-function setupWindow() {
-  sessionStorage.setItem('panelTheme', theme);
-}
-
-function setupPage() {
-  alert(sessionStorage.getItem('panelTheme'));
-}
-*/
 
 // Next/previous controls
 function plusSlides(n) {
@@ -45,34 +27,6 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("active");
 }
-/*
-function changeTheme() {
-  localstTheme = sessionStorage.getItem('panelTheme');
-  if (localstTheme == 'dark') {
-    theme = 'light';
-    setTheme('light');
-  } else {
-    theme = 'dark';
-    setTheme('dark');
-  }
-}
-
-function setTheme(theme) {
-  if (theme == 'dark') {
-    sessionStorage.setItem('panelTheme', theme);
-    for (var i = 0; i < themeProperties.length; i++) {
-      document.documentElement.style.setProperty(themeProperties[i], themeValues[0][i]);
-    } /* attenzione alla posizione delle variabili globali, prima erano tra set theme e changeTheme, siccome change chiama set e le variabili erano dichiarate sotto change per change non esistevano ancora e crashava con metodo .lenght
-  }
-  if (theme == 'light') {
-    sessionStorage.setItem('panelTheme', theme);
-    for (var i = 0; i < themeProperties.length; i++) {
-      document.documentElement.style.setProperty(themeProperties[i], themeValues[1][i]);
-    }
-  }
-}
-
-*/
 
 /*document.scroll(function(){
   var y = this.scrollTop();
@@ -109,7 +63,7 @@ document.onclick = function (event) {
       hamburger.setAttribute("aria-expanded", "false");
     }
   }
-}
+}/*lo avevo tolto perchè quando zoommi indietro il menù normale non si vede*/
 
 function showCards(n){
   var cards = document.getElementsByClassName("partnerCard");
@@ -145,7 +99,7 @@ function setTheme(themeName) {
 function changeTheme() {
   if (localStorage.getItem('theme') == 'theme-dark') {
       setTheme('theme-light');
-  } else {
+  } else { /*anche se non c'è il localStorage*/
       setTheme('theme-dark');
   }
 }
