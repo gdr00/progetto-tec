@@ -628,6 +628,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
 table{
   border-collapse: collapse;
   box-shadow: 0 0 8px 2px grey;
+  border-radius: 1em;
 }
 
 caption {
