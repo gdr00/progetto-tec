@@ -1,32 +1,67 @@
-:root {
-    --navbarbg: #050505;
-    --navmenubg: rgba(0, 0, 0, 0.90);
-    --breadcrumbbg: grey;
-    --footerbg: rgba(0, 0, 0, 0.35);
-    --bodybgcolor: #050505;
-    --bodylineheight: 1.9em;
-    --txtcolor: #f1f1f1;
-    --linkcolor: #f1f1f1;
-    --linkvisited: #f1f1f1;
-    --linkhovercolor: #1BDC88;
-    --navlinkcolor: #f1f1f1;
-    --navlinkvisited: #f1f1f1;
-    --navlinkhovercolor: #1BDC88;
-    --navlinkbg: #5050504d;
-    --themebg: #f1f1f1;
-    --themeborder: #1BDC88;
-    --cardbg: #181818;
-    --cardshadow: #141414;
-    --cardtxtcolor: #f1f1f1;
-    --animatedformcolor: #1BDC88;
-    --tableoddrowcolor: #4D4D4D;
-    --tableevenrowcolor: #1BDC88;
-    /*take the min from the min of vw, vh or 
-  if it is too big take the minumum of default text size*/
-    /*--globaltxtsize: min(min(1.5vh, 1.5vw), 1em);/* adaptive text */
-    /*--globaltxtsize: 1em;/* */
-    --iconpos: left;
-    --logo: url(../img/logo-sfondo-nero.webp);
+.theme-dark{
+  --navbarbg: #050505;
+  --breadcrumbbg: #181818;
+  --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
+  --breadcrumbshadowcolor: #6B6B6B;
+  --footerbg: rgba(0, 0, 0, 0.35);
+  /*--generalshadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor); */
+  --bodybgcolor: #050505;
+  --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
+  --globaltxtsize: 1em;
+  --txtcolor: #f1f1f1;
+  --linkcolor: #1BDC88;
+  --linkvisitedcolor: #BD89EB;
+  --currentnavpagetxtcolor: black;
+  --currentnavpagebg: #1BDC88;
+  --navlinkhoverbg: white;
+  --navlinkhovercolor: black;
+  --themebg: #f1f1f1;
+  --themebgimg: url(../img/theme/moon.png);
+  --themeborder: #fff;
+  --cardbg: #181818;
+  --cardshadow: #141414;
+  --cardLogobg: #fff;
+  --cardtitlesize: 1.2em;
+  --animatedformcolor: #1BDC88;
+  --theadcolor: #4D4D4D;
+  --tbodycolor: #363535;
+  --iconpos: left;
+  --formbuttoncolor: #1BDC88;
+  --footertxtsize: .8em;
+  --tabletxtsize: .7em;
+  --logo: url(../img/logo-sfondo-nero.webp);
+}
+
+.theme-light{
+  --navbarbg: white;
+  --breadcrumbbg: white;
+  --breadcrumbsvg: none;
+  --breadcrumbshadowcolor: #6B6B6B;
+  --footerbg: white;
+  --bodybgcolor: white;
+  --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
+  --globaltxtsize: 1em;
+  --txtcolor: black;
+  --linkcolor: blue;
+  --linkvisitedcolor: #681DA8;
+  --currentnavpagetxtcolor: black;
+  --currentnavpagebg: #1BDC88;
+  --navlinkhoverbg: black;
+  --navlinkhovercolor: white;
+  --themebg: #f1f1f1;
+  --themebgimg: url(../img/theme/light.png);
+  --themeborder: #000;
+  --cardbg: white;
+  --cardshadow: #141414;
+  --cardLogobg: #fff;
+  --cardtitlesize: 1.2em;
+  --animatedformcolor: #1BDC88;
+  --tableoddrowcolor: #4D4D4D;
+  --tableevenrowcolor: #363535;
+  --iconpos: right;
+  --formbuttoncolor: #1BDC88;
+  --footertxtsize: .8em;
+  --logo: url(../img/logo-sfondo-bianco.webp);
 }
 
 html,
