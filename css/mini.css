@@ -139,6 +139,30 @@ main h2 {
 }
 
 /*******************
+    CONTATTACI
+********************/
+#contactsContainer{
+    flex-direction: column;
+}
+
+#formRequestsContainer {
+    margin-top: 2em;
+}
+
+footer{
+    flex-direction: column;
+}
+
+#hoursTable {
+    display: none;
+}
+
+#hoursInTxtFormat{
+    display: block;
+}
+
+
+/*******************
        FOOTER
 ********************/
 footer {
