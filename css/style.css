@@ -214,6 +214,7 @@ header h1 {
   
   font-size: 1px;
   text-indent: -9999em;
+  cursor: pointer;
   margin: 0em 10px; /*siccome cambiare font size cambia anche il valore di un em setto il margine ad uun valore assoluto*/
 }
 
