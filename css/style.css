@@ -94,7 +94,7 @@ a:visited {
   color: var(--linkvisitedcolor);
 }
 
-.hidden {
+.aiuti {
   height: 1px;
   width: 1px;
   overflow: hidden;
