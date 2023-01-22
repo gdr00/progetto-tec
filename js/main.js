@@ -63,7 +63,7 @@ document.onclick = function (event) {
       hamburger.setAttribute("aria-expanded", "false");
     }
   }
-}
+}/*lo avevo tolto perchè quando zoommi indietro il menù normale non si vede*/
 
 function showCards(n){
   var cards = document.getElementsByClassName("partnerCard");
