@@ -308,6 +308,7 @@ main h2 {
   max-height: 45vh;
   position: relative;
   left: auto;
+  border-radius: 1em;
 }
 
 .prev,
