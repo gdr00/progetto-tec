@@ -53,11 +53,11 @@
   --themeborder: #000;
   --cardbg: white;
   --cardshadow: #141414;
-  --cardLogobg: #fff;
+  --cardLogobg: #e1e1e1;
   --cardtitlesize: 1.2em;
   --animatedformcolor: #1BDC88;
-  --tableoddrowcolor: #4D4D4D;
-  --tableevenrowcolor: #363535;
+  --theadcolor: #e1e1e1;
+  --tbodycolor: white;
   --iconpos: right;
   --formbuttoncolor: #1BDC88;
   --footertxtsize: .8em;
