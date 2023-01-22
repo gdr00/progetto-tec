@@ -50,7 +50,7 @@
   --navlinkhovercolor: white;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/light.png);
-  --themeborder: #000;
+  --themeborder: #a5a5a5;
   --cardbg: white;
   --cardshadow: #141414;
   --cardLogobg: #fff;
@@ -653,6 +653,10 @@ table tbody {
   margin-right: auto;
 }
 
+#hoursInTxtFormat {
+  display: none;
+}
+
 #hoursTable th {
   font-weight: bold;
 }
@@ -771,13 +775,13 @@ input[type="submit"]{
   margin-right: auto;
   margin-left: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 #contactsContainer li{
   list-style: none;
 }
+
 
 #contactsList ul {
   padding: 0em;
@@ -788,10 +792,6 @@ input[type="submit"]{
   align-content: center;
   flex-direction: column;
   justify-content: center;
-}
-
-#contactsList ul a:hover{
-  transition: linear 0.14s;
 }
 
 #contactList ul a:visited {
@@ -810,6 +810,7 @@ input[type="submit"]{
   padding: 1em;
   text-align: center;
   width: 65%;
+  min-width: 200px;
 }
 
 #contactsList a { /*per andare a capo con i link*/
