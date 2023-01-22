@@ -99,7 +99,7 @@ function setTheme(themeName) {
 function changeTheme() {
   if (localStorage.getItem('theme') == 'theme-dark') {
       setTheme('theme-light');
-  } else {
+  } else { /*anche se non c'è il localStorage*/
       setTheme('theme-dark');
   }
 }
