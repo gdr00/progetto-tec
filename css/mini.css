@@ -141,10 +141,48 @@ main h2 {
 /*******************
        FOOTER
 ********************/
+footer {
+    flex-direction: column;
+}
 
 /*******************
        TABLE
 ********************/
+/*
+thead, tfoot{
+    display: none;
+}
+
+tr, th , td {
+    display: block;
+}
+
+td[data-title]::before, th[data-title]::before {
+    content: attr(data-title)":\00A0";
+    font-weight: bold;
+}
+
+#hoursTable th[scope="row"] {
+    font-size: 1em;
+    text-align: center;
+    background-color: var(--theadcolor);
+}
+
+tbody tr:last-child :first-child { /*reset settings of style thead not displayed so useless reset
+  border-bottom-left-radius: 0;
+}
+
+tbody tr:last-child :last-child {
+  border-bottom-right-radius: 0;
+}
+
+tbody tr:first-child :first-child {
+  border-top-left-radius: 1em;
+}
+
+tbody tr:first-child :last-child {
+  border-top-right-radius: 1em;
+}/**/
 
 /*******************
      LOGIN PAGE
