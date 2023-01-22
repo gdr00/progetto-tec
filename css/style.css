@@ -655,19 +655,19 @@ table tbody {
   font-weight: bold;
 }
 
-#topLeftBorder {
+thead tr:first-child :first-child { /*perchè border collapse poi non permette di mettere il radius*/
   border-top-left-radius: 1em;
 }
 
-#topRightBorder {
+thead tr:first-child :last-child {
   border-top-right-radius: 1em;
 }
 
-#bottomLeftBorder {
+tbody tr:last-child :first-child {
   border-bottom-left-radius: 1em;
 }
 
-#bottomRightBorder {
+tbody tr:last-child :last-child {
   border-bottom-right-radius: 1em;
 }
 

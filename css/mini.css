@@ -1,94 +1,9 @@
 .theme-dark{
-  --navbarbg: #050505;
   --navmenubg: rgba(0, 0, 0, 0.95);
-  --breadcrumbbg: #181818;
-  --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
-  --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: rgba(0, 0, 0, 0.35);
-  /*--generalshadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor); */
-  --bodybgcolor: #050505;
-  --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
-  --globaltxtsize: 1em;
-  --txtcolor: #f1f1f1;
-  --linkcolor: #1BDC88;
-  --linkvisitedcolor: #BD89EB;
-  --currentnavpagetxtcolor: black;
-  --currentnavpagebg: #1BDC88;
-  --navlinkhoverbg: white;
-  --navlinkhovercolor: black;
-  --themebg: #f1f1f1;
-  --themebgimg: url(../img/theme/moon.png);
-  --themeborder: #fff;
-  --cardbg: #181818;
-  --cardshadow: #141414;
-  --cardLogobg: #fff;
-  --cardtitlesize: 1.2em;
-  --animatedformcolor: #1BDC88;
-  --theadcolor: #4D4D4D;
-  --tbodycolor: #363535;
-  --iconpos: left;
-  --formbuttoncolor: #1BDC88;
-  --footertxtsize: .8em;
-  --tabletxtsize: .7em;
-  --logo: url(../img/logo-sfondo-nero.webp);
 }
 
 .theme-light{
-  --navbarbg: white;
   --navmenubg: rgba(255, 255, 255, 0.90);
-  --breadcrumbbg: white;
-  --breadcrumbsvg: none;
-  --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: white;
-  --bodybgcolor: white;
-  --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
-  --globaltxtsize: 1em;
-  --txtcolor: black;
-  --linkcolor: blue;
-  --linkvisitedcolor: #681DA8;
-  --currentnavpagetxtcolor: black;
-  --currentnavpagebg: #1BDC88;
-  --navlinkhoverbg: black;
-  --navlinkhovercolor: white;
-  --themebg: #f1f1f1;
-  --themebgimg: url(../img/theme/light.png);
-  --themeborder: #000;
-  --cardbg: white;
-  --cardshadow: #141414;
-  --cardLogobg: #fff;
-  --cardtitlesize: 1.2em;
-  --animatedformcolor: #1BDC88;
-  --tableoddrowcolor: #4D4D4D;
-  --tableevenrowcolor: #363535;
-  --iconpos: right;
-  --formbuttoncolor: #1BDC88;
-  --footertxtsize: .8em;
-  --logo: url(../img/logo-sfondo-bianco.webp);
-}
-
-html,
-body {
-    font-size: 1em;
-    font-family: "Verdana", sans-serif;
-    line-height: 1.5em;
-    margin: auto;
-}
-
-html {
-    background: var(--bodybgcolor);
-    /*scroll-behavior: smooth; /*smooth scroll su tutta la pagina o link che snappano?*/
-}
-
-a {
-    color: var(--linkcolor);
-}
-
-a:visited {
-    color: var(--linkvisited);
-}
-
-a:hover {
-    color: var(--linknavhovercolor);
 }
 
 /*******************
@@ -124,7 +39,6 @@ header h1 {
 
 #menu li {
     margin: 0em 0em 1em 0em; /*resetta il margine sulla sisnistra e lo mette sotto*/
-    padding: 0;
 }
 
 #hamburger {
@@ -182,30 +96,6 @@ main h2 {
     margin: .5em 0 .2em .5em;
 }
 
-main ul {
-    margin-left: 3em;
-}
-
-#products {
-    color: var(--txtcolor);
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0em;
-    justify-content: center;
-    margin-top: 2em;
-
-}
-
-#products li {
-    padding: 10px;
-    border-radius: 10px;
-    flex: 0 0 270px;
-    text-align: center;
-    border: solid white 1px;
-    margin: 1em;
-}
-
 #products li p {
     font-size: 1em;
 }
@@ -255,37 +145,6 @@ main ul {
 /*******************
        TABLE
 ********************/
-
-table {
-    border-collapse: collapse;
-}
-
-table caption {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-table thead {
-    background-color: var(--tableoddrowcolor);
-}
-
-table tbody {
-    background-color: var(--tableoddrowcolor);
-}
-
-#tabOrari {
-    font-size: 0.6em;
-}
-
-#tabOrari th[scope="row"] {
-    text-align: left;
-    padding: 0.2em;
-}
-
-#tabOrari td {
-    text-align: center;
-    padding: 0.2em;
-}
 
 /*******************
      LOGIN PAGE
