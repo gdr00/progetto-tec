@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.html
+
+<FilesMatch "\\.(jpe?g|png|gif|swf|flv|pdf|webp|svg)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
