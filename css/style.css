@@ -53,14 +53,15 @@
   --themeborder: #a5a5a5;
   --cardbg: white;
   --cardshadow: #141414;
-  --cardLogobg: #fff;
+  --cardLogobg: #e1e1e1;
   --cardtitlesize: 1.2em;
   --animatedformcolor: #1BDC88;
-  --tableoddrowcolor: #4D4D4D;
-  --tableevenrowcolor: #363535;
+  --theadcolor: #e1e1e1;
+  --tbodycolor: white;
   --iconpos: right;
   --formbuttoncolor: #1BDC88;
   --footertxtsize: .8em;
+  --tabletxtsize: .7em;
   --logo: url(../img/logo-sfondo-bianco.webp);
 }
 
@@ -649,8 +650,7 @@ table tbody {
 
 #hoursTable {
   flex: 2 1;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 1em;
 }
 
 #hoursInTxtFormat {

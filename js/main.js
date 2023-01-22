@@ -100,6 +100,17 @@ function toggleMenu(){ /*for hamburger menu*/
   }
 }
 
+document.onclick = function (event) {
+  var menu = document.getElementById("menus");
+  var hamburger = document.getElementById("hamburger");
+  if (event.target != menu && event.target != hamburger) {
+    if (menu.style.display == "flex") {
+      menu.style.display = "none";
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+  }
+}
+
 function showCards(n){
   var cards = document.getElementsByClassName("partnerCard");
   cardIndex += n;
