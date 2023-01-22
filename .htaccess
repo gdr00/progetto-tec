@@ -5,7 +5,7 @@ ErrorDocument 404 /404.html
         Header set Cache-Control "max-age=2592000, public"
     </FilesMatch>
     <FilesMatch "\\.(jpe?g|png|gif|swf|flv|pdf|svg|webp)$">
-        Header set Cache-Control "max-age=604800, public"
+        Header set Cache-Control "max-age=2419200, public"
     </FilesMatch>
     <FilesMatch "\\.(js|css)$">
         Header set Cache-Control "max-age=3600, private"
