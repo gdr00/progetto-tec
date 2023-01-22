@@ -109,14 +109,8 @@ main h2 {
 ********************/
 
 .mySlides img {
-    max-width: 100%;
-    max-height: 32vh;
-    border-radius: 1rem;
-}
-
-.prev,
-.next {
-    display: none;
+    max-width: 90vw; /*cambio le immagini in modo da far occupare al massimo il 90% della view width*/
+    height: auto;
 }
 
 /*******************
