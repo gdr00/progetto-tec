@@ -3,18 +3,18 @@
   --breadcrumbbg: #181818;
   --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
   --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: rgba(0, 0, 0, 0.35);
+  --footerbg: #050505;
   /*--generalshadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor); */
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
-  --linkcolor: #1BDC88;
-  --linkvisitedcolor: #BD89EB;
-  --currentnavpagetxtcolor: black;
-  --currentnavpagebg: #1BDC88;
-  --navlinkhoverbg: white;
-  --navlinkhovercolor: black;
+  --linkcolor: #139A60;
+  --linkvisitedcolor: #9E51E1;
+  --currentnavpagetxtcolor: #000;
+  --currentnavpagebg: #139A60;
+  --navlinkhoverbg: #fff;
+  --navlinkhovercolor: #000;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/moon.png);
   --themeborder: #fff;
@@ -22,44 +22,44 @@
   --cardshadow: #141414;
   --cardLogobg: #fff;
   --cardtitlesize: 1.2em;
-  --animatedformcolor: #1BDC88;
+  --animatedformcolor: #139A60;
   --theadcolor: #4D4D4D;
   --tbodycolor: #363535;
   --iconpos: left;
-  --formbuttoncolor: #1BDC88;
+  --formbuttoncolor: #139A60;
   --footertxtsize: .8em;
   --tabletxtsize: .7em;
   --logo: url(../img/logo-sfondo-nero.webp);
 }
 
 .theme-light{
-  --navbarbg: white;
-  --breadcrumbbg: white;
+  --navbarbg: #fff;
+  --breadcrumbbg: #fff;
   --breadcrumbsvg: none;
   --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: white;
-  --bodybgcolor: white;
+  --footerbg: #fff;
+  --bodybgcolor: #fff;
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
-  --txtcolor: black;
-  --linkcolor: blue;
-  --linkvisitedcolor: #681DA8;
-  --currentnavpagetxtcolor: black;
-  --currentnavpagebg: #1BDC88;
-  --navlinkhoverbg: black;
-  --navlinkhovercolor: white;
+  --txtcolor: #000;
+  --linkcolor: #0F7B4C;
+  --linkvisitedcolor: #8023D1;
+  --currentnavpagetxtcolor: #fff;
+  --currentnavpagebg: #0F7B4C;
+  --navlinkhoverbg: #000;
+  --navlinkhovercolor: #fff;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/light.png);
   --themeborder: #a5a5a5;
-  --cardbg: white;
+  --cardbg: #fff;
   --cardshadow: #141414;
   --cardLogobg: #e1e1e1;
   --cardtitlesize: 1.2em;
-  --animatedformcolor: #1BDC88;
+  --animatedformcolor: #0F7B4C;
   --theadcolor: #e1e1e1;
-  --tbodycolor: white;
+  --tbodycolor: #fff;
   --iconpos: right;
-  --formbuttoncolor: #1BDC88;
+  --formbuttoncolor: #0F7B4C;
   --footertxtsize: .8em;
   --tabletxtsize: .7em;
   --logo: url(../img/logo-sfondo-bianco.webp);
@@ -178,7 +178,6 @@ header h1 {
 #menu a:hover {
   background-color: var(--navlinkhoverbg);
   color: var(--navlinkhovercolor);
-  text-decoration: underline;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
   transition: linear 0.14s;
@@ -220,11 +219,6 @@ header h1 {
 }
 
 #breadcrumb {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
   color: var(--txtcolor);
@@ -235,9 +229,14 @@ header h1 {
 #breadcrumb img {
   height: var(--globaltxtsize);
   width: var(--globaltxtsize);
-  margin-left: .3em;
-  margin-right: .3em;
+  margin-left: .4em;
+  margin-right: .1em;
   filter: var(--breadcrumbsvg);
+}
+#breadcrumb p{
+  display: inline;
+  margin: 0em;
+  padding: 0em;
 }
 
 #breadcrumb a:hover {
@@ -318,13 +317,13 @@ main h2 {
   min-height: 30px;
   margin-top: -1em;
   font-size: 2em;
-  color: #fff;
+  color: var(--txtcolor);
   font-weight: bold;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   border-width: 0;
   user-select: none;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--bodybgcolor);
 }
 
 .next {
@@ -334,11 +333,15 @@ main h2 {
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--linkcolor);
 }
 
 #dots {
   text-align: center;
+}
+
+#dots .active {
+  background-color: var(--linkcolor);
 }
 
 .dot {
@@ -393,7 +396,6 @@ main h2 {
   padding: .5em;
   border-radius: 2em;
   background-color: var(--cardbg);
-  height: fit-content; /*TODO*/
 }
 
 #serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
@@ -434,6 +436,7 @@ main h2 {
 #partnerCards .prev:hover,
 #partnerCards .next:hover {
   background-color: var(--bodybgcolor);
+  color: var(--linkcolor);
 }
 
 #partnerList {
@@ -603,6 +606,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   font-size: var(--footertxtsize);
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--footerbg);
 }
 
 #contactsOnFooter {
