@@ -32,4 +32,10 @@ Norme bottoni:
     - Colore testo: Come il colore del testo nel body
     - Hover: Colore dei link.
 
-Norme testo: card dove è presente testo
+Norme Cards:
+    - Card background: poco più chiaro per il tema scuro e come il body per il tema chiaro
+    - Contrasto tra cardbg e sfondo non valutato in quanto che si veda la card fisica o no non influisce in modo bloccante sull'esperienza utente.
+![card-bg-nero](text-card-contrast-nero.png)
+*text-card-contrast nero*
+![card-bg-nero](text-card-contrast-bianco.png)
+*text-card-contrast bianco*
