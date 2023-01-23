@@ -8,7 +8,7 @@ $paginaHTML = file_get_contents("inserimentoProdotto.html");
 // Errore da mostrare all'utente
 $messaggioForm = "";
 
-// Fu
+// Funzione per pulire i dati in input
 
 function pulisciInput($value) {
     $value = trim($value); 
@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
     // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
     // prende la descrizione del prodotto
-    $product_description = $_POST['product-description'];
+    $product_description = pulisciInput($_POST['product-description']);
     // prende il nome del file immagine
     $target_dir = "uploads/";
     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
