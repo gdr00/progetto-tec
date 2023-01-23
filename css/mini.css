@@ -113,6 +113,10 @@ main h2 {
     height: auto;
 }
 
+.dot {
+    display: none;
+}
+
 /*******************
        CARDS
 ********************/
