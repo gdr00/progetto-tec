@@ -9,10 +9,10 @@
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
-  --linkcolor: #1BDC88;
+  --linkcolor: #139A60;
   --linkvisitedcolor: #BD89EB;
   --currentnavpagetxtcolor: black;
-  --currentnavpagebg: #1BDC88;
+  --currentnavpagebg: #139A60;
   --navlinkhoverbg: white;
   --navlinkhovercolor: black;
   --themebg: #f1f1f1;
@@ -22,11 +22,11 @@
   --cardshadow: #141414;
   --cardLogobg: #fff;
   --cardtitlesize: 1.2em;
-  --animatedformcolor: #1BDC88;
+  --animatedformcolor: #139A60;
   --theadcolor: #4D4D4D;
   --tbodycolor: #363535;
   --iconpos: left;
-  --formbuttoncolor: #1BDC88;
+  --formbuttoncolor: #139A60;
   --footertxtsize: .8em;
   --tabletxtsize: .7em;
   --logo: url(../img/logo-sfondo-nero.webp);
@@ -178,7 +178,6 @@ header h1 {
 #menu a:hover {
   background-color: var(--navlinkhoverbg);
   color: var(--navlinkhovercolor);
-  text-decoration: underline;
   /*border-radius: 1em;
   padding: .5em .5em; /*top bottom left right padding, introducing it with linear transition moves the text to respect li padding to remove this effect add the same padding in a "non active"*/
   transition: linear 0.14s;
