@@ -10,11 +10,11 @@
   --globaltxtsize: 1em;
   --txtcolor: #f1f1f1;
   --linkcolor: #139A60;
-  --linkvisitedcolor: #BD89EB;
-  --currentnavpagetxtcolor: black;
+  --linkvisitedcolor: #9E51E1;
+  --currentnavpagetxtcolor: #000;
   --currentnavpagebg: #139A60;
-  --navlinkhoverbg: white;
-  --navlinkhovercolor: black;
+  --navlinkhoverbg: #fff;
+  --navlinkhovercolor: #000;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/moon.png);
   --themeborder: #fff;
@@ -33,33 +33,33 @@
 }
 
 .theme-light{
-  --navbarbg: white;
-  --breadcrumbbg: white;
+  --navbarbg: #fff;
+  --breadcrumbbg: #fff;
   --breadcrumbsvg: none;
   --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: white;
-  --bodybgcolor: white;
+  --footerbg: #fff;
+  --bodybgcolor: #fff;
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
   --globaltxtsize: 1em;
-  --txtcolor: black;
-  --linkcolor: blue;
-  --linkvisitedcolor: #681DA8;
-  --currentnavpagetxtcolor: black;
-  --currentnavpagebg: #1BDC88;
-  --navlinkhoverbg: black;
-  --navlinkhovercolor: white;
+  --txtcolor: #000;
+  --linkcolor: #0F7B4C;
+  --linkvisitedcolor: #8023D1;
+  --currentnavpagetxtcolor: #fff;
+  --currentnavpagebg: #0F7B4C;
+  --navlinkhoverbg: #000;
+  --navlinkhovercolor: #fff;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/light.png);
   --themeborder: #a5a5a5;
-  --cardbg: white;
+  --cardbg: #fff;
   --cardshadow: #141414;
   --cardLogobg: #e1e1e1;
   --cardtitlesize: 1.2em;
-  --animatedformcolor: #1BDC88;
+  --animatedformcolor: #0F7B4C;
   --theadcolor: #e1e1e1;
-  --tbodycolor: white;
+  --tbodycolor: #fff;
   --iconpos: right;
-  --formbuttoncolor: #1BDC88;
+  --formbuttoncolor: #0F7B4C;
   --footertxtsize: .8em;
   --tabletxtsize: .7em;
   --logo: url(../img/logo-sfondo-bianco.webp);
@@ -317,13 +317,13 @@ main h2 {
   min-height: 30px;
   margin-top: -1em;
   font-size: 2em;
-  color: #fff;
+  color: var(--txtcolor);
   font-weight: bold;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   border-width: 0;
   user-select: none;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--bodybgcolor);
 }
 
 .next {
@@ -333,7 +333,6 @@ main h2 {
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
   color: var(--linkcolor);
 }
 
@@ -472,7 +471,7 @@ main h2 {
   margin-top: .7em;
   margin-bottom: .7em;
   color: var(--txtcolor);
-  background-color: var(--cardbg);
+  background-color: var(--);
   border-radius: 1em;
   justify-content: center;
 }
