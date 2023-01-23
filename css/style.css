@@ -3,7 +3,7 @@
   --breadcrumbbg: #181818;
   --breadcrumbsvg: invert(100%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(101%) contrast(102%);
   --breadcrumbshadowcolor: #6B6B6B;
-  --footerbg: rgba(0, 0, 0, 0.35);
+  --footerbg: #050505;
   /*--generalshadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor); */
   --bodybgcolor: #050505;
   --bodylineheight: 1.9em; /*line height ok per dislessia, almeno 1.5*/
@@ -606,6 +606,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
   font-size: var(--footertxtsize);
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--footerbg);
 }
 
 #contactsOnFooter {
