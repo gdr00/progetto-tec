@@ -219,11 +219,6 @@ header h1 {
 }
 
 #breadcrumb {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
   background-color: var(--breadcrumbbg);
   border-radius: 5px;
   color: var(--txtcolor);
@@ -234,9 +229,14 @@ header h1 {
 #breadcrumb img {
   height: var(--globaltxtsize);
   width: var(--globaltxtsize);
-  margin-left: .3em;
-  margin-right: .3em;
+  margin-left: .4em;
+  margin-right: .1em;
   filter: var(--breadcrumbsvg);
+}
+#breadcrumb p{
+  display: inline;
+  margin: 0em;
+  padding: 0em;
 }
 
 #breadcrumb a:hover {
