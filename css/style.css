@@ -396,7 +396,6 @@ main h2 {
   padding: .5em;
   border-radius: 2em;
   background-color: var(--cardbg);
-  height: fit-content; /*TODO*/
 }
 
 #serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
@@ -471,7 +470,7 @@ main h2 {
   margin-top: .7em;
   margin-bottom: .7em;
   color: var(--txtcolor);
-  background-color: var(--);
+  background-color: var(--cardbg);
   border-radius: 1em;
   justify-content: center;
 }
