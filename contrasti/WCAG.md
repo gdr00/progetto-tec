@@ -15,12 +15,18 @@ Link visited contrast
 ![link-visited-bianco](link-visited-bianco.png)
 *link visited color bianco*
 
+Hover menu
+![menu-hover-nero](menu-hover-nero.png)
+*menu hover color nero*
+![menu-hover-bianco](menu-hover-bianco.png)
+*menu hover color bianco*
 ## Norme
 
 Norme menù:
     - Normal: Colore del testo uguale al colore del link, no padding background.
     - Visited: Colore del link come colore del link visitato, no padding background.
     - Active: Colore testo come background e colore padding come colore link.
+    - Hover: Colore testo come background e padding il suo complementare. (in questo modo ho contrasto completo tra testo che è del colore opposto e padding che ha colore opposto al background e contrastante con il colore del link)
 Norme bottoni:
     - Colore testo: Come il colore del testo nel body
     - Hover: Colore dei link.
