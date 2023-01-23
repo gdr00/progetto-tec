@@ -31,3 +31,5 @@ Norme menù:
 Norme bottoni:
     - Colore testo: Come il colore del testo nel body
     - Hover: Colore dei link.
+
+Norme testo: card dove è presente testo
