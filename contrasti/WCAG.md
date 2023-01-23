@@ -27,7 +27,8 @@ Norme menù:
     - Normal: Colore del testo uguale al colore del link, no padding background.
     - Visited: Colore del link come colore del link visitato, no padding background.
     - Active: Colore testo come background e colore padding come colore link.
-    - Hover: Colore testo come background e padding il suo complementare. (in questo modo ho contrasto completo tra testo che è del colore opposto e padding che ha colore opposto al background e contrastante con il colore del)
+    - Hover: Colore testo come background e padding il suo complementare. (in questo modo ho contrasto completo tra testo che è del colore opposto e padding che ha colore opposto al background e contrastante con il colore del testo)
+
 Norme bottoni:
     - Colore testo: Come il colore del testo nel body
     - Hover: Colore dei link.
@@ -39,3 +40,7 @@ Norme Cards:
 *text-card-contrast nero*
 ![card-bg-nero](text-card-contrast-bianco.png)
 *text-card-contrast bianco*
+
+Norme link:
+    - Per superare il test Drue Miller si è optato di tenere i link sottolineati.
+    - Colore in contrasto come da immagine *link color nero* *link color bianco* *link visited color nero* *link visited color bianco*
