@@ -341,6 +341,10 @@ main h2 {
   text-align: center;
 }
 
+#dots .active {
+  background-color: var(--linkcolor);
+}
+
 .dot {
   cursor: pointer;
   height: 1.2em;
