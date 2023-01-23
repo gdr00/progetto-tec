@@ -1,5 +1,6 @@
 <?php
-
+namespace DB;
+use mysqli;
 class DBAccess {
     private const HOST_DB = "localhost";
     private const DATABASE_NAME = "tecweb";
