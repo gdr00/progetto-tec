@@ -334,6 +334,7 @@ main h2 {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: var(--linkcolor);
 }
 
 #dots {
@@ -437,6 +438,7 @@ main h2 {
 #partnerCards .prev:hover,
 #partnerCards .next:hover {
   background-color: var(--bodybgcolor);
+  color: var(--linkcolor);
 }
 
 #partnerList {
