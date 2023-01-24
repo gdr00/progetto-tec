@@ -29,6 +29,7 @@
 - [ ] Sistemare tutti i contrasti
 - [X] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
 - [ ] chech [https://wave.webaim.org/]()
+- [ ] controllare "ti trovi in" duplicato
 
 Check di accessibilità con TotalValidator:
 
