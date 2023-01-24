@@ -29,3 +29,7 @@
 - [ ] Sistemare tutti i contrasti
 - [ ] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
 - [ ] chech [https://wave.webaim.org/]()
+
+Check di accessibilità con TotalValidator:
+- [ ] chiSiamo manca di description (content)
+- [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)
