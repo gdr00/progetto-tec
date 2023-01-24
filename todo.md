@@ -15,7 +15,7 @@
 - [ ] Alt delle immagini dello slideshow
 - [ ] Controllare hover per i cellulari
 - [ ] Fixare span Home
-- [ ] Fixare cambio tema permanente quando clicco in altre pagine
+- [X] Fixare cambio tema permanente quando clicco in altre pagine
 - [ ] Fare il test delle immagini con i plugin di chrome
 - [X] Aggiungere "Salta alla navigazione"
 - [X] Fixare tutti i tabIndex
