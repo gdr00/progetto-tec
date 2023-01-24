@@ -27,8 +27,7 @@
   --tbodycolor: #363535;
   --iconpos: left;
   --formbuttoncolor: #139A60;
-  --footertxtsize: .8em;
-  --tabletxtsize: .7em;
+  --footertxtsize: .9em;
   --logo: url(../img/logo-sfondo-nero.webp);
 }
 
@@ -60,8 +59,7 @@
   --tbodycolor: #fff;
   --iconpos: right;
   --formbuttoncolor: #0F7B4C;
-  --footertxtsize: .8em;
-  --tabletxtsize: .7em;
+  --footertxtsize: .9em;
   --logo: url(../img/logo-sfondo-bianco.webp);
 }
 
@@ -689,7 +687,7 @@ tbody tr:last-child :last-child {
 }
 
 #hoursTable td, th {
-  font-size: var(--tabletxtsize);
+  font-size: var(--footertxtsize);
   text-align: center;
   padding: .2em;
 }

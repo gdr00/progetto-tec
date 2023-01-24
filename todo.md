@@ -23,7 +23,7 @@
 - [ ] (MB) Chiedere alla prof emoji
 - [ ] Description per register e login
 - [ ] Recensioni e/o login come admin per proditti
-- [ ] Area described by al posto di summary(XHTML) nella tabella
+- [X] Area described by al posto di summary(XHTML) nella tabella
 - [ ] Class e Id per elementi uguali, ma in pagine diverse
 - [ ] aggiungere <ahref="#firstAvaiableContent"class="hidden">Salta al primo contenuto `</a>` e id firstAvaiableContent per ogni pagina
 - [ ] Sistemare tutti i contrasti
