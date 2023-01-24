@@ -1,6 +1,7 @@
 <?php
 use DB\DBAccess;
 require_once("connection.php");
+#require_once("prodotto.php");
 
 $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
@@ -27,7 +28,19 @@ if(isset($_POST['submit'])){
     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
     $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
 
-    /* Utilizzo del classe prodotto per controllare i dati in input  e per salvare poi nel dv*/
+    /* Utilizzo del classe prodotto per controllare i dati in input  e per salvare poi nel db
+    
+    DA CONTROLLARE
+
+    $prodotto = new Product($product_name, $product_description, $target_file);
+
+    if($prodotto==""){
+        $messageForm .= $prodotto->save();
+    }
+    else{
+        $messageForm .= '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
+    }
+    */
 
 }
 // dopo che ho fatto tutti i controlli

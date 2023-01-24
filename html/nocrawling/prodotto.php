@@ -68,6 +68,7 @@ class Prodotto{
                 $resultString .= '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
             }
         }
+        return $resultString;
     }
 }
 ?>
