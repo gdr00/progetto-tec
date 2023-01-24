@@ -86,45 +86,46 @@
 				</li>
             </ul>
         </div>
-            <!-- TABELLA ORARI -->
-            <p id="hoursInTxtFormat">Siamo aperti il mattino dal lunedì al sabato dalle 8.00 alle 12.00, il pomeriggio dal lunedì al venerdi dalle 15.00 alle 18.00</p>
-            <table id="hoursTable" title="Orari di apertura" summary="La tabella è organizzata per righe e colonne, nelle colonne ci sono i giorni della settimana, mentre nella prima riga ci sono gli della mattina e nella seconda riga ci sono gli orari del pomeriggio">
-                <caption>Orari di apertura</caption>
-                <thead>
-                    <tr>
-                        <td></td>
-                        <th scope="col" abbr="Lun.">Lunedì</th>
-                        <th scope="col" abbr="Mar.">Martedì</th>
-                        <th scope="col" abbr="Mer.">Mercoledì</th>
-                        <th scope="col" abbr="Giov.">Giovedì</th>
-                        <th scope="col" abbr="Ven.">Venerdì</th>
-                        <th scope="col" abbr="Sab.">Sabato</th>
-                        <th scope="col" abbr="Dom.">Domenica</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Mattino</th>
-                        <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                        <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                        <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                        <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                        <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                        <td abbr="9 - 12"><time>8:00</time>-<time>12:00</time></td>
-                        <td>Chiuso</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Pomeriggio</th>
-                        <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                        <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                        <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                        <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                        <td abbr="15 - 18"><time>15:00</time>-<time>18:00</time></td>
-                        <td>Chiuso</td>
-                        <td>Chiuso</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- TABELLA ORARI -->
+        <p id="hoursInTxtFormat">Siamo aperti il mattino dal lunedì al sabato dalle 8.00 alle 12.00, il pomeriggio dal lunedì al venerdi dalle 15.00 alle 18.00</p>
+        <p id="descHoursTable" class="helps">La tabella è organizzata per righe e colonne, nelle colonne ci sono i giorni della settimana, mentre nella prima riga ci sono gli della mattina e nella seconda riga ci sono gli orari del pomeriggio</p>
+        <table id="hoursTable" title="Orari di apertura" aria-describedby="descHoursTable">
+            <caption>Orari di apertura</caption>
+            <thead>
+                <tr>
+                <th scope="col"></th>
+                <th scope="col">Lunedì</th>
+                <th scope="col">Martedì</th>
+                <th scope="col">Mercoledì</th>
+                <th scope="col">Giovedì</th>
+                <th scope="col">Venerdì</th>
+                <th scope="col">Sabato</th>
+                <th scope="col">Domenica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">Mattina</th>
+                <td> <time datetime="08:00">8:00</time> - <time datetime="12:00">12:00</time></td>
+                <td> <time datetime="08:00">8:00</time> - <time datetime="12:00">12:00</time></td>
+                <td> <time datetime="08:00">8:00</time> - <time datetime="12:00">12:00</time></td>
+                <td> <time datetime="08:00">8:00</time> - <time datetime="12:00">12:00</time></td>
+                <td> <time datetime="08:00">8:00</time> - <time datetime="12:00">12:00</time></td>
+                <td> <time datetime="08:00">8:00</time> - <time datetime="12:00">12:00</time></td>
+                <td>Chiuso</td>
+                </tr>
+                <tr>
+                <th scope="row">Pomeriggio</th>
+                <td> <time datetime="15:00">15:00</time> - <time datetime="18:00">18:00</time></td>
+                <td> <time datetime="15:00">15:00</time> - <time datetime="18:00">18:00</time></td>
+                <td> <time datetime="15:00">15:00</time> - <time datetime="18:00">18:00</time></td>
+                <td> <time datetime="15:00">15:00</time> - <time datetime="18:00">18:00</time></td>
+                <td> <time datetime="15:00">15:00</time> - <time datetime="18:00">18:00</time></td>
+                <td>Chiuso</td>
+                <td>Chiuso</td>
+                </tr>
+            </tbody>
+        </table>
     </footer>
 </body>
 
