@@ -42,6 +42,18 @@ function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
 
+let portrait = window.matchMedia("(orientation: portrait)");
+
+portrait.addEventListener("change", function(e) {
+    if(e.matches) {
+        // Portrait mode
+        toggleMenu();
+    } else {
+        // Landscape
+        toggleMenu();
+    }
+})
+
 function toggleMenu(){ /*for hamburger menu*/
   var menu = document.getElementById("menus");
   var hamburger = document.getElementById("hamburger");
