@@ -125,7 +125,7 @@ header h1 {
   height: 100%;
   background: var(--logo) no-repeat center left;
   filter: var(--breadcrumbsvg);
-  background-size: contain;
+  background-size: 100%;
   /*fit the image without cutting it*/
   background-position: left;
   text-indent: -9999em;
