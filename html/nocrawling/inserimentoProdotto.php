@@ -2,7 +2,6 @@
 use DB\DBAccess;
 require_once("connection.php");
 
-//manca file get contents
 $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
 // Errore da mostrare all'utente
@@ -27,6 +26,8 @@ if(isset($_POST['submit'])){
     $target_dir = "uploads/";
     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
     $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
+
+    /* Utilizzo del classe prodotto per controllare i dati in input  e per salvare poi nel dv*/
 
 }
 // dopo che ho fatto tutti i controlli
