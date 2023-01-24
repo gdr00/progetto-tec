@@ -39,17 +39,6 @@ class DBAccess {
         }
     }
     
-    private function filterInput($input) {
-        $input = trim($input);
-        $input = strip_tags($input);
-        $input = htmlspecialchars($input);
-        return $input;
-    }
-
-    private function filterProductInput($input) {
-        $this->filterInput($input);
-
-    }
 
     public function insertProduct ($nome, $descrizione, $immagine){
         $query = "INSERT INTO prodotto (nome, descrizione, immagine) VALUES(\"$nome\", \"$descrizione\", \"$immagine\")";
