@@ -103,7 +103,7 @@ a:visited {
 }
 
 #breadcrumb, #products li, #contactsList li, #serviceList li, #partnerList li, .cards li {
-  box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor); ;
+  box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor);
 }
 
 /*******************
@@ -629,7 +629,6 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
 
 table{
   border-collapse: collapse;
-  box-shadow: 0 0 8px 2px grey;
   border-radius: 1em;
 }
 
@@ -651,6 +650,7 @@ table tbody {
 }
 
 #hoursTable {
+  box-shadow: 0px -5px 10px -5px var(--breadcrumbshadowcolor);
   flex: 2 1;
   margin-right: 1em;
 }
