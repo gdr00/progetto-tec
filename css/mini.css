@@ -147,19 +147,6 @@ main h2 {
     margin-top: 2em;
 }
 
-footer{
-    flex-direction: column;
-}
-
-#hoursTable {
-    display: none;
-}
-
-#hoursInTxtFormat{
-    display: block;
-}
-
-
 /*******************
        FOOTER
 ********************/
@@ -171,12 +158,12 @@ footer {
        TABLE
 ********************/
 
-table {
-    width: 80%;
+#hoursTable {
+    display: none;
 }
 
-#hoursTable {
-    margin-right: 0;
+#hoursInTxtFormat{
+    display: block;
 }
 
 /*
