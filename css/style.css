@@ -29,7 +29,7 @@
   --formbuttoncolor: #139A60;
   --footertxtsize: .8em;
   --tabletxtsize: .7em;
-  --logo: url(../img/logo-sfondo-nero.webp);
+  --logo: url(../img/logo.svg);
 }
 
 .theme-light{
@@ -62,7 +62,7 @@
   --formbuttoncolor: #0F7B4C;
   --footertxtsize: .8em;
   --tabletxtsize: .7em;
-  --logo: url(../img/logo-sfondo-bianco.webp);
+  --logo: url(../img/logo.svg);
 }
 
 
@@ -124,6 +124,7 @@ header h1 {
   width: 30%;
   height: 100%;
   background: var(--logo) no-repeat center left;
+  filter: var(--breadcrumbsvg);
   background-size: contain;
   /*fit the image without cutting it*/
   background-position: left;
