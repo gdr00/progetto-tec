@@ -31,5 +31,6 @@
 - [ ] chech [https://wave.webaim.org/]()
 
 Check di accessibilità con TotalValidator:
+
 - [ ] chiSiamo manca di description (content)
-- [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)
+- [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)(credo che long desc sia deprecato e sostituito da un aria describedby con id che punta ad un p nascosto contentente la descrizione)
