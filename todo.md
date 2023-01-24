@@ -15,7 +15,7 @@
 - [ ] Alt delle immagini dello slideshow
 - [ ] Controllare hover per i cellulari
 - [ ] Fixare span Home
-- [ ] Fixare cambio tema permanente quando clicco in altre pagine
+- [X] Fixare cambio tema permanente quando clicco in altre pagine
 - [ ] Fare il test delle immagini con i plugin di chrome
 - [X] Aggiungere "Salta alla navigazione"
 - [X] Fixare tutti i tabIndex
@@ -27,9 +27,10 @@
 - [ ] Class e Id per elementi uguali, ma in pagine diverse
 - [ ] aggiungere <ahref="#firstAvaiableContent"class="hidden">Salta al primo contenuto `</a>` e id firstAvaiableContent per ogni pagina
 - [ ] Sistemare tutti i contrasti
-- [ ] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
+- [X] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
 - [ ] chech [https://wave.webaim.org/]()
 
 Check di accessibilità con TotalValidator:
+
 - [ ] chiSiamo manca di description (content)
-- [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)
+- [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)(credo che long desc sia deprecato e sostituito da un aria describedby con id che punta ad un p nascosto contentente la descrizione)

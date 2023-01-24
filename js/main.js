@@ -91,28 +91,28 @@ function showCards(n){
 //--------------------------------------------------------------
 
 function setTheme(themeName) {
-  localStorage.setItem('theme', themeName);
+  sessionStorage.setItem('theme', themeName);
   document.documentElement.className = themeName;
 }
 
 // function to toggle between light and dark theme
 function changeTheme() {
-  if (localStorage.getItem('theme') == 'theme-dark') {
+  if (sessionStorage.getItem('theme') == 'theme-dark') {
       setTheme('theme-light');
-  } else { /*anche se non c'è il localStorage*/
+  } else { /*anche se non c'è il sessionStorage*/
       setTheme('theme-dark');
   }
 }
 
 function syncTheme() {
-  if(localStorage.getItem('theme') == 'theme-light') {
+  if(sessionStorage.getItem('theme') == 'theme-light') {
     document.getElementById('themeButton').checked = true;
   }
 }
 
 // Immediately invoked function to set the theme on initial load
 (function () {
-  if (localStorage.getItem('theme') == 'theme-light') {
+  if (sessionStorage.getItem('theme') == 'theme-light') {
       setTheme('theme-light');
   } else {
       setTheme('theme-dark');
