@@ -27,8 +27,7 @@
   --tbodycolor: #363535;
   --iconpos: left;
   --formbuttoncolor: #139A60;
-  --footertxtsize: .8em;
-  --tabletxtsize: .7em;
+  --footertxtsize: .9em;
   --logo: url(../img/logo.svg);
 }
 
@@ -60,8 +59,7 @@
   --tbodycolor: #fff;
   --iconpos: right;
   --formbuttoncolor: #0F7B4C;
-  --footertxtsize: .8em;
-  --tabletxtsize: .7em;
+  --footertxtsize: .9em;
   --logo: url(../img/logo.svg);
 }
 
@@ -617,6 +615,7 @@ footer { /*footer fatto con flex per semplicità di riscalatura*/
 #contactsOnFooter {
   flex: 1 1;
   padding: 1em;
+  min-width: 220px;
 }
 
 #contactsOnFooter li {
@@ -658,6 +657,7 @@ table tbody {
   box-shadow: 0px -5px 10px -5px var(--breadcrumbshadowcolor);
   flex: 2 1;
   margin-right: 1em;
+  margin-left: 1em;
 }
 
 #hoursInTxtFormat {
@@ -690,7 +690,7 @@ tbody tr:last-child :last-child {
 }
 
 #hoursTable td, th {
-  font-size: var(--tabletxtsize);
+  font-size: var(--footertxtsize);
   text-align: center;
   padding: .2em;
 }

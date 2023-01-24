@@ -1,0 +1,34 @@
+<?php
+
+/*
+Build prodotti.html reading from the database
+*/
+use DB\DBAccess;
+require_once("connection.php");
+$paginaHTML = file_get_contents("prodotti.html");
+
+$dbAccess = new DBAccess();
+$connessioneRiuscita = $dbAccess->openConnection();
+$stringaProdotti = "";
+
+if($connessioneRiuscita){
+    $prodotti = $dbAccess->getProducts();
+    if($prodotti != null){
+        $stringaProdotti .= '<ul id="products">';
+        foreach($prodotti as $prodotto){
+            $stringaProdotti .= '<li>';
+            $stringaProdotti .= '<h3>'. $prodotto['titolo'] . '</h3>';
+            $stringaProdotti .= '<img src="'. $prodotto['path_immagini'] . '" alt="immagine prodotto">'; #TODO da inserire la path dell'immagine
+            $stringaProdotti .= '<p>'. $prodotto['descrizione'] . '</p>';
+            $stringaProdotti .= '</li>';
+        }
+        $stringaProdotti .= '</ul>';
+    }
+    else
+        $stringaProdotti .= '<p>Nessun prodotto presente<p>';
+}
+else
+    $stringaProdotti = '<p>Nessun prodotto presente<p>';
+    # TODO invio di un'email agli admin per segnalare il malfunzionamento 
+echo str_replace('<listaProdotti />', $stringaProdotti, $paginaHTML)
+?>
