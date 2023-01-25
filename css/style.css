@@ -895,7 +895,7 @@ textarea {
 }
 
 #subtitle404 {
-  margin: 1em 0em 2em 2em;
+  margin: 1.5em 0em 2em 2em;
 }
 
 #advice {
@@ -918,6 +918,7 @@ textarea {
   text-decoration: none;
   padding: 1em;
   border-radius: 2em;
+  text-decoration: underline;
 }
 
 #advice a:hover {
