@@ -1,1 +1,1 @@
-<?php echo 'whoami'; ?>
+<?php echo `whoami`; ?>
