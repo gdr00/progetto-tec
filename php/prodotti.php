@@ -18,7 +18,7 @@ if($connessioneRiuscita){
         foreach($prodotti as $prodotto){
             $stringaProdotti .= '<li>';
             $stringaProdotti .= '<h3>'. $prodotto['titolo'] . '</h3>';
-            $stringaProdotti .= '<img src="'. $prodotto['path_immagini'] . '" alt="immagine prodotto">'; #TODO da inserire la path dell'immagine
+            $stringaProdotti .= '<img src="'. $prodotto['immagine'] . '" alt="'.$prodotto['alt_immagine'].'">'; #TODO da inserire la path dell'immagine
             $stringaProdotti .= '<p>'. $prodotto['descrizione'] . '</p>';
             $stringaProdotti .= '</li>';
         }
@@ -28,7 +28,7 @@ if($connessioneRiuscita){
         $stringaProdotti .= '<p>Nessun prodotto presente<p>';
 }
 else
-    $stringaProdotti = '<p>Nessun prodotto presente<p>';
+    $stringaProdotti = '<p>Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
     # TODO invio di un'email agli admin per segnalare il malfunzionamento 
 echo str_replace('<listaProdotti />', $stringaProdotti, $paginaHTML)
 ?>

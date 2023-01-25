@@ -25,7 +25,7 @@ class DBAccess {
     }
 
     public function getProducts(){
-        $query = "SELECT * FROM prodotto ORDER BY nome ASC";
+        $query = "SELECT * FROM prodotto ORDER BY titolo ASC";
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if (mysqli_num_rows($queryResult) == 0){
             return null;
