@@ -14,7 +14,7 @@ class DBAccess {
             return false;
         }
         else{
-            return false;
+            return true;
         }
     }
 
