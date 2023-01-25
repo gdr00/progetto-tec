@@ -40,8 +40,8 @@ class DBAccess {
     }
     
 
-    public function insertProduct ($nome, $descrizione, $immagine){
-        $query = "INSERT INTO prodotto (nome, descrizione, immagine) VALUES(\"$nome\", \"$descrizione\", \"$immagine\")";
+    public function insertProduct ($titolo, $descrizione, $immagine, $alt){
+        $query = "INSERT INTO prodotti (titolo, descrizione, immagine, alt_immagine) VALUES(\"$titolo\", \"$descrizione\", \"$immagine\", \"$alt\")";
         $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
         
         if(mysqli_affected_rows($this->connection) > 0){

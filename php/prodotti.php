@@ -25,7 +25,7 @@ if($connessioneRiuscita){
         $stringaProdotti .= '</ul>';
     }
     else
-        $stringaProdotti .= '<p class="serverStringError">Nessun prodotto presente<p>';
+        $stringaProdotti = '<p class="serverStringError">Nessun prodotto presente<p>';
 }
 else{
     $stringaProdotti = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
