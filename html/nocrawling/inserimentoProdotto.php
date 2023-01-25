@@ -32,9 +32,17 @@ if(isset($_POST['submit'])){
 
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
     //chmod('upload',777);
-    $messaggioForm = (is_writable('uploads/')) ? '<p>La cartella ha i permessi</p>' : '<p>La cartella non ha i permessi</p>';
+    if (is_writable('uploads/')) {
+        $messaggioForm .= '<p>La cartella ha i permessi</p>';
+    } else {
+        $messaggioForm .= '<p>La cartella non ha i permessi</p>';
+    }
     
-    $messaggioForm = (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)) ? '<p>Immagine caricata correttamente</p>' : '<p>Immagine non caricata correttamente</p>';
+    f (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)){
+        $messaggioForm .= '<p>Immagine caricata correttamente</p>';
+    }else{
+        $messaggioForm .= '<p>Immagine non caricata correttamente</p>';
+    }
 
     $messaggioForm = ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
 
