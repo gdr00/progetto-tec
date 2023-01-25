@@ -1,0 +1,1 @@
+<?php echo pathinfo('/www/progetto-tec/php/uploads'); ?>
