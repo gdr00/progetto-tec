@@ -1,5 +1,5 @@
 <?php
-$path_parts = pathinfo('/www/htdocs/inc/lib.inc.php');
+$path_parts = pathinfo('/www/progetto/html/nocrawling/test.php');
 
 echo $path_parts['dirname'], "\n";
 echo $path_parts['basename'], "\n";
