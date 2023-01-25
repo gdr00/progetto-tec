@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
 
-    if($prodotto==""){
+    if($prodotto->__toString()==""){
         $messaggioForm .= $prodotto->save();
     }
     else{
