@@ -52,17 +52,15 @@ document.addEventListener("scroll", function() {
   }
 })
 
-let portrait = window.matchMedia("(orientation: portrait)");
-
-portrait.addEventListener("change", function(e) {
-  if(e.matches) {
-      // Portrait mode
-      toggleMenu();
-  } else {
-      // Landscape
-      toggleMenu();
+window.onresize = function() {
+  width = window.innerWidth;
+  if (width <= 600 && document.getElementById("menus").style.display == "flex") {
+    toggleMenu();
   }
-})
+  if (width > 600 && document.getElementById("menus").style.display == "none") {
+    toggleMenu();
+  }
+}
 
 function toggleMenu(){ /*for hamburger menu*/
   var menu = document.getElementById("menus");
