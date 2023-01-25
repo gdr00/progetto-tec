@@ -28,7 +28,7 @@ if($connessioneRiuscita){
         $stringaProdotti .= '<p class="serverStringError">Nessun prodotto presente<p>';
 }
 else
-    $stringaProdotti = '<p>Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
+    $stringaProdotti = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
     # TODO invio di un'email agli admin per segnalare il malfunzionamento 
 echo str_replace('<listaProdotti />', $stringaProdotti, $paginaHTML)
 ?>
