@@ -25,6 +25,7 @@ class DBAccess {
     }
 
     public function getProducts(){
+        /* only to test email sending
         $query = "SELECT * FROM prodotti ORDER BY titolo ASC";
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if (mysqli_num_rows($queryResult) == 0){
@@ -37,6 +38,8 @@ class DBAccess {
             $queryResult->free();
             return $result;
         }
+        */
+        return null
     }
     
 

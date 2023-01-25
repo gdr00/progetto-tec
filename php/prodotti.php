@@ -27,8 +27,10 @@ if($connessioneRiuscita){
     else
         $stringaProdotti .= '<p class="serverStringError">Nessun prodotto presente<p>';
 }
-else
+else{
     $stringaProdotti = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
+    mail('luca.brugnera@libero.it', 'Database non raggiungibile', 'Sono stati riscontrati problemi con accesso al database');
     # TODO invio di un'email agli admin per segnalare il malfunzionamento 
+}
 echo str_replace('<listaProdotti />', $stringaProdotti, $paginaHTML)
 ?>
