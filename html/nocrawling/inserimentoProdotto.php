@@ -34,6 +34,7 @@ if(isset($_POST['submit'])){
 
     if($prodotto->__toString()==""){
         $messaggioForm .= $prodotto->save();
+        move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file);
     }
     else{
         $messaggioForm .= '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
