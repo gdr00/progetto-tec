@@ -100,6 +100,10 @@ a:visited {
   top: auto;
 }
 
+.serverStringError {
+  text-align: center;
+}
+
 #breadcrumb, #products li, #contactsList li, #serviceList li, #partnerList li, .cards li {
   box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor);
 }
