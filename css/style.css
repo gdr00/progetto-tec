@@ -888,3 +888,39 @@ textarea {
   flex: 0 0 400px;
   text-align: center;
 }
+
+/******************* 404 PAGE *******************/
+#title404 {
+  text-align: center;
+}
+
+#subtitle404 {
+  margin: 1em 0em 2em 2em;
+}
+
+#advice {
+  margin: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  padding-left: 0;
+}
+
+#advice li {
+  list-style-position: outside;
+}
+
+#advice a {
+  background-color: var(--cardbg);
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+#advice a:hover {
+  transition: linear 0.14s;
+  background-color: var(--bodybgcolor);
+}
