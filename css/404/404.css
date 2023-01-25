@@ -140,17 +140,14 @@ header h1 {
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
-}
-
-#menu a:visited {
-    color: var(--linkvisitedcolor);
-}
-
-#menu a {
     padding: .5em .5em;
     border-radius: 1em;
     min-height: 30px;
     min-width: 44px;
+}
+
+#menu a:visited {
+    color: var(--linkvisitedcolor);
 }
 
 #menu a:hover {
@@ -187,7 +184,7 @@ header h1 {
 }
 
 /************* FOOTER *************/
-footer {
+footer { /*footer fatto con flex per semplicità di riscalatura*/
     margin-top: 1em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -207,6 +204,11 @@ footer {
     min-width: 220px;
 }
 
+#contactsOnFooter ul {
+    margin: 0;
+    padding: 0;
+}
+
 #contactsOnFooter li {
     list-style: none;
 }
@@ -216,19 +218,25 @@ footer {
     padding-top: 2em;
 }
 
+#contactsOnFooter h3 {
+    font-size: 1.4em;
+    margin-bottom: 0em;
+}
+
+#contactsOnFooter p {
+    margin: 0em;
+}
+
 /******************* TABLE ********************/
 table{
     border-collapse: collapse;
     border-radius: 1em;
 }
 
-caption {
-    margin-bottom: 0.7em;
-}
-
 table caption{
     font-weight: bold;
     font-size: 1.2em;
+    margin-bottom: 0.7em;
 }
 
 table thead {
@@ -287,15 +295,33 @@ h1 {
 }
 
 h2 {
-    margin-top: 2em;
+    margin: 1em 0em 2em 2em;
 }
 
 #advice {
+    margin: auto;
     list-style-type: none;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    padding-left: 0;
 }
 
 #advice li {
-    display: inline;
+    list-style-position: outside;
+    align-self: center;
+}
+
+#advice a {
+    background-color: var(--cardbg);
+    text-decoration: none;
     padding: 1em;
+    border-radius: 2em;
+}
+
+#advice a:hover {
+    transition: linear 0.14s;
+    background-color: var(--bodybgcolor);
 }
