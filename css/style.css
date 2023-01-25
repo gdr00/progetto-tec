@@ -764,10 +764,6 @@ input[type="submit"]{
   align-items: center;
 }
 
-.cards a:hover {
-  transition: .14s;
-}
-
 #staff h2 {
 	text-align: center;
   margin-bottom: 1em;
@@ -888,7 +884,7 @@ textarea {
   background-color: var(--cardbg);
   margin: 0 10px 20px 10px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 2em;
   flex: 0 0 400px;
   text-align: center;
 }
