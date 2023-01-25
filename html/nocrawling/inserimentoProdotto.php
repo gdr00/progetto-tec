@@ -32,6 +32,12 @@ if(isset($_POST['submit'])){
 
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
 
+    if (is_writable('uploads/')) {
+        $messaggioForm .= '<p>La cartella ha i permessi</p>';
+    } else {
+        $messaggioForm .= '<p>La cartella non ha i permessi</p>';
+    }
+
     if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)){
         $messaggioForm .= '<p>Immagine caricata correttamente</p>';
     }else{
