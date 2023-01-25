@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
     $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
-    chmod('/upload',777);
+    chmod('upload',777);
     $messaggioForm = (is_writable('uploads/')) ? '<p>La cartella ha i permessi</p>' : '<p>La cartella non ha i permessi</p>';
     
     $messaggioForm = (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)) ? '<p>Immagine caricata correttamente</p>' : '<p>Immagine non caricata correttamente</p>';
