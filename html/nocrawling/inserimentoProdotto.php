@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
 
     move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file);
-    
+
     if($prodotto->__toString()==""){
         $messaggioForm .= $prodotto->save();    
     }
