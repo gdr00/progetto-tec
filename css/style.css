@@ -168,17 +168,14 @@ header h1 {
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
-}
-
-#menu a:visited {
-  color: var(--linkvisitedcolor);
-}
-
-#menu a {
   padding: .5em .5em;
   border-radius: 1em;
   min-height: 30px;
   min-width: 44px;
+}
+
+#menu a:visited {
+  color: var(--linkvisitedcolor);
 }
 
 /*top bottom left right padding in order to eliminate the text movement*/
@@ -642,9 +639,6 @@ table{
 
 caption {
   margin-bottom: 0.7em;
-}
-
-table caption{
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -924,4 +918,9 @@ textarea {
 #advice a:hover {
   transition: linear 0.14s;
   background-color: var(--bodybgcolor);
+}
+
+#contactsOnFooter h4 {
+  font-size: 1.4em;
+  margin-bottom: 0em;
 }
