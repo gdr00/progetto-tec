@@ -35,7 +35,8 @@ class Prodotto{
 
     private function setPath($path){
         $err = "";
-        (file_exists($path)) ? $this->path_immagini = $path : $err = "<li>Path della cartella indicata non esiste</li>";
+        //(file_exists($path)) ? $this->path_immagini = $path : $err = "<li>Path della cartella indicata non esiste</li>";
+        $this->path_immagini = $path;
         return $err;
     }
 

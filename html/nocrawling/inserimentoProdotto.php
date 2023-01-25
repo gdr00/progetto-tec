@@ -32,12 +32,11 @@ if(isset($_POST['submit'])){
 
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
 
-    if($prodotto==""){
-        $messaggioForm .= $prodotto->save();
-    }
-    else{
-        $messaggioForm .= '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
-    }
+    $messaggioForm = (is_writable('uploads/')) ? '<p>La cartella ha i permessi</p>' : '<p>La cartella non ha i permessi</p>';
+
+    $messaggioForm = (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)) ? '<p>Immagine caricata correttamente</p>' : '<p>Immagine non caricata correttamente</p>';
+
+    $messaggioForm = ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
 
 }
 // dopo che ho fatto tutti i controlli

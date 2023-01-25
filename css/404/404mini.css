@@ -67,6 +67,10 @@ footer {
     flex-direction: column;
 }
 
+#contactsOnFooter ul li span {
+    padding-top: 0em;
+}
+
 /******************* TABLE ********************/
 
 #hoursTable {
@@ -75,4 +79,23 @@ footer {
 
 #hoursInTxtFormat{
     display: block;
+}
+
+/******************* 404 ********************/
+#advice {
+    display: inline;
+    text-align: center;
+    list-style-type: none;
+}
+#advice li {
+    margin: 2.3em;
+}
+
+#advice a {
+    padding: 1em 3em;
+    white-space: nowrap;
+}
+
+main p {
+    margin-left: 0.5em;
 }
