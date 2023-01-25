@@ -1,12 +1,12 @@
 <?php
 use DB\DBAccess;
 require_once("connection.php");
-#require_once("prodotto.php");
+require_once("prodotto.php");
 
 $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
 // Errore da mostrare all'utente
-$messaggioForm = "";
+$messaggioForm = "messaggio ok";
 
 // Funzione per pulire i dati in input
 
@@ -27,23 +27,21 @@ if(isset($_POST['submit'])){
     $target_dir = "uploads/";
     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
     $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
+    //alt immagine
+    $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
-    /* Utilizzo del classe prodotto per controllare i dati in input  e per salvare poi nel db
-    
-    DA CONTROLLARE
-
-    $prodotto = new Product($product_name, $product_description, $target_file);
+    $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
 
     if($prodotto==""){
-        $messageForm .= $prodotto->save();
+        $messaggioForm .= $prodotto->save();
     }
     else{
-        $messageForm .= '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
+        $messaggioForm .= '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
     }
-    */
 
 }
 // dopo che ho fatto tutti i controlli
+/*
 if ($messaggioForm == ""){
     // inserisco il prodotto nel database
     $dbAccess = new DBAccess();
@@ -65,8 +63,12 @@ if ($messaggioForm == ""){
     // sostituisco il tag <messaggioForm /> con il messaggio da mostrare all'utente
     $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
     //stampo la pagina HTML
-    echo $paginaHTML;
+    echo $paginaHTML;messaggioForm
 }
+*/
+
+echo str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
+    
 ?>
 
 

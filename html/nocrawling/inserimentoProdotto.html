@@ -27,7 +27,7 @@
             <ul id="menus">
                 <li><a href="../../index.html" aria-label="vai alla pagina home">Home</a></li>
                 <li><a href="../chiSiamo.html" aria-label="vai alla pagina home">Chi siamo</a></li>
-                <li><a href="../prodotti.html" aria-label="vai alla pagina prodotti">Prodotti</a></li>
+                <li><a href="../../php/prodotti.php" aria-label="vai alla pagina prodotti">Prodotti</a></li>
                 <li><a href="../contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
                 <li><a class="active" aria-label="pagina corrente area amministratore">Amministratore</a></li>
             </ul>
@@ -45,7 +45,7 @@
 
 
     <h1>Inserimento Nuovo Prodotto</h1>
-    <form id="modifyProduct" method="post" enctype="multipart/form-data">
+    <form id="modifyProduct" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
         <messaggioForm />
         <label for="product-name">Nome Prodotto:</label>
         <input type="text" id="product-name" name="product-name" required>
@@ -53,13 +53,18 @@
         <label for="product-image">Immagini Prodotto:</label>
         <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
         <br>
+        <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
+        <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
+        <br>
         <label for="product-description">Descrizione Prodotto:</label>
         <textarea id="product-description" name="product-description" required></textarea>
         <br>
         <div class="button-group">
-            <button type="submit" formaction="add-product.php">Aggiungi</button>
-            <button type="submit" formaction="edit-product.php" disabled>Modifica</button>
-            <button type="submit" formaction="delete-product.php" disabled>Elimina</button>
+            <fieldset>
+                <legend>Bottoni</legend>
+                <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
+                <input type="reset" id="reset" value="Cancella tutto" />
+            </fieldset>
         </div>
     </form>
 

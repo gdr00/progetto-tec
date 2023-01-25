@@ -9,12 +9,14 @@ class Prodotto{
     private $titolo = "";
     private $descrizione = "";
     private $path_immagini = "";
+    private $alt_immagine = "";
     private $errore = "";
 
-    function __construct($titolo, $descrizione, $path_immagini){
+    function __construct($titolo, $descrizione, $path_immagini, $alt_immagine){
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
+        $this->alt_immagine = $alt_immagine;
 
         $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
     }
@@ -53,21 +55,22 @@ class Prodotto{
         return $this->path_immagini;
     }
 
-    function save(){
-        //connessione al DB
+    public function save(){
         $resultString = "";
         $dbAccess = new DBAccess();
         $connessioneRiuscita = $dbAccess->openConnection();
         if ($connessioneRiuscita == true) {
-            $queryOK = $dbAccess->insertProduct($this->titolo, $this->descrizione, $this->path_immagini);
+            $queryOK = $dbAccess->insertProduct($this->titolo, $this->descrizione, $this->path_immagini, $this->alt_immagine);
             $dbAccess->closeConnection();
             if ($queryOK == true) {
-                $resultString  .= '<div class="alertSuccess" role="alert">Prodotto inserito correttamente</div> ';
+                $resultString = '<div class="alertSuccess" role="alert">Prodotto inserito correttamente</div> ';
             }
             else {
-                $resultString .= '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
+                $resultString = '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
             }
         }
+        else
+            $resultString = '<p>Errore di connessione al database</p>';
         return $resultString;
     }
 }
