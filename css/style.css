@@ -559,7 +559,7 @@ main h2 {
     BACK TO TOP
 ********************/
 #toTop {
-  display: block;
+  display: none;
   font-size: 1.6em;
   font-weight: bold;
   color: var(--bodybgcolor);

@@ -42,16 +42,26 @@ function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
 
+/* toTop appare solo se scrollo */
+document.addEventListener("scroll", function() {
+  var btn = document.getElementById("toTop");
+  if (window.scrollY != 0) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+})
+
 let portrait = window.matchMedia("(orientation: portrait)");
 
 portrait.addEventListener("change", function(e) {
-    if(e.matches) {
-        // Portrait mode
-        toggleMenu();
-    } else {
-        // Landscape
-        toggleMenu();
-    }
+  if(e.matches) {
+      // Portrait mode
+      toggleMenu();
+  } else {
+      // Landscape
+      toggleMenu();
+  }
 })
 
 function toggleMenu(){ /*for hamburger menu*/
