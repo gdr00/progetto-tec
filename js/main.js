@@ -52,6 +52,14 @@ document.addEventListener("scroll", function() {
   }
 })
 
+/* toTop scompare prima della stampa */
+window.addEventListener("beforeprint", function (event) {
+  var btn = document.getElementById("toTop");
+  console.log("beforeprint");
+  btn.style.display = "none";
+});
+
+/* sistema l'hamburgher che si apre/chiude/fa scomparire il menu */
 window.onresize = function() {
   width = window.innerWidth;
   if (width <= 600 && document.getElementById("menus").style.display == "flex") {
