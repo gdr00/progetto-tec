@@ -402,9 +402,11 @@ main h2 {
   background-color: var(--cardbg);
 }
 
-#serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
+#serviceList li h3 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
   font-size: var(--txtsize);
   margin-bottom: .7em;
+  margin: .7em 0.5em .7em;
+  text-align: center;
 }
 
 #serviceList li p {
