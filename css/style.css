@@ -168,17 +168,14 @@ header h1 {
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
-}
-
-#menu a:visited {
-  color: var(--linkvisitedcolor);
-}
-
-#menu a {
   padding: .5em .5em;
   border-radius: 1em;
   min-height: 30px;
   min-width: 44px;
+}
+
+#menu a:visited {
+  color: var(--linkvisitedcolor);
 }
 
 /*top bottom left right padding in order to eliminate the text movement*/
@@ -405,9 +402,11 @@ main h2 {
   background-color: var(--cardbg);
 }
 
-#serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
+#serviceList li h3 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
   font-size: var(--txtsize);
   margin-bottom: .7em;
+  margin: .7em 0.5em .7em;
+  text-align: center;
 }
 
 #serviceList li p {
@@ -562,7 +561,7 @@ main h2 {
     BACK TO TOP
 ********************/
 #toTop {
-  display: block;
+  display: none;
   font-size: 1.6em;
   font-weight: bold;
   color: var(--bodybgcolor);
@@ -642,9 +641,6 @@ table{
 
 caption {
   margin-bottom: 0.7em;
-}
-
-table caption{
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -895,7 +891,7 @@ textarea {
 }
 
 #subtitle404 {
-  margin: 1em 0em 2em 2em;
+  margin: 1.5em 0em 2em 2em;
 }
 
 #advice {
@@ -918,9 +914,15 @@ textarea {
   text-decoration: none;
   padding: 1em;
   border-radius: 2em;
+  text-decoration: underline;
 }
 
 #advice a:hover {
   transition: linear 0.14s;
   background-color: var(--bodybgcolor);
+}
+
+#contactsOnFooter h4 {
+  font-size: 1.4em;
+  margin-bottom: 0em;
 }

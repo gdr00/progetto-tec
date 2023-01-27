@@ -37,3 +37,4 @@ Check di accessibilità con TotalValidator:
 - [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)(credo che long desc sia deprecato e sostituito da un aria describedby con id che punta ad un p nascosto contentente la descrizione)
 - [ ] quando finito cambiare link in 404.html perchè vanno a gdr00.it
 - [ ] mettere tabindex-1 sulle frecec delle card perchè accessibili tramite tab senza l'uso delle frecce che appesantiscono solo il contenuto per gli screen reader
+- [ ] pagina error500

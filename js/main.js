@@ -42,17 +42,33 @@ function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
 
-let portrait = window.matchMedia("(orientation: portrait)");
-
-portrait.addEventListener("change", function(e) {
-    if(e.matches) {
-        // Portrait mode
-        toggleMenu();
-    } else {
-        // Landscape
-        toggleMenu();
-    }
+/* toTop appare solo se scrollo */
+document.addEventListener("scroll", function() {
+  var btn = document.getElementById("toTop");
+  if (window.scrollY != 0) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
 })
+
+/* toTop scompare prima della stampa */
+window.addEventListener("beforeprint", function (event) {
+  var btn = document.getElementById("toTop");
+  console.log("beforeprint");
+  btn.style.display = "none";
+});
+
+/* sistema l'hamburgher che si apre/chiude/fa scomparire il menu */
+window.onresize = function() {
+  width = window.innerWidth;
+  if (width <= 600 && document.getElementById("menus").style.display == "flex") {
+    toggleMenu();
+  }
+  if (width > 600 && document.getElementById("menus").style.display == "none") {
+    toggleMenu();
+  }
+}
 
 function toggleMenu(){ /*for hamburger menu*/
   var menu = document.getElementById("menus");
