@@ -92,6 +92,11 @@ a:visited {
   color: var(--linkvisitedcolor);
 }
 
+button:hover {
+  background-color: var(--navlinkhoverbg);
+  color: var(--navlinkhovercolor);
+}
+
 .aiuti {
   height: 1px;
   width: 1px;
