@@ -973,10 +973,22 @@ textarea {
   display: none;
 }
 
+#operationForm {
+  text-align: center;
+}
+
 #operationForm *{
   padding: .4em;
 }
 
-#operationForm div{
-  margin-top: 1em;
+#operationForm label {
+  display: block;
+}
+
+#operationForm input, textarea {
+  width: 100%;
+}
+
+#operationForm textarea{
+  height: 4em;
 }
