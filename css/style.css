@@ -926,3 +926,55 @@ textarea {
   font-size: 1.4em;
   margin-bottom: 0em;
 }
+
+/******************* INSERIMENTO PRODOTTO *******************/
+#adminButtons {
+  text-align: center;
+}
+
+#adminButtons button {
+  border-radius: 2em;
+  padding: 1.5em;
+  margin: 2em 2em;
+  background-color: var(--cardbg);
+  color: var(--txtcolor);
+  border: none;
+  font-weight: bold;
+}
+
+#adminButtons button:hover {
+  background-color: black;
+}
+
+#insForm {
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 2em;
+  background-color: var(--cardbg);
+  display: none;
+}
+
+#modForm {
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 2em;
+  background-color: var(--cardbg);
+  display: none;
+}
+
+#delForm {
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 2em;
+  background-color: var(--cardbg);
+  display: none;
+}

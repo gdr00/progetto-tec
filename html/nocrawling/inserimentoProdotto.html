@@ -43,30 +43,65 @@
     
     <main>
 
+    <h1>Pagina amministratore</h1>
 
-    <h1>Inserimento Nuovo Prodotto</h1>
-    <form id="modifyProduct" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
-        <messaggioForm />
-        <label for="product-name">Nome Prodotto:</label>
-        <input type="text" id="product-name" name="product-name" required>
-        <br>
-        <label for="product-image">Immagini Prodotto:</label>
-        <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
-        <br>
-        <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
-        <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
-        <br>
-        <label for="product-description">Descrizione Prodotto:</label>
-        <textarea id="product-description" name="product-description" required></textarea>
-        <br>
-        <div class="button-group">
-            <fieldset>
-                <legend>Bottoni</legend>
+    <div id="adminButtons">
+        <button id="insBtn" onclick="showInsert();">Inserisci prodotto</button>
+        <button id="modBtn" onclick="showModify();">Modifica prodotto</button>
+        <button id="delBtn" onclick="showDelete();">Elimina prodotto</button>
+    </div>
+    <div>
+        <form id="insForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
+            <messaggioFormIns />
+            <label for="product-name">Inserire nome prodotto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <br>
+            <label for="product-image">Immagine prodotto:</label>
+            <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
+            <br>
+            <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
+            <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
+            <br>
+            <label for="product-description">Descrizione prodotto:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+            <br>
+            <div class="button-group" id="formButtons">
                 <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
                 <input type="reset" id="reset" value="Cancella tutto" />
-            </fieldset>
-        </div>
-    </form>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form id="modForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
+            <messaggioFormMod />
+            <label for="product-name">Inserire nome prodotto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <br>
+            <label for="product-image">Immagine prodotto:</label>
+            <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
+            <br>
+            <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
+            <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
+            <br>
+            <label for="product-description">Descrizione prodotto:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+            <br>
+            <div class="button-group" id="formButtons">
+                <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
+                <input type="reset" id="reset" value="Cancella tutto" />
+            </div>
+        </form>
+    </div>
+    <div>
+        <form id="delForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
+            <messaggioFormDel />
+            <label for="product-name">Inserire nome prodotto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <div class="button-group" id="formButtons">
+                <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
+            </div>
+        </form>
+    </div>
 
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Torna all'inizio"><span>Torna all'inizio</span></button>
