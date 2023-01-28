@@ -167,14 +167,14 @@ function changeForm (btnId) {
     document.getElementById("detailsInputs").style.display = "block";
     document.getElementById("buttonsForm").style.display = "block";
     document.getElementById("operationBtn").value = "Inserisci";
-  } else {
-    if (document.getElementById("detailsInputs").style.display == "block") { // SE VEDO INSERIMENTO DETTAGLI
+  } 
+  else if (btnId == "modBtn") { // SE VEDO INSERIMENTO DETTAGLI
       document.getElementById("detailsInputs").style.display = "none";
       document.getElementById("operationBtn").value = "Modifica"
-    } else {
+  } 
+  else {
       document.getElementById("nameInputs").style.display = "block";
       document.getElementById("buttonsForm").style.display = "block";
       document.getElementById("operationBtn").value = "Elimina"
-    }
   }
 }
