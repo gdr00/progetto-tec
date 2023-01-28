@@ -949,6 +949,7 @@ textarea {
   margin: 2em 2em;
   border: none;
   font-weight: bold;
+  font-size: var(--txtsize);
 }
 
 #insForm {
