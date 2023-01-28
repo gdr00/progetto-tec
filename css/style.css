@@ -1005,3 +1005,7 @@ textarea {
 #operationForm textarea{
   height: 4em;
 }
+
+.active {
+  background-color: blue !important;
+}
