@@ -67,6 +67,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 1px solid red;
 }
 
 html,
@@ -941,12 +942,18 @@ textarea {
 /******************* INSERIMENTO PRODOTTO *******************/
 #adminButtons {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
+
 #adminButtons button {
+  flex: 1 1 300px;
   border-radius: 2em;
-  padding: 1.5em;
-  margin: 2em 2em;
+  padding: 1.2em;
+  margin: 1em 1.5em 2em 1.5em;
   border: none;
   font-weight: bold;
   font-size: var(--txtsize);
@@ -1012,5 +1019,7 @@ textarea {
 .active {
   background-color: var(--currentnavpagebg);
   color: var(--currentnavpagetxtcolor);
+  pointer-events: none;
+  cursor: default;
 }
 

@@ -232,3 +232,16 @@ tbody tr:first-child :last-child {
 .p404 {
     margin-left: 0.5em;
 }
+
+/*******************
+      inserimentoProdotto
+********************/
+
+@media screen and (max-width: 550px) {
+    #adminButtons {
+        flex-direction: column;
+    }
+    #adminButtons button {
+        flex: 1 0;
+    }
+}
