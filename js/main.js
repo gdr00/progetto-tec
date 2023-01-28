@@ -168,7 +168,7 @@ function changeForm (btnId) {
     document.getElementById("buttonsForm").style.display = "block";
     document.getElementById("operationBtn").value = "Inserisci";
   } 
-  else if (btnId == "modBtn") { // SE VEDO INSERIMENTO DETTAGLI
+  else if (btnId == "modBtn") {
       document.getElementById("detailsInputs").style.display = "none";
       document.getElementById("nameInputs").style.display = "block";
       document.getElementById("buttonsForm").style.display = "block";
