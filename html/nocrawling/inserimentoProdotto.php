@@ -23,8 +23,8 @@ function pulisciInput($value) {
 
 $conn = new DBAccess();
 $checkConn = $conn->openConnection();
-if (checkConn) {
-    $products = conn->getProducts();
+if ($checkConn) {
+    $products = $conn->getProducts();
     $conn->closeConnection();
 
         if (count($products) != 0) {
