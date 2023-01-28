@@ -170,11 +170,13 @@ function changeForm (btnId) {
   } 
   else if (btnId == "modBtn") { // SE VEDO INSERIMENTO DETTAGLI
       document.getElementById("detailsInputs").style.display = "none";
-      document.getElementById("operationBtn").value = "Modifica"
+      document.getElementById("nameInputs").style.display = "block";
+      document.getElementById("buttonsForm").style.display = "block";
+      document.getElementById("operationBtn").value = "Modifica";
   } 
   else {
       document.getElementById("nameInputs").style.display = "block";
       document.getElementById("buttonsForm").style.display = "block";
-      document.getElementById("operationBtn").value = "Elimina"
+      document.getElementById("operationBtn").value = "Elimina";
   }
 }
