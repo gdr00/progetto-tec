@@ -162,7 +162,7 @@ function changeForm (btnId) {
   }
 
 
-  if (btnId == "insBtn" || btnId == "modBtn") {
+  if (btnId == "insBtn") {
     document.getElementById("nameInputs").style.display = "block";
     document.getElementById("detailsInputs").style.display = "block";
     document.getElementById("buttonsForm").style.display = "block";
