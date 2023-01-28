@@ -147,45 +147,23 @@ function syncTheme() {
   }
 })();
 
-
-
-/* onclick dei bottoni di inserimento/mod/del */
-function showInsert () {
-  if (document.getElementById("detailsInputs").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
+function changeForm (btnId) {
+  document.getElementById("reset").click();
+  changeBtnColors(document.getElementById(btnId));
+  if (btnId == "insBtn" || btnId == "modBtn") {
     document.getElementById("nameInputs").style.display = "block";
     document.getElementById("detailsInputs").style.display = "block";
     document.getElementById("buttonsForm").style.display = "block";
   } else {
-    document.getElementById("reset").click();
+    if (document.getElementById("detailsInputs").style.display == "block") { // SE VEDO INSERIMENTO DETTAGLI
+      document.getElementById("detailsInputs").style.display = "none";
+    } else {
+      document.getElementById("nameInputs").style.display = "block";
+      document.getElementById("buttonsForm").style.display = "block";
+    }
   }
-  document.getElementById("reset").click();
-  changeBtnColors(document.getElementById("insBtn"));
 }
 
-function showModify () {
-  if (document.getElementById("detailsInputs").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
-    document.getElementById("nameInputs").style.display = "block";
-    document.getElementById("detailsInputs").style.display = "block";
-    document.getElementById("buttonsForm").style.display = "block";
-  } else {
-    document.getElementById("reset").click();
-  }
-  document.getElementById("reset").click();
-  changeBtnColors(document.getElementById("modBtn"));
-}
-
-function showDelete () {
-  if (document.getElementById("detailsInputs").style.display == "block") { // SE VEDO INSERIMENTO DETTAGLI
-    document.getElementById("nameInputs").style.display = "block";
-    document.getElementById("detailsInputs").style.display = "none";
-    document.getElementById("buttonsForm").style.display = "block";
-  } else {
-    document.getElementById("nameInputs").style.display = "block";
-    document.getElementById("buttonsForm").style.display = "block";
-  }
-  document.getElementById("reset").click();
-  changeBtnColors(document.getElementById("delBtn"));
-}
 /* cambia il colore dei bottoni nel form di inserimento/mod/del */
 function changeBtnColors (btn) {
   btn.style.backgroundColor = "var(--currentnavpagebg)";
