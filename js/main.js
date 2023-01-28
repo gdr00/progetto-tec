@@ -150,16 +150,16 @@ function syncTheme() {
 function changeForm (btnId) {
   document.getElementById("reset").click();
   var btn = document.getElementById(btnId);
-  document.getElementById(btnId).classList.add("active");/*
+  document.getElementById(btnId).classList.add("active");
   if (btn != document.getElementById("insBtn")) {
-    btn.classList.remove("active");
+    document.getElementById("insBtn").classList.remove("active");
   }
   if (btn != document.getElementById("modBtn")) {
-    btn.classList.remove("active");
+    document.getElementById("modBtn").classList.remove("active");
   }
   if (btn != document.getElementById("delBtn")) {
-    btn.classList.remove("active");
-  }*/
+    document.getElementById("delBtn").classList.remove("active");
+  }
 
 
   if (btnId == "insBtn" || btnId == "modBtn") {
@@ -174,36 +174,4 @@ function changeForm (btnId) {
       document.getElementById("buttonsForm").style.display = "block";
     }
   }
-}
-
-/* cambia il colore dei bottoni nel form di inserimento/mod/del */
-function changeBtnColors (btn) {
-  btn.style.backgroundColor = "var(--currentnavpagebg)";
-  if (btn != document.getElementById("insBtn")) {
-    document.getElementById("insBtn").style.backgroundColor = "var(--cardbg)";
-  }
-  if (btn != document.getElementById("modBtn")) {
-    document.getElementById("modBtn").style.backgroundColor = "var(--cardbg)";
-  }
-  if (btn != document.getElementById("delBtn")) {
-    document.getElementById("delBtn").style.backgroundColor = "var(--cardbg)";
-  }
-}
-
-function changeBtnColors (btn) {
-  btn.classList.add = "active";
-  console.log("0");
-  if (btn != document.getElementById("insBtn")) {
-    console.log("1");
-    btn.classList.remove = "active";
-  }
-  if (btn != document.getElementById("modBtn")) {
-    console.log("2");
-    btn.classList.remove = "active";
-  }
-  if (btn != document.getElementById("delBtn")) {
-    console.log("3");
-    btn.classList.remove = "active";
-  }
-  console.log(btn.classList);
 }
