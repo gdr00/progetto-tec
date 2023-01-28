@@ -959,14 +959,6 @@ textarea {
   font-size: var(--txtsize);
 }
 
-#nameInputs {
-  display: none;
-}
-
-#detailsInputs {
-  display: none;
-}
-
 #buttonsForm {
   display: none;
 }
