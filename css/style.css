@@ -972,3 +972,11 @@ textarea {
 #buttonsForm {
   display: none;
 }
+
+#operationForm *{
+  padding: .4em;
+}
+
+#operationForm div{
+  margin-top: 1em;
+}

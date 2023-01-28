@@ -51,23 +51,19 @@
         <button id="delBtn" onclick="showDelete();">Elimina prodotto</button>
     </div>
     <div>
-        <form id="insForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
+        <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
             <messaggioFormIns />
             <div id="nameInputs">
                 <label for="product-name">Inserire nome prodotto:</label>
                 <input type="text" id="product-name" name="product-name" required>
-                <br>
             </div>
             <div id="detailsInputs">
                 <label for="product-image">Immagine prodotto:</label>
                 <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
-                <br>
                 <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
                 <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
-                <br>
                 <label for="product-description">Descrizione prodotto:</label>
                 <textarea id="product-description" name="product-description" required></textarea>
-                <br>
             </div>
             <div class="button-group" id="buttonsForm">
                 <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
