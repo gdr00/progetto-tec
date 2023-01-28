@@ -162,17 +162,21 @@ function changeForm (btnId) {
     document.getElementById("delBtn").classList.remove("active");
   }
 
+  let operationBtn = document.getElementById("operationBtn");
 
   if (btnId == "insBtn") {
     document.getElementById("insInputs").style.display = "block";
-    document.getElementById("operationBtn").value = "Inserisci";
+    operationBtn.name = "inserisci";
+    operationBtn.value = "Inserisci";
   } 
   else if (btnId == "modBtn") {
       document.getElementById("insInputs").style.display = "none";
       document.getElementById("modAndDelInputs").style.display = "block";
-      document.getElementById("operationBtn").value = "Modifica";
+      operationBtn.name = "modifica";
+      operationBtn.value = "Modifica";
   } 
   else {
-      document.getElementById("operationBtn").value = "Elimina";
+      operationBtn.name = "elimina";
+      operationBtn.value = "Elimina";
   }
 }
