@@ -148,6 +148,7 @@ function syncTheme() {
 })();
 
 function changeForm (btnId) {
+  document.getElementById("operationForm").style.display = "block";
   document.getElementById("reset").click();
   var btn = document.getElementById(btnId);
   document.getElementById(btnId).classList.add("active");
@@ -163,20 +164,15 @@ function changeForm (btnId) {
 
 
   if (btnId == "insBtn") {
-    document.getElementById("nameInputs").style.display = "block";
-    document.getElementById("detailsInputs").style.display = "block";
-    document.getElementById("buttonsForm").style.display = "block";
+    document.getElementById("insInputs").style.display = "block";
     document.getElementById("operationBtn").value = "Inserisci";
   } 
   else if (btnId == "modBtn") {
-      document.getElementById("detailsInputs").style.display = "none";
-      document.getElementById("nameInputs").style.display = "block";
-      document.getElementById("buttonsForm").style.display = "block";
+      document.getElementById("insInputs").style.display = "none";
+      document.getElementById("modAndDelInputs").style.display = "block";
       document.getElementById("operationBtn").value = "Modifica";
   } 
   else {
-      document.getElementById("nameInputs").style.display = "block";
-      document.getElementById("buttonsForm").style.display = "block";
       document.getElementById("operationBtn").value = "Elimina";
   }
 }

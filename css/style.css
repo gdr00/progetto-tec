@@ -952,17 +952,6 @@ textarea {
   font-size: var(--txtsize);
 }
 
-#insForm {
-  width: 80%;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 2em;
-  border-radius: 2em;
-  background-color: var(--cardbg);
-  display: block;
-}
-
 #nameInputs {
   display: none;
 }
@@ -977,6 +966,9 @@ textarea {
 
 #operationForm {
   text-align: center;
+  display: none;
+  background-color: var(--cardbg);
+  border-radius: 2em;
 }
 
 #operationForm *{
@@ -998,9 +990,10 @@ textarea {
   width: 65%;
 }
 
-#operationForm #buttonsForm input {
+#operationForm .opFormButton {
   width: 30%;
   margin: 1em;
+  margin-bottom: 3em;
 }
 
 #operationForm textarea{
