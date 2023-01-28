@@ -985,9 +985,13 @@ textarea {
   width: 100%;
 }
 
-#operationForm input, textarea {
+#operationForm input, textarea, select {
   position: relative;
   width: 65%;
+}
+
+#modAndDelInputs select {
+  padding-left: 0em;
 }
 
 #operationForm .opFormButton {
@@ -1004,3 +1008,4 @@ textarea {
   background-color: var(--currentnavpagebg);
   color: var(--currentnavpagetxtcolor);
 }
+
