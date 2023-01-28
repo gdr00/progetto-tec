@@ -92,15 +92,16 @@ a:visited {
   color: var(--linkvisitedcolor);
 }
 
-button {
+button, input[type="submit"], input[type="reset"], input[type="button"] {
   background-color: var(--linkcolor);
   color: var(--txtcolor);
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
   background-color: var(--navlinkhoverbg);
   color: var(--navlinkhovercolor);
 }
+
 
 .aiuti {
   height: 1px;
@@ -995,7 +996,9 @@ textarea {
   position: relative;
   width: 65%;
 }
-#operationForm input[type="reset"] {
+
+#operationForm #buttonsForm input {
+  width: 30%;
   margin-top: 1em;
 }
 
