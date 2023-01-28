@@ -245,3 +245,14 @@ tbody tr:first-child :last-child {
         flex: 1 0;
     }
 }
+
+
+/* da fare bottoni uno sotto l'altro */
+@media screen and (max-width: 400px) {
+    #operationForm {
+        display: inline-block;
+    }
+    #adminButtons button {
+        flex: 1 0;
+    }
+}
