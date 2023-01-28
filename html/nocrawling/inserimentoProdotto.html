@@ -43,34 +43,30 @@
     
     <main>
 
-    <h1>Pagina amministratore</h1>
-
     <div id="adminButtons">
         <button id="insBtn" onclick="changeForm(this.id);">Inserisci prodotto</button>
         <button id="modBtn" onclick="changeForm(this.id);">Modifica prodotto</button>
         <button id="delBtn" onclick="changeForm(this.id);">Elimina prodotto</button>
     </div>
-    <div>
-        <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
-            <!-- <messagioformins/> Problema per il css TODO-->
-            <div id="nameInputs">
-                <label for="product-name">Inserire nome prodotto:</label>
-                <input type="text" id="product-name" name="product-name" required>
-            </div>
-            <div id="detailsInputs">
-                <label for="product-image">Immagine prodotto:</label>
-                <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
-                <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
-                <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
-                <label for="product-description">Descrizione prodotto:</label>
-                <textarea id="product-description" name="product-description" required></textarea>
-            </div>
-            <div class="button-group" id="buttonsForm">
-                <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
-                <input type="reset" id="reset" value="Cancella tutto" />
-            </div>
-        </form>
-    </div>
+    <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
+        <!-- <messagioformins/> Problema per il css TODO-->
+        <div id="nameInputs">
+            <label for="product-name">Inserire nome prodotto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+        </div>
+        <div id="detailsInputs">
+            <label for="product-image">Immagine prodotto:</label>
+            <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
+            <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
+            <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
+            <label for="product-description">Descrizione prodotto:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+        </div>
+        <div class="button-group" id="buttonsForm">
+            <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
+            <input type="reset" id="reset" value="Cancella tutto" />
+        </div>
+    </form>
 
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Torna all'inizio"><span>Torna all'inizio</span></button>
