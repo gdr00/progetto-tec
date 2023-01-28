@@ -92,6 +92,11 @@ a:visited {
   color: var(--linkvisitedcolor);
 }
 
+button {
+  background-color: var(--linkcolor);
+  color: var(--txtcolor);
+}
+
 button:hover {
   background-color: var(--navlinkhoverbg);
   color: var(--navlinkhovercolor);
@@ -941,14 +946,8 @@ textarea {
   border-radius: 2em;
   padding: 1.5em;
   margin: 2em 2em;
-  background-color: var(--cardbg);
-  color: var(--txtcolor);
   border: none;
   font-weight: bold;
-}
-
-#adminButtons button:hover {
-  background-color: black;
 }
 
 #insForm {
