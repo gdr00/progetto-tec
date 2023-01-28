@@ -982,11 +982,21 @@ textarea {
 }
 
 #operationForm label {
+  margin-top: 1.5em;
   display: block;
 }
 
-#operationForm input, textarea {
+#operationForm div{
+  position: relative;
   width: 100%;
+}
+
+#operationForm input, textarea {
+  position: relative;
+  width: 65%;
+}
+#operationForm input[type="reset"] {
+  margin-top: 1em;
 }
 
 #operationForm textarea{
