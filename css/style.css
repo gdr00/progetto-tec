@@ -966,7 +966,6 @@ textarea {
 
 #operationForm {
   text-align: center;
-  display: none;
   background-color: var(--cardbg);
   border-radius: 2em;
 }
@@ -982,7 +981,8 @@ textarea {
 
 #operationForm div{
   position: relative;
-  width: 100%;
+  margin: auto;
+  width: 90%;
 }
 
 #operationForm input, textarea, select {
@@ -991,6 +991,7 @@ textarea {
 }
 
 #modAndDelInputs select {
+  margin-top: 1.5em;
   padding-left: 0em;
 }
 
