@@ -165,6 +165,7 @@ function changeForm (btnId) {
   let operationBtn = document.getElementById("operationBtn");
 
   if (btnId == "insBtn") {
+    document.getElementById("modAndDelInputs").style.display = "none";
     document.getElementById("insInputs").style.display = "block";
     operationBtn.name = "inserisci";
     operationBtn.value = "Inserisci";

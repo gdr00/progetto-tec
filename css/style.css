@@ -990,6 +990,10 @@ textarea {
   width: 65%;
 }
 
+#modAndDelInputs {
+  display: none;
+}
+
 #modAndDelInputs select {
   margin-top: 1.5em;
   padding-left: 0em;
