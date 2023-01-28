@@ -151,10 +151,10 @@ function syncTheme() {
 
 /* onclick dei bottoni di inserimento/mod/del */
 function showInsert () {
-  if (document.getElementById("secondo").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
-    document.getElementById("primo").style.display = "block";
-    document.getElementById("secondo").style.display = "block";
-    document.getElementById("terzo").style.display = "block";
+  if (document.getElementById("detailsInputs").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
+    document.getElementById("nameInputs").style.display = "block";
+    document.getElementById("detailsInputs").style.display = "block";
+    document.getElementById("buttonsForm").style.display = "block";
   } else {
     document.getElementById("reset").click();
   }
@@ -163,10 +163,10 @@ function showInsert () {
 }
 
 function showModify () {
-  if (document.getElementById("secondo").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
-    document.getElementById("primo").style.display = "block";
-    document.getElementById("secondo").style.display = "block";
-    document.getElementById("terzo").style.display = "block";
+  if (document.getElementById("detailsInputs").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
+    document.getElementById("nameInputs").style.display = "block";
+    document.getElementById("detailsInputs").style.display = "block";
+    document.getElementById("buttonsForm").style.display = "block";
   } else {
     document.getElementById("reset").click();
   }
@@ -175,13 +175,13 @@ function showModify () {
 }
 
 function showDelete () {
-  if (document.getElementById("secondo").style.display == "block") { // SE VEDO INSERIMENTO DETTAGLI
-    document.getElementById("primo").style.display = "block";
-    document.getElementById("secondo").style.display = "none";
-    document.getElementById("terzo").style.display = "block";
+  if (document.getElementById("detailsInputs").style.display == "block") { // SE VEDO INSERIMENTO DETTAGLI
+    document.getElementById("nameInputs").style.display = "block";
+    document.getElementById("detailsInputs").style.display = "none";
+    document.getElementById("buttonsForm").style.display = "block";
   } else {
-    document.getElementById("primo").style.display = "block";
-    document.getElementById("terzo").style.display = "block";
+    document.getElementById("nameInputs").style.display = "block";
+    document.getElementById("buttonsForm").style.display = "block";
   }
   document.getElementById("reset").click();
   changeBtnColors(document.getElementById("delBtn"));

@@ -962,14 +962,14 @@ textarea {
   display: block;
 }
 
-#primo {
+#nameInputs {
   display: none;
 }
 
-#secondo {
+#detailsInputs {
   display: none;
 }
 
-#terzo {
+#buttonsForm {
   display: none;
 }
