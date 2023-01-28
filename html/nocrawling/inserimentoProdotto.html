@@ -46,9 +46,9 @@
     <h1>Pagina amministratore</h1>
 
     <div id="adminButtons">
-        <button id="insBtn" onclick="showInsert();">Inserisci prodotto</button>
-        <button id="modBtn" onclick="showModify();">Modifica prodotto</button>
-        <button id="delBtn" onclick="showDelete();">Elimina prodotto</button>
+        <button id="insBtn" onclick="changeForm(this.id);">Inserisci prodotto</button>
+        <button id="modBtn" onclick="changeForm(this.id);">Modifica prodotto</button>
+        <button id="delBtn" onclick="changeForm(this.id);">Elimina prodotto</button>
     </div>
     <div>
         <form id="insForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
