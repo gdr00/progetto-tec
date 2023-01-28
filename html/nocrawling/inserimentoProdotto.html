@@ -51,7 +51,7 @@
     <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
         <!-- <messagioformins/> Problema per il css TODO-->
         <div id="nameInputs">
-            <label for="product-name">Inserire nome prodotto:</label>
+            <label for="product-name">Inserire titolo prodotto:</label>
             <input type="text" id="product-name" name="product-name" required>
         </div>
         <div id="detailsInputs">
@@ -63,11 +63,10 @@
             <textarea id="product-description" name="product-description" required></textarea>
         </div>
         <div class="button-group" id="buttonsForm">
-            <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
+            <input type="submit" id="operationBtn" name="submit" value="Inserisci Prodotto" />
             <input type="reset" id="reset" value="Cancella tutto" />
         </div>
     </form>
-
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Torna all'inizio"><span>Torna all'inizio</span></button>
 
