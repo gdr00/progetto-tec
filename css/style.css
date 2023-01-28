@@ -999,7 +999,7 @@ textarea {
 
 #operationForm #buttonsForm input {
   width: 30%;
-  margin-top: 1em;
+  margin: 1em;
 }
 
 #operationForm textarea{
