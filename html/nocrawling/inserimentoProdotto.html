@@ -53,52 +53,25 @@
     <div>
         <form id="insForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
             <messaggioFormIns />
-            <label for="product-name">Inserire nome prodotto:</label>
-            <input type="text" id="product-name" name="product-name" required>
-            <br>
-            <label for="product-image">Immagine prodotto:</label>
-            <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
-            <br>
-            <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
-            <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
-            <br>
-            <label for="product-description">Descrizione prodotto:</label>
-            <textarea id="product-description" name="product-description" required></textarea>
-            <br>
-            <div class="button-group" id="formButtons">
+            <div id="primo">
+                <label for="product-name">Inserire nome prodotto:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                <br>
+            </div>
+            <div id="secondo">
+                <label for="product-image">Immagine prodotto:</label>
+                <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
+                <br>
+                <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
+                <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
+                <br>
+                <label for="product-description">Descrizione prodotto:</label>
+                <textarea id="product-description" name="product-description" required></textarea>
+                <br>
+            </div>
+            <div class="button-group" id="terzo">
                 <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
                 <input type="reset" id="reset" value="Cancella tutto" />
-            </div>
-        </form>
-    </div>
-    <div>
-        <form id="modForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
-            <messaggioFormMod />
-            <label for="product-name">Inserire nome prodotto:</label>
-            <input type="text" id="product-name" name="product-name" required>
-            <br>
-            <label for="product-image">Immagine prodotto:</label>
-            <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
-            <br>
-            <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
-            <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
-            <br>
-            <label for="product-description">Descrizione prodotto:</label>
-            <textarea id="product-description" name="product-description" required></textarea>
-            <br>
-            <div class="button-group" id="formButtons">
-                <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
-                <input type="reset" id="reset" value="Cancella tutto" />
-            </div>
-        </form>
-    </div>
-    <div>
-        <form id="delForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
-            <messaggioFormDel />
-            <label for="product-name">Inserire nome prodotto:</label>
-            <input type="text" id="product-name" name="product-name" required>
-            <div class="button-group" id="formButtons">
-                <input type="submit" id="submit" name="submit" value="Inserisci Prodotto" />
             </div>
         </form>
     </div>

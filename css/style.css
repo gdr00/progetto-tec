@@ -954,27 +954,17 @@ textarea {
   padding: 2em;
   border-radius: 2em;
   background-color: var(--cardbg);
+  display: block;
+}
+
+#primo {
   display: none;
 }
 
-#modForm {
-  width: 80%;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 2em;
-  border-radius: 2em;
-  background-color: var(--cardbg);
+#secondo {
   display: none;
 }
 
-#delForm {
-  width: 80%;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding: 2em;
-  border-radius: 2em;
-  background-color: var(--cardbg);
+#terzo {
   display: none;
 }

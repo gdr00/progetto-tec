@@ -151,17 +151,39 @@ function syncTheme() {
 
 /* onclick dei bottoni di inserimento/mod/del */
 function showInsert () {
-  visualizeForm(document.getElementById("insForm"));
+  if (document.getElementById("secondo").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
+    document.getElementById("primo").style.display = "block";
+    document.getElementById("secondo").style.display = "block";
+    document.getElementById("terzo").style.display = "block";
+  } else {
+    document.getElementById("reset").click();
+  }
+  document.getElementById("reset").click();
   changeBtnColors(document.getElementById("insBtn"));
 }
 
 function showModify () {
-  visualizeForm(document.getElementById("modForm"));
+  if (document.getElementById("secondo").style.display != "block") { // SE NON VEDO INSERIMENTO DETTAGLI
+    document.getElementById("primo").style.display = "block";
+    document.getElementById("secondo").style.display = "block";
+    document.getElementById("terzo").style.display = "block";
+  } else {
+    document.getElementById("reset").click();
+  }
+  document.getElementById("reset").click();
   changeBtnColors(document.getElementById("modBtn"));
 }
 
 function showDelete () {
-  visualizeForm(document.getElementById("delForm"));
+  if (document.getElementById("secondo").style.display == "block") { // SE VEDO INSERIMENTO DETTAGLI
+    document.getElementById("primo").style.display = "block";
+    document.getElementById("secondo").style.display = "none";
+    document.getElementById("terzo").style.display = "block";
+  } else {
+    document.getElementById("primo").style.display = "block";
+    document.getElementById("terzo").style.display = "block";
+  }
+  document.getElementById("reset").click();
   changeBtnColors(document.getElementById("delBtn"));
 }
 /* cambia il colore dei bottoni nel form di inserimento/mod/del */
@@ -175,18 +197,5 @@ function changeBtnColors (btn) {
   }
   if (btn != document.getElementById("delBtn")) {
     document.getElementById("delBtn").style.backgroundColor = "var(--cardbg)";
-  }
-}
-/* mostra il form di inserimento/mod/del */
-function visualizeForm (form) {
-  form.style.display = "block";
-  if (form != document.getElementById("insForm") && document.getElementById("insForm").style.display == "block") {
-    document.getElementById("insForm").style.display = "none";
-  }
-  if (form != document.getElementById("modForm") && document.getElementById("modForm").style.display == "block") {
-    document.getElementById("modForm").style.display = "none";
-  }
-  if (form != document.getElementById("delForm") && document.getElementById("delForm").style.display == "block") {
-    document.getElementById("delForm").style.display = "none";
   }
 }
