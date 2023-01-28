@@ -1007,5 +1007,6 @@ textarea {
 }
 
 .active {
-  background-color: blue !important;
+  background-color: var(--currentnavpagebg);
+  color: var(--currentnavpagetxtcolor);
 }
