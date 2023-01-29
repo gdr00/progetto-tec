@@ -54,11 +54,5 @@ if($messaggioForm == "") {
 
 
 
-$query = "SELECT * FROM utenti WHERE username='$username' AND password='$password'";
 
-
-$_SESSION['user_id'] = $user['id'];
-$_SESSION['username'] = $user['username'];
-
-header("Location: inserimentoProdotti.html");
 ?>

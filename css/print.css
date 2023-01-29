@@ -4,16 +4,6 @@ body {
 	font-family: "Times New Roman", Times, serif; /* Cambiare con font di default a font con grazie*/
 }
 
-table {
-	text-align: center;
-	border-collapse: collapse;
-}
-
-table td, table th {
-	padding: 5pt 3pt 5pt 3pt;
-	border: 1px solid black;
-}
-
 #menu {
 	display: none;
 }
@@ -35,12 +25,44 @@ h1 {
 	line-height: 20pt;
 }
 
-footer {
+.hidden {
 	display: none;
 }
 
-.hidden {
+#toTop {
 	display: none;
+}
+
+.hide {
+	display: none;
+}
+
+/*** FOOTER ***/
+#contactsOnFooter li:last-child {
+	display: none;
+}
+
+#hoursInTxtFormat {
+	display: none;
+}
+
+#descHoursTable {
+	display: none;
+}
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+	page-break-inside: avoid;
+}
+
+caption {
+	padding-bottom: 4pt;
+}
+
+table td, table th {
+	padding: 4pt 2pt 4pt 2pt;
+	border: 1px solid black;
 }
 
 /** INDEX */

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Chi Siamo - Sicurservice</title>
+    <title>Aggiungi Prodotto - Sicurservice</title>
     <!-- META TAGS -->
     <meta charset="utf-8" />
-    <meta name="keywords" content="Alessandro Da Re, Roberta Moret, installatore, contabilità" />
+    <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="Sicurservice" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,7 @@
             <ul id="menus">
                 <li><a href="../../index.html" aria-label="vai alla pagina home">Home</a></li>
                 <li><a href="../chiSiamo.html" aria-label="vai alla pagina home">Chi siamo</a></li>
-                <li><a href="../prodotti.html" aria-label="vai alla pagina prodotti">Prodotti</a></li>
+                <li><a href="../../php/prodotti.php" aria-label="vai alla pagina prodotti">Prodotti</a></li>
                 <li><a href="../contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
                 <li><a class="active" aria-label="pagina corrente area amministratore">Amministratore</a></li>
             </ul>
@@ -37,32 +37,40 @@
 
 	<!-- BREADCRUMB -->
 	<nav id ="breadcrumb" aria-label="Posizione corrente">
-		<img src="../img/icons/location-dot.svg" alt="Ti trovi in:"/>
+		<img src="../../img/icons/location-dot.svg" alt="Ti trovi in:"/>
 		<p><a href ="../index.html"><span lang="en">Home</span></a> > Chi siamo</p>
 	</nav>
     
     <main>
 
-
-    <h1>Inserimento Nuovo Prodotto</h1>
-    <form id="modifyProduct" method="post" enctype="multipart/form-data">
-        <messaggioForm />
-        <label for="product-name">Nome Prodotto:</label>
-        <input type="text" id="product-name" name="product-name" required>
-        <br>
-        <label for="product-image">Immagini Prodotto:</label>
-        <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
-        <br>
-        <label for="product-description">Descrizione Prodotto:</label>
-        <textarea id="product-description" name="product-description" required></textarea>
-        <br>
-        <div class="button-group">
-            <button type="submit" formaction="add-product.php">Aggiungi</button>
-            <button type="submit" formaction="edit-product.php" disabled>Modifica</button>
-            <button type="submit" formaction="delete-product.php" disabled>Elimina</button>
+    <div id="adminButtons">
+        <button id="insBtn" class="active" onclick="changeForm(this.id);">Inserisci prodotto</button>
+        <button id="modBtn" onclick="changeForm(this.id);">Modifica prodotto</button>
+        <button id="delBtn" onclick="changeForm(this.id);">Elimina prodotto</button>
+    </div>
+    <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
+        <messagioformins></messagioformins> <!--occupa spazio per nulla  TODO -->
+        <div id="insInputs">
+            <label for="product-name">Inserire titolo prodotto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <label for="product-image">Immagine prodotto:</label>
+            <input type="file" id="product-image" name="product-image" accept=".svg" multiple required>
+            <label for="product-image_alt">Descrizione testuale dell'immagine:</label>
+            <textarea type="text" id="product-image_alt" name="product-image-alt" accept=".svg" required></textarea>
+            <label for="product-description">Descrizione prodotto:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
         </div>
+        <div id="modAndDelInputs">
+            <listOfProducts></listOfProducts>
+            <select>
+                <option value="0">Prodotti</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+            </select>
+        </div>
+        <input class="opFormButton" type="submit" id="operationBtn" name="submit" value="Inserisci Prodotto" />
+        <input class="opFormButton" type="reset" id="reset" value="Cancella tutto" />
     </form>
-
     </main>
     <button id="toTop" onclick="toTop()" aria-label="Torna all'inizio"><span>Torna all'inizio</span></button>
 

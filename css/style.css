@@ -92,12 +92,27 @@ a:visited {
   color: var(--linkvisitedcolor);
 }
 
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: var(--linkcolor);
+  color: var(--txtcolor);
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+  background-color: var(--navlinkhoverbg);
+  color: var(--navlinkhovercolor);
+}
+
+
 .aiuti {
   height: 1px;
   width: 1px;
   overflow: hidden;
   position: absolute;
   top: auto;
+}
+
+.serverStringError {
+  text-align: center;
 }
 
 #breadcrumb, #products li, #contactsList li, #serviceList li, #partnerList li, .cards li {
@@ -164,17 +179,14 @@ header h1 {
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
-}
-
-#menu a:visited {
-  color: var(--linkvisitedcolor);
-}
-
-#menu a {
   padding: .5em .5em;
   border-radius: 1em;
   min-height: 30px;
   min-width: 44px;
+}
+
+#menu a:visited {
+  color: var(--linkvisitedcolor);
 }
 
 /*top bottom left right padding in order to eliminate the text movement*/
@@ -401,9 +413,11 @@ main h2 {
   background-color: var(--cardbg);
 }
 
-#serviceList li h2 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
+#serviceList li h3 { /*eredito h2 sono già centrato comunque allineo tutto nell'#serviceList li al centro*/
   font-size: var(--txtsize);
   margin-bottom: .7em;
+  margin: .7em 0.5em .7em;
+  text-align: center;
 }
 
 #serviceList li p {
@@ -558,7 +572,7 @@ main h2 {
     BACK TO TOP
 ********************/
 #toTop {
-  display: block;
+  display: none;
   font-size: 1.6em;
   font-weight: bold;
   color: var(--bodybgcolor);
@@ -638,9 +652,6 @@ table{
 
 caption {
   margin-bottom: 0.7em;
-}
-
-table caption{
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -758,10 +769,6 @@ input[type="submit"]{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.cards a:hover {
-  transition: .14s;
 }
 
 #staff h2 {
@@ -884,11 +891,132 @@ textarea {
   background-color: var(--cardbg);
   margin: 0 10px 20px 10px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 2em;
   flex: 0 0 400px;
   text-align: center;
 }
 
-.numeroCellulare {
-  font-size: 1 em;
+/******************* 404 PAGE *******************/
+#title404 {
+  text-align: center;
 }
+
+#subtitle404 {
+  margin: 1.5em 0em 2em 2em;
+}
+
+#advice {
+  margin: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  padding-left: 0;
+}
+
+#advice li {
+  list-style-position: outside;
+}
+
+#advice a {
+  background-color: var(--cardbg);
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 2em;
+  text-decoration: underline;
+}
+
+#advice a:hover {
+  transition: linear 0.14s;
+  background-color: var(--bodybgcolor);
+}
+
+#contactsOnFooter h4 {
+  font-size: 1.4em;
+  margin-bottom: 0em;
+}
+
+/******************* INSERIMENTO PRODOTTO *******************/
+#adminButtons {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+
+#adminButtons button {
+  flex: 1 1 300px;
+  border-radius: 2em;
+  padding: 1.2em;
+  margin: 1em 1.5em 2em 1.5em;
+  border: none;
+  font-weight: bold;
+  font-size: var(--txtsize);
+}
+
+#buttonsForm {
+  display: none;
+}
+
+#operationForm {
+  text-align: center;
+  display: block;
+  background-color: var(--cardbg);
+  position: relative;
+  width: 90%;
+  margin: auto;
+  border-radius: 2em;
+  box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor);
+}
+
+#operationForm *{
+  padding: .4em;
+}
+
+#operationForm label {
+  margin-top: 1.5em;
+  display: block;
+}
+
+#operationForm div{
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+#operationForm input, textarea, select {
+  position: relative;
+  width: 65%;
+}
+
+#modAndDelInputs {
+  display: none;
+}
+
+#modAndDelInputs select {
+  margin-top: 1.5em;
+  padding-left: 0em;
+}
+
+#operationForm .opFormButton {
+  width: 30%;
+  margin: 1em;
+  margin-bottom: 3em;
+  margin-top: 2em;
+}
+
+#operationForm textarea{
+  height: 4em;
+}
+
+.active {
+  background-color: var(--currentnavpagebg);
+  color: var(--currentnavpagetxtcolor);
+  pointer-events: none;
+  cursor: default;
+}
+

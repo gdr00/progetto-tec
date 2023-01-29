@@ -27,7 +27,7 @@ class DBAccess {
     
 
     public function getProducts(){
-        $query = "SELECT * FROM prodotto ORDER BY nome ASC";
+        $query = "SELECT * FROM prodotti ORDER BY titolo ASC";
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if (mysqli_num_rows($queryResult) == 0){
             return null;
@@ -41,12 +41,6 @@ class DBAccess {
         }
     }
     
-    private function filterInput($input) {
-        $input = trim($input);
-        $input = strip_tags($input);
-        $input = htmlspecialchars($input);
-        return $input;
-    }
 
     private function filterProductInput($input) {
         $this->filterInput($input);
@@ -62,8 +56,8 @@ class DBAccess {
         }
     }
 
-    public function insertProduct ($nome, $descrizione, $immagine){
-        $query = "INSERT INTO prodotto (nome, descrizione, immagine) VALUES(\"$nome\", \"$descrizione\", \"$immagine\")";
+    public function insertProduct ($titolo, $descrizione, $immagine, $alt){
+        $query = "INSERT INTO prodotti (titolo, descrizione, immagine, alt_immagine) VALUES(\"$titolo\", \"$descrizione\", \"$immagine\", \"$alt\")";
         $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
         
         if(mysqli_affected_rows($this->connection) > 0){
@@ -73,8 +67,8 @@ class DBAccess {
         }
     }
 
-    public function deletePlayer($nome){
-        $query = "DELETE FROM products WHERE ID = $nome";
+    public function deleteProduct($nome){
+        $query = "DELETE FROM prodotti WHERE titolo = $nome";
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if(mysqli_affected_rows($this->connection) > 0) {
             return true;

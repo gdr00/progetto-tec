@@ -42,6 +42,34 @@ function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
 
+/* toTop appare solo se scrollo */
+document.addEventListener("scroll", function() {
+  var btn = document.getElementById("toTop");
+  if (window.scrollY != 0) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+})
+
+/* toTop scompare prima della stampa */
+window.addEventListener("beforeprint", function (event) {
+  var btn = document.getElementById("toTop");
+  console.log("beforeprint");
+  btn.style.display = "none";
+});
+
+/* sistema l'hamburgher che si apre/chiude/fa scomparire il menu */
+window.onresize = function() {
+  width = window.innerWidth;
+  if (width <= 600 && document.getElementById("menus").style.display == "flex") {
+    toggleMenu();
+  }
+  if (width > 600 && document.getElementById("menus").style.display == "none") {
+    toggleMenu();
+  }
+}
+
 function toggleMenu(){ /*for hamburger menu*/
   var menu = document.getElementById("menus");
   var hamburger = document.getElementById("hamburger");
@@ -118,3 +146,37 @@ function syncTheme() {
       setTheme('theme-dark');
   }
 })();
+
+function changeForm (btnId) {
+  document.getElementById("reset").click();
+  var btn = document.getElementById(btnId);
+  document.getElementById(btnId).classList.add("active");
+  if (btn != document.getElementById("insBtn")) {
+    document.getElementById("insBtn").classList.remove("active");
+  }
+  if (btn != document.getElementById("modBtn")) {
+    document.getElementById("modBtn").classList.remove("active");
+  }
+  if (btn != document.getElementById("delBtn")) {
+    document.getElementById("delBtn").classList.remove("active");
+  }
+
+  let operationBtn = document.getElementById("operationBtn");
+
+  if (btnId == "insBtn") {
+    document.getElementById("modAndDelInputs").style.display = "none";
+    document.getElementById("insInputs").style.display = "block";
+    operationBtn.name = "inserisci";
+    operationBtn.value = "Inserisci";
+  } 
+  else if (btnId == "modBtn") {
+      document.getElementById("insInputs").style.display = "none";
+      document.getElementById("modAndDelInputs").style.display = "block";
+      operationBtn.name = "modifica";
+      operationBtn.value = "Modifica";
+  } 
+  else {
+      operationBtn.name = "elimina";
+      operationBtn.value = "Elimina";
+  }
+}
