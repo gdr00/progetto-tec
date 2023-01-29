@@ -4,7 +4,7 @@ body {
 	font-family: "Times New Roman", Times, serif; /* Cambiare con font di default a font con grazie*/
 }
 
-.help {
+.aiuti {
 	display: none;
 }
 
@@ -27,10 +27,6 @@ a {
 
 h1 {
 	line-height: 20pt;
-}
-
-.hidden {
-	display: none;
 }
 
 #toTop {
