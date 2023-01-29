@@ -41,16 +41,16 @@ echo str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['submit'])){
-        // prende il nome del prodotto
-        $product_name = pulisciInput($_POST['product-name']);
-        // prende la descrizione del prodotto
-        $product_description = pulisciInput($_POST['product-description']);
-        // prende il nome del file immagine
-        $target_dir = "/php/uploads/";
-        // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
-        $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
-        //alt immagine
-        $product_image_alt = pulisciInput($_POST['product-image-alt']);
+     // prende il nome del prodotto
+    $product_name = pulisciInput($_POST['product-name']);
+     // prende la descrizione del prodotto
+    $product_description = pulisciInput($_POST['product-description']);
+     // prende il nome del file immagine
+    $target_dir = realpath('php/uploads/');
+     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
+    $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
+     //alt immagine
+    $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
         $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
         //chmod('upload',777);

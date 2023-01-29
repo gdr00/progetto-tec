@@ -16,24 +16,30 @@ function pulisciInput($value) {
 }
 
 
-$email = pulisciInput($_POST['email']);
-$password = pulisciInput($_POST['password']);
+if (isset($_POST['username']) && isset($_POST['password'])) {
 
-if($messaggioForm == "") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openConnection();
+
     if ($connessioneRiuscita == true) {
-        $queryOK = $dbAccess->login($email, $password);
+        $queryOK = $dbAccess->login($username, $password);
         $dbAccess->closeConnection();
+
         if ($queryOK == true) {
-            $messaggioForm  .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
-        } else
-        {
-            $messaggioForm .= '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
+            $messaggioForm .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
+            header("inserimentoProdotto.html");
         }
-    }else{
-        $messaggioForm = '<div id="messaErrors"<ul>' . $messaggioForm . '</ul></div';
+        else
+            $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
+        
     }
+    else {
+        $messaggioForm = '<div class="alertDanger" role="alert">Problemi database</div> ';
+    }
+}
 
     // sostituisco il tag <messaggioForm /> con il messaggio da mostrare all'utente
     $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
@@ -41,10 +47,6 @@ if($messaggioForm == "") {
     //stampo la pagina HTML
     echo $paginaHTML;
     
-    
-}
-
-
 
 
 
