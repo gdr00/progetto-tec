@@ -4,6 +4,10 @@ body {
 	font-family: "Times New Roman", Times, serif; /* Cambiare con font di default a font con grazie*/
 }
 
+.helps {
+	display: none;
+}
+
 #menu {
 	display: none;
 }
