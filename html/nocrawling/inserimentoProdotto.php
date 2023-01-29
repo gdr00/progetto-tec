@@ -49,6 +49,7 @@ if(isset($_POST['submit'])){
     $product_description = pulisciInput($_POST['product-description']);
     // prende il nome del file immagine
     $target_dir = "uploads/";
+    echo target_dir;
     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
     $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
     //alt immagine
@@ -56,7 +57,7 @@ if(isset($_POST['submit'])){
 
     $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
     //chmod('upload',777);
-    if (is_writable('uploads/')) {
+    if (is_writable($target_dir)) {
         $messaggioForm .= '<p>La cartella ha i permessi</p>';
     } else {
         $messaggioForm .= '<p>La cartella non ha i permessi</p>';
