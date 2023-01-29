@@ -892,10 +892,6 @@ textarea {
   border-radius: 3em;
 }
 
-#requestsForm input[type="text"]:hover, input[type="tel"]:hover, textarea:hover {
-  transition: linear 0.14s;
-}
-
 #agreementBlock label, input {
   margin: 0em;
 }
