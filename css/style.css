@@ -284,6 +284,7 @@ main h2 {
 }
 
 #products li {
+  display: block;
   padding: 10px;
   border-radius: 10px;
   height: 300px;
