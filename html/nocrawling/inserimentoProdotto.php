@@ -7,17 +7,6 @@ require_once("prodotto.php");
 
 $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
-foreach ($_POST as $key => $value) {
-    echo "<tr>";
-    echo "<td>";
-    echo $key;
-    echo "</td>";
-    echo "<td>";
-    echo $value;
-    echo "</td>";
-    echo "</tr>";
-}
-
 // Errore da mostrare all'utente
 $messaggioForm = "messaggio ok";
 
@@ -52,19 +41,16 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
-
-    //chdir('../..');
     echo "<h1>TEST</h1>";
-    //chdir('../..');
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
     $product_description = pulisciInput($_POST['product-description']);
      // prende il nome del file immagine
-     //torno alla root directory del progetto dato che sono in html/nocrawling
-     $target_dir = realpath('../../php/uploads/');
+    chdir('../..'); //torno alla root directory del progetto dato che sono in html/nocrawling
+    $target_dir = realpath('php/uploads/');
      // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
-    $target_file = $target_dir . '/' . basename($_FILES["product-image"]["name"]);
+    $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
      //alt immagine
     $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
@@ -86,9 +72,12 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
+    throw new ErrorException("modifica");
     
 }
 if (isset($_POST['elimina'])) {
+
+    throw new ErrorException("elimina");
 
     $product_name = pulisciInput($_POST['product-selector']);
     $conn = new DBAccess();
