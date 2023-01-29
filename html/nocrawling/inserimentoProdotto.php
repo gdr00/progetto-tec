@@ -26,14 +26,10 @@ $checkConn = $conn->openConnection();
 if ($checkConn) {
     $products = $conn->getProducts();
     $conn->closeConnection();
-
         if (count($products) != 0) {
-            $result = '<label for=\"productSelector\">Seleziona un prodotto:</label>
-                <select name=\"productSelector\" id=\"productSelector\">';
             foreach ($products as $product) {
                 $result .= '<option value=\"'.$product->getId().'\>'.$product->getTitolo().'</option>';
             }
-            $result .= '</select>';
         } else {
             $result = '<p>Non ci sono prodotti</p>';
         }
