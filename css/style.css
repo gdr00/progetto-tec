@@ -761,7 +761,7 @@ input[type="submit"]:hover {
 }
 
 #loginContainer label {
-  display: block;
+  float: left;
 }
 
 input[type="submit"]{
