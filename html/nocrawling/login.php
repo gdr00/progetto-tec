@@ -46,5 +46,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //stampo la pagina HTML
     echo $paginaHTML;
+    header("inserisciProdotto.html");
     
 ?>
