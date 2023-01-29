@@ -760,6 +760,11 @@ input[type="submit"]:hover {
   text-align: center;
 }
 
+#loginContainer label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
 #loginContainer p{
   float: left;
 }
