@@ -41,15 +41,17 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
+    echo "<h1>TEST</h1>";
+    chdir('../..');
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
     $product_description = pulisciInput($_POST['product-description']);
      // prende il nome del file immagine
      //torno alla root directory del progetto dato che sono in html/nocrawling
-    $target_dir = realpath('../../php/uploads/'); //da la path completa alla cartella uploads
+    $target_dir = realpath('./php/uploads/');
      // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
-    $target_file = basename($target_dir) .'/' . basename($_FILES["product-image"]["name"]);
+    $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
      //alt immagine
     $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
@@ -71,11 +73,14 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
-    echo '<h1>Modifica</h1>';
+    throw new ErrorException("modifica");
     
 }
 if (isset($_POST['elimina'])) {
 
+    throw new ErrorException("elimina");
+
+    $product_name = pulisciInput($_POST['product-selector']);
     $conn = new DBAccess();
     $checkConn = $conn->openConnection();
     if ($checkConn) {
