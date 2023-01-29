@@ -53,7 +53,7 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 if(isset($_POST['inserisci'])){
 
-    chdir('../..');
+    //chdir('../..');
     echo "<h1>TEST</h1>";
     //chdir('../..');
      // prende il nome del prodotto
