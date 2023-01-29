@@ -76,12 +76,9 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
-    throw new ErrorException("modifica");
     
 }
 if (isset($_POST['elimina'])) {
-
-    throw new ErrorException("elimina");
 
     $product_name = pulisciInput($_POST['product-selector']);
     $conn = new DBAccess();
