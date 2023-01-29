@@ -27,6 +27,7 @@ if($messaggioForm == "") {
         $dbAccess->closeConnection();
         if ($queryOK == true) {
             $messaggioForm  .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
+            header("inserimentoProdotto.html");
         } else
         {
             $messaggioForm .= '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
@@ -43,9 +44,5 @@ if($messaggioForm == "") {
     
     
 }
-
-
-
-
 
 ?>
