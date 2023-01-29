@@ -16,8 +16,8 @@ function pulisciInput($value) {
 }
 
 
-$email = pulisciInput($_POST['email']);
-$password = pulisciInput($_POST['password']);
+//$email = pulisciInput($_POST['email']);
+//$password = pulisciInput($_POST['password']);
 
 if($messaggioForm == "") {
     $dbAccess = new DBAccess();
@@ -30,10 +30,10 @@ if($messaggioForm == "") {
             header("inserimentoProdotto.html");
         } else
         {
-            $messaggioForm .= '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
+            $messaggioForm .= '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
         }
     }else{
-        $messaggioForm = '<div id="messaErrors"<ul>' . $messaggioForm . '</ul></div';
+        $messaggioForm = '<div id="messaErrors"<ul>' . $messaggioForm . '</ul></div>';
     }
 
     // sostituisco il tag <messaggioForm /> con il messaggio da mostrare all'utente

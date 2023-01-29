@@ -53,13 +53,31 @@ class DBAccess {
 
     }
     public function login($username, $password){
-        $query = "SELECT * FROM utenti WHERE username='$username' AND password='$password'";
+        /*$query = "SELECT * FROM utenti WHERE username='$username' AND password='$password'";
         $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
-        if(mysqli_affected_rows($this->connection) > 0){
+
+        if(mysqli_num_rows($this->connection) > 0){
             if ($username == "admin" && $password == "admin")
                 $_SESSION['admin'] = true;
             return true;
         } else{
+            return false;
+        }*/
+        $username = mysqli_real_escape_string($this->connection, $username);
+        $password = mysqli_real_escape_string($this->connection, $password);
+
+        $query = "SELECT * FROM utenti WHERE username = ? AND password = ?";
+        $stmt = mysqli_prepare($this->connection, $query);
+        mysqli_stmt_bind_param($stmt, $username, $password);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        if (mysqli_num_rows($result) > 0) {
+            if ($username == 'admin' && $password == 'admin') {
+                $_SESSION['admin'] = true;
+            }
+            return true;
+        } 
+        else {
             return false;
         }
     }
