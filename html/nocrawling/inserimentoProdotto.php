@@ -41,6 +41,17 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
+
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
@@ -71,7 +82,6 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
-    echo '<h1>Modifica</h1>';
     
 }
 if (isset($_POST['elimina'])) {
