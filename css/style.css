@@ -760,10 +760,6 @@ input[type="submit"]:hover {
   float: left;
 }
 
-#loginContainer label {
-  float: left;
-}
-
 input[type="submit"]{
   background-color: var(--formbuttoncolor);
 }
