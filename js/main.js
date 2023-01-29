@@ -176,6 +176,8 @@ function changeForm (btnId) {
       operationBtn.value = "Modifica";
   } 
   else {
+      document.getElementById("insInputs").style.display = "none";
+      document.getElementById("modAndDelInputs").style.display = "block";
       operationBtn.name = "elimina";
       operationBtn.value = "Elimina";
   }
