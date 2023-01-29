@@ -713,7 +713,7 @@ tbody tr:last-child :last-child {
 }
 
 /*******************
-       FORM\
+       FORM
 ********************/
 
 form {
@@ -732,7 +732,7 @@ input {
 
 input[type="submit"] {
   background-color: var(--formbuttoncolor);
-  color: var(--txtcolor); /*per rispettare contrasto*/
+  color: var(--navlinkhovercolor); /*per rispettare contrasto*/
   border: none;
   font-size: 1em;
   font-weight: bold;
@@ -741,7 +741,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #333;
+  background-color: var(--navlinkhoverbg);
+  color: var(--navlinkhovercolor);
   cursor: pointer;
 }
 
@@ -763,6 +764,13 @@ input[type="submit"]:hover {
 #loginContainer label {
   display: block;
   margin: 0.5em 0em;
+}
+
+#loginContainer input {
+  display: block;
+  margin: 0.5em 0em;
+  margin: auto;
+  margin-top: 0.5em;
 }
 
 #loginContainer p{
