@@ -292,6 +292,11 @@ main h2 {
   margin: 1em;
 }
 
+#products img {
+  max-width: inherit;
+  max-height: inherit;
+}
+
 #products li h3{
   font-size: var(--cardtitlesize);
   margin-bottom: .7em;
