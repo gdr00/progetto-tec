@@ -1,7 +1,7 @@
 <?php
 
 namespace DB;
-session_start();
+
 use mysqli;
 class DBAccess {
     private const HOST_DB = "localhost";
@@ -65,6 +65,7 @@ class DBAccess {
         } else{
             return false;
         }*/
+        session_start();
         $user = mysqli_real_escape_string($this->connection, $username);
         $passw = mysqli_real_escape_string($this->connection, $password);
 
