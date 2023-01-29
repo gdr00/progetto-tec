@@ -41,6 +41,17 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
+    chdir('../..');
     echo "<h1>TEST</h1>";
     //chdir('../..');
      // prende il nome del prodotto
@@ -73,12 +84,9 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
-    throw new ErrorException("modifica");
     
 }
 if (isset($_POST['elimina'])) {
-
-    throw new ErrorException("elimina");
 
     $product_name = pulisciInput($_POST['product-selector']);
     $conn = new DBAccess();
