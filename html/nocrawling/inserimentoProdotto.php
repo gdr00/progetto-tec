@@ -83,7 +83,7 @@ if (isset($_POST['elimina'])) {
     if ($checkConn) {
         $checkDel = $conn->deleteProduct($product_name);
         $conn->closeConnection();
-        if ($result) {
+        if ($checkDel) {
             $messaggioForm = '<p class="serverStringSuccess">Prodotto eliminato correttamente</p>';
         } else {
             $messaggioForm = '<p class="serverStringError">Il prodotto non è stato eliminato correttamente</p>';
@@ -94,6 +94,11 @@ if (isset($_POST['elimina'])) {
 
 
 }
+echo str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
+
+
+
+
 // dopo che ho fatto tutti i controlli
 /*
 if ($messaggioForm == ""){
@@ -119,15 +124,5 @@ if ($messaggioForm == ""){
     //stampo la pagina HTML
     echo $paginaHTML;messaggioForm
 }*/
-echo str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
+
 ?>
-
-
-
-
-
-
-
-
-
-
