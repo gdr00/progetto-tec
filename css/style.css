@@ -889,16 +889,11 @@ textarea {
 #requestsForm input[type="submit"]{
   width: 30%;
   margin-top: 2em;
-  background-color: var(--cardbg);
   border-radius: 3em;
 }
 
 #requestsForm input[type="text"]:hover, input[type="tel"]:hover, textarea:hover {
   transition: linear 0.14s;
-}
-
-#requestsForm input[type="submit"]:hover {
-  background-color: var(--navlinkbg);
 }
 
 #agreementBlock label, input {
