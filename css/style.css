@@ -808,7 +808,7 @@ form label {
   margin-right: auto;
   margin-left: auto;
   display: flex;
-  flex-wrap: nowrap;
+  /*flex-wrap: nowrap;/* no wrap e default... https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 }
 
 #contactsContainer li{
