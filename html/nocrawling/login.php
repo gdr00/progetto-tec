@@ -15,12 +15,17 @@ function pulisciInput($value) {
     return $value;
 }
 
+
 if (isset($_POST['username']) && isset($_POST['password'])) {
+
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openConnection();
 
     if ($connessioneRiuscita == true) {
-        $queryOK = $dbAccess->login($_POST['username'], $_POST['password']);
+        $queryOK = $dbAccess->login($username, $password);
         $dbAccess->closeConnection();
 
         if ($queryOK == true) {

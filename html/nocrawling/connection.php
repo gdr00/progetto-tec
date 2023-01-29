@@ -63,14 +63,15 @@ class DBAccess {
         } else{
             return false;
         }*/
-        $username = mysqli_real_escape_string($this->connection, $username);
-        $password = mysqli_real_escape_string($this->connection, $password);
+        $user = mysqli_real_escape_string($this->connection, $username);
+        $passw = mysqli_real_escape_string($this->connection, $password);
 
         $query = "SELECT * FROM utenti WHERE username = ? AND password = ?";
         $stmt = mysqli_prepare($this->connection, $query);
-        mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+        mysqli_stmt_bind_param($stmt, "ss", $user, $passw);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
+
         if (mysqli_num_rows($result) > 0) {
             if ($username == 'admin' && $password == 'admin') {
                 $_SESSION['admin'] = true;
