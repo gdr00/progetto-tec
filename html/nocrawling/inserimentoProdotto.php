@@ -41,7 +41,6 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
-    echo "<h1>TEST</h1>";
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
@@ -72,14 +71,11 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
-    throw new ErrorException("modifica");
+    echo '<h1>Modifica</h1>';
     
 }
 if (isset($_POST['elimina'])) {
 
-    throw new ErrorException("elimina");
-
-    $product_name = pulisciInput($_POST['product-selector']);
     $conn = new DBAccess();
     $checkConn = $conn->openConnection();
     if ($checkConn) {
