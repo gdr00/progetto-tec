@@ -293,8 +293,8 @@ main h2 {
 }
 
 #products img {
-  max-width: inherit;
-  max-height: inherit;
+  max-width: 270px;
+  max-height: 200px;
 }
 
 #products li h3{
