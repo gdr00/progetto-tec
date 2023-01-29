@@ -760,7 +760,7 @@ input[type="submit"]:hover {
   float: left;
 }
 
-#loginContainer {
+#loginContainer form {
   flex-grow: 1;
 }
 
