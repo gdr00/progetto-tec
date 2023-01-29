@@ -62,7 +62,7 @@ if(isset($_POST['inserisci'])){
     $product_description = pulisciInput($_POST['product-description']);
      // prende il nome del file immagine
      //torno alla root directory del progetto dato che sono in html/nocrawling
-     $target_dir = realpath('./php/uploads/');
+     $target_dir = realpath('../../php/uploads/');
      // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
     $target_file = $target_dir . '/' . basename($_FILES["product-image"]["name"]);
      //alt immagine
