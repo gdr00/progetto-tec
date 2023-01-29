@@ -746,6 +746,12 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+form label {
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
 /*******************
      LOGIN PAGE
 ********************/
@@ -759,8 +765,7 @@ input[type="submit"]:hover {
 }
 
 #loginContainer label {
-  display: block;
-  margin: 0.5em 0em;
+  display: block
 }
 
 #loginContainer input {
@@ -815,8 +820,8 @@ input[type="submit"]:hover {
   margin-left: 0em;
   margin-bottom: auto;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  /*flex-wrap: wrap; /*ma perche wrappi se tanto e un direction column*/
+  align-items: center;
   flex-direction: column;
   justify-content: center;
 }
@@ -872,12 +877,6 @@ textarea {
   border: 2px solid #ccc;
   font-family: "Verdana", sans-serif;
   font-size: var(--globaltxtsize);
-}
-
-#requestsForm label {
-  margin-bottom: .5em;
-  margin-top: 1.5em;
-  text-align: center;
 }
 
 #requestsForm input[type="submit"]{
