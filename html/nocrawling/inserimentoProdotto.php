@@ -40,7 +40,7 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 
-if(isset($_POST['submit'])){
+if(isset($_POST['inserisci'])){
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
@@ -66,7 +66,32 @@ if(isset($_POST['submit'])){
             $messaggioForm .= '<p>Immagine non caricata correttamente</p>';
         }
 
-        $messaggioForm = ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
+        $messaggioForm .= ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
+
+}
+if (isset($_POST['modifica'])) {
+    throw new ErrorException("modifica");
+    
+}
+if (isset($_POST['elimina'])) {
+
+    throw new ErrorException("elimina");
+
+    $product_name = pulisciInput($_POST['product-selector']);
+    $conn = new DBAccess();
+    $checkConn = $conn->openConnection();
+    if ($checkConn) {
+        $checkDel = $conn->deleteProduct($product_name);
+        $conn->closeConnection();
+        if ($result) {
+            $messaggioForm = '<p class="serverStringSuccess">Prodotto eliminato correttamente</p>';
+        } else {
+            $messaggioForm = '<p class="serverStringError">Il prodotto non è stato eliminato correttamente</p>';
+        }
+    } else {
+        $messaggioForm = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
+    }
+
 
 }
 // dopo che ho fatto tutti i controlli
