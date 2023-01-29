@@ -742,8 +742,8 @@ input {
 }
 
 input[type="submit"] {
-  background-color: var(--linkcolor);
-  color: white;
+  background-color: var(--formbuttoncolor);
+  color: var(--txtcolor); /*per rispettare contrasto*/
   border: none;
   font-size: 1em;
   font-weight: bold;
@@ -758,14 +758,6 @@ input[type="submit"]:hover {
 
 #loginContainer p{
   float: left;
-}
-
-#loginContainer label {
-  display: block;
-}
-
-input[type="submit"]{
-  background-color: var(--formbuttoncolor);
 }
 
 /*******************
