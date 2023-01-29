@@ -30,7 +30,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         if ($queryOK == true) {
             $messaggioForm .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
-            //header("inserimentoProdotto.html");
+            header('Location: inserisciProdotto.html');
         }
         else
             $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
@@ -46,6 +46,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //stampo la pagina HTML
     echo $paginaHTML;
-    header("inserisciProdotto.html");
+    
     
 ?>
