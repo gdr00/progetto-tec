@@ -511,7 +511,7 @@ main h2 {
 #partnerList a {
   display: block;
   margin: auto; /*overwrite margini di default*/
-  width: 330px;
+  width: 100%;
   height: 60px;
   overflow: hidden;
   text-indent: -9999px;
