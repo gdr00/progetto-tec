@@ -275,6 +275,7 @@ main h2 {
 #products {
   color: var(--txtcolor);
   display: flex;
+  flex: 0 0 270px;
   flex-wrap: wrap;
   list-style: none;
   padding: 0em;
@@ -285,7 +286,6 @@ main h2 {
 #products li {
   padding: 10px;
   border-radius: 10px;
-  flex: 0 0 270px;
   height: 300px;
   text-align: center;
   background-color: var(--cardbg);
