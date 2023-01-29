@@ -760,6 +760,10 @@ input[type="submit"]:hover {
   float: left;
 }
 
+#loginContainer {
+  flex-grow: 1;
+}
+
 /*******************
       chiSiamo
 ********************/
