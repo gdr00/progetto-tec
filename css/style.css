@@ -732,7 +732,7 @@ input {
 
 input[type="submit"] {
   background-color: var(--formbuttoncolor);
-  color: var(--navlinkhovercolor); /*per rispettare contrasto*/
+  color: var(--navlinkhovercolor); /*per rispettare contrasto e norme interne*/
   border: none;
   font-size: 1em;
   font-weight: bold;
@@ -753,10 +753,7 @@ input[type="submit"]:hover {
   width: 50%;
   border-radius: 10px;
   padding: 2em 2em;
-  margin-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
+  margin: 1em auto;
   box-shadow: rgba(252, 252, 252, 0.15) 0px 2px 8px;
   text-align: center;
 }
@@ -768,9 +765,7 @@ input[type="submit"]:hover {
 
 #loginContainer input {
   display: block;
-  margin: 0.5em 0em;
-  margin: auto;
-  margin-top: 0.5em;
+  margin: 0.7em auto;
 }
 
 #loginContainer p{
@@ -814,7 +809,6 @@ input[type="submit"]:hover {
 #contactsContainer li{
   list-style: none;
 }
-
 
 #contactsList ul {
   padding: 0em;
