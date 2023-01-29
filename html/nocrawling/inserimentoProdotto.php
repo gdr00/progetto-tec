@@ -7,6 +7,17 @@ require_once("prodotto.php");
 
 $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
+foreach ($_POST as $key => $value) {
+    echo "<tr>";
+    echo "<td>";
+    echo $key;
+    echo "</td>";
+    echo "<td>";
+    echo $value;
+    echo "</td>";
+    echo "</tr>";
+}
+
 // Errore da mostrare all'utente
 $messaggioForm = "messaggio ok";
 
@@ -41,16 +52,7 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
-    foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
+
     chdir('../..');
     echo "<h1>TEST</h1>";
     //chdir('../..');
