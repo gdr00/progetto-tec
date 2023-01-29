@@ -37,6 +37,11 @@ h1 {
 	display: none;
 }
 
+/*** BreadCrumbs ***/
+#breadcrumb {
+	display: none;
+}
+
 /*** FOOTER ***/
 #contactsOnFooter li:last-child {
 	display: none;
