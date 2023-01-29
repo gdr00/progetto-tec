@@ -288,6 +288,7 @@ main h2 {
   padding: 10px;
   border-radius: 10px;
   height: 300px;
+  width: 300px;
   text-align: center;
   background-color: var(--cardbg);
   margin: 1em;
