@@ -1,5 +1,6 @@
 <?php
-echo (getcwd().='../../'); //debug
+chdir('../..');
+echo getcwd(); //debug
 use DB\DBAccess;
 require_once("connection.php");
 require_once("prodotto.php");
