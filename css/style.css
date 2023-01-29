@@ -292,6 +292,7 @@ main h2 {
   text-align: center;
   background-color: var(--cardbg);
   margin: 1em;
+  overflow: hidden;
 }
 
 #products img {
