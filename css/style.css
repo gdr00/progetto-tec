@@ -275,7 +275,7 @@ main h2 {
 #products {
   color: var(--txtcolor);
   display: flex;
-  flex: 0 0 270px;
+  flex: 0 0;
   flex-wrap: wrap;
   list-style: none;
   padding: 0em;
