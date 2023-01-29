@@ -32,7 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         
     }
     else {
-        $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
+        $messaggioForm = '<div class="alertDanger" role="alert">Problemi database</div> ';
     }
 }
 
