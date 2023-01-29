@@ -24,6 +24,8 @@ class DBAccess {
         }
     }
 
+    
+
     public function getProducts(){
         $query = "SELECT * FROM prodotto ORDER BY nome ASC";
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
@@ -49,6 +51,15 @@ class DBAccess {
     private function filterProductInput($input) {
         $this->filterInput($input);
 
+    }
+    public function login($username, $password){
+        $query = "SELECT * FROM utenti WHERE username='$username' AND password='$password'";
+        $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
+        if(mysqli_affected_rows($this->connection) > 0){
+            return true;
+        } else{
+            return false;
+        }
     }
 
     public function insertProduct ($nome, $descrizione, $immagine){
