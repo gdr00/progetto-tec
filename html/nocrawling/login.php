@@ -15,16 +15,9 @@ function pulisciInput($value) {
     return $value;
 }
 
-if(isset($_POST['submit'])){
-    $email = pulisciInput($_POST['email']);
-    $password = pulisciInput($_POST['password']);
-}
 
-
-if ($connessioneRiuscita == true) {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
-}
+$email = pulisciInput($_POST['email']);
+$password = pulisciInput($_POST['password']);
 
 if($messaggioForm == "") {
     $dbAccess = new DBAccess();
