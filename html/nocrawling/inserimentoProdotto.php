@@ -36,7 +36,7 @@ if ($checkConn) {
 } else {
     $result = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
 }
-echo str_replace('<listOfProducts />', $result, $paginaHTML);
+$paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 

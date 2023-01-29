@@ -148,6 +148,7 @@ function syncTheme() {
 })();
 
 function changeForm (btnId) {
+  console.log("log");
   document.getElementById("reset").click();
   var btn = document.getElementById(btnId);
   document.getElementById(btnId).classList.add("active");
