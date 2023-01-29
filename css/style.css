@@ -803,10 +803,8 @@ form label {
 #contactsContainer {
   align-items: center;
   font-size: var(--globaltxtsize);
-  margin-top: 2em;
   width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
   display: flex;
   /*flex-wrap: nowrap;/* no wrap e default... https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 }
