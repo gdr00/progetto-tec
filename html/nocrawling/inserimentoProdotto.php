@@ -1,5 +1,5 @@
 <?php
-chdir('../..'); //torno alla root directory del progetto dato che sono in html/nocrawling
+//chdir('../..'); //torno alla root directory del progetto dato che sono in html/nocrawling
 //echo getcwd(); //debug
 use DB\DBAccess;
 require_once("connection.php");
@@ -20,57 +20,53 @@ function pulisciInput($value) {
     return $value;
 }
 
-
-
-
 $conn = new DBAccess();
 $checkConn = $conn->openConnection();
+$result = '';
 if ($checkConn) {
     $products = $conn->getProducts();
     $conn->closeConnection();
-        if (count($products) != 0) {
+        if ($products != null) {
             foreach ($products as $product) {
-                $result .= '<option value=\"'.$product->getId().'\>'.$product->getTitolo().'</option>';
+                $result .= '<option value=\"'.$product['id'].'\>'.$product['titolo'].'</option>';
             }
         } else {
-            $result = '<p>Non ci sono prodotti</p>';
+            $result = '<p class="serverStringError">Nessun prodotto presente<p>';
         }
 } else {
-    $result = '<p>Errore di connessione al database</p>';
+    $result = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
 }
-echo str_replace('<listOfProducts/>', $result, $paginaHTML);
-
-
+echo str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 
 if(isset($_POST['submit'])){
-    // prende il nome del prodotto
-    $product_name = pulisciInput($_POST['product-name']);
-    // prende la descrizione del prodotto
-    $product_description = pulisciInput($_POST['product-description']);
-    // prende il nome del file immagine
-    $target_dir = "/php/uploads/";
-    // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
-    $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
-    //alt immagine
-    $product_image_alt = pulisciInput($_POST['product-image-alt']);
+        // prende il nome del prodotto
+        $product_name = pulisciInput($_POST['product-name']);
+        // prende la descrizione del prodotto
+        $product_description = pulisciInput($_POST['product-description']);
+        // prende il nome del file immagine
+        $target_dir = "/php/uploads/";
+        // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
+        $target_file = $target_dir . basename($_FILES["product-image"]["name"]);
+        //alt immagine
+        $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
-    $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
-    //chmod('upload',777);
-    if (is_writable($target_dir)) {
-        $messaggioForm .= '<p>La cartella ha i permessi</p>';
-    } else {
-        $messaggioForm .= '<p>La cartella non ha i permessi</p>';
-    }
-    
-    if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)){
-        $messaggioForm .= '<p>Immagine caricata correttamente</p>';
-    }else{
-        $messaggioForm .= '<p>Immagine non caricata correttamente</p>';
-    }
+        $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
+        //chmod('upload',777);
+        if (is_writable($target_dir)) {
+            $messaggioForm .= '<p>La cartella ha i permessi</p>';
+        } else {
+            $messaggioForm .= '<p>La cartella non ha i permessi</p>';
+        }
+        
+        if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)){
+            $messaggioForm .= '<p>Immagine caricata correttamente</p>';
+        }else{
+            $messaggioForm .= '<p>Immagine non caricata correttamente</p>';
+        }
 
-    $messaggioForm = ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
+        $messaggioForm = ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
 
 }
 // dopo che ho fatto tutti i controlli
@@ -97,11 +93,8 @@ if ($messaggioForm == ""){
     $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
     //stampo la pagina HTML
     echo $paginaHTML;messaggioForm
-}
-*/
-
+}*/
 echo str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
-    
 ?>
 
 
