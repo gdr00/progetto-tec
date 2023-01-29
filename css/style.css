@@ -762,7 +762,7 @@ input[type="submit"]:hover {
 
 #loginContainer label {
   display: block;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0em;
 }
 
 #loginContainer p{
