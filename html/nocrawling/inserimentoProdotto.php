@@ -41,6 +41,7 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
+    echo "<h1>TEST</h1>";
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
