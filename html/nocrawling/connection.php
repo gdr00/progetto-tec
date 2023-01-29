@@ -41,6 +41,12 @@ class DBAccess {
         }
     }
     
+    private function filterInput($input) {
+        $input = trim($input);
+        $input = strip_tags($input);
+        $input = htmlspecialchars($input);
+        return $input;
+    }
 
     private function filterProductInput($input) {
         $this->filterInput($input);
