@@ -490,6 +490,7 @@ main h2 {
   left: calc(50% - 165px); /*per centrare la card nello schermo*/
   /*transform: translate(-390px);/**/
   height: 330px;
+  width: 330px;
   margin-left: 60px; /*margini in px per sapere le distanze di cui traslare in js*/
   margin-top: .7em;
   margin-bottom: .7em;
@@ -510,7 +511,7 @@ main h2 {
 #partnerList a {
   display: block;
   margin: auto; /*overwrite margini di default*/
-  width: 330px;
+  
   height: 60px;
   overflow: hidden;
   text-indent: -9999px;
