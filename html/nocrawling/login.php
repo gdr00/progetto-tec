@@ -23,7 +23,7 @@ if($messaggioForm == "") {
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openConnection();
     if ($connessioneRiuscita == true) {
-        $queryOK = $dbAccess->login($email, $password);
+        $queryOK = $dbAccess->login($_POST['username'], $_POST['password']);
         $dbAccess->closeConnection();
         if ($queryOK == true) {
             $messaggioForm  .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
