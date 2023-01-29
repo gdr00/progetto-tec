@@ -293,7 +293,7 @@ main h2 {
 }
 
 #products img {
-  max-width: 270px;
+  max-width: 100%;
 }
 
 #products li h3{
