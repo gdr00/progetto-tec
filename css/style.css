@@ -743,7 +743,7 @@ input {
 
 input[type="submit"] {
   background-color: var(--formbuttoncolor);
-  color: var(--txtcolor);
+  color: var(--txtcolor); /*per rispettare contrasto*/
   border: none;
   font-size: 1em;
   font-weight: bold;
