@@ -79,13 +79,13 @@ class Prodotto{
         return $resultString;
     }
 
+    //PRE: i parametri passati sono gia stati controllati
     public function update($title, $desc, $imm, $alt_imm){
         $resultString = "";
         $dbAccess = new DBAccess();
-
         $connessioneRiuscita = $dbAccess->openConnection();
         if ($connessioneRiuscita == true) {
-            $queryOK = $dbAccess->updateProduct($title, $desc, $imm, $alt_imm);
+            $queryOK = $dbAccess->updateProduct($this->titolo, $title, $desc, $imm, $alt_imm);
             $dbAccess->closeConnection();
             if ($queryOK == true) {
                 $resultString = '<div class="alertSuccess" role="alert">Prodotto modificato correttamente</div> ';

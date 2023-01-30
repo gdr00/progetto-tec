@@ -97,8 +97,8 @@ class DBAccess {
         }
     }
 
-    public function updateProduct($titolo, $descrizione, $immagine, $alt){
-        $query = "UPDATE prodotti SET descrizione = \"$descrizione\", immagine = \"$immagine\", alt_immagine = \"$alt\" WHERE titolo = \"$titolo\"";
+    public function updateProduct($old_title, $titolo, $descrizione, $immagine, $alt){
+        $query = "UPDATE prodotti SET titolo = \"$titolo\", descrizione = \"$descrizione\", immagine = \"$immagine\", alt_immagine = \"$alt\" WHERE titolo = \"$old_title\"";
         $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
         if(mysqli_affected_rows($this->connection) > 0){
             return true;
