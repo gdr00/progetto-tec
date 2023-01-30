@@ -30,7 +30,7 @@ class Prodotto{
 
     private function stringCorrectness($string, $string_checked, $dot_presence = true){
         $err = "";
-        $regex = ($dot_presence) ? '/^[a-z](\s*|\.|[a-z]|[0-9]|\[|\]|\=|)+$/i' : '/^[a-z](\s*|[a-z]|[0-9]|\[|\]|\=|)+$/i';
+        $regex = ($dot_presence) ? '/^\[[a-z]+\s*=\s*[a-z]+\]|([a-z]\d*)+(\s+|\.|[a-z]|[0-9]|\[[a-z]+\s*=\s*[a-z]+\])+$/i' : '/^\[[a-z]+\s*=\s*[a-z]+\]|([a-z]\d*)+(\s+|\.|[a-z]|[0-9]|\[[a-z]+\s*=\s*[a-z]+\])+$/i';
         if (preg_match($regex, $string))
             $string = preg_replace('/\s\s+/', ' ', $string);
         else
