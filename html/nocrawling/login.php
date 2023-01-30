@@ -4,11 +4,6 @@ session_start();
 use DB\DBAccess;
 require_once("connection.php");
 
-if (isset($_SESSION["username"])) {
-    header("Location: inserimentoProdotto.html");
-    ob_end_flush();
-    exit;
-}
 
 $paginaHTML = file_get_contents("login.html");
 
