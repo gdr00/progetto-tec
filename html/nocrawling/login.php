@@ -4,6 +4,12 @@ session_start();
 use DB\DBAccess;
 require_once("connection.php");
 
+if (isset($_SESSION["username"])) {
+    header("Location: inserimentoProdotto.html");
+    ob_end_flush();
+    exit;
+}
+
 $paginaHTML = file_get_contents("login.html");
 
 $messaggioForm = "";
@@ -17,7 +23,7 @@ function pulisciInput($value) {
 }
 
 
-if (isset($_POST['username']) && isset($_POST['password']) && !isset($_SESSION["username"])) {
+if (isset($_POST['username']) && isset($_POST['password'])) {
 
     $username = $_POST["username"];
     $password = $_POST["password"];
