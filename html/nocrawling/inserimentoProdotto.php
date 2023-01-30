@@ -19,9 +19,10 @@ if ($_SESSION["admin"] == false) {
         $prodotto = new Prodotto(
             $_POST["product-name"],
             $_POST["product-description"],
-            $_POST["product-image"]["name"],
+            $_FILES["product-image"]["name"],
             $_POST["product-image-alt"]
         );
+        
         $messaggioForm .=
             $prodotto->__toString() == ""
                 ? $prodotto->save()

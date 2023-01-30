@@ -33,9 +33,7 @@ class Prodotto{
         if (!is_writable($target_dir))
             $result = '<li>La cartella non ha i permessi</li>';
             
-        if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file))
-            $result .= '<li>Immagine caricata correttamente</li>';
-        else
+        if (!move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file))
             $result .= '<li>Immagine non caricata correttamente</li>';
         return $result;
     }
