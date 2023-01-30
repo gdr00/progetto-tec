@@ -39,3 +39,10 @@ Check di accessibilità con TotalValidator:
 - [ ] quando finito cambiare link in 404.html perchè vanno a gdr00.it
 - [ ] mettere tabindex-1 sulle frecec delle card perchè accessibili tramite tab senza l'uso delle frecce che appesantiscono solo il contenuto per gli screen reader
 - [ ] pagina error500
+
+
+----------------------------- Luca & Matteo --------------------------------------------
+- [ ] regex su titolo
+- [ ] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
+- [ ] modifica 
+- [ ] elimina

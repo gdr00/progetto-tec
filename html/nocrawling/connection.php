@@ -5,9 +5,9 @@ namespace DB;
 use mysqli;
 class DBAccess {
     private const HOST_DB = "localhost";
-    private const DATABASE_NAME = "tecweb";
-    private const USERNAME = "tecweb";
-    private const PASSWORD = "eDD&%5+QrPr4?A-";
+    private const DATABASE_NAME = "lbrugner";
+    private const USERNAME = "lbrugner";
+    private const PASSWORD = "cheeHie7eigoowee";
     private $connection;
 
     public function openConnection(){
