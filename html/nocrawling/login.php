@@ -4,7 +4,7 @@ session_start();
 use DB\DBAccess;
 require_once("connection.php");
 
-if (isset($_SESSION["username"])) {
+if (isset($_SESSION["username"]) && $_SESSION["admin"] == true) {
     header("Location: inserimentoProdotto.php");
 } else{
     $paginaHTML = file_get_contents("login.html");
