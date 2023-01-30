@@ -46,3 +46,4 @@ Check di accessibilità con TotalValidator:
 - [ ] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
 - [ ] modifica 
 - [X] elimina
+- [ ] rimettere tipo file svg
