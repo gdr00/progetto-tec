@@ -30,7 +30,6 @@ class Prodotto{
 
     private function saveImageIntoServerDirectory($target_dir, $target_file){
         $result = "";
-        //chmod('upload',777);//inutile
         if (!is_writable($target_dir))
             $result = '<li>La cartella non ha i permessi</li>';
             
