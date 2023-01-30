@@ -10,16 +10,6 @@ $paginaHTML = file_get_contents("inserimentoProdotto.html");
 // Errore da mostrare all'utente
 $messaggioForm = "messaggio ok";
 
-// Funzione per pulire i dati in input
-
-function pulisciInput($value) {
-    $value = trim($value); 
-    $value = strip_tags($value); 
-    $value = htmlentities($value); 
-
-    return $value;
-}
-
 $conn = new DBAccess();
 $checkConn = $conn->openConnection();
 $result = '';
