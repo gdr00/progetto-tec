@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 use DB\DBAccess;
 require_once("connection.php");
@@ -45,7 +46,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //stampo la pagina HTML
     echo $paginaHTML;
-    header('Location: inserisciProdotto.html');
+    header("Location: inserimentoProdotto.html");
+    ob_end_flush();
     
     
 ?>
