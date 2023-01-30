@@ -36,9 +36,6 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
-    /*
-        TODO: pulizia input da fare in Prodotto.php
-    */
     $modPr = new Prodotto($_POST['product-name'], $_POST['product-description'], $_POST['product-image'], $_POST['product-image-alt']);
     if($modPr->__toString() != "")
         $messaggioForm .= '<p class="serverStringError">I dati non sono inseriti correttamente:</p>'.$modPr;
@@ -65,34 +62,5 @@ if (isset($_POST['elimina'])) {
 
 }
 echo str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
-
-
-
-
-// dopo che ho fatto tutti i controlli
-/*
-if ($messaggioForm == ""){
-    // inserisco il prodotto nel database
-    $dbAccess = new DBAccess();
-    $connessioneRiuscita = $dbAccess->openConnection();
-    if ($connessioneRiuscita == true) {
-        $queryOK = $dbAccess->insertProduct($product_name, $product_description, $target_file);
-        $dbAccess->closeConnection();
-        if ($queryOK == true) {
-            $messaggioForm  .= '<div class="alertSuccess" role="alert">Prodotto inserito correttamente</div> ';
-        }
-        else {
-            $messaggioForm .= '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
-        }
-    }
-    else {
-        $messaggioForm = '<div id="messaErrors"<ul>' . $messaggioForm . '</ul></div';
-    }
-
-    // sostituisco il tag <messaggioForm /> con il messaggio da mostrare all'utente
-    $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
-    //stampo la pagina HTML
-    echo $paginaHTML;messaggioForm
-}*/
 
 ?>
