@@ -109,7 +109,6 @@ class DBAccess {
 
     public function deleteProduct($nome) {
         $query = "DELETE FROM prodotti WHERE id = $nome";
-        echo $query;
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if(mysqli_affected_rows($this->connection) > 0) {
             return true;

@@ -10,26 +10,6 @@ $paginaHTML = file_get_contents("inserimentoProdotto.html");
 // Errore da mostrare all'utente
 $messaggioForm = "messaggio ok";
 
-$conn = new DBAccess();
-$checkConn = $conn->openConnection();
-$result = '';
-if ($checkConn) {
-    $products = $conn->getProducts();
-    $conn->closeConnection();
-        if ($products != null) {
-            foreach ($products as $product) {
-                $result .= '<option value="'.$product['id'].'"\>'.$product['titolo'].'</option>';
-            }
-        } else {
-            $result = '<p class="serverStringError">Nessun prodotto presente<p>';
-        }
-} else {
-    $result = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
-}
-$paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
-
-
-
 if(isset($_POST['inserisci'])){
     $prodotto = new Prodotto($_POST['product-name'], $_POST['product-description'], $_POST['product-image'], $_POST['product-image-alt']);
     $messaggioForm .= ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
@@ -60,5 +40,24 @@ if (isset($_POST['elimina'])) {
         $messaggioForm = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
     }
 }
+
+$conn = new DBAccess();
+$checkConn = $conn->openConnection();
+$result = '';
+if ($checkConn) {
+    $products = $conn->getProducts();
+    $conn->closeConnection();
+        if ($products != null) {
+            foreach ($products as $product) {
+                $result .= '<option value="'.$product['id'].'"\>'.$product['titolo'].'</option>';
+            }
+        } else {
+            $result = '<p class="serverStringError">Nessun prodotto presente<p>';
+        }
+} else {
+    $result = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
+}
+$paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
+
 echo str_replace("<messaggioForm/>", $messaggioForm, $paginaHTML);
 ?>
