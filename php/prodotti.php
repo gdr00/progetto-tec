@@ -23,9 +23,9 @@ if($connessioneRiuscita){
         $stringaProdotti .= '<ul id="products">';
         foreach($prodotti as $prodotto){
             $stringaProdotti .= '<li>';
-            $stringaProdotti .= '<h3>'. $this->replaceForeignText($prodotto['titolo']) . '</h3>';
+            $stringaProdotti .= '<h3>'. replaceForeignText($prodotto['titolo']) . '</h3>';
             $stringaProdotti .= '<img src="'. $prodotto['immagine'] . '" alt="'.$prodotto['alt_immagine'].'">';
-            $stringaProdotti .= '<p>'. $this->replaceForeignText($prodotto['descrizione']) . '</p>';
+            $stringaProdotti .= '<p>'. replaceForeignText($prodotto['descrizione']) . '</p>';
             $stringaProdotti .= '</li>';
         }
         $stringaProdotti .= '</ul>';
