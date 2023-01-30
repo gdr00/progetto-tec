@@ -16,7 +16,7 @@ class Prodotto{
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
-        $this->alt_immagine = $alt_immagine;
+        $this->alt_immagine = $this->setAlt($alt_immagine);
 
         $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
     }
@@ -32,30 +32,28 @@ class Prodotto{
         $result = "";
         //chmod('upload',777);
         if (!is_writable($target_dir))
-            $result = '<p>La cartella non ha i permessi</p>';
+            $result = '<li>La cartella non ha i permessi</li>';
             
-        if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)){
-            $result .= '<p>Immagine caricata correttamente</p>';
-        }else{
-            $result .= '<p>Immagine non caricata correttamente</p>';
-        }
+        if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file))
+            $result .= '<li>Immagine caricata correttamente</li>';
+        else
+            $result .= '<li>Immagine non caricata correttamente</li>';
         return $result;
     }
 
     private function setTitle($titolo){
         $err = "";
-        (strlen($titolo) < MAX_TITLE_LENGTH) ? $this->titolo = $titolo : $err = "<li>Il titolo è troppo lungo</li>";
+        (strlen($titolo) < MAX_TITLE_LENGTH) ? $this->titolo = $this->pulisciInput($titolo) : $err = "<li>Il titolo è troppo lungo</li>";
         return $err;
     }
 
     private function setDescription($desc){
         $err = "";
-        (strlen($desc) < MAX_DESCRIPTION_LENGTH) ? $this->descrizione = $desc : $err = "<li>La descrizione è troppo lunga</li>";
+        (strlen($desc) < MAX_DESCRIPTION_LENGTH) ? $this->descrizione = $this->pulisciInput($desc) : $err = "<li>La descrizione è troppo lunga</li>";
         return $err;
     } 
 
     private function setPath($file_name){
-        $err = "";
         // prende il nome del file immagine
         // percorso assoluto per la cartella uploads, da modificare se cambia la struttura delle directory
         $target_dir = realpath('../../php/uploads/'); 
@@ -64,8 +62,12 @@ class Prodotto{
         // target file e ilo nome del file completo di path assoluta
         // per il db metto solo la parent folder in quanto prodotti php e gia in ./php/
         $this->path_immagini = basename($target_dir) . '/' . basename($file_name); //$_FILES["product-image"]["name"]);
-        saveImageIntoServerDirectory($target_dir, $target_file);
+        $err = $this->saveImageIntoServerDirectory($target_dir, $target_file);
         return $err;
+    }
+
+    private function setAlt($alt){
+        $this->alt_immagine = $this->pulisciInput($alt);
     }
 
     public function __toString(){
