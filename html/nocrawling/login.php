@@ -5,7 +5,7 @@ use DB\DBAccess;
 require_once("connection.php");
 
 if (isset($_SESSION["username"])) {
-    header("Location: inserimentoProdotto.html");
+    header("Location: inserimentoProdotto.php");
 } else{
     $paginaHTML = file_get_contents("login.html");
 
@@ -35,7 +35,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($queryOK == true) {
             $messaggioForm .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
             $_SESSION["username"] = $username;
-            header("Location: inserimentoProdotto.html");
+            header("Location: inserimentoProdotto.php");
         }
         else
             $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
