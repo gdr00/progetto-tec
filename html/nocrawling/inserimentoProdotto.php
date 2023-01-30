@@ -1,6 +1,8 @@
 <?php
 //chdir('../..'); //torno alla root directory del progetto dato che sono in html/nocrawling
 //echo getcwd(); //debug
+ob_start();
+session_start();
 use DB\DBAccess;
 require_once "connection.php";
 require_once "prodotto.php";
@@ -95,4 +97,5 @@ if ($_SESSION["admin"] == false) {
 
     echo str_replace("<messaggioForm/>", $messaggioForm, $paginaHTML);
 }
+ob_end_flush();
 ?>
