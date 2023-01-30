@@ -7,17 +7,6 @@ require_once("prodotto.php");
 
 $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
-foreach ($_POST as $key => $value) {
-    echo "<tr>";
-    echo "<td>";
-    echo $key;
-    echo "</td>";
-    echo "<td>";
-    echo $value;
-    echo "</td>";
-    echo "</tr>";
-}
-
 // Errore da mostrare all'utente
 $messaggioForm = "messaggio ok";
 
@@ -38,9 +27,11 @@ if ($checkConn) {
     $products = $conn->getProducts();
     $conn->closeConnection();
         if ($products != null) {
+            $result = '<select id="product-selector" name="product-selector">';
             foreach ($products as $product) {
                 $result .= '<option value=\"'.$product['id'].'\>'.$product['titolo'].'</option>';
             }
+            $result .= '</select>';
         } else {
             $result = '<p class="serverStringError">Nessun prodotto presente<p>';
         }
