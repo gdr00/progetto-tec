@@ -785,6 +785,10 @@ form label {
   align-items: center;
 }
 
+#chiSiamo {
+  margin: 2em;
+}
+
 #staff h2 {
 	text-align: center;
   margin-bottom: 1em;

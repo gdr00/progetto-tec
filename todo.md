@@ -30,6 +30,7 @@
 - [X] Riportare tutti i valori dei colori allo script change theme, settare correttamente i nuovi colori per il tema chiaro
 - [ ] chech [https://wave.webaim.org/]()
 - [ ] controllare "ti trovi in" duplicato
+- [ ] Decidere numero massimo di caratteri da mettere nella descrizione prodotto e in base a quello limitarli da php + check JS per evitare di sbordare dalle card.
 
 Check di accessibilità con TotalValidator:
 

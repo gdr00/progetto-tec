@@ -168,17 +168,29 @@ function changeForm (btnId) {
     document.getElementById("insInputs").style.display = "block";
     operationBtn.name = "inserisci";
     operationBtn.value = "Inserisci";
+    document.getElementById("product-name").setAttribute("required", "");
+    document.getElementById("product-image").setAttribute("required", "");
+    document.getElementById("product-image_alt").setAttribute("required", "");
+    document.getElementById("product-description").setAttribute("required", "");
   } 
   else if (btnId == "modBtn") {
       document.getElementById("insInputs").style.display = "none";
       document.getElementById("modAndDelInputs").style.display = "block";
       operationBtn.name = "modifica";
       operationBtn.value = "Modifica";
+      document.getElementById("product-name").removeAttribute("required");
+      document.getElementById("product-image").removeAttribute("required");
+      document.getElementById("product-image_alt").removeAttribute("required");
+      document.getElementById("product-description").removeAttribute("required");
   } 
   else {
       document.getElementById("insInputs").style.display = "none";
       document.getElementById("modAndDelInputs").style.display = "block";
       operationBtn.name = "elimina";
       operationBtn.value = "Elimina";
+      document.getElementById("product-name").removeAttribute("required");
+      document.getElementById("product-image").removeAttribute("required");
+      document.getElementById("product-image_alt").removeAttribute("required");
+      document.getElementById("product-description").removeAttribute("required");
   }
 }

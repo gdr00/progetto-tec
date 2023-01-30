@@ -43,8 +43,6 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
-
-    chdir('../..');
     echo "<h1>TEST</h1>";
     //chdir('../..');
      // prende il nome del prodotto
@@ -52,14 +50,17 @@ if(isset($_POST['inserisci'])){
      // prende la descrizione del prodotto
     $product_description = pulisciInput($_POST['product-description']);
      // prende il nome del file immagine
-     //torno alla root directory del progetto dato che sono in html/nocrawling
-     $target_dir = realpath('../../php/uploads/');
-     // $target_file => Contiene il percorso completo del file caricato (es. uploads/immagine.jpg)
+     // percorso assoluto per la cartella uploads, da modificare se cambia la struttura delle directory
+    $target_dir = realpath('../../php/uploads/'); 
+     // $target_file => Contiene il percorso completo del file caricato (es. var/www/progetto-tec/php/uploads/immagine.jpg)
     $target_file = $target_dir . '/' . basename($_FILES["product-image"]["name"]);
+     // target file e ilo nome del file completo di path assoluta
+     // per il db metto solo la parent folder in quanto prodotti php e gia in ./php/
+    $db_target_file = basename($target_dir) . '/' . basename($_FILES["product-image"]["name"]);
      //alt immagine
     $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
-        $prodotto = new Prodotto($product_name, $product_description, $target_file, $product_image_alt);
+        $prodotto = new Prodotto($product_name, $product_description, $db_target_file, $product_image_alt);
         //chmod('upload',777);
         if (is_writable($target_dir)) {
             $messaggioForm .= '<p>La cartella ha i permessi</p>';
