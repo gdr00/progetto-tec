@@ -5,8 +5,6 @@ use DB\DBAccess;
 require_once("connection.php");
 
 if (isset($_SESSION["username"])) {
-    echo "sei già loggato";
-    echo $_SESSION["username"];
     header("Location: inserimentoProdotto.html");
 } else{
     $paginaHTML = file_get_contents("login.html");
