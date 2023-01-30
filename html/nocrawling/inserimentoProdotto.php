@@ -5,7 +5,7 @@ use DB\DBAccess;
 require_once "connection.php";
 require_once "prodotto.php";
 
-if ($_SESSION["admin"] = false) {
+if ($_SESSION["admin"] == false) {
     header("Location: login.php");
 } else {
     $paginaHTML = file_get_contents("inserimentoProdotto.html");
