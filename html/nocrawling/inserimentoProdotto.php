@@ -18,7 +18,7 @@ if ($checkConn) {
     $conn->closeConnection();
         if ($products != null) {
             foreach ($products as $product) {
-                $result .= '<option value=\"'.$product['id'].'\>'.$product['titolo'].'</option>';
+                $result .= '<option value="'.$product['id'].'"\>'.$product['titolo'].'</option>';
             }
         } else {
             $result = '<p class="serverStringError">Nessun prodotto presente<p>';
@@ -48,6 +48,7 @@ if (isset($_POST['elimina'])) {
     $conn = new DBAccess();
     $checkConn = $conn->openConnection();
     if ($checkConn) {
+        $product_name = $_POST['product-selector'];
         $checkDel = $conn->deleteProduct($product_name);
         $conn->closeConnection();
         if ($checkDel) {
