@@ -16,7 +16,7 @@ class Prodotto{
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
-        $this->alt_immagine = $this->setAlt($alt_immagine);
+        $this->errore .= $this->setAlt($alt_immagine);
 
         $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
     }
@@ -34,7 +34,7 @@ class Prodotto{
         if (preg_match($regex, $string))
             $string = preg_replace('/\s\s+/', ' ', $string);
         else
-            $err = "<li>Ci sono alcune caratteri non consentiti in ".$string_checked."</li>";
+            $err = "<li>Ci sono alcune caratteri non consentiti nel campo ".$string_checked."</li>";
         return $err;
     }
 
@@ -51,7 +51,7 @@ class Prodotto{
     private function setTitle($titolo){
         $err = $this->stringCorrectness($titolo, 'titolo', false);
         $titolo = $this->pulisciInput($titolo);
-        if (strlen($titolo) < MAX_TITLE_LENGTH)
+        if (strlen($titolo) > MAX_TITLE_LENGTH)
             $err .= "<li>Il titolo è troppo lungo</li>";
         if ($err == "")
             $this->titolo = preg_replace('/\s\s+/', ' ', $titolo);
@@ -59,8 +59,12 @@ class Prodotto{
     }
 
     private function setDescription($desc){
-        $err = "";
-        (strlen($desc) < MAX_DESCRIPTION_LENGTH) ? $this->descrizione = $this->pulisciInput($desc) : $err = "<li>La descrizione è troppo lunga</li>";
+        $err = $this->stringCorrectness($desc, 'descrizione');
+        $desc = $this->pulisciInput($desc);
+        if (strlen($desc) > MAX_DESCRIPTION_LENGTH)
+            $err .= "<li>La descrizione è troppo lunga</li>";
+        if($err == "")
+            $this->descrizione = preg_replace('/\s\s+/', ' ', $desc);
         return $err;
     } 
 
@@ -78,7 +82,11 @@ class Prodotto{
     }
 
     private function setAlt($alt){
-        return $this->pulisciInput($alt);
+        $err = $this->stringCorrectness($alt, 'alt immagine');
+        $alt = $this->pulisciInput($alt);
+        if ($err == "")
+            $this->alt_immagine = preg_replace('/\s\s+/', ' ', $alt);
+        return $err;
     }
 
     public function __toString(){

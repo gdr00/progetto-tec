@@ -42,7 +42,7 @@ Check di accessibilità con TotalValidator:
 
 
 ----------------------------- Luca & Matteo --------------------------------------------
-- [ ] regex su titolo
+- [x] regex su titolo e altro testo
 - [ ] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
 - [ ] modifica 
 - [ ] elimina
