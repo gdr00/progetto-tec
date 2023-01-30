@@ -49,7 +49,7 @@
         <button id="delBtn" onclick="changeForm(this.id);">Elimina prodotto</button>
     </div>
     <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
-        <messagioformins/> <!--occupa spazio per nulla  TODO -->
+        <messaggioForm /> <!--occupa spazio per nulla  TODO -->
         <div id="insInputs">
             <label for="product-name">Inserire titolo prodotto:</label>
             <input type="text" id="product-name" name="product-name" required>
@@ -62,7 +62,7 @@
         </div>
         <div id="modAndDelInputs">
             <select id="product-selector" name="product-selector">
-                <listOfProducts/>
+                <listOfProducts />
             </select>
         </div>
         <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" />
