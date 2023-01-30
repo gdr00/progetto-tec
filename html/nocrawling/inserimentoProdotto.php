@@ -43,36 +43,16 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
-    echo "<h1>TEST</h1>";
     //chdir('../..');
      // prende il nome del prodotto
     $product_name = pulisciInput($_POST['product-name']);
      // prende la descrizione del prodotto
     $product_description = pulisciInput($_POST['product-description']);
-     // prende il nome del file immagine
-     // percorso assoluto per la cartella uploads, da modificare se cambia la struttura delle directory
-    $target_dir = realpath('../../php/uploads/'); 
-     // $target_file => Contiene il percorso completo del file caricato (es. var/www/progetto-tec/php/uploads/immagine.jpg)
-    $target_file = $target_dir . '/' . basename($_FILES["product-image"]["name"]);
-     // target file e ilo nome del file completo di path assoluta
-     // per il db metto solo la parent folder in quanto prodotti php e gia in ./php/
-    $db_target_file = basename($target_dir) . '/' . basename($_FILES["product-image"]["name"]);
+
      //alt immagine
     $product_image_alt = pulisciInput($_POST['product-image-alt']);
 
         $prodotto = new Prodotto($product_name, $product_description, $db_target_file, $product_image_alt);
-        //chmod('upload',777);
-        if (is_writable($target_dir)) {
-            $messaggioForm .= '<p>La cartella ha i permessi</p>';
-        } else {
-            $messaggioForm .= '<p>La cartella non ha i permessi</p>';
-        }
-        
-        if (move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)){
-            $messaggioForm .= '<p>Immagine caricata correttamente</p>';
-        }else{
-            $messaggioForm .= '<p>Immagine non caricata correttamente</p>';
-        }
 
         $messaggioForm .= ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
 
@@ -86,7 +66,6 @@ if (isset($_POST['modifica'])) {
         $messaggioForm .= '<p class="serverStringError">I dati non sono inseriti correttamente:</p>'.$modPr;
     else
         $messaggioForm = $prodotto->update($modPr->getTitolo(), $modPr->getDescrizione(), $modPr->getPath(),  $modPr->getAlt());
-    
 }
 
 if (isset($_POST['elimina'])) {
