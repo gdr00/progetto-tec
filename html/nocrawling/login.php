@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 use DB\DBAccess;
 require_once("connection.php");
