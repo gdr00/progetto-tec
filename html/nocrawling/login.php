@@ -37,6 +37,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($queryOK == true) {
             $messaggioForm .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
             $_SESSION["username"] = $username;
+            header("Location: inserimentoProdotto.html");
         }
         else
             $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
@@ -52,7 +53,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     //stampo la pagina HTML
     echo $paginaHTML;
-    header("Location: inserimentoProdotto.html");
     ob_end_flush();
 }
 ?>
