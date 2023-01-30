@@ -727,8 +727,8 @@ input {
 
 input[type="submit"] {
   background-color: var(--formbuttoncolor);
-  color: var(--navlinkhovercolor); /*per rispettare contrasto e norme interne*/
-  border: none;
+  /*color: var(--navlinkhovercolor); /*per rispettare contrasto e norme interne
+  border: none;*/
   font-size: 1em;
   font-weight: bold;
   width: 100px;
