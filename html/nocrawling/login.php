@@ -6,11 +6,9 @@ require_once("connection.php");
 
 if (isset($_SESSION["username"])) {
     header("Location: inserimentoProdotto.html");
-    ob_end_flush();
     exit;
-}
-
-$paginaHTML = file_get_contents("login.html");
+} else{
+    $paginaHTML = file_get_contents("login.html");
 
 $messaggioForm = "";
 
@@ -55,6 +53,5 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     echo $paginaHTML;
     header("Location: inserimentoProdotto.html");
     ob_end_flush();
-    
-    
+}
 ?>
