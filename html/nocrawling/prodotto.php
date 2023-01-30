@@ -64,8 +64,8 @@ class Prodotto{
     }
 
     private function setAlt($alt){
-        echo '<h1>ALT: ' . $alt . '</h1>';
         $this->alt_immagine = $this->pulisciInput($alt);
+        return "";
     }
 
     public function __toString(){
