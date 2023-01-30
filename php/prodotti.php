@@ -11,6 +11,12 @@ $dbAccess = new DBAccess();
 $connessioneRiuscita = $dbAccess->openConnection();
 $stringaProdotti = "";
 
+function replaceForeignText($string){
+    $regex = '/\[([a-z]+)\s*=\s*([a-z]+)\]/i';
+    $replacement = '<span lang="$1">$2</span>';
+    return preg_replace($regex, $replacement, $string);
+}
+
 if($connessioneRiuscita){
     $prodotti = $dbAccess->getProducts();
     if($prodotti != null){

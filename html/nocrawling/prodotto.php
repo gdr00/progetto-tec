@@ -16,7 +16,7 @@ class Prodotto{
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
-        $this->errore .= $this->setAlt($alt_immagine);
+        $this->alt_immagine = $this->setAlt($alt_immagine);
 
         $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
     }
@@ -82,11 +82,7 @@ class Prodotto{
     }
 
     private function setAlt($alt){
-        $err = $this->stringCorrectness($alt, 'alt immagine');
-        $alt = $this->pulisciInput($alt);
-        if ($err == "")
-            $this->alt_immagine = preg_replace('/\s\s+/', ' ', $alt);
-        return $err;
+        return $this->pulisciInput($alt);
     }
 
     public function __toString(){
