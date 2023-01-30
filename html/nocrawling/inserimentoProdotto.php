@@ -22,7 +22,7 @@ if ($_SESSION["admin"] == false) {
             $_FILES["product-image"]["name"],
             $_POST["product-image-alt"]
         );
-        
+
         $messaggioForm .=
             $prodotto->__toString() == ""
                 ? $prodotto->save()
