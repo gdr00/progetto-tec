@@ -28,6 +28,16 @@ class Prodotto{
         return $value;
     }
 
+    private function stringCorrectness($string, $string_checked, $dot_presence = true){
+        $err = "";
+        $regex = ($dot_presence) ? '/^[a-z](\s*|\.|[a-z]|[0-9]|\[|\]|\=|)+$/i' : '/^[a-z](\s*|[a-z]|[0-9]|\[|\]|\=|)+$/i';
+        if (preg_match($regex, $string))
+            $string = preg_replace('/\s\s+/', ' ', $string);
+        else
+            $err = "<li>Ci sono alcune caratteri non consentiti in ".$string_checked."</li>";
+        return $err;
+    }
+
     private function saveImageIntoServerDirectory($target_dir, $target_file){
         $result = "";
         if (!is_writable($target_dir))
@@ -39,8 +49,12 @@ class Prodotto{
     }
 
     private function setTitle($titolo){
-        $err = "";
-        (strlen($titolo) < MAX_TITLE_LENGTH) ? $this->titolo = $this->pulisciInput($titolo) : $err = "<li>Il titolo è troppo lungo</li>";
+        $err = $this->stringCorrectness($titolo, 'titolo', false);
+        $titolo = $this->pulisciInput($titolo);
+        if (strlen($titolo) < MAX_TITLE_LENGTH)
+            $err .= "<li>Il titolo è troppo lungo</li>";
+        if ($err == "")
+            $this->titolo = preg_replace('/\s\s+/', ' ', $titolo);
         return $err;
     }
 
