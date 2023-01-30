@@ -170,7 +170,7 @@ function changeForm (btnId) {
     operationBtn.value = "Inserisci";
     document.getElementById("product-name").setAttribute("required", "");
     document.getElementById("product-image").setAttribute("required", "");
-    document.getElementById("product-image_alt").setAttribute("required", "");
+    document.getElementById("product-image-alt").setAttribute("required", "");
     document.getElementById("product-description").setAttribute("required", "");
   } 
   else if (btnId == "modBtn") {
@@ -180,7 +180,7 @@ function changeForm (btnId) {
       operationBtn.value = "Modifica";
       document.getElementById("product-name").removeAttribute("required");
       document.getElementById("product-image").removeAttribute("required");
-      document.getElementById("product-image_alt").removeAttribute("required");
+      document.getElementById("product-image-alt").removeAttribute("required");
       document.getElementById("product-description").removeAttribute("required");
   } 
   else {
@@ -190,7 +190,7 @@ function changeForm (btnId) {
       operationBtn.value = "Elimina";
       document.getElementById("product-name").removeAttribute("required");
       document.getElementById("product-image").removeAttribute("required");
-      document.getElementById("product-image_alt").removeAttribute("required");
+      document.getElementById("product-image-alt").removeAttribute("required");
       document.getElementById("product-description").removeAttribute("required");
   }
 }
