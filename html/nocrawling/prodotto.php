@@ -56,6 +56,10 @@ class Prodotto{
         return $this->path_immagini;
     }
 
+    public function getAlt(){
+        return $this->alt_immagine;
+    }
+
     public function save(){
         $resultString = "";
         $dbAccess = new DBAccess();
@@ -73,6 +77,26 @@ class Prodotto{
         else
             $resultString = '<p>Errore di connessione al database</p>';
         return $resultString;
+    }
+
+    public function update($title, $desc, $imm, $alt_imm){
+        $resultString = "";
+        $dbAccess = new DBAccess();
+
+        $connessioneRiuscita = $dbAccess->openConnection();
+        if ($connessioneRiuscita == true) {
+            $queryOK = $dbAccess->updateProduct($title, $desc, $imm, $alt_imm);
+            $dbAccess->closeConnection();
+            if ($queryOK == true) {
+                $resultString = '<div class="alertSuccess" role="alert">Prodotto modificato correttamente</div> ';
+            }
+            else {
+                $resultString = '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
+            }
+        }
+        else
+            $resultString = '<p>Errore di connessione al database</p>';
+        return $resultString;  
     }
 }
 ?>

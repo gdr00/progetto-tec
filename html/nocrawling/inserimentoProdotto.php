@@ -78,11 +78,19 @@ if(isset($_POST['inserisci'])){
 
 }
 if (isset($_POST['modifica'])) {
+    /*
+        TODO: pulizia input da fare in Prodotto.php
+    */
+    $modPr = new Prodotto($_POST['product-name'], $_POST['product-description'], $_POST['product-image'], $_POST['product-image-alt']);
+    if($modPr->__toString() != "")
+        $messaggioForm .= '<p class="serverStringError">I dati non sono inseriti correttamente:</p>'.$modPr;
+    else
+        $messaggioForm = $prodotto->update($modPr->getTitolo(), $modPr->getDescrizione(), $modPr->getPath(),  $modPr->getAlt());
     
 }
+
 if (isset($_POST['elimina'])) {
 
-    $product_name = pulisciInput($_POST['product-selector']);
     $conn = new DBAccess();
     $checkConn = $conn->openConnection();
     if ($checkConn) {
