@@ -31,6 +31,19 @@ if ($_SESSION["admin"] == false) {
                     "</p>";
     }
     if (isset($_POST["modifica"])) {
+/*
+        $formMod = '
+            <label for="mod-product-name">Inserire titolo prodotto:</label>
+            <input type="text" id="mod-product-name" name="mod-product-name" required>
+            <label for="mod-product-image">Immagine prodotto:</label>
+            <input type="file" id="mod-product-image" name="mod-product-image" multiple required>
+            <label for="mod-product-image-alt">Descrizione testuale dell\'immagine:</label>
+            <textarea type="text" id="mod-product-image-alt" name="mod-product-image-alt" required></textarea>
+            <label for="mod-product-description">Descrizione prodotto:</label>
+            <textarea id="mod-product-description" name="mod-product-description" required></textarea>';
+            $paginaHTML = str_replace("<modForm/>", $formMod, $paginaHTML);
+
+        */
         $modPr = new Prodotto(
             $_POST["product-name"],
             $_POST["product-description"],
