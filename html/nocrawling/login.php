@@ -17,7 +17,7 @@ function pulisciInput($value) {
 }
 
 
-if (isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['username']) && isset($_POST['password']) && !isset($_SESSION["username"])) {
 
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -31,6 +31,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         if ($queryOK == true) {
             $messaggioForm .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
+            $_SESSION["username"] = $username;
         }
         else
             $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
