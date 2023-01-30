@@ -43,18 +43,8 @@ $paginaHTML = str_replace('<listOfProducts />', $result, $paginaHTML);
 
 
 if(isset($_POST['inserisci'])){
-    //chdir('../..');
-     // prende il nome del prodotto
-    $product_name = pulisciInput($_POST['product-name']);
-     // prende la descrizione del prodotto
-    $product_description = pulisciInput($_POST['product-description']);
-
-     //alt immagine
-    $product_image_alt = pulisciInput($_POST['product-image-alt']);
-
-        $prodotto = new Prodotto($product_name, $product_description, $db_target_file, $product_image_alt);
-
-        $messaggioForm .= ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
+    $prodotto = new Prodotto($$_POST['product-name'], $_POST['product-description'], $_POST['product-image'], $_POST['product-image-alt']);
+    $messaggioForm .= ($prodotto->__toString()=="") ? $prodotto->save() : '<p>I dati non sono inseriti correttamente:'.$prodotto.'</p>';
 
 }
 if (isset($_POST['modifica'])) {
