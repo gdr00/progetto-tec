@@ -45,7 +45,6 @@ Check di accessibilità con TotalValidator:
 - [x] regex su titolo e altro testo
 - [x] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
 - [X] elimina
-- [ ] rimettere tipo file svg
 - [x] controllare lato server estensione immagina corretta
 - [ ] bug nel caso di prodotti in lingua straniera: nell'html inserisce degli " " che non dovrebbero esserci
 - [ ] stile prodotti: o 3 card per riga o più spazio per le card
