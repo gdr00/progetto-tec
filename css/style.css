@@ -95,6 +95,7 @@ a:visited {
 button, input[type="submit"], input[type="reset"], input[type="button"] {
   background-color: var(--linkcolor);
   color: var(--txtcolor);
+  font-weight: bold;
 }
 
 button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
@@ -730,7 +731,7 @@ input[type="submit"] {
   /*color: var(--navlinkhovercolor); /*per rispettare contrasto e norme interne
   border: none;*/
   font-size: 1em;
-  font-weight: bold;
+  /*font-weight: bold;*/
   width: 100px;
   margin-top: 1em;
 }
