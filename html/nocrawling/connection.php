@@ -72,16 +72,6 @@ class DBAccess {
         }
     }
 
-    public function updateProduct($old_title, $titolo, $descrizione, $immagine, $alt){
-        $query = "UPDATE prodotti SET titolo = \"$titolo\", descrizione = \"$descrizione\", immagine = \"$immagine\", alt_immagine = \"$alt\" WHERE titolo = \"$old_title\"";
-        mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
-        if(mysqli_affected_rows($this->connection) > 0){
-            return true;
-        } else{
-            return false;
-        }
-    }
-
     public function deleteProduct($nome) {
         $query = "DELETE FROM prodotti WHERE id = $nome";
         mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));

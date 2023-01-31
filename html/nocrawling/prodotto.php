@@ -155,25 +155,5 @@ class Prodotto{
             $resultString = '<p>Errore di connessione al database</p>';
         return $resultString;
     }
-
-    //PRE: i parametri passati sono gia stati controllati
-    public function update($title, $desc, $imm, $alt_imm){
-        $resultString = "";
-        $dbAccess = new DBAccess();
-        $connessioneRiuscita = $dbAccess->openConnection();
-        if ($connessioneRiuscita == true) {
-            $queryOK = $dbAccess->updateProduct($this->titolo, $title, $desc, $imm, $alt_imm);
-            $dbAccess->closeConnection();
-            if ($queryOK == true) {
-                $resultString = '<div class="alertSuccess" role="alert">Prodotto modificato correttamente</div> ';
-            }
-            else {
-                $resultString = '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
-            }
-        }
-        else
-            $resultString = '<p>Errore di connessione al database</p>';
-        return $resultString;  
-    }
 }
 ?>
