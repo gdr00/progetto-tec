@@ -73,7 +73,7 @@ if ($_SESSION["admin"] == false) {
     }
     $paginaHTML = str_replace("<listOfProducts />", $result, $paginaHTML);
 
-    echo str_replace("<messaggioForm/>", $messaggioForm, $paginaHTML);
+    echo str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
 }
 ob_end_flush();
 ?>

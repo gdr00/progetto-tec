@@ -992,6 +992,11 @@ textarea {
   width: 100%;
 }
 
+#operationForm input, textarea, select {
+  position: relative;
+  width: 65%;
+}
+
 #delInputs {
   display: none;
 }
