@@ -16,7 +16,7 @@ class Prodotto{
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
-        $this->alt_immagine = $this->setAlt($alt_immagine);
+        $this->errore = $this->setAlt($alt_immagine);
 
         $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
     }
@@ -83,9 +83,10 @@ class Prodotto{
     private function setAlt($alt){
         $regex = '/^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i';
         $err = $this->stringCorrectness($regex, $alt, 'alt immagine');
-        return $this->pulisciInput($alt);
+        $alt = $this->pulisciInput($alt);
         if($err == "")
             $this->alt_immagine = preg_replace('/\s\s+/', ' ', $alt);
+        return $err;
     }
 
     public function __toString(){
