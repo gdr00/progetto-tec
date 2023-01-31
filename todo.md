@@ -49,3 +49,4 @@ Check di accessibilità con TotalValidator:
 - [ ] controllare lato server estensione immagina corretta
 - [ ] bug nel caso di prodotti in lingua straniera: nell'html inserisce degli " " che non dovrebbero esserci
 - [ ] stile prodotti: o 3 card per riga o più spazio per le card
+- [ ] fixare bordo su form di contatto con il tema chiaro
