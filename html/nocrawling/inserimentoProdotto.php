@@ -12,8 +12,7 @@ if ($_SESSION["admin"] == false) {
 } else {
     $paginaHTML = file_get_contents("inserimentoProdotto.html");
 
-    // Errore da mostrare all'utente
-    $messaggioForm = "messaggio ok";
+    $messaggioForm = "";
 
     if (isset($_POST["inserisci"])) {
         $prodotto = new Prodotto(
