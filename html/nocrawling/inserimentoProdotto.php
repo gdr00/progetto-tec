@@ -23,9 +23,9 @@ if ($_SESSION["admin"] == false) {
         $messaggioForm .=
             $prodotto->__toString() == ""
                 ? $prodotto->save()
-                : "<p>I dati non sono inseriti correttamente:" .
+                : '<p class="serverStringError" role="alert">I dati non sono stati inseriti correttamente:' .
                     $prodotto .
-                    "</p>";
+                    '</p>';
     }
 
     if (isset($_POST["elimina"])) {
@@ -37,14 +37,14 @@ if ($_SESSION["admin"] == false) {
             $conn->closeConnection();
             if ($checkDel) {
                 $messaggioForm =
-                    '<p class="serverStringSuccess">Prodotto eliminato correttamente</p>';
+                    '<p class="serverStringSuccess" role="alert">Prodotto eliminato correttamente</p>';
             } else {
                 $messaggioForm =
-                    '<p class="serverStringError">Il prodotto non è stato eliminato correttamente</p>';
+                    '<p class="serverStringError" role="alert">Il prodotto non è stato eliminato correttamente</p>';
             }
         } else {
             $messaggioForm =
-                '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
+                '<p class="serverStringError" role="alert">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
         }
     }
 
@@ -65,11 +65,11 @@ if ($_SESSION["admin"] == false) {
             }
         } else {
             $result =
-                '<p class="serverStringError">Nessun prodotto presente<p>';
+                '<p class="serverStringError" role="alert">Nessun prodotto presente<p>';
         }
     } else {
         $result =
-            '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
+            '<p class="serverStringError" role="alert">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.<p>';
     }
     $paginaHTML = str_replace("<listOfProducts />", $result, $paginaHTML);
 

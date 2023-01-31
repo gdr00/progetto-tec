@@ -18,7 +18,7 @@ class Prodotto{
         $this->errore .= $this->setPath($path_immagini);
         $this->errore = $this->setAlt($alt_immagine);
 
-        $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
+        $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto">' . $this->errore . '</ul>' : "";
     }
 
     private function pulisciInput($value) {
@@ -145,14 +145,14 @@ class Prodotto{
             $queryOK = $dbAccess->insertProduct($this->titolo, $this->descrizione, $this->path_immagini, $this->alt_immagine);
             $dbAccess->closeConnection();
             if ($queryOK == true) {
-                $resultString = '<div class="alertSuccess" role="alert">Prodotto inserito correttamente</div> ';
+                $resultString = '<p class="serverStringSuccess" role="alert">Prodotto inserito correttamente</p> ';
             }
             else {
-                $resultString = '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
+                $resultString = '<p class="serverStringError" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio.</p> ';
             }
         }
         else
-            $resultString = '<p>Errore di connessione al database</p>';
+            $resultString = '<p class="serverStringError" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio.</p>';
         return $resultString;
     }
 }

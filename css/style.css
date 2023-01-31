@@ -113,6 +113,19 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type=
 
 .serverStringError {
   text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+.serverStringSuccess {
+  text-align: center;
+  font-weight: bold;
+}
+
+.erroreCreazioneProdotto {
+  list-style-type: none;
+  color: red;
+  font-weight: bold;
 }
 
 .cards {
@@ -1032,9 +1045,4 @@ textarea {
 #insInputs textarea {
   max-width: 100%;
   max-height: 400px;
-}
-
-.alertSuccess {
-  font-weight: bold;
-  margin-top: 3em;
 }
