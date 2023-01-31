@@ -43,7 +43,8 @@ Check di accessibilità con TotalValidator:
 
 ----------------------------- Luca & Matteo --------------------------------------------
 - [x] regex su titolo e altro testo
-- [ ] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
-- [ ] modifica 
+- [x] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
 - [X] elimina
 - [ ] rimettere tipo file svg
+- [ ] controllare lato server estensione immagina corretta
+- [ ] bug nel caso di prodotti in lingua straniera: nell'html inserisce degli " " che non dovrebbero esserci
