@@ -28,15 +28,12 @@ class Prodotto{
         return $value;
     }
 
-    private function stringCorrectness($string, $string_checked, $dot_presence = true){
-        $err = "";
-        $regex = ($dot_presence) ? '/^\[[a-z]+\s*=\s*[a-z]+\]|([a-z]\d*)+(\s+|\.|[a-z]|[0-9]|\[[a-z]+\s*=\s*[a-z]+\])+$/i' : '/^\[[a-z]+\s*=\s*[a-z]+\]|([a-z]\d*)+(\s+|\.|[a-z]|[0-9]|\[[a-z]+\s*=\s*[a-z]+\])+$/i';
-        if (preg_match($regex, $string))
-            $string = preg_replace('/\s\s+/', ' ', $string);
-        else
-            $err = "<li>Ci sono alcune caratteri non consentiti nel campo ".$string_checked."</li>";
-        return $err;
+    private function stringCorrectness($pattern, $string, $field_checked){
+        if (!preg_match($pattern, $string))
+            return "<li>Ci sono alcune caratteri non consentiti nel campo ".$field_checked."</li>";
+        return "";
     }
+
 
     private function saveImageIntoServerDirectory($target_dir, $target_file){
         $result = "";
@@ -49,7 +46,8 @@ class Prodotto{
     }
 
     private function setTitle($titolo){
-        $err = $this->stringCorrectness($titolo, 'titolo', false);
+        $regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i';
+        $err = $this->stringCorrectness($regex, $titolo, 'titolo prodotto');
         $titolo = $this->pulisciInput($titolo);
         if (strlen($titolo) > MAX_TITLE_LENGTH)
             $err .= "<li>Il titolo è troppo lungo</li>";
@@ -59,7 +57,8 @@ class Prodotto{
     }
 
     private function setDescription($desc){
-        $err = $this->stringCorrectness($desc, 'descrizione');
+        $regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?+|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i';
+        $err = $this->stringCorrectness($regex, $desc, 'descrizione prodotto');
         $desc = $this->pulisciInput($desc);
         if (strlen($desc) > MAX_DESCRIPTION_LENGTH)
             $err .= "<li>La descrizione è troppo lunga</li>";
@@ -82,7 +81,11 @@ class Prodotto{
     }
 
     private function setAlt($alt){
+        $regex = '/^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i';
+        $err = $this->stringCorrectness($regex, $alt, 'alt immagine');
         return $this->pulisciInput($alt);
+        if($err == "")
+            $this->alt_immagine = preg_replace('/\s\s+/', ' ', $alt);
     }
 
     public function __toString(){
