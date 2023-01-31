@@ -90,8 +90,14 @@ class Prodotto{
         $target_file = $target_dir . '/' . basename($file_name); //$_FILES["product-image"]["name"]);
         // target file e ilo nome del file completo di path assoluta
         // per il db metto solo la parent folder in quanto prodotti php e gia in ./php/
-        $this->path_immagini = basename($target_dir) . '/' . basename($file_name); //$_FILES["product-image"]["name"]);
-        $err = $this->saveImageIntoServerDirectory($target_dir, $target_file);
+        $file_extension = pathinfo($target_file)['extension'];
+        $err = "";
+        if($file_extension == 'jpg' | $file_extension == 'png' | $file_extension == 'jpeg' | $file_extension == 'svg'){
+            $this->path_immagini = basename($target_dir) . '/' . basename($file_name); //$_FILES["product-image"]["name"]);
+            $err = $this->saveImageIntoServerDirectory($target_dir, $target_file);
+        }
+        else
+            $err .= "<li>Il file caricato non è un'immagine (estensioni concesse: jpg, png, jpeg, svg)</li>";
         return $err;
     }
 
