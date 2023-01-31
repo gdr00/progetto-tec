@@ -155,8 +155,8 @@ function changeForm (btnId) {
   let operationBtn = document.getElementById("operationBtn");
 
   if (btnId == "insBtn") {
-    if (document.getElementById("delBtn").classList.contains("active")) {
-      document.getElementById("delBtn").classList.remove("active");
+    if (document.getElementById("delBtn").classList.contains("choosenOperation")) {
+      document.getElementById("delBtn").classList.remove("choosenOperation");
     }
     document.getElementById("delInputs").style.display = "none";
     document.getElementById("insInputs").style.display = "block";
@@ -167,8 +167,8 @@ function changeForm (btnId) {
     document.getElementById("product-image-alt").setAttribute("required", "");
     document.getElementById("product-description").setAttribute("required", "");
   } else {
-    if (document.getElementById("insBtn").classList.contains("active")) {
-      document.getElementById("insBtn").classList.remove("active");
+    if (document.getElementById("insBtn").classList.contains("choosenOperation")) {
+      document.getElementById("insBtn").classList.remove("choosenOperation");
     }
     document.getElementById("insInputs").style.display = "none";
     document.getElementById("delInputs").style.display = "block";

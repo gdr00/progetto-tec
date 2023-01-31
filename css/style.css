@@ -959,6 +959,7 @@ textarea {
   border: none;
   font-weight: bold;
   font-size: var(--txtsize);
+  border: 2px solid var(--bodybgcolor);
 }
 
 #buttonsForm {
@@ -1014,6 +1015,10 @@ textarea {
 
 #operationForm textarea{
   height: 4em;
+}
+
+.choosenOperation{
+  border: 2px solid var(--txtcolor);
 }
 
 .active {
