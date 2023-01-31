@@ -1,11 +1,11 @@
 <?php
-//chdir('../..'); //torno alla root directory del progetto dato che sono in html/nocrawling
-//echo getcwd(); //debug
 ob_start();
 session_start();
 use DB\DBAccess;
 require_once "connection.php";
-require_once "prodotto.php";
+require_once "pro
+//chdir('../..'); //torno alla root directory del progetto dato che sono in html/nocrawling
+//echo getcwd(); //debugdotto.php";
 
 if ($_SESSION["admin"] == false) {
     header("Location: login.php");
