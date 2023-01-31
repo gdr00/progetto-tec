@@ -47,6 +47,13 @@ class Prodotto{
 
     private function setTitle($titolo){
         $regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i';
+        /*
+        Il titolo può essere composto da:
+        - lettere minuscole e maiuscole
+        - numeri
+        - spazi (non alla fine)
+        - parentesi quadre con dentro una parola (es. [lingua=nome])
+        */
         $err = $this->stringCorrectness($regex, $titolo, 'titolo prodotto');
         $titolo = $this->pulisciInput($titolo);
         if (strlen($titolo) > MAX_TITLE_LENGTH)
@@ -58,6 +65,14 @@ class Prodotto{
 
     private function setDescription($desc){
         $regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?+|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i';
+        /*
+        Il titolo può essere composto da:
+        - lettere minuscole e maiuscole
+        - numeri
+        - spazi (non alla fine)
+        - punti
+        - parentesi quadre con dentro una parola (es. [lingua=nome])
+        */
         $err = $this->stringCorrectness($regex, $desc, 'descrizione prodotto');
         $desc = $this->pulisciInput($desc);
         if (strlen($desc) > MAX_DESCRIPTION_LENGTH)
@@ -82,6 +97,13 @@ class Prodotto{
 
     private function setAlt($alt){
         $regex = '/^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i';
+        /*
+        Alt immagine può essere composto da:
+        - lettere minuscole e maiuscole
+        - numeri
+        - spazi (non alla fine)
+        - punti
+        */
         $err = $this->stringCorrectness($regex, $alt, 'alt immagine');
         $alt = $this->pulisciInput($alt);
         if($err == "")
