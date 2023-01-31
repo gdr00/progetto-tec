@@ -30,26 +30,6 @@ if ($_SESSION["admin"] == false) {
                     $prodotto .
                     "</p>";
     }
-    if (isset($_POST["modifica"])) {
-        $modPr = new Prodotto(
-            $_POST["product-name"],
-            $_POST["product-description"],
-            $_POST["product-image"],
-            $_POST["product-image-alt"]
-        );
-        if ($modPr->__toString() != "") {
-            $messaggioForm .=
-                '<p class="serverStringError">I dati non sono inseriti correttamente:</p>' .
-                $modPr;
-        } else {
-            $messaggioForm = $prodotto->update(
-                $modPr->getTitolo(),
-                $modPr->getDescrizione(),
-                $modPr->getPath(),
-                $modPr->getAlt()
-            );
-        }
-    }
 
     if (isset($_POST["elimina"])) {
         $conn = new DBAccess();
