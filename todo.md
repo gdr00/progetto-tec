@@ -48,3 +48,4 @@ Check di accessibilità con TotalValidator:
 - [ ] rimettere tipo file svg
 - [ ] controllare lato server estensione immagina corretta
 - [ ] bug nel caso di prodotti in lingua straniera: nell'html inserisce degli " " che non dovrebbero esserci
+- [ ] stile prodotti: o 3 card per riga o più spazio per le card
