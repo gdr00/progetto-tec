@@ -1,8 +1,5 @@
 <?php
 
-/*
-Build prodotti.html reading from the database
-*/
 use DB\DBAccess;
 require_once("../html/nocrawling/connection.php");
 $paginaHTML = file_get_contents("../html/prodotti.html");
