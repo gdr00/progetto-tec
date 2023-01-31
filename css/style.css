@@ -115,6 +115,26 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type=
   text-align: center;
 }
 
+.cards {
+  margin: -10px;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards li {
+  color: var(--txtcolor);
+  background-color: var(--cardbg);
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border-radius: 2em;
+  flex: 0 1 400px;
+  text-align: center;
+}
+
 #breadcrumb, #products li, #contactsList li, #serviceList li, #partnerList li, .cards li {
   box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor);
 }
@@ -777,15 +797,6 @@ form label {
 /*******************
       chiSiamo
 ********************/
-.cards {
-  margin: -10px;
-  padding: 10px;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
 
 #chiSiamo {
   margin: 2em;
@@ -886,17 +897,7 @@ textarea {
 
 #agreementBlock label, input {
   margin: 0em;
-}
-
-.cards li {
-  color: var(--txtcolor);
-  background-color: var(--cardbg);
-  margin: 0 10px 20px 10px;
-  padding: 10px;
-  border-radius: 2em;
-  flex: 0 1 400px;
-  text-align: center;
-}
+} 
 
 /******************* 404 PAGE *******************/
 #title404 {
