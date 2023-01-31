@@ -371,7 +371,7 @@ main h2 {
 
 .prev:hover,
 .next:hover {
-  color: var(--linkcolor);
+  color: var(--bodybgcolor);
 }
 
 #dots {
