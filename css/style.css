@@ -993,11 +993,11 @@ textarea {
   width: 65%;
 }
 
-#modAndDelInputs {
+#delInputs {
   display: none;
 }
 
-#modAndDelInputs select {
+#delInputs select {
   margin-top: 1.5em;
   padding-left: 0em;
 }

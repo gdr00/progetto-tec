@@ -151,20 +151,14 @@ function changeForm (btnId) {
   document.getElementById("reset").click();
   var btn = document.getElementById(btnId);
   document.getElementById(btnId).classList.add("active");
-  if (btn != document.getElementById("insBtn")) {
-    document.getElementById("insBtn").classList.remove("active");
-  }
-  if (btn != document.getElementById("modBtn")) {
-    document.getElementById("modBtn").classList.remove("active");
-  }
-  if (btn != document.getElementById("delBtn")) {
-    document.getElementById("delBtn").classList.remove("active");
-  }
 
   let operationBtn = document.getElementById("operationBtn");
 
   if (btnId == "insBtn") {
-    document.getElementById("modAndDelInputs").style.display = "none";
+    if (document.getElementById("delBtn").classList.contains("active")) {
+      document.getElementById("delBtn").classList.remove("active");
+    }
+    document.getElementById("delInputs").style.display = "none";
     document.getElementById("insInputs").style.display = "block";
     operationBtn.name = "inserisci";
     operationBtn.value = "Inserisci";
@@ -172,25 +166,17 @@ function changeForm (btnId) {
     document.getElementById("product-image").setAttribute("required", "");
     document.getElementById("product-image-alt").setAttribute("required", "");
     document.getElementById("product-description").setAttribute("required", "");
-  } 
-  else if (btnId == "modBtn") {
-      document.getElementById("insInputs").style.display = "none";
-      document.getElementById("modAndDelInputs").style.display = "block";
-      operationBtn.name = "modifica";
-      operationBtn.value = "Modifica";
-      document.getElementById("product-name").removeAttribute("required");
-      document.getElementById("product-image").removeAttribute("required");
-      document.getElementById("product-image-alt").removeAttribute("required");
-      document.getElementById("product-description").removeAttribute("required");
-  } 
-  else {
-      document.getElementById("insInputs").style.display = "none";
-      document.getElementById("modAndDelInputs").style.display = "block";
-      operationBtn.name = "elimina";
-      operationBtn.value = "Elimina";
-      document.getElementById("product-name").removeAttribute("required");
-      document.getElementById("product-image").removeAttribute("required");
-      document.getElementById("product-image-alt").removeAttribute("required");
-      document.getElementById("product-description").removeAttribute("required");
+  } else {
+    if (document.getElementById("insBtn").classList.contains("active")) {
+      document.getElementById("insBtn").classList.remove("active");
+    }
+    document.getElementById("insInputs").style.display = "none";
+    document.getElementById("delInputs").style.display = "block";
+    operationBtn.name = "elimina";
+    operationBtn.value = "Elimina";
+    document.getElementById("product-name").removeAttribute("required");
+    document.getElementById("product-image").removeAttribute("required");
+    document.getElementById("product-image-alt").removeAttribute("required");
+    document.getElementById("product-description").removeAttribute("required");
   }
 }

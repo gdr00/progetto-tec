@@ -45,7 +45,6 @@
 
     <div id="adminButtons">
         <button id="insBtn" class="active" onclick="changeForm(this.id);">Inserisci prodotto</button>
-        <button id="modBtn" onclick="changeForm(this.id);">Modifica prodotto</button>
         <button id="delBtn" onclick="changeForm(this.id);">Elimina prodotto</button>
     </div>
     <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
@@ -60,12 +59,11 @@
             <label for="product-description">Descrizione prodotto:</label>
             <textarea id="product-description" name="product-description" required></textarea>
         </div>
-        <div id="modAndDelInputs">
+        <div id="delInputs">
             <select id="product-selector" name="product-selector">
                 <listOfProducts />
             </select>
         </div>
-        <modForm />
         <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" />
         <input class="opFormButton" type="reset" id="reset" value="Cancella tutto" />
     </form>
