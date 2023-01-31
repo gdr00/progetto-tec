@@ -975,6 +975,7 @@ textarea {
   margin: auto;
   border-radius: 2em;
   box-shadow: 0px 5px 10px -5px var(--breadcrumbshadowcolor);
+  padding-top: 2em;
 }
 
 #operationForm *{
@@ -1031,4 +1032,9 @@ textarea {
 #insInputs textarea {
   max-width: 100%;
   max-height: 400px;
+}
+
+.alertSuccess {
+  font-weight: bold;
+  margin-top: 3em;
 }
