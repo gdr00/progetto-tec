@@ -1,6 +1,6 @@
 # WARNING! If you make an error in the config server crashes
 ErrorDocument 404 /404.html
-# AddType text/cache-manifest .manifest
+AddType text/cache-manifest .manifest
 
 <IfModule mod_headers.c>
     <FilesMatch "\\.(ico|gz)$">
