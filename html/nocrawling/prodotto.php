@@ -16,7 +16,7 @@ class Prodotto{
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
-        $this->errore = $this->setAlt($alt_immagine);
+        $this->errore .= $this->setAlt($alt_immagine);
 
         $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto">' . $this->errore . '</ul>' : "";
     }
