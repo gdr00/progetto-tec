@@ -29,7 +29,7 @@ class Prodotto{
     }
 
     private function stringCorrectness($pattern, $string, $field_checked){
-        if (!preg_match($pattern, $string))
+        if (preg_match($pattern, $string) == 0)
             return "<li>Ci sono alcune caratteri non consentiti nel campo ".$field_checked."</li>";
         return "";
     }
