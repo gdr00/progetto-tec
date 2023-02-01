@@ -988,10 +988,6 @@ textarea {
   padding-top: 2em;
 }
 
-#operationForm *{
-  padding: .4em;
-}
-
 #operationForm label {
   margin-top: 1.5em;
   display: block;
@@ -1024,10 +1020,6 @@ textarea {
 
 #operationForm textarea{
   height: 4em;
-}
-
-.choosenOperation{
-  border: 2px solid var(--txtcolor);
 }
 
 .active {
