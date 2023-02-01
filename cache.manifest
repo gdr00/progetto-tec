@@ -2,6 +2,8 @@ CACHE MANIFEST
 
 CACHE:
 index.html
+html/404.html
+html/noConnection.html
 css/style.css
 js/main.js
 img/logo.svg
