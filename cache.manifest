@@ -1,9 +1,17 @@
 CACHE MANIFEST
 
 CACHE:
-
+index.html
+css/style.css
+js/main.js
+img/logo.svg
+img/partners/*
+img/slideshow/*
 
 NETWORK:
+php/*
+html/nocrawling/*
 
 
 FALLBACK:
+html/nocrawling/* html/noConnection.html
