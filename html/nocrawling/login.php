@@ -45,11 +45,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $messaggioForm = '<div class="alertDanger" role="alert">Problemi database</div> ';
     }
 }
-
-    // sostituisco il tag <messaggioForm /> con il messaggio da mostrare all'utente
     $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
-
-    //stampo la pagina HTML
     echo $paginaHTML;
     ob_end_flush();
 }

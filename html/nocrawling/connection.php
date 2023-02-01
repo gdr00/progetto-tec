@@ -1,8 +1,6 @@
 <?php
 
 namespace DB;
-
-use mysqli;
 class DBAccess {
     private const HOST_DB = "localhost";
     private const DATABASE_NAME = "tecweb";
@@ -26,8 +24,6 @@ class DBAccess {
         }
     }
 
-    
-
     public function getProducts(){
         $query = "SELECT * FROM prodotti ORDER BY titolo ASC";
         $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
@@ -42,29 +38,8 @@ class DBAccess {
             return $result;
         }
     }
-    
-    private function filterInput($input) {
-        $input = trim($input);
-        $input = strip_tags($input);
-        $input = htmlspecialchars($input);
-        return $input;
-    }
 
-    private function filterProductInput($input) {
-        $this->filterInput($input);
-
-    }
     public function login($username, $password){
-        /*$query = "SELECT * FROM utenti WHERE username='$username' AND password='$password'";
-        $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
-
-        if(mysqli_num_rows($this->connection) > 0){
-            if ($username == "admin" && $password == "admin")
-                $_SESSION['admin'] = true;
-            return true;
-        } else{
-            return false;
-        }*/
         session_start();
         $user = mysqli_real_escape_string($this->connection, $username);
         $passw = mysqli_real_escape_string($this->connection, $password);
@@ -88,18 +63,8 @@ class DBAccess {
 
     public function insertProduct ($titolo, $descrizione, $immagine, $alt){
         $query = "INSERT INTO prodotti (titolo, descrizione, immagine, alt_immagine) VALUES(\"$titolo\", \"$descrizione\", \"$immagine\", \"$alt\")";
-        $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
+        mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
         
-        if(mysqli_affected_rows($this->connection) > 0){
-            return true;
-        } else{
-            return false;
-        }
-    }
-
-    public function updateProduct($old_title, $titolo, $descrizione, $immagine, $alt){
-        $query = "UPDATE prodotti SET titolo = \"$titolo\", descrizione = \"$descrizione\", immagine = \"$immagine\", alt_immagine = \"$alt\" WHERE titolo = \"$old_title\"";
-        $queryResult = mysqli_query($this->connection, $query) or die ("Errore in openDBConnection: ".mysqli_error($this->connection));
         if(mysqli_affected_rows($this->connection) > 0){
             return true;
         } else{
@@ -109,7 +74,7 @@ class DBAccess {
 
     public function deleteProduct($nome) {
         $query = "DELETE FROM prodotti WHERE id = $nome";
-        $queryResult=mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
+        mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if(mysqli_affected_rows($this->connection) > 0) {
             return true;
         } else{

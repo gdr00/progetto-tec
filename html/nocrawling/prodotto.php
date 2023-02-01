@@ -16,9 +16,9 @@ class Prodotto{
         $this->errore = $this->setTitle($titolo);
         $this->errore .= $this->setDescription($descrizione);
         $this->errore .= $this->setPath($path_immagini);
-        $this->errore = $this->setAlt($alt_immagine);
+        $this->errore .= $this->setAlt($alt_immagine);
 
-        $this->errore = $this->errore ? "<ul>$this->errore</ul>" : "";
+        $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto">' . $this->errore . '</ul>' : "";
     }
 
     private function pulisciInput($value) {
@@ -29,7 +29,7 @@ class Prodotto{
     }
 
     private function stringCorrectness($pattern, $string, $field_checked){
-        if (!preg_match($pattern, $string))
+        if (preg_match($pattern, $string) == 0)
             return "<li>Ci sono alcune caratteri non consentiti nel campo ".$field_checked."</li>";
         return "";
     }
@@ -145,35 +145,15 @@ class Prodotto{
             $queryOK = $dbAccess->insertProduct($this->titolo, $this->descrizione, $this->path_immagini, $this->alt_immagine);
             $dbAccess->closeConnection();
             if ($queryOK == true) {
-                $resultString = '<div class="alertSuccess" role="alert">Prodotto inserito correttamente</div> ';
+                $resultString = '<p class="serverStringSuccess" role="alert">Prodotto inserito correttamente</p> ';
             }
             else {
-                $resultString = '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
+                $resultString = '<p class="serverStringError" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio.</p> ';
             }
         }
         else
-            $resultString = '<p>Errore di connessione al database</p>';
+            $resultString = '<p class="serverStringError" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio.</p>';
         return $resultString;
-    }
-
-    //PRE: i parametri passati sono gia stati controllati
-    public function update($title, $desc, $imm, $alt_imm){
-        $resultString = "";
-        $dbAccess = new DBAccess();
-        $connessioneRiuscita = $dbAccess->openConnection();
-        if ($connessioneRiuscita == true) {
-            $queryOK = $dbAccess->updateProduct($this->titolo, $title, $desc, $imm, $alt_imm);
-            $dbAccess->closeConnection();
-            if ($queryOK == true) {
-                $resultString = '<div class="alertSuccess" role="alert">Prodotto modificato correttamente</div> ';
-            }
-            else {
-                $resultString = '<div class="alertDanger" role="alert">I nostri sistemi sono al momento non funzionanti. Ci scusiamo per il disagio</div> ';
-            }
-        }
-        else
-            $resultString = '<p>Errore di connessione al database</p>';
-        return $resultString;  
     }
 }
 ?>
