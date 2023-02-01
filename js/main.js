@@ -149,8 +149,7 @@ function syncTheme() {
 
 function changeForm (btnId) {
   document.getElementById("reset").click();
-  var btn = document.getElementById(btnId);
-  document.getElementById(btnId).classList.add("active");
+  document.getElementById(btnId).classList.add("operationBtn");
 
   let operationBtn = document.getElementById("operationBtn");
 
