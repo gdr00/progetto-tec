@@ -969,7 +969,6 @@ textarea {
   border-radius: 2em;
   padding: 1.2em;
   margin: 1em 1.5em 2em 1.5em;
-  border: none;
   font-weight: bold;
   font-size: var(--txtsize);
   border: 2px solid var(--bodybgcolor);
