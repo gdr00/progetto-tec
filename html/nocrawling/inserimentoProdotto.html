@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" manifest="cache.manifest">
 <head>
     <title>Aggiungi Prodotto - Sicurservice</title>
     <!-- META TAGS -->
@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- LINK TAGS -->
-    <link rel="stylesheet" href="../../css/style.css" media="handheld, screen" />
-    <link rel="stylesheet" href="../../css/mini.css" media="handhled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
-    <link rel="stylesheet" href="../../css/print.css" media="print" />
-    <link rel="shortcut icon" type="image/png" href="../../img/icon.png" />
+    <link rel="stylesheet" href="/css/style.css" media="handheld, screen" />
+    <link rel="stylesheet" href="/css/mini.css" media="handhled, screen and (max-width: 600px), only screen and (max-device-width: 600px)" />
+    <link rel="stylesheet" href="/css/print.css" media="print" />
+    <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
 
     <!-- SCRIPTS -->
-    <script src="../../js/main.js"></script>
+    <script src="/js/main.js"></script>
 </head>
 
 <body onload="syncTheme()">
@@ -25,10 +25,10 @@
         <nav id="menu">
             <button id="hamburger" onclick="toggleMenu()" aria-expanded="false"><span>Menu</span></button>
             <ul id="menus">
-                <li><a href="../../index.html" aria-label="vai alla pagina home">Home</a></li>
-                <li><a href="../chiSiamo.html" aria-label="vai alla pagina home">Chi siamo</a></li>
-                <li><a href="../../php/prodotti.php" aria-label="vai alla pagina prodotti">Prodotti</a></li>
-                <li><a href="../contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
+                <li><a href="/index.html" aria-label="vai alla pagina home">Home</a></li>
+                <li><a href="/html/chiSiamo.html" aria-label="vai alla pagina home">Chi siamo</a></li>
+                <li><a href="/php/prodotti.php" aria-label="vai alla pagina prodotti">Prodotti</a></li>
+                <li><a href="/html/contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
                 <li><a class="active" aria-label="pagina corrente area amministratore">Amministratore</a></li>
             </ul>
             <button id="themeButton" onclick="changeTheme();" aria-hidden="true">Tema chiaro-scuro</button>
@@ -37,8 +37,8 @@
 
 	<!-- BREADCRUMB -->
 	<nav id ="breadcrumb" aria-label="Posizione corrente">
-		<img src="../../img/icons/location-dot.svg" alt="Ti trovi in:"/>
-		<p><a href ="../../index.html"><span lang="en">Home</span></a> > Amministratore</p>
+		<img src="/img/icons/location-dot.svg" alt="Ti trovi in:"/>
+		<p><a href ="/index.html"><span lang="en">Home</span></a> > Amministratore</p>
 	</nav>
     
     <main>

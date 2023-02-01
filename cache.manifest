@@ -1,9 +1,22 @@
 CACHE MANIFEST
 
 CACHE:
-
+/index.html
+/html/404.html
+/html/chiSiamo.html
+/html/contatti.html
+/html/noConnection.html
+/css/style.css
+/js/main.js
+/img/logo.svg
+/img/partners/*
+/img/slideshow/*
 
 NETWORK:
+/php/*
+/html/nocrawling/*
 
 
 FALLBACK:
+/html/nocrawling/* /html/noConnection.html
+/html/prodotti.html /html/noConnection.html
