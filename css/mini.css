@@ -242,7 +242,7 @@ tbody tr:first-child :last-child {
         flex-direction: column;
     }
     #adminButtons button {
-        flex: 1 0;
+        flex: 1 1;
     }
 }
 
@@ -250,9 +250,6 @@ tbody tr:first-child :last-child {
 /* da fare bottoni uno sotto l'altro */
 @media screen and (max-width: 400px) {
     #operationForm {
-        display: inline-block;
-    }
-    #adminButtons button {
-        flex: 1 0;
+        margin: .5em;
     }
 }
