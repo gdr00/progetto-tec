@@ -979,7 +979,6 @@ textarea {
 
 #operationForm {
   text-align: center;
-  display: block;
   background-color: var(--cardbg);
   position: relative;
   width: 90%;
@@ -1006,6 +1005,7 @@ textarea {
 
 #operationForm input, textarea, select {
   position: relative;
+  margin: auto;
   width: 65%;
 }
 
@@ -1019,10 +1019,7 @@ textarea {
 }
 
 #operationForm .opFormButton {
-  width: 30%;
   margin: 1em;
-  margin-bottom: 3em;
-  margin-top: 2em;
 }
 
 #operationForm textarea{
