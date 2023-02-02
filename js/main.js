@@ -169,3 +169,10 @@ function changeForm (btnId) {
     document.getElementById("product-description").removeAttribute("required");
   }
 }
+
+function checkString () {
+  var titolo = document.getElementById("product-name").value;
+  var descrizione = document.getElementById("product-description").value;
+  var img_alt = document.getElementById("product-image-alt").value;
+  
+}
