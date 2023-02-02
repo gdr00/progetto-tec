@@ -40,7 +40,7 @@ class DBAccess {
     }
 
     public function login($username, $password){
-        session_start();
+        //session_start();
         $user = mysqli_real_escape_string($this->connection, $username);
         $passw = mysqli_real_escape_string($this->connection, $password);
 
