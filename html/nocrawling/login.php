@@ -22,8 +22,8 @@ function pulisciInput($value) {
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = pulisciInput($_POST["username"]);
+    $password = pulisciInput($_POST["password"]);
 
     $dbAccess = new DBAccess();
     $connessioneRiuscita = $dbAccess->openConnection();
@@ -33,16 +33,16 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $dbAccess->closeConnection();
 
         if ($queryOK == true) {
-            $messaggioForm .= '<div class="alertSuccess" role="alert">Accesso effettuato</div> ';
+            $messaggioForm .= '<p class="serverStringError">Accesso effettuato </p> '; 
             $_SESSION["username"] = $username;
             header("Location: inserimentoProdotto.php");
         }
         else
-            $messaggioForm = '<div class="alertDanger" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </div> ';
+            $messaggioForm = '<p class="serverStringError">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </p> ';
         
     }
     else {
-        $messaggioForm = '<div class="alertDanger" role="alert">Problemi database</div> ';
+        $messaggioForm = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.</p> ';
     }
 }
     $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
