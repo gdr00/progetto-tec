@@ -170,19 +170,30 @@ function changeForm (btnId) {
   }
 }
 
-let regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
-
 function checkString (id) {
   var btn = document.getElementById("operationBtn");
   var testo = document.getElementById(id).value;
+  var regex = "";
+  var errorString = "";
+
+  if (id == "product-name") {
+    regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
+    errorString = document.getElementById("titleStringError");
+  } else if (id == "product-image-alt") {
+    regex = /^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i;
+    errorString = document.getElementById("imageAltStringError");
+  } else if (id == "product-description") {
+    //regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?+|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i;
+    // non va letteralmente la regex
+    errorString = document.getElementById("descriptionStringError");
+  }
+
   if (stringCorrectness(regex, testo)) {
     btn.disabled = false;
-    btn.classList.remove("disabledButton");
-    document.getElementById(id).classList.remove("errorInput");
+    errorString.style.display = "none";
   } else {
     btn.disabled = true;
-    btn.classList.add("disabledButton");
-    document.getElementById(id).classList.add("errorInput");
+    errorString.style.display = "block";
   }
 }
 

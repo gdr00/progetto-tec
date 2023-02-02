@@ -14,7 +14,7 @@
   --currentnavpagebg: #139A60;
   --navlinkhoverbg: #fff;
   --navlinkhovercolor: #000;
-  --errorcolor: #FF0000;
+  --errorstringcolor: #ff2d2d;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/moon.png);
   --themeborder: #fff;
@@ -47,7 +47,7 @@
   --currentnavpagebg: #0F7B4C;
   --navlinkhoverbg: #000;
   --navlinkhovercolor: #fff;
-  --errorcolor: #A30000;
+  --errorstringcolor: #A30000;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/light.png);
   --themeborder: #a5a5a5;
@@ -115,7 +115,7 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type=
 .serverStringError {
   text-align: center;
   font-weight: bold;
-  color: red;
+  color: var(--errorstringcolor);
 }
 
 .serverStringSuccess {
@@ -125,7 +125,7 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type=
 
 .erroreCreazioneProdotto {
   list-style-type: none;
-  color: red;
+  color: var(--errorstringcolor);
   font-weight: bold;
 }
 
@@ -1040,10 +1040,11 @@ textarea {
   max-height: 400px;
 }
 
-.disabledButton {
-  background-color: grey;
+.clientInputErrors {
+  color: var(--errorstringcolor);
+  display: none;
 }
 
-.errorInput {
-  background-color: red;
+#logout {
+  text-decoration: underline;
 }

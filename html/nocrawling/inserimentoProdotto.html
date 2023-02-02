@@ -53,19 +53,22 @@
         <div id="insInputs">
             <label for="product-name">Inserire titolo prodotto:</label>
             <input type="text" id="product-name" name="product-name" required onchange="checkString(this.id)"/>
+            <div class="clientInputErrors" id="titleStringError" role="alert">Il titolo del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), parentesi quadre con dentro una parola.</div>
             <label for="product-image">Immagine prodotto:</label>
             <input type="file" id="product-image" name="product-image" accept="image/jpeg, image/png, image/svg" multiple required/>
             <label for="product-image-alt">Descrizione testuale dell'immagine:</label>
             <textarea id="product-image-alt" name="product-image-alt" required onchange="checkString(this.id)"></textarea>
+            <div class="clientInputErrors" id="imageAltStringError" role="alert">La descrizione dell'immagine del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), e punti.</div>
             <label for="product-description">Descrizione prodotto:</label>
             <textarea id="product-description" name="product-description" required onchange="checkString(this.id)"></textarea>
+            <div class="clientInputErrors" id="descriptionStringError" role="alert">La descrizione del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), punti e parentesi quadre con dentro una parola.</div>
         </div>
         <div id="delInputs">
             <select id="product-selector" name="product-selector" aria-label="Lista di prodotti">
                 <listOfProducts />
             </select>
         </div>
-        <input class="opFormButton disabledButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" disabled/>
+        <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" disabled/>
         <input class="opFormButton" type="reset" id="reset" value="Cancella tutto" />
     </form>
     </main>
@@ -79,7 +82,7 @@
                 <li>Telefono: <a aria-label="Chiama il 0434-590096" href="tel:+390434590096">0434-590096</a></li>
                 <li>Email: <a aria-label="Manda una email a info@sicurservice.com" href="mailto:info@sicurservice.com">info@sicurservice.com</a></li>
                 <li>
-					<a href="logout.php" aria-label="esegui il Logout"><span lang="en">Logout</span></a>
+					<a href="logout.php" aria-label="esegui il Logout"><span lang="en" id="logout">Logout</span></a>
 				</li>
             </ul>
         </div>
