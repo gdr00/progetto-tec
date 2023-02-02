@@ -156,6 +156,7 @@ function changeForm (btnId) {
     document.getElementById("product-image-alt").setAttribute("required", "");
     document.getElementById("product-description").setAttribute("required", "");
   } else {
+    btn.disabled = false;
     if (document.getElementById("insBtn").classList.contains("choosenOperation")) {
       document.getElementById("insBtn").classList.remove("choosenOperation");
     }
