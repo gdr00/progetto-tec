@@ -65,7 +65,7 @@
                 <listOfProducts />
             </select>
         </div>
-        <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" />
+        <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" onclick="checkString()"/>
         <input class="opFormButton" type="reset" id="reset" value="Cancella tutto" />
     </form>
     </main>
@@ -76,8 +76,8 @@
             <h2>Contattaci</h2>
             <p>Se hai bisogno di ulteriore assistenza o vuoi saperne di più sui nostri prodotti, non esitare a contattarci:</p>
             <ul>
-                <li>Telefono: <a href="tel:+390434590096">0434-590096</a></li>
-                <li>Email: <a href="mailto:info@sicurservice.com">info@sicurservice.com</a></li>
+                <li>Telefono: <a aria-label="Chiama il 0434-590096" href="tel:+390434590096">0434-590096</a></li>
+                <li>Email: <a aria-label="Manda una email a info@sicurservice.com" href="mailto:info@sicurservice.com">info@sicurservice.com</a></li>
                 <li>
 					<a href="logout.php" aria-label="esegui il logout"><span lang="en">Logout</span></a>
 				</li>

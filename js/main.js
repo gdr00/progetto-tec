@@ -28,16 +28,6 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-/*document.scroll(function(){
-  var y = this.scrollTop();
-  window.alert(y);
-  if(y > 200){
-    document.getElementById("toTop").style.display = "block";
-  }else{
-    document.getElementById("toTop").style.display = "none";
-  }
-}); /*non va boh*/
-
 function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
@@ -178,4 +168,20 @@ function changeForm (btnId) {
     document.getElementById("product-image-alt").removeAttribute("required");
     document.getElementById("product-description").removeAttribute("required");
   }
+}
+
+function checkString () {
+  throw new Exception("@bgvhjsk");
+  var regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
+  var titolo = document.getElementById("product-name").value;
+  var descrizione = document.getElementById("product-description").value;
+  var img_alt = document.getElementById("product-image-alt").value;
+  if (!stringCorrectness(regex, titolo))
+    console.log("AAAAAAAAAAAA");
+  else
+    throw new Exception("@bgvhjsk");
+}
+
+function stringCorrectness (pattern, string) {
+  return pattern.test(string);
 }
