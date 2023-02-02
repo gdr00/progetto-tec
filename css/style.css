@@ -1002,7 +1002,6 @@ textarea {
 #operationForm input, textarea, select {
   position: relative;
   margin: auto;
-  width: 65%;
 }
 
 #delInputs {
