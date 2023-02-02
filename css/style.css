@@ -14,6 +14,7 @@
   --currentnavpagebg: #139A60;
   --navlinkhoverbg: #fff;
   --navlinkhovercolor: #000;
+  --errorcolor: #FF0000;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/moon.png);
   --themeborder: #fff;
@@ -46,6 +47,7 @@
   --currentnavpagebg: #0F7B4C;
   --navlinkhoverbg: #000;
   --navlinkhovercolor: #fff;
+  --errorcolor: #A30000;
   --themebg: #f1f1f1;
   --themebgimg: url(../img/theme/light.png);
   --themeborder: #a5a5a5;
