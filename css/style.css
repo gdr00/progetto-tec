@@ -1016,6 +1016,9 @@ textarea {
 
 #operationForm .opFormButton {
   margin: 1em;
+}
+
+#operationForm .opFormButton:last-child {
   margin-bottom: 2em;
 }
 
