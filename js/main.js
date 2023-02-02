@@ -177,6 +177,8 @@ function checkString () {
   var img_alt = document.getElementById("product-image-alt").value;
   if (!stringCorrectness(regex, titolo))
     console.log("AAAAAAAAAAAA");
+  else
+    throw new Exception("@bgvhjsk");
 }
 
 function stringCorrectness (pattern, string) {
