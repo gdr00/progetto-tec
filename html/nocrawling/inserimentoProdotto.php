@@ -27,7 +27,7 @@ if ($_SESSION["admin"] == false) {
         $messaggioForm .=
             $prodotto->__toString() == ""
                 ? $prodotto->save()
-                : '<p class="serverStringError">I dati non sono stati inseriti correttamente:' .
+                : '<p class="serverStringError" role="alert">I dati non sono stati inseriti correttamente:' .
                     $prodotto .
                     '</p>';
     }
