@@ -183,8 +183,7 @@ function checkString (id) {
     regex = /^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i;
     errorString = document.getElementById("imageAltStringError");
   } else if (id == "product-description") {
-    //regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?+|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i;
-    // non va letteralmente la regex
+    regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i;
     errorString = document.getElementById("descriptionStringError");
   }
 

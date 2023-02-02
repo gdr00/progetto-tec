@@ -64,7 +64,7 @@ class Prodotto{
     }
 
     private function setDescription($desc){
-        $regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?+|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i';
+        $regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i';
         /*
         Il titolo può essere composto da:
         - lettere minuscole e maiuscole
