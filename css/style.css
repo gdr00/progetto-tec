@@ -1039,3 +1039,11 @@ textarea {
 #insInputs textarea {
   max-height: 400px;
 }
+
+.disabledButton {
+  background-color: grey;
+}
+
+.errorInput {
+  background-color: red;
+}

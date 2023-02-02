@@ -173,11 +173,16 @@ function changeForm (btnId) {
 let regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
 
 function checkString (id) {
+  var btn = document.getElementById("operationBtn");
   var testo = document.getElementById(id).value;
   if (stringCorrectness(regex, testo)) {
-    document.getElementById("operationBtn").disabled = false;
+    btn.disabled = false;
+    btn.classList.add("disabledButton");
+    document.getElementById(id).classList.add("errorInput");
   } else {
-    document.getElementById("operationBtn").disabled = true;
+    btn.disabled = true;
+    btn.classList.remove("disabledButton");
+    document.getElementById(id).classList.remove("errorInput");
   }
 }
 
