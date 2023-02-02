@@ -28,16 +28,6 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-/*document.scroll(function(){
-  var y = this.scrollTop();
-  window.alert(y);
-  if(y > 200){
-    document.getElementById("toTop").style.display = "block";
-  }else{
-    document.getElementById("toTop").style.display = "none";
-  }
-}); /*non va boh*/
-
 function toTop(){
   window.scroll({top : 0, behavior : 'smooth'});
 }
