@@ -23,29 +23,29 @@
     <a href="#firstAvailableContent" class="aiuti">Vai al contenuto principale</a> 
     <header>
         <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
-        <nav id="menu">
+        <nav id="menu" aria-label="Hamburger menu">
             <button id="hamburger" aria-label="Hamburger menu" onclick="toggleMenu()" aria-expanded="false"><span>Menu</span></button>
             <ul id="menus">
                 <li><a href="/index.html" aria-label="vai alla pagina home">Home</a></li>
-                <li><a href="/html/chiSiamo.html" aria-label="vai alla pagina home">Chi siamo</a></li>
+                <li><a href="/html/chiSiamo.html" aria-label="vai alla pagina chi siamo">Chi siamo</a></li>
                 <li><a href="/php/prodotti.php" aria-label="vai alla pagina prodotti">Prodotti</a></li>
                 <li><a href="/html/contatti.html" aria-label="vai alla pagina contatti">Contatti</a></li>
-                <li><a class="active" aria-label="pagina corrente area amministratore">Amministratore</a></li>
+                <li><a href="#" class="active" aria-label="pagina corrente area admin">Amministratore</a></li>
             </ul>
-            <button id="themeButton" onclick="changeTheme();" aria-hidden="true">Tema chiaro-scuro</button>
+            <button id="themeButton" onclick="changeTheme();">Tema chiaro-scuro</button>
         </nav>
     </header>
 
 	<!-- BREADCRUMB -->
 	<nav id ="breadcrumb" aria-label="Posizione corrente">
 		<img src="/img/icons/location-dot.svg" alt="Ti trovi in:"/>
-		<p><a href ="/index.html"><span lang="en">Home</span></a> > Amministratore</p>
+		<p><a href ="/index.html"><span lang="en">Home</span></a> &gt; Amministratore</p>
 	</nav>
     
     <main id="firstAvaliableContent">
 
     <div id="adminButtons">
-        <button id="insBtn" class="choosenOperation" onclick="changeForm(this.id);">Inserisci prodotto</button>
+        <button id="insBtn" class="choosenOperation" onclick="changeForm(this.id);">Inserisci un nuovo prodotto</button>
         <button id="delBtn" onclick="changeForm(this.id);">Elimina prodotto</button>
     </div>
     <form id="operationForm" method="post" action="inserimentoProdotto.php" enctype="multipart/form-data">
@@ -61,7 +61,7 @@
             <textarea id="product-description" name="product-description" required></textarea>
         </div>
         <div id="delInputs">
-            <select id="product-selector" name="product-selector">
+            <select id="product-selector" name="product-selector" aria-label="Lista di prodotti">
                 <listOfProducts />
             </select>
         </div>
