@@ -171,8 +171,8 @@ function changeForm (btnId) {
 }
 
 let regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
-let titoloProdotto = document.getElementById("product-name");
 
+/*
 function checkString (id) {
   var testo = document.getElementById(id).value;
   if (stringCorrectness(regex, testo)) {
@@ -180,7 +180,11 @@ function checkString (id) {
   } else {
     throw new Exception("@");
   }
-}
+}*/
+
+document.getElementById("product-name").addEventListener("input", function () {
+  console.log(document.getElementById("product-name").value);
+})
 
 function stringCorrectness (pattern, string) {
   return pattern.test(string);
