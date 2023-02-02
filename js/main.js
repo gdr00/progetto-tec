@@ -171,11 +171,11 @@ function changeForm (btnId) {
 }
 
 function checkString () {
-  var regex = '/^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i';
+  var regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
   var titolo = document.getElementById("product-name").value;
   var descrizione = document.getElementById("product-description").value;
   var img_alt = document.getElementById("product-image-alt").value;
-  if (stringCorrectness(regex, titolo))
+  if (!stringCorrectness(regex, titolo))
     console.log("AAAAAAAAAAAA");
 }
 
