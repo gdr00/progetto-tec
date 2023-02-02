@@ -978,6 +978,10 @@ textarea {
   padding-top: 2em;
 }
 
+#operationBtn{
+  width: 60%;
+}
+
 #operationForm label {
   margin-top: 1.5em;
   display: block;
@@ -1026,12 +1030,7 @@ textarea {
   width: 80%;
 }
 
-#operationBtn{
-  width: 60%;
-}
-
 #delInputs input[type="submit"], input[type="reset"] {
-
   width: 60%;
 }
 
