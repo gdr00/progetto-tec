@@ -53,7 +53,7 @@
         <div id="insInputs">
             <label for="product-name">Inserire titolo prodotto:</label>
             <input type="text" id="product-name" name="product-name" required onchange="checkString(this.id)"/>
-            <div class="clientInputErrors" id="titleStringError" role="alert">Il titolo del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), parentesi quadre con dentro una parola.</div>
+            <div class="clientInputErrors" id="titleStringError" role="alert">Il titolo del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), parentesi quadre con dentro una parola (ex. [en=home]).</div>
             <label for="product-image">Immagine prodotto:</label>
             <input type="file" id="product-image" name="product-image" accept="image/jpeg, image/png, image/svg" multiple required/>
             <label for="product-image-alt">Descrizione testuale dell'immagine:</label>
@@ -61,7 +61,7 @@
             <div class="clientInputErrors" id="imageAltStringError" role="alert">La descrizione dell'immagine del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), e punti.</div>
             <label for="product-description">Descrizione prodotto:</label>
             <textarea id="product-description" name="product-description" required onchange="checkString(this.id)"></textarea>
-            <div class="clientInputErrors" id="descriptionStringError" role="alert">La descrizione del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), punti e parentesi quadre con dentro una parola.</div>
+            <div class="clientInputErrors" id="descriptionStringError" role="alert">La descrizione del prodotto può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine), punti e parentesi quadre con dentro una parola (ex. [en=home]).</div>
         </div>
         <div id="delInputs">
             <select id="product-selector" name="product-selector" aria-label="Lista di prodotti">
