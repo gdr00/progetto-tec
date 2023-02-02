@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" manifest="cache.manifest">
+<html lang="it" manifest="../cache.manifest">
 <head>
     <title>Prodotti - Sicurservice</title> <!--prima contenso particolare poi generale-->
     <!-- META TAGS -->
@@ -20,9 +20,10 @@
 </head>
 
 <body onload="syncTheme()">
+    <a href="#firstAvaiableContent" class="aiuti">Vai al contenuto principale</a>   
     <header>
         <h1>Sicurservice, sicurezza e antifurto per la tua famiglia e casa</h1>
-        <nav id="menu">
+        <nav id="menu" aria-label="Hamburger menu">
             <button id="hamburger" onclick="toggleMenu()" aria-expanded="false"><span>Menu</span></button>
             <ul id="menus">
                 <li><a href="/index.html" aria-label="vai alla pagina home">Home</a></li>
@@ -39,7 +40,7 @@
         <p><a href="/index.html"><span lang ="en">Home</span></a> &gt; Prodotti</p>
     </nav>
 
-    <main>
+    <main id="firstAvaiableContent">
         <h2>Prodotti</h2>
         <listaProdotti />
     </main>
@@ -53,7 +54,7 @@
                 <li>Telefono: <a href="tel:+390434590096">0434-590096</a></li>
                 <li>Email: <a href="mailto:info@sicurservice.com">info@sicurservice.com</a></li>
                 <li>
-					<span lang="en"><a href="/html/nocrawling/login.php" aria-label="vai alla pagina di login amministratori">Admin</a></span>
+					<span lang="en"><a href="/html/nocrawling/login.php" aria-label="vai alla pagina Admin">Admin</a></span>
 				</li>
             </ul>
         </div>
