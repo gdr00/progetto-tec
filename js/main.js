@@ -169,7 +169,7 @@ function changeForm (btnId) {
     document.getElementById("product-description").removeAttribute("required");
   }
 }
-
+/*
 let regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
 let titoloProdotto = document.getElementById("product-name");
 
@@ -177,7 +177,7 @@ titoloProdotto.value.addEventListener("change", function () {
   if (stringCorrectness(regex, titoloProdotto)) {
     document.getElementById("operationBtn").disabled = true;
   }
-})
+})*/
 
 function stringCorrectness (pattern, string) {
   return pattern.test(string);
