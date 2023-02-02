@@ -52,20 +52,20 @@
         <messaggioForm /> <!--occupa spazio per nulla  TODO -->
         <div id="insInputs">
             <label for="product-name">Inserire titolo prodotto:</label>
-            <input type="text" id="product-name" name="product-name" required>
+            <input type="text" id="product-name" name="product-name" required onchange="checkString(this.id)"/>
             <label for="product-image">Immagine prodotto:</label>
-            <input type="file" id="product-image" name="product-image" accept="image/jpeg, image/png, image/svg" multiple required>
+            <input type="file" id="product-image" name="product-image" accept="image/jpeg, image/png, image/svg" multiple required/>
             <label for="product-image-alt">Descrizione testuale dell'immagine:</label>
-            <textarea id="product-image-alt" name="product-image-alt" required></textarea>
+            <textarea id="product-image-alt" name="product-image-alt" required onchange="checkString(this.id)"></textarea>
             <label for="product-description">Descrizione prodotto:</label>
-            <textarea id="product-description" name="product-description" required></textarea>
+            <textarea id="product-description" name="product-description" required onchange="checkString(this.id)"></textarea>
         </div>
         <div id="delInputs">
             <select id="product-selector" name="product-selector" aria-label="Lista di prodotti">
                 <listOfProducts />
             </select>
         </div>
-        <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto" onclick="checkString()" disabled/>
+        <input class="opFormButton" type="submit" id="operationBtn" name="inserisci" value="Inserisci Prodotto"/>
         <input class="opFormButton" type="reset" id="reset" value="Cancella tutto" />
     </form>
     </main>
