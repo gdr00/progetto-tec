@@ -887,7 +887,6 @@ form label {
 }
 
 textarea {
-  border: 2px solid #ccc;
   font-family: "Verdana", sans-serif;
   font-size: var(--globaltxtsize);
 }
@@ -1023,7 +1022,14 @@ textarea {
   cursor: default;
 }
 
+#insInputs  input[type="text"], textarea {
+  width: 80%;
+}
+
+#delInputs input[type="submit"], #delInputs input[type="reset"] {
+  width: 60%;
+}
+
 #insInputs textarea {
-  max-width: 100%;
   max-height: 400px;
 }
