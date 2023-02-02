@@ -175,7 +175,7 @@ function checkString () {
   var titolo = document.getElementById("product-name").value;
   var descrizione = document.getElementById("product-description").value;
   var img_alt = document.getElementById("product-image-alt").value;
-  if (stringCorrectness(regex, titolo))
+  if (!stringCorrectness(regex, titolo))
     console.log("AAAAAAAAAAAA");
 }
 
