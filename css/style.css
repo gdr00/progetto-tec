@@ -1007,6 +1007,7 @@ textarea {
 #delInputs select {
   margin-top: 1.5em;
   padding-left: 0em;
+  min-width: 80%;
 }
 
 #operationForm .opFormButton {
