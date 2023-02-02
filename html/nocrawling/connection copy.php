@@ -3,9 +3,9 @@
 namespace DB;
 class DBAccess {
     private const HOST_DB = "localhost";
-    private const DATABASE_NAME = "gdare";
-    private const USERNAME = "gdare";
-    private const PASSWORD = "ahGhih5aeph3ao6y";
+    private const DATABASE_NAME = "tecweb";
+    private const USERNAME = "tecweb";
+    private const PASSWORD = "eDD&%5+QrPr4?A-";
     private $connection;
 
     public function openConnection(){
