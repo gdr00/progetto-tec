@@ -175,9 +175,9 @@ let regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=
 function checkString (id) {
   var testo = document.getElementById(id).value;
   if (stringCorrectness(regex, testo)) {
-    console.log("FUNZIONA");
+    document.getElementById("operationBtn").disabled = false;
   } else {
-    throw new Exception("@");
+    document.getElementById("operationBtn").disabled = true;
   }
 }
 
