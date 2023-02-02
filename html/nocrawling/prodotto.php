@@ -18,7 +18,7 @@ class Prodotto{
         $this->errore .= $this->setPath($path_immagini);
         $this->errore .= $this->setAlt($alt_immagine);
 
-        $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto">' . $this->errore . '</ul>' : "";
+        $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto" role="alert">' . $this->errore . '</ul>' : "";
     }
 
     private function pulisciInput($value) {
@@ -97,7 +97,7 @@ class Prodotto{
             $err = $this->saveImageIntoServerDirectory($target_dir, $target_file);
         }
         else
-            $err .= "<li>Il file caricato non è un'immagine (estensioni concesse: jpg, png, jpeg, svg)</li>";
+            $err .= "<li >Il file caricato non è un'immagine (estensioni concesse: jpg, png, jpeg, svg)</li>";
         return $err;
     }
 

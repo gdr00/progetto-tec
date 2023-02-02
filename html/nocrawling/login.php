@@ -37,16 +37,16 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $dbAccess->closeConnection();
 
         if ($queryOK == true) {
-            $messaggioForm .= '<p class="serverStringError">Accesso effettuato </p> '; 
+            $messaggioForm .= '<p class="serverStringError" role="alert">Accesso effettuato </p> '; 
             $_SESSION["username"] = $username;
             header("Location: inserimentoProdotto.php");
         }
         else
-            $messaggioForm = '<p class="serverStringError">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </p> ';
+            $messaggioForm = '<p class="serverStringError" role="alert">Utente non riconosciuto, si prega di inserire nuovamente nome utente e password </p> ';
         
     }
     else {
-        $messaggioForm = '<p class="serverStringError">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.</p> ';
+        $messaggioForm = '<p class="serverStringError" role="alert">Il servizio non è al momento raggiungibile, ci scusiamo per il disagio.</p> ';
     }
 }
     $paginaHTML = str_replace("<messaggioForm />", $messaggioForm, $paginaHTML);
