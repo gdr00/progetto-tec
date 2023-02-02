@@ -1026,7 +1026,12 @@ textarea {
   width: 80%;
 }
 
-#delInputs input[type="submit"], #delInputs input[type="reset"] {
+#operationBtn{
+  width: 60%;
+}
+
+#delInputs input[type="submit"], input[type="reset"] {
+
   width: 60%;
 }
 
