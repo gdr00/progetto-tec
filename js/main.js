@@ -177,12 +177,12 @@ function checkString (id) {
   var testo = document.getElementById(id).value;
   if (stringCorrectness(regex, testo)) {
     btn.disabled = false;
-    btn.classList.add("disabledButton");
-    document.getElementById(id).classList.add("errorInput");
-  } else {
-    btn.disabled = true;
     btn.classList.remove("disabledButton");
     document.getElementById(id).classList.remove("errorInput");
+  } else {
+    btn.disabled = true;
+    btn.classList.add("disabledButton");
+    document.getElementById(id).classList.add("errorInput");
   }
 }
 
