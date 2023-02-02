@@ -97,7 +97,7 @@ class Prodotto{
             $err = $this->saveImageIntoServerDirectory($target_dir, $target_file);
         }
         else
-            $err .= "<li>Il file caricato non è un'immagine (estensioni concesse: jpg, png, jpeg, svg)</li>";
+            $err .= "<li >Il file caricato non è un'immagine (estensioni concesse: jpg, png, jpeg, svg)</li>";
         return $err;
     }
 
