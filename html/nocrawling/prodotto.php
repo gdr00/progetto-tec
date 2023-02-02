@@ -18,7 +18,7 @@ class Prodotto{
         $this->errore .= $this->setPath($path_immagini);
         $this->errore .= $this->setAlt($alt_immagine);
 
-        $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto">' . $this->errore . '</ul>' : "";
+        $this->errore = $this->errore ? '<ul class="erroreCreazioneProdotto" role="alert">' . $this->errore . '</ul>' : "";
     }
 
     private function pulisciInput($value) {
