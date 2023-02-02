@@ -76,12 +76,9 @@ class DBAccess {
     }
 
     public function deleteProduct($nome) {
-        $rel_path= "SELECT immagine FROM prodotti WHERE id = $nome";
-        $abs_path= rtrim(realpath('../../php/uploads/'), 'uploads') . $rel_path;
         $query = "DELETE FROM prodotti WHERE id = $nome";
         mysqli_query($this->connection, $query) or die("Errore in openDBConnection: ".mysqli_error($this->connection));
         if(mysqli_affected_rows($this->connection) > 0) {
-            unlink($abs_path);
             return true;
         } else{
             return false;
