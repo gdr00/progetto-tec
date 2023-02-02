@@ -1,6 +1,10 @@
 <?php
 ob_start();
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    // inizializza la sessione
+    session_start();
+  }
+
 use DB\DBAccess;
 require_once("connection.php");
 
