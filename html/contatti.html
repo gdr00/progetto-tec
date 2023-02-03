@@ -71,10 +71,10 @@
 				<form id="requestsForm" action="richiestaInviata.html" method="post">
 					<label id="lbl-fname" for="fname">Nome</label>
 					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" aria-required="true" required onchange="checkContactsString(this.id)"/>
-					<div class="clientInputErrors" id="nameStringError" role="alert">Il nome può contenere solo lettere maiuscole e minuscole, la prima lettera dev'essere maiuscola.</div>
+					<div class="clientInputErrors" id="nameStringError" role="alert">Il nome può contenere solo lettere maiuscole e minuscole, la prima lettera dev'essere maiuscola, con lunghezza minima di 2 caratteri.</div>
 					<label id="lbl-fsurname" for="fsurname">Cognome</label>
 					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" aria-required="true" required onchange="checkContactsString(this.id)"/>
-					<div class="clientInputErrors" id="surnameStringError" role="alert">Il cognome può contenere solo lettere maiuscole e minuscole, la prima lettera dev'essere maiuscola.</div>
+					<div class="clientInputErrors" id="surnameStringError" role="alert">Il cognome può contenere solo lettere maiuscole e minuscole, la prima lettera dev'essere maiuscola, con lunghezza minima di 2 caratteri.</div>
 					<label id="lbl-fphone" for="fphone">Numero di telefono</label>
 					<input id="fphone" type="tel" placeholder="+39-123 456 1111" aria-labelledby="lbl-fphone" aria-required="true" required onchange="checkContactsString(this.id)"/>
 					<div class="clientInputErrors" id="phoneStringError" role="alert">Il telefono dev'essere in formato +39-378-234-4324 oppure +3-378-234-4324 oppure +333-378-234-4324.</div>
