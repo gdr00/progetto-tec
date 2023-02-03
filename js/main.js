@@ -204,7 +204,7 @@ function checkContactsString (id) {
   var errorString = "";
 
   if (id == "fname") {
-    regex = "";
+    regex = /([A-Z]+[a-z]*\s?){1,2}/;
     errorString = document.getElementById("nameStringError");
   } else if (id == "fsurname") {
     regex = "";
