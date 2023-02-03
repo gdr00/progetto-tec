@@ -966,10 +966,6 @@ textarea {
   border: 2px solid var(--bodybgcolor);
 }
 
-#buttonsForm {
-  display: none;
-}
-
 #operationForm {
   text-align: center;
   background-color: var(--cardbg);
