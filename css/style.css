@@ -875,13 +875,13 @@ form label {
   text-align: center;
 }
 
-#formRequestsContainer input, textarea {
+#formRequestsContainer input, #formRequestsContainer textarea {
   width: 80%;
   padding:.8em;
   min-width: 12em;
 }
 
-#formRequestsContainer input[type="text"], input[type="tel"], textarea {
+#formRequestsContainer input[type="text"],#formRequestsContainer input[type="tel"],#formRequestsContainer textarea {
   border-radius: 0.5em;
 }
 
@@ -963,7 +963,6 @@ textarea {
   margin: 1em 1.5em 2em 1.5em;
   font-weight: bold;
   font-size: var(--txtsize);
-  border: 2px solid var(--bodybgcolor);
 }
 
 #operationForm {
@@ -1001,8 +1000,8 @@ textarea {
   margin-top: 1.5em;
   padding-left: 0em;
   min-width: 80%;
-  border-radius: 1em;
-  height: 2em;
+  border-radius: 1.5em;
+  height: 3em;
 }
 
 #operationForm .opFormButton {
