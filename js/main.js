@@ -204,16 +204,16 @@ function checkContactsString (id) {
   var errorString = "";
 
   if (id == "fname") {
-    regex = /([A-Z]+[a-z]*\s?){1,2}/;
+    regex = /^[a-zA-Z\ ']{2,}$/;
     errorString = document.getElementById("nameStringError");
   } else if (id == "fsurname") {
-    regex = /([A-Z]+[a-z]*\s?){1,2}/;
+    regex = /^[a-zA-Z\ ']{2,}$/;
     errorString = document.getElementById("surnameStringError");
   } else if (id == "fphone") {
     regex = /^\+\d{1,3}-\d{3}-\d{3}-\d{4}$/;
     errorString = document.getElementById("phoneStringError");
   } else if (id == "fmex") {
-    regex = /^([[:ascii:]]){20,}$/;
+    regex = /.{20,}/;
     errorString = document.getElementById("messageStringError");
   }
 
