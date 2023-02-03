@@ -75,8 +75,8 @@ if ($_SESSION["admin"] == false) {
                     $start = strpos( $nuovoTitolo, "["); // trova la posizione del carattere di apertura
                     $end = strpos($nuovoTitolo, "="); // trova la posizione del carattere di chiusura
                     echo "start: " . $start . " end: " . $end;
-                    substr_replace($nuovoTitolo, '', $start, ($end-$start));
-                    str_replace("]", " ", $product["titolo"]); // rimuove il carattere di chiusura e metto uno spazio
+                    substr_replace($nuovoTitolo, "ciao", $start, ($end-$start));
+                    str_replace("]", "", $product["titolo"]); // rimuove il carattere di chiusura e metto uno spazio
                     $result .= $nuovoTitolo . "</option>";
                     echo $nuovoTitolo;
                 } else {
