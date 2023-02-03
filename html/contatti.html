@@ -70,16 +70,16 @@
 				<p>Inviaci la tua richiesta</p>
 				<form id="requestsForm" action="richiestaInviata.html" method="post">
 					<label id="lbl-fname" for="fname">Nome</label>
-					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" />
+					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" required />
 					<span class="error none" id="name-error"></span>
 					<label id="lbl-fsurname" for="fsurname">Cognome</label>
-					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" />
+					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" required />
 					<span class="error none" id="surname-error"></span>
 					<label id="lbl-fphone" for="fphone">Numero di telefono</label>
-					<input id="fphone" type="tel" placeholder="+39 123 456 1111" aria-labelledby="lbl-fphone" />
+					<input id="fphone" type="tel" placeholder="+39 123 456 1111" aria-labelledby="lbl-fphone"required  />
 					<span class="error none" id="phone-error"></span>
 					<label id="lbl-fmex" for="fmex">Messaggio</label>
-					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" ></textarea>
+					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" required  ></textarea>
 					<span class="error none" id="mex-error"></span>
 					<input type="submit" value="Invia richiesta"/>
 				</form>
