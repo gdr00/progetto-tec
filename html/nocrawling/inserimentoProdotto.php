@@ -60,14 +60,15 @@ if ($_SESSION["admin"] == false) {
         $conn->closeConnection();
         if ($products != null) {
             foreach ($products as $product) {
-                /*
+                
                 $result .=
                     '<option value="' .
                     $product["id"] .
                     '"\>' .
                     $product["titolo"] .
                     "</option>";
-                */
+                
+                /*
                 $result .= '<option value="' . $product["id"] . '"\>';
                 $pos = strpos("=", $product["titolo"]);
                 if ($pos) {
@@ -78,7 +79,7 @@ if ($_SESSION["admin"] == false) {
                     str_replace("]", " ", $product["titolo"]); // rimuove il carattere di chiusura e metto uno spazio
                 } else {
                     $result .= $product["titolo"] . "</option>";
-                }
+                }*/
             }
         } else {
             $result =
