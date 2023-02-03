@@ -207,13 +207,13 @@ function checkContactsString (id) {
     regex = /([A-Z]+[a-z]*\s?){1,2}/;
     errorString = document.getElementById("nameStringError");
   } else if (id == "fsurname") {
-    regex = "";
+    regex = /([A-Z]+[a-z]*\s?){1,2}/;
     errorString = document.getElementById("surnameStringError");
   } else if (id == "fphone") {
-    regex = /^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i;
+    regex = /^\+\d{1,3}-\d{3}-\d{3}-\d{4}$/;
     errorString = document.getElementById("phoneStringError");
   } else if (id == "fmex") {
-    regex = "";
+
     errorString = document.getElementById("messageStringError");
   }
 
