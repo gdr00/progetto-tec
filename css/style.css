@@ -96,6 +96,7 @@ a:visited {
 button, input[type="submit"], input[type="reset"], input[type="button"] {
   background-color: var(--linkcolor);
   color: var(--currentnavpagetxtcolor);
+  border-color: gray;
   font-weight: bold;
 }
 
