@@ -213,7 +213,7 @@ function checkContactsString (id) {
     regex = /^\+\d{1,3}-\d{3}-\d{3}-\d{4}$/;
     errorString = document.getElementById("phoneStringError");
   } else if (id == "fmex") {
-
+    regex = /^([[:ascii:]]){20,}$/;
     errorString = document.getElementById("messageStringError");
   }
 
