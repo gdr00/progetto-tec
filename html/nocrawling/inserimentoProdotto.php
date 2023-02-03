@@ -60,21 +60,22 @@ if ($_SESSION["admin"] == false) {
         $conn->closeConnection();
         if ($products != null) {
             foreach ($products as $product) {
-                
+                /*
                 $result .=
                     '<option value="' .
                     $product["id"] .
                     '"\>' .
                     $product["titolo"] .
                     "</option>";
-                
+                */
                 $result .= '<option value="' . $product["id"] . '"\>';
                 $pos = strpos("=", $product["titolo"]);
+                echo 'posizione: ' . $pos . '<br>';
                 if ($pos) {
                     $nuovoTitolo = $product["titolo"];
                     $start = strpos("[", $nuovoTitolo); // trova la posizione del carattere di apertura
                     $end = strpos("=",$nuovoTitolo); // trova la posizione del carattere di chiusura
-                    substr_replace($nuovoTitolo, '', $start, $end);
+                    substr_replace($nuovoTitolo, '', $start, ($end-$start));
                     str_replace("]", " ", $product["titolo"]); // rimuove il carattere di chiusura e metto uno spazio
                     $result .= $nuovoTitolo . "</option>";
                     echo $nuovoTitolo;
