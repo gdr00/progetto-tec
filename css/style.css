@@ -1000,8 +1000,8 @@ textarea {
   margin-top: 1.5em;
   padding-left: 0em;
   min-width: 80%;
-  border-radius: 1em;
-  height: 2em;
+  border-radius: 1.5em;
+  height: 3em;
 }
 
 #operationForm .opFormButton {
