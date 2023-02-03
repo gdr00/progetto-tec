@@ -875,13 +875,13 @@ form label {
   text-align: center;
 }
 
-#formRequestsContainer input, textarea {
+#formRequestsContainer input, #formRequestsContainer textarea {
   width: 80%;
   padding:.8em;
   min-width: 12em;
 }
 
-#formRequestsContainer input[type="text"], input[type="tel"], textarea {
+#formRequestsContainer input[type="text"],#formRequestsContainer input[type="tel"],#formRequestsContainer textarea {
   border-radius: 0.5em;
 }
 
