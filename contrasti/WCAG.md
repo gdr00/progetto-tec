@@ -44,3 +44,13 @@ Norme Cards:
 Norme link:
     - Per superare il test Drue Miller si è optato di tenere i link sottolineati.
     - Colore in contrasto come da immagine *link color nero* *link color bianco* *link visited color nero* *link visited color bianco*
+
+Tabella:
+
+Contrasti thead:
+![thead-bg-txt-bianco](thead-bg-text-bianco.png)
+![thead-bg-txt-nero](thead-bg-text-nero.png)
+
+Contrasti tbody:
+Il colore bianco e bianco su nero come background e colore del testo, gia controllato.
+![tbody-bg-txt-nero](tbody-bg-text-nero.png)
