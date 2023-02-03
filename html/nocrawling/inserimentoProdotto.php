@@ -69,7 +69,7 @@ if ($_SESSION["admin"] == false) {
                     "</option>";
                 */
                 $result .= '<option value="' . $product["id"] . '"\>';
-                $pos = strpos("=", $product["titolo"]);
+                $pos = strpos($product["titolo"], "=");
                 echo 'posizione: ' . $pos . '<br>';
                 if ($pos) {
                     $nuovoTitolo = $product["titolo"];
