@@ -197,6 +197,35 @@ function checkString (id) {
   }
 }
 
+function checkContactsString (id) {
+  var btn = document.getElementById("submitContact");
+  var testo = document.getElementById(id).value;
+  var regex = "";
+  var errorString = "";
+
+  if (id == "fname") {
+    regex = "";
+    errorString = document.getElementById("nameStringError");
+  } else if (id == "fsurname") {
+    regex = "";
+    errorString = document.getElementById("surnameStringError");
+  } else if (id == "fphone") {
+    regex = "";
+    errorString = document.getElementById("phoneStringError");
+  } else if (id == "fmex") {
+    regex = "";
+    errorString = document.getElementById("messageStringError");
+  }
+
+  if (stringCorrectness(regex, testo)) {
+    btn.disabled = false;
+    errorString.style.display = "none";
+  } else {
+    btn.disabled = true;
+    errorString.style.display = "block";
+  }
+}
+
 function stringCorrectness (pattern, string) {
   return pattern.test(string);
 }
