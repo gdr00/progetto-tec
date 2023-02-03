@@ -105,6 +105,10 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type=
   color: var(--navlinkhovercolor);
 }
 
+input, textarea {
+  border: 2px solid gray;
+}
+
 .aiuti {
   height: 1px;
   width: 1px;
