@@ -987,10 +987,6 @@ textarea {
   width: 100%;
 }
 
-#operationForm input, textarea, select {
-  position: relative;
-  margin: auto;
-}
 
 #delInputs {
   display: none;
