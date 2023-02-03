@@ -105,7 +105,7 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type=
   color: var(--navlinkhovercolor);
 }
 
-input, textarea {
+input:not([type="file"]), textarea {
   border: 2px solid gray;
 }
 
