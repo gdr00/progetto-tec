@@ -203,26 +203,30 @@ function checkContactsString (id) {
   var regex = "";
   var errorString = "";
 
-  if (id == "fname") {
-    regex = /^[a-zA-Z\ ']{2,}$/;
-    errorString = document.getElementById("nameStringError");
-  } else if (id == "fsurname") {
-    regex = /^[a-zA-Z\ ']{2,}$/;
-    errorString = document.getElementById("surnameStringError");
-  } else if (id == "fphone") {
-    regex = /^\+\d{1,3}-\d{3}-\d{3}-\d{4}$/;
-    errorString = document.getElementById("phoneStringError");
-  } else if (id == "fmex") {
-    regex = /.{20,}/;
-    errorString = document.getElementById("messageStringError");
-  }
+  if (testo != "") {
+    if (id == "fname") {
+      regex = /^[a-zA-Z\ ']{2,}$/;
+      errorString = document.getElementById("nameStringError");
+    } else if (id == "fsurname") {
+      regex = /^[a-zA-Z\ ']{2,}$/;
+      errorString = document.getElementById("surnameStringError");
+    } else if (id == "fphone") {
+      regex = /^\+\d{1,3}-\d{3}-\d{3}-\d{4}$/;
+      errorString = document.getElementById("phoneStringError");
+    } else if (id == "fmex") {
+      regex = /.{20,}/;
+      errorString = document.getElementById("messageStringError");
+    }
 
-  if (stringCorrectness(regex, testo)) {
-    btn.disabled = false;
-    errorString.style.display = "none";
+    if (stringCorrectness(regex, testo)) {
+      btn.disabled = false;
+      errorString.style.display = "none";
+    } else {
+      btn.disabled = true;
+      errorString.style.display = "block";
+    }
   } else {
-    btn.disabled = true;
-    errorString.style.display = "block";
+    btn.disabled = false;
   }
 }
 
