@@ -70,18 +70,18 @@
 				<p>Inviaci la tua richiesta</p>
 				<form id="requestsForm" action="richiestaInviata.html" method="post">
 					<label id="lbl-fname" for="fname">Nome</label>
-					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" aria-required="true" required/>
-					<span class="error none" id="name-error"></span>
+					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" aria-required="true" required onchange="checkContactsString(this.id)"/>
+					<div class="clientInputErrors" id="nameStringError" role="alert">Il nome può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine).</div>
 					<label id="lbl-fsurname" for="fsurname">Cognome</label>
-					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" aria-required="true" required/>
-					<span class="error none" id="surname-error"></span>
+					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" aria-required="true" required onchange="checkContactsString(this.id)"/>
+					<div class="clientInputErrors" id="surnameStringError" role="alert">Il cognome può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine).</div>
 					<label id="lbl-fphone" for="fphone">Numero di telefono</label>
-					<input id="fphone" type="tel" placeholder="+39 123 456 1111" aria-labelledby="lbl-fphone" aria-required="true" required/>
-					<span class="error none" id="phone-error"></span>
+					<input id="fphone" type="tel" placeholder="+39 123 456 1111" aria-labelledby="lbl-fphone" aria-required="true" required onchange="checkContactsString(this.id)"/>
+					<div class="clientInputErrors" id="phoneStringError" role="alert">Il telefono può contenere solo numeri.</div>
 					<label id="lbl-fmex" for="fmex">Messaggio</label>
-					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" aria-required="true" required></textarea>
-					<span class="error none" id="mex-error"></span>
-					<input type="submit" value="Invia richiesta"/>
+					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" aria-required="true" required onchange="checkContactsString(this.id)"></textarea>
+					<div class="clientInputErrors" id="messageStringError" role="alert">Il messaggio può contenere solo lettere maiuscole e minuscole, numeri, spazi(non alla fine).</div>
+					<input type="submit" value="Invia richiesta" id="submitContact"/>
 				</form>
 			</li>
 		</ul>
