@@ -987,10 +987,6 @@ textarea {
   width: 100%;
 }
 
-#operationForm input, textarea, select {
-  position: relative;
-  margin: auto;
-}
 
 #delInputs {
   display: none;
@@ -1023,7 +1019,7 @@ textarea {
   cursor: default;
 }
 
-#insInputs  input[type="text"], textarea {
+#insInputs input[type="text"],#insInputs textarea {
   width: 80%;
 }
 
