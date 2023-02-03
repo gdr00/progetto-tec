@@ -1023,7 +1023,7 @@ textarea {
   cursor: default;
 }
 
-#insInputs  input[type="text"], textarea {
+#insInputs input[type="text"],#insInputs textarea {
   width: 80%;
 }
 
