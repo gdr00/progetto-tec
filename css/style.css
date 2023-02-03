@@ -1021,6 +1021,7 @@ textarea {
 
 #insInputs input[type="text"],#insInputs textarea {
   width: 80%;
+  border-radius: .5em;
 }
 
 input[type="submit"], input[type="reset"] {
