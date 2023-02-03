@@ -93,6 +93,10 @@ a:visited {
   color: var(--linkvisitedcolor);
 }
 
+input:not([type="file"]), textarea {
+  border: 2px solid gray;
+}
+
 button, input[type="submit"], input[type="reset"], input[type="button"] {
   background-color: var(--linkcolor);
   color: var(--currentnavpagetxtcolor);
@@ -103,10 +107,6 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
 button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
   background-color: var(--navlinkhoverbg);
   color: var(--navlinkhovercolor);
-}
-
-input, textarea {
-  border: 2px solid gray;
 }
 
 .aiuti {
