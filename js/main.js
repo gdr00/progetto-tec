@@ -210,7 +210,7 @@ function checkContactsString (id) {
     regex = "";
     errorString = document.getElementById("surnameStringError");
   } else if (id == "fphone") {
-    regex = "";
+    regex = /^\\+?[1-9][0-9]{7,14}$/;
     errorString = document.getElementById("phoneStringError");
   } else if (id == "fmex") {
     regex = "";
