@@ -177,23 +177,27 @@ function checkString (id) {
   var regex = "";
   var errorString = "";
 
-  if (id == "product-name") {
-    regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
-    errorString = document.getElementById("titleStringError");
-  } else if (id == "product-image-alt") {
-    regex = /^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i;
-    errorString = document.getElementById("imageAltStringError");
-  } else if (id == "product-description") {
-    regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i;
-    errorString = document.getElementById("descriptionStringError");
-  }
+  if (testo != "") {
+    if (id == "product-name") {
+      regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))(\s+[a-z0-9]+|\s+\[[a-z]+\s*=\s*[a-z]+\])*$/i;
+      errorString = document.getElementById("titleStringError");
+    } else if (id == "product-image-alt") {
+      regex = /^[a-z0-9]+(\s+[a-z0-9]+\.?|\.[a-z0-9]+)*$/i;
+      errorString = document.getElementById("imageAltStringError");
+    } else if (id == "product-description") {
+      regex = /^([a-z0-9]+|(\[[a-z]+\s*=\s*[a-z]+\]))((\s+|\s*)[a-z0-9]\.?|\s+\[[a-z]+\s*=\s*[a-z]+\]\.?)*$/i;
+      errorString = document.getElementById("descriptionStringError");
+    }
 
-  if (stringCorrectness(regex, testo)) {
-    btn.disabled = false;
-    errorString.style.display = "none";
+    if (stringCorrectness(regex, testo)) {
+      btn.disabled = false;
+      errorString.style.display = "none";
+    } else {
+      btn.disabled = true;
+      errorString.style.display = "block";
+    }
   } else {
-    btn.disabled = true;
-    errorString.style.display = "block";
+    btn.disabled = false;
   }
 }
 
