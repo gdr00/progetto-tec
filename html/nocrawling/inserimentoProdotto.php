@@ -68,7 +68,6 @@ if ($_SESSION["admin"] == false) {
                     $product["titolo"] .
                     "</option>";
                 
-                /*
                 $result .= '<option value="' . $product["id"] . '"\>';
                 $pos = strpos("=", $product["titolo"]);
                 if ($pos) {
@@ -77,9 +76,12 @@ if ($_SESSION["admin"] == false) {
                     $end = strpos("=",$nuovoTitolo); // trova la posizione del carattere di chiusura
                     substr_replace($nuovoTitolo, '', $start, $end);
                     str_replace("]", " ", $product["titolo"]); // rimuove il carattere di chiusura e metto uno spazio
+                    $result .= $nuovoTitolo . "</option>";
+                    echo $nuovoTitolo;
                 } else {
                     $result .= $product["titolo"] . "</option>";
-                }*/
+                    echo $product["titolo"];
+                }
             }
         } else {
             $result =
