@@ -4,7 +4,7 @@
 - [x] Codice html valido
 - [ ] Link con un proprio stile non ripreso da altre parti non clickabili
 - [ ] Norme interne sempre rispettate (Se ho uno stile per un elemento non clickabile non posso riusarlo per un altro link)
-- [ ] Navigabilità da mobile
+- [X] Navigabilità da mobile
 - [ ] Stampa
 - [ ] Link per non vedenti per saltare menù, news e il "torna su" (aiuti alla navigazione)
 - [ ] Utilizzo aria-label per screen reader
@@ -16,7 +16,7 @@
 - [ ] Controllare hover per i cellulari
 - [ ] Fixare span Home
 - [X] Fixare cambio tema permanente quando clicco in altre pagine
-- [ ] Fare il test delle immagini con i plugin di chrome
+- [X] Fare il test delle immagini con i plugin di chrome
 - [X] Aggiungere "Salta alla navigazione"
 - [X] Fixare tutti i tabIndex
 - [ ] footer per mobile
@@ -38,15 +38,14 @@ Check di accessibilità con TotalValidator:
 - [ ] Inserire gli alt nelle immagini dello slideshow (gli alt devono essere al massimo 75 caratteri, se la descrizione è più lunga si usi longdesc con classe helps che lo nasconde)(credo che long desc sia deprecato e sostituito da un aria describedby con id che punta ad un p nascosto contentente la descrizione)
 - [ ] quando finito cambiare link in 404.html perchè vanno a gdr00.it
 - [ ] mettere tabindex-1 sulle frecec delle card perchè accessibili tramite tab senza l'uso delle frecce che appesantiscono solo il contenuto per gli screen reader
-- [ ] pagina error500
 
 
 ----------------------------- Luca & Matteo --------------------------------------------
 - [x] regex su titolo e altro testo
 - [x] caso in cui il testo è in lingua straniera (controllare pulisci input che non rimuova cose che ci interessano)
 - [X] elimina
-- [x] controllare lato server estensione immagina corretta
-- [ ] bug nel caso di prodotti in lingua straniera: nell'html inserisce degli " " che non dovrebbero esserci
-- [ ] stile prodotti: o 3 card per riga o più spazio per le card
-- [ ] fixare bordo su form di contatto con il tema chiaro
-- [ ] rimettere nel form i tipi dell'immagine consentiti
+- [X] controllare lato server estensione immagina corretta
+- [X] bug nel caso di prodotti in lingua straniera: nell'html inserisce degli " " che non dovrebbero esserci
+- [X] stile prodotti: o 3 card per riga o più spazio per le card
+- [X] fixare bordo su form di contatto con il tema chiaro
+- [X] rimettere nel form i tipi dell'immagine consentiti
