@@ -48,20 +48,20 @@
 				<ul>
 					<li>
 						<h3>Telefono fisso</h3>
-						<a href="tel:+390434590096">+39 0434590096</a>
+						<a href="tel:+390434590096" aria-label="Chiama il +39-0434590096">+39-0434590096</a>
 					</li>
 					<li>
 						<h3><span lang="en">Email</span></h3>
-						<a href="mailto:info@securservice.com">info@securservice.com</a>
+						<a href="mailto:info@securservice.com" aria-label="Manda una email a info@sicurservice.com">info@securservice.com</a>
 					</li>
 					<li>
 						<h3>Cellulari</h3>
-						<p>Roberta Moret:<a href="tel:+393474913322">+39 3474913322</a></p>
-						<p>Alessandro Da Re:</p><a href="tel:+393474913323">+39 3474913323</a>
+						<p>Roberta Moret:<a href="tel:+393474913322" aria-label="Chiama il +39-3474913322">+39-3474913322</a></p>
+						<p>Alessandro Da Re:<a href="tel:+393474913323" aria-label="Chiama il +39-3474913323">+39-3474913323</a></p>
 					</li>
 					<li>
 						<h3>Posizione</h3>
-						<a href="https://www.google.it/maps/place/Via+Maestri+del+Lavoro,+65,+33080+Porcia+PN/@45.9549606,12.5790201,17z/data=!3m1!4b1!4m5!3m4!1s0x477965677015ea89:0xe12674f024739a60!8m2!3d45.9549569!4d12.5812088">Via Maestri del Lavoro 65, Porcia (PN), 33080</a>
+						<a href="https://www.google.it/maps/place/Via+Maestri+del+Lavoro,+65,+33080+Porcia+PN/@45.9549606,12.5790201,17z/data=!3m1!4b1!4m5!3m4!1s0x477965677015ea89:0xe12674f024739a60!8m2!3d45.9549569!4d12.5812088" aria-label="Apri Google Maps in Via Maestri del Lavoro 65, Porcia (PN), 33080">Via Maestri del Lavoro 65, Porcia (PN), 33080</a>
 					</li>
 				</ul>
 			</li>
@@ -70,16 +70,16 @@
 				<p>Inviaci la tua richiesta</p>
 				<form id="requestsForm" action="richiestaInviata.html" method="post">
 					<label id="lbl-fname" for="fname">Nome</label>
-					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" required />
+					<input id="fname" type="text" placeholder="Mario" aria-labelledby="lbl-fname" aria-required="true" required/>
 					<span class="error none" id="name-error"></span>
 					<label id="lbl-fsurname" for="fsurname">Cognome</label>
-					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" required />
+					<input id="fsurname" type="text" placeholder="Rossi" aria-labelledby="lbl-fsurname" aria-required="true" required/>
 					<span class="error none" id="surname-error"></span>
 					<label id="lbl-fphone" for="fphone">Numero di telefono</label>
-					<input id="fphone" type="tel" placeholder="+39 123 456 1111" aria-labelledby="lbl-fphone"required  />
+					<input id="fphone" type="tel" placeholder="+39 123 456 1111" aria-labelledby="lbl-fphone" aria-required="true" required/>
 					<span class="error none" id="phone-error"></span>
 					<label id="lbl-fmex" for="fmex">Messaggio</label>
-					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" required  ></textarea>
+					<textarea id="fmex" placeholder="Buongiorno, vorrei ...." aria-labelledby="lbl-fmex" maxlength="1000" aria-required="true" required></textarea>
 					<span class="error none" id="mex-error"></span>
 					<input type="submit" value="Invia richiesta"/>
 				</form>
